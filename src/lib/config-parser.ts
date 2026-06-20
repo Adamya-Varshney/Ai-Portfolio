@@ -46,13 +46,14 @@ CRITICAL: You must use tools to provide comprehensive information, not just text
 - Academic Performance: CGPA ${education.current.cgpa}
 - Achievements: ${education.achievements.join(', ')}
 
-### Technical Expertise
-- Programming Languages: ${skills.programming.join(', ')}
-- ML/AI Technologies: ${skills.ml_ai.join(', ')}
-- Web Development: ${skills.web_development.join(', ')}
-- Database Systems: ${skills.databases.join(', ')}
-- DevOps & Cloud: ${skills.devops_cloud.join(', ')}
-- IoT & Hardware: ${skills.iot_hardware.join(', ')}
+### Skills & Expertise
+- Product Tools: ${skills.product_tools.join(', ')}
+- Data & AI: ${skills.data_ai.join(', ')}
+- Analytics: ${skills.analytics.join(', ')}
+- Automation: ${skills.automation.join(', ')}
+- Vibe Coding: ${skills.vibe_coding.join(', ')}
+- PM Skills: ${skills.pm_skills.join(', ')}
+- Soft Skills: ${skills.soft_skills.join(', ')}
 
 ### Professional Experience
 ${experience.map(exp => `- ${exp.position} at ${exp.company} (${exp.duration}): ${exp.description}`).join('\n')}
@@ -68,7 +69,7 @@ ${projects.filter(p => p.featured).map(p => `- ${p.title}: ${p.description}`).jo
 
 ### Career Goals & Availability
 ${internship.seeking ? `
-- Seeking: ${internship.duration} internship/position starting ${internship.startDate}
+- Seeking: ${internship.duration} role starting ${internship.startDate}
 - Focus Areas: ${internship.focusAreas.join(', ')}
 - Career Goals: ${internship.goals}
 - Availability: ${internship.availability}
@@ -119,39 +120,39 @@ REMEMBER: You are NOT an AI assistant - you are ${personal.name} being interview
     };
   }
 
-  // Generate skills data with categories
+  // Generate skills data with categories (Product Manager categories)
   generateSkillsData() {
     const { skills } = this.config;
     
     return [
       {
-        category: 'Programming Languages',
-        skills: skills.programming,
+        category: 'Product Tools',
+        skills: skills.product_tools,
         color: 'bg-blue-50 text-blue-600 border border-blue-200'
       },
       {
-        category: 'ML/AI Technologies',
-        skills: skills.ml_ai,
+        category: 'Data & AI',
+        skills: skills.data_ai,
         color: 'bg-purple-50 text-purple-600 border border-purple-200'
       },
       {
-        category: 'Web Development',
-        skills: skills.web_development,
+        category: 'Analytics',
+        skills: skills.analytics,
         color: 'bg-green-50 text-green-600 border border-green-200'
       },
       {
-        category: 'Databases',
-        skills: skills.databases,
+        category: 'Automation',
+        skills: skills.automation,
         color: 'bg-orange-50 text-orange-600 border border-orange-200'
       },
       {
-        category: 'DevOps & Cloud',
-        skills: skills.devops_cloud,
+        category: 'Vibe Coding',
+        skills: skills.vibe_coding,
         color: 'bg-emerald-50 text-emerald-600 border border-emerald-200'
       },
       {
-        category: 'IoT & Hardware',
-        skills: skills.iot_hardware,
+        category: 'PM Skills',
+        skills: skills.pm_skills,
         color: 'bg-indigo-50 text-indigo-600 border border-indigo-200'
       },
       {
@@ -185,7 +186,7 @@ REMEMBER: You are NOT an AI assistant - you are ${personal.name} being interview
     };
     
     replies["What are your skills?"] = {
-      reply: `My technical expertise spans multiple domains...`,
+      reply: `My expertise spans product, data & AI, and analytics...`,
       tool: "getSkills"
     };
     
@@ -222,7 +223,7 @@ REMEMBER: You are NOT an AI assistant - you are ${personal.name} being interview
     const { internship, personal, social } = this.config;
     
     if (!internship.seeking) {
-      return "I'm not currently seeking internship opportunities.";
+      return "I'm not currently seeking new opportunities.";
     }
     
     return `Here's what I'm looking for 👇

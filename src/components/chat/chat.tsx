@@ -54,7 +54,7 @@ const Avatar = dynamic<AvatarProps>(
             onClick={() => (window.location.href = '/')}
           >
             <img
-              src="/avatar.png"
+              src="/profile.png"
               alt="Avatar"
               className="h-full w-full object-cover object-[center_top_-5%] scale-95 rounded-full"
             />

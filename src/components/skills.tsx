@@ -3,49 +3,49 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { Code, Cpu, PenTool, Users, Database, Cloud, Microchip, Brain } from 'lucide-react';
+import { BarChart3, Brain, Code, PenTool, Sparkles, Target, Users, Workflow } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 
 const Skills = () => {
   // Get skills from configuration
   const config = getConfig();
-  
-  // Transform skills data with icons
+
+  // Transform skills data with icons (Product Manager categories)
   const skillsData = [
     {
-      category: 'Programming Languages',
-      icon: <Code className="h-5 w-5" />,
-      skills: config.skills.programming,
+      category: 'Product Tools',
+      icon: <PenTool className="h-5 w-5" />,
+      skills: config.skills.product_tools,
       color: 'bg-blue-50 text-blue-600 border border-blue-200',
     },
     {
-      category: 'ML/AI Technologies',
+      category: 'Data & AI',
       icon: <Brain className="h-5 w-5" />,
-      skills: config.skills.ml_ai,
+      skills: config.skills.data_ai,
       color: 'bg-purple-50 text-purple-600 border border-purple-200',
     },
     {
-      category: 'Web Development',
-      icon: <Cpu className="h-5 w-5" />,
-      skills: config.skills.web_development,
+      category: 'Analytics',
+      icon: <BarChart3 className="h-5 w-5" />,
+      skills: config.skills.analytics,
       color: 'bg-green-50 text-green-600 border border-green-200',
     },
     {
-      category: 'Databases',
-      icon: <Database className="h-5 w-5" />,
-      skills: config.skills.databases,
+      category: 'Automation',
+      icon: <Workflow className="h-5 w-5" />,
+      skills: config.skills.automation,
       color: 'bg-orange-50 text-orange-600 border border-orange-200',
     },
     {
-      category: 'DevOps & Cloud',
-      icon: <Cloud className="h-5 w-5" />,
-      skills: config.skills.devops_cloud,
+      category: 'Vibe Coding',
+      icon: <Code className="h-5 w-5" />,
+      skills: config.skills.vibe_coding,
       color: 'bg-emerald-50 text-emerald-600 border border-emerald-200',
     },
     {
-      category: 'IoT & Hardware',
-      icon: <Microchip className="h-5 w-5" />,
-      skills: config.skills.iot_hardware,
+      category: 'PM Skills',
+      icon: <Target className="h-5 w-5" />,
+      skills: config.skills.pm_skills,
       color: 'bg-indigo-50 text-indigo-600 border border-indigo-200',
     },
     {

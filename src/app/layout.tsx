@@ -6,53 +6,60 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
+// 🔧 After your first deploy, set this to your live URL (e.g. https://adamya-portfolio.vercel.app
+// or your custom domain). Everything below — canonical, OG, Twitter, JSON-LD — derives from it.
+const siteUrl = "https://your-domain.com";
+
 // Load Inter font for non-Apple devices
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Anuj Jain - Full-stack Python Developer & AI Engineer | Professional Portfolio",
-    template: "%s | Anuj Jain Portfolio"
+    default: "Adamya Varshney - Product Manager | AI & Agentic Products | Portfolio",
+    template: "%s | Adamya Varshney"
   },
-  description: "Professional portfolio of Anuj Jain - Full-stack Python Developer & AI Engineer. SIH 2025 Finalist showcasing 25+ automation projects, IoT systems, and AI-powered solutions. Available for internships.",
+  description: "Portfolio of Adamya Varshney - Product Manager with 3.5+ years across 0-to-N product development, GTM strategy, and product analytics for B2B & D2C e-commerce. Shipping AI and Agentic AI products with quantifiable impact. Open to senior PM opportunities.",
   keywords: [
-    "Anuj Jain",
-    "Full-stack Developer", 
-    "Python Developer",
-    "AI Engineer",
-    "Portfolio",
-    "Software Developer",
-    "Machine Learning",
-    "IoT Developer",
-    "Web Development",
-    "Next.js",
-    "React",
-    "FastAPI",
-    "Django",
-    "Automation",
+    "Adamya Varshney",
+    "Product Manager",
+    "AI Product Manager",
+    "Agentic AI",
+    "GTM Strategy",
+    "Product Analytics",
+    "B2B Product Manager",
+    "D2C",
+    "E-commerce Product Manager",
+    "Product Management",
+    "Product Lifecycle Management",
+    "Roadmap Planning",
+    "A/B Testing",
+    "User Research",
+    "RAG",
+    "LangGraph",
     "LangChain",
-    "Smart India Hackathon",
-    "Freelancer",
-    "AI Chatbot",
-    "Professional Portfolio",
-    "Developer Portfolio",
-    "Tech Portfolio",
-    "Internship",
-    "Python Automation",
-    "Web Scraping",
-    "API Development"
+    "Power BI",
+    "SQL",
+    "Python",
+    "IndiaMART",
+    "IIM Kashipur",
+    "MBA",
+    "Product Strategy",
+    "AI Products",
+    "Portfolio",
+    "Professional Portfolio"
   ],
   authors: [
     {
-      name: "Anuj Jain",
-      url: "https://portfolio.anujjainbatu.tech/",
+      name: "Adamya Varshney",
+      url: siteUrl,
     },
   ],
-  creator: "Anuj Jain",
-  publisher: "Anuj Jain",
+  creator: "Adamya Varshney",
+  publisher: "Adamya Varshney",
   robots: {
     index: true,
     follow: true,
@@ -67,29 +74,27 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://portfolio.anujjainbatu.tech/",
-    title: "Anuj Jain - Full-stack Python Developer & AI Engineer | Professional Portfolio",
-    description: "Professional portfolio showcasing AI-powered projects, IoT systems, and full-stack development. SIH 2025 Finalist with 25+ automation projects. Available for internships.",
-    siteName: "Anuj Jain Portfolio",
+    url: siteUrl,
+    title: "Adamya Varshney - Product Manager | AI & Agentic Products",
+    description: "Product Manager with 3.5+ years in 0-to-N product development, GTM strategy, and product analytics. Building AI & Agentic AI products with measurable impact. Chat with my AI-powered portfolio.",
+    siteName: "Adamya Varshney Portfolio",
     images: [
       {
-        url: "https://portfolio.anujjainbatu.tech/portfolio.png",
+        url: "/portfolio.png",
         width: 1200,
         height: 630,
-        alt: "Anuj Jain - Professional Portfolio with AI Chatbot",
+        alt: "Adamya Varshney - Product Manager | AI & Agentic Products",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anuj Jain - Full-stack Python Developer & AI Engineer",
-    description: "Professional portfolio showcasing AI projects, IoT systems, and automation solutions. SIH 2025 Finalist available for internships.",
-    creator: "@anujainbatu",
-    site: "@anujainbatu",
+    title: "Adamya Varshney - Product Manager | AI & Agentic Products",
+    description: "Product Manager building AI & Agentic AI products. 0-to-N, GTM strategy, and product analytics. Chat with my AI-powered portfolio.",
     images: [{
-      url: "https://portfolio.anujjainbatu.tech/portfolio.png",
-      alt: "Anuj Jain Professional Portfolio"
+      url: "/portfolio.png",
+      alt: "Adamya Varshney - Product Manager Portfolio"
     }],
   },
   icons: {
@@ -99,18 +104,14 @@ export const metadata: Metadata = {
         sizes: "any",
       }
     ],
-    shortcut: "/favicon.ico?v=2",
-    apple: "/apple-touch-icon.svg?v=2",
+    shortcut: "/favicon.ico",
   },
   manifest: "/manifest.json",
   alternates: {
-    canonical: "https://portfolio.anujjainbatu.tech/",
+    canonical: siteUrl,
   },
   category: "technology",
   classification: "Portfolio Website",
-  other: {
-    "google-site-verification": "your-google-verification-code-here",
-  },
 };
 
 export default function RootLayout({
@@ -123,40 +124,40 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="canonical" href="https://portfolio.anujjainbatu.tech/" />
+        <link rel="canonical" href={siteUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Anuj Jain",
-              "jobTitle": "Full-stack Python Developer & AI Engineer",
-              "url": "https://portfolio.anujjainbatu.tech/",
-              "image": "https://portfolio.anujjainbatu.tech/profile.jpeg",
+              "name": "Adamya Varshney",
+              "jobTitle": "Product Manager - AI & Agentic Products",
+              "url": siteUrl,
+              "image": `${siteUrl}/profile.png`,
               "sameAs": [
-                "https://github.com/anujjainbatu",
-                "https://linkedin.com/in/anujjainbatu",
-                "https://x.com/anujainbatu"
+                "https://github.com/Adamya-Varshney",
+                "https://www.linkedin.com/in/adamya-varshney15/"
               ],
               "worksFor": {
                 "@type": "Organization",
-                "name": "Freelance"
+                "name": "IndiaMART InterMESH"
               },
               "alumniOf": {
                 "@type": "Organization",
-                "name": "SATI"
+                "name": "Indian Institute of Management (IIM), Kashipur"
               },
               "knowsAbout": [
-                "Python Development",
-                "AI Engineering",
-                "Machine Learning",
-                "IoT Systems",
-                "Web Development",
-                "Automation",
-                "Full Stack Development"
+                "Product Management",
+                "AI Product Management",
+                "Agentic AI",
+                "GTM Strategy",
+                "Product Analytics",
+                "Product Lifecycle Management",
+                "User Research",
+                "B2B & D2C E-commerce"
               ],
-              "description": "Full-stack Python Developer & AI Engineer with expertise in building AI-powered solutions, IoT systems, and automation tools. SIH 2025 Finalist with 25+ delivered projects."
+              "description": "Product Manager with 3.5+ years across 0-to-N product development, GTM strategy, and product analytics, building AI and Agentic AI products with quantifiable impact on B2B and D2C e-commerce."
             })
           }}
         />

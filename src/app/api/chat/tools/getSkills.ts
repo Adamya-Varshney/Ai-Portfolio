@@ -4,19 +4,20 @@ import { getConfig } from '@/lib/config-loader';
 
 export const getSkills = tool({
   description:
-    'This tool provides a comprehensive overview of technical skills, expertise, and professional qualifications.',
+    'This tool provides a comprehensive overview of product, technical, and analytical skills, expertise, and professional qualifications.',
   parameters: z.object({}),
   execute: async () => {
     const config = getConfig();
     
     return {
-      technicalSkills: {
-        programming: config.skills.programming,
-        machineLearning: config.skills.ml_ai,
-        webDevelopment: config.skills.web_development,
-        databases: config.skills.databases,
-        devOpsCloud: config.skills.devops_cloud,
-        iotHardware: config.skills.iot_hardware
+      skills: {
+        productTools: config.skills.product_tools,
+        dataAndAI: config.skills.data_ai,
+        analytics: config.skills.analytics,
+        automation: config.skills.automation,
+        vibeCoding: config.skills.vibe_coding,
+        pmSkills: config.skills.pm_skills,
+        softSkills: config.skills.soft_skills
       },
       education: {
         degree: config.education.current.degree,
@@ -33,7 +34,7 @@ export const getSkills = tool({
         technologies: exp.technologies,
         description: exp.description
       })),
-      message: "I'd be happy to walk you through my technical skills and expertise. I've built a diverse skill set across multiple domains through both my academic coursework and hands-on project experience. I'm particularly passionate about machine learning and full-stack development, where I've been able to apply these technologies to solve real-world problems. Each area of my expertise has been strengthened through practical application - from building end-to-end web applications to developing ML models for complex data analysis. I believe my combination of theoretical knowledge and practical experience, along with my enthusiasm for continuous learning, would allow me to contribute effectively to your team. What specific technical areas would you like me to elaborate on?"
+      message: "I'd be happy to walk you through my skill set. As a Product Manager I pair customer-centric, design-thinking with quantitative rigor — owning the full product lifecycle from research and GTM to product analytics. I'm especially strong in AI and agentic products, where I've shipped things like conversion analytics dashboards and a RAG agent into real B2B workflows, and I back product decisions with data using Power BI, SQL, and Python. Which area would you like me to go deeper on?"
     };
   },
 });

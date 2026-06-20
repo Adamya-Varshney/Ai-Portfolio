@@ -34,12 +34,12 @@ try {
     },
     experience: [],
     skills: {
-      programming: [],
-      ml_ai: [],
-      web_development: [],
-      databases: [],
-      devops_cloud: [],
-      iot_hardware: [],
+      product_tools: [],
+      data_ai: [],
+      analytics: [],
+      automation: [],
+      vibe_coding: [],
+      pm_skills: [],
       soft_skills: []
     },
     projects: [],
