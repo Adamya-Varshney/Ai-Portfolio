@@ -83,10 +83,10 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery, handlePresetRepl
       {/* Welcome message */}
       <motion.div className="mb-8 text-center" variants={itemVariants}>
         <h2 className="mb-3 text-2xl font-semibold">
-            I'm Anuj's digital twin
+            I'm Adamya's AI twin
         </h2>
         <p className="text-muted-foreground mx-auto max-w-md">
-          Begin your interview with my digital twin.
+          Ask me anything about my product work — projects, GTM, and AI.
         </p>
       </motion.div>
 
