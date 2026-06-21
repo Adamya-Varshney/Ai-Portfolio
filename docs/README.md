@@ -19,13 +19,6 @@ MIT License details including:
 - Attribution requirements
 - Liability disclaimers
 
-## 🚀 Quick Links
-
-- **Main Repository**: [GitHub](https://github.com/anujjainbatu/portfolio)
-- **Live Demo**: [Portfolio Demo](https://portfolio.anujjainbatu.tech/)
-- **Issues**: [Report Bugs](https://github.com/anujjainbatu/portfolio/issues)
-- **Discussions**: [Community Forum](https://github.com/anujjainbatu/portfolio/discussions)
-
 ## 📖 Additional Resources
 
 ### For Users
@@ -45,16 +38,6 @@ MIT License details including:
 - **Questions**: Use GitHub Discussions
 - **Pull Requests**: Follow the contributing guide
 
-## 🆘 Getting Help
-
-### Community Support
-- 💬 [GitHub Discussions](https://github.com/anujjainbatu/portfolio/discussions) - Community Q&A
-- 🐛 [GitHub Issues](https://github.com/anujjainbatu/portfolio/issues) - Bug reports and feature requests
-
-### Direct Contact
-- 📧 **Email**: anujjainbatu@gmail.com
-- 🐦 **Twitter**: [@anujjainbatu](https://twitter.com/anujjainbatu)
-
 ## 🔄 Documentation Updates
 
 This documentation is actively maintained and updated. If you find any issues or have suggestions for improvements:
@@ -66,8 +49,6 @@ This documentation is actively maintained and updated. If you find any issues or
 ---
 
 <div align="center">
-
-**📚 Happy documenting!**
 
 *Last updated: July 15, 2025*
 
