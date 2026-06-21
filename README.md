@@ -11,19 +11,6 @@ No coding knowledge required. Just configure, deploy, and showcase your best sel
   <a href="https://github.com/anujjainbatu/portfolio/stargazers"><img src="https://img.shields.io/github/stars/anujjainbatu/portfolio" alt="GitHub Stars"></a>
 </p>
 
-> 🌟 **NEW**: Looking for the marketing landing page? Check out our [dedicated landing page repository](https://github.com/anujjainbatu/portfolio-builder-landing) with SEO-optimized content designed to showcase this portfolio builder to the world!
-
----
-
-## ✨ Why Choose This Portfolio?
-
-| Traditional Portfolios              | **This Portfolio**                                   |
-|-------------------------------------|-----------------------------------------------------|
-| Tedious manual edits                | **Edit 1 JSON file — instant updates**              |
-| Risk of breaking code               | **Zero coding required**                            |
-| Complex, hard-to-customize codebase | **Intuitive configuration, AI-powered assistance**  |
-| Outdated design                     | **Modern, responsive layout**                       |
-
 ---
 
 ## 🚦 Quick Start (5 Minutes)
