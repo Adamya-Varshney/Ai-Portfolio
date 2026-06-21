@@ -60,7 +60,7 @@ export async function POST(req: Request) {
     console.log('[CHAT-API] About to call streamText');
     
     const result = await streamText({
-      model: google('gemini-1.5-flash'),
+      model: google('gemini-2.0-flash'),
       messages,
       tools,
       maxSteps: 2,
