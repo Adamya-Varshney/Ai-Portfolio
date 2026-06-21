@@ -80,6 +80,7 @@ const Chat = () => {
   const initialQuery = searchParams.get('query');
   const [autoSubmitted, setAutoSubmitted] = useState(false);
   const [loadingSubmit, setLoadingSubmit] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const [presetReply, setPresetReply] = useState<{
     question: string;
     reply: string;
@@ -115,7 +116,7 @@ const Chat = () => {
       // Handle specific error types
       if (error.message?.includes('quota') || error.message?.includes('exceeded') || error.message?.includes('429')) {
         // Show a friendly notification for quota issues
-        toast.error('⚠️ API Quota Exhausted! Free Gemini API limit reached. Please contact Anuj directly or use preset questions. Thank you for understanding! 🙏', {
+        toast.error('⚠️ API Quota Exhausted! Free Gemini API limit reached. Please contact Adamya directly or use preset questions. Thank you for understanding! 🙏', {
           duration: 6000, // Show for 6 seconds
           style: {
             background: '#fef3c7',
@@ -133,7 +134,7 @@ const Chat = () => {
         try {
           append({
             role: 'assistant',
-            content: '⚠️ **API Quota Exhausted**\n\nFree Gemini API limit reached. Please contact Anuj directly or use preset questions below.',
+            content: '⚠️ **API Quota Exhausted**\n\nFree Gemini API limit reached. Please contact Adamya directly or use preset questions below.',
           });
         } catch (appendError) {
           console.error('Failed to append error message:', appendError);
@@ -266,6 +267,18 @@ const Chat = () => {
     setLoadingSubmit(false);
   };
 
+  // Collapse the floating avatar + its placeholder once the user scrolls down,
+  // and restore them when scrolled back near the top. The hysteresis gap
+  // (collapse > 50px, restore < 10px) prevents flicker right at the threshold.
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const top = e.currentTarget.scrollTop;
+    setIsCollapsed((prev) => {
+      if (!prev && top > 50) return true;
+      if (prev && top < 10) return false;
+      return prev;
+    });
+  };
+
   // Check if this is the initial empty state (no messages)
   const isEmptyState =
     !currentAIMessage && !latestUserMessage && !loadingSubmit && !presetReply && !errorMessage;
@@ -277,7 +290,11 @@ const Chat = () => {
     <div className="relative h-screen overflow-hidden">
       {/* Fixed Avatar Header with Gradient */}
       <div
-        className="fixed top-0 right-0 left-0 z-50"
+        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ease-in-out ${
+          isCollapsed
+            ? '-translate-y-full opacity-0 pointer-events-none'
+            : 'translate-y-0 opacity-100'
+        }`}
         style={{
           background:
             'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
@@ -320,8 +337,12 @@ const Chat = () => {
       <div className="container mx-auto flex h-full max-w-3xl flex-col">
         {/* Scrollable Chat Content */}
         <div
+          onScroll={handleScroll}
           className="flex-1 overflow-y-auto px-2 pb-4"
-          style={{ paddingTop: `${headerHeight}px` }}
+          style={{
+            paddingTop: `${isCollapsed ? 16 : headerHeight}px`,
+            transition: 'padding-top 300ms ease-in-out',
+          }}
         >
           <AnimatePresence mode="wait">
             {isEmptyState ? (
