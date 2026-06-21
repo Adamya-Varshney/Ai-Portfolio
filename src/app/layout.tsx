@@ -8,7 +8,7 @@ import "./globals.css";
 
 // 🔧 After your first deploy, set this to your live URL (e.g. https://adamya-portfolio.vercel.app
 // or your custom domain). Everything below — canonical, OG, Twitter, JSON-LD — derives from it.
-const siteUrl = "https://your-domain.com";
+const siteUrl = "https://adamya-pm.vercel.app/";
 
 // Load Inter font for non-Apple devices
 const inter = Inter({
