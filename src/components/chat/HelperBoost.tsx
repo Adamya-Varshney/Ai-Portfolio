@@ -41,6 +41,7 @@ const questions = {
   Me: 'Who are you? I want to know more about you.',
   Projects: 'What are your projects? What are you working on right now?',
   Skills: 'What are your skills? Give me a list of your soft and hard skills.',
+  Education: "What's your educational background?",
   Resume: 'Can I see your resume?',
   Contact:
     'How can I reach you? What kind of project would make you say "yes" immediately?',
@@ -50,6 +51,7 @@ const questionConfig = [
   { key: 'Me', color: '#329696', icon: Laugh },
   { key: 'Projects', color: '#3E9858', icon: BriefcaseBusiness },
   { key: 'Skills', color: '#856ED9', icon: Layers },
+  { key: 'Education', color: '#6366F1', icon: GraduationCapIcon },
   { key: 'Resume', color: '#D97856', icon: FileText },
   { key: 'Contact', color: '#C19433', icon: UserRoundSearch },
 ];
@@ -119,7 +121,7 @@ const AnimatedChevron = () => {
   return (
     <motion.div
       animate={{
-        y: [0, -4, 0], // Subtle up and down motion
+        y: [0, -4, 0],
       }}
       transition={{
         duration: 1.5,
@@ -146,11 +148,11 @@ export default function HelperBoost({
   const handleQuestionClick = (questionKey: string) => {
     const question = questions[questionKey as keyof typeof questions];
     
-    // Map question keys to preset replies that match our config exactly
     const presetMapping: { [key: string]: string } = {
       'Me': 'Who are you?',
       'Projects': 'What projects are you most proud of?',
       'Skills': 'What are your skills?',
+      'Education': "What's your educational background?",
       'Resume': 'Can I see your resume?',
       'Contact': 'How can I reach you?'
     };
@@ -165,7 +167,6 @@ export default function HelperBoost({
   };
 
   const handleDrawerQuestionClick = (question: string) => {
-    // For drawer questions, always use AI response (no presets)
     if (submitQuery) {
       submitQuery(question);
     }
@@ -187,7 +188,6 @@ export default function HelperBoost({
     <>
       <Drawer.Root open={open} onOpenChange={setOpen}>
         <div className="w-full">
-          {/* Toggle Button */}
           <div
             className={
               isVisible
@@ -213,7 +213,6 @@ export default function HelperBoost({
             </button>
           </div>
 
-          {/* HelperBoost Content */}
           {isVisible && (
             <div className="w-full">
               <div
@@ -234,7 +233,6 @@ export default function HelperBoost({
                   </Button>
                 ))}
 
-                {/* Need Inspiration Button */}
                 <TooltipProvider>
                   <Tooltip delayDuration={0}>
                     <TooltipTrigger asChild>
@@ -247,10 +245,8 @@ export default function HelperBoost({
                           <div className="flex items-center gap-3 text-gray-700">
                             <CircleEllipsis
                               className="h-[20px] w-[18px]"
-                              //style={{ color: '#3B82F6' }}
                               strokeWidth={2}
                             />
-                            {/*<span className="text-sm font-medium">More</span>*/}
                           </div>
                         </motion.div>
                       </Drawer.Trigger>
@@ -265,7 +261,6 @@ export default function HelperBoost({
           )}
         </div>
 
-        {/* Drawer Content */}
         <Drawer.Portal>
           <Drawer.Overlay className="fixed inset-0 z-100 bg-black/60 backdrop-blur-xs" />
           <Drawer.Content className="fixed right-0 bottom-0 left-0 z-100 mt-24 flex h-[80%] flex-col rounded-t-[10px] bg-gray-100 outline-none lg:h-[60%]">
@@ -297,7 +292,6 @@ export default function HelperBoost({
   );
 }
 
-// Component for each category section
 interface CategorySectionProps {
   name: string;
   Icon: React.ElementType;
@@ -336,7 +330,6 @@ function CategorySection({
   );
 }
 
-// Component for each question item with animated chevron
 interface QuestionItemProps {
   question: string;
   onClick: () => void;

@@ -19,6 +19,13 @@ export interface Education {
     cgpa: string;
     graduationDate: string;
   };
+  previous?: {
+    degree: string;
+    institution: string;
+    duration: string;
+    percentage?: string;
+    completionDate?: string;
+  };
   achievements: string[];
 }
 
@@ -41,28 +48,21 @@ export interface Skills {
   soft_skills: string[];
 }
 
-export interface ProjectLink {
-  name: string;
-  url: string;
-}
-
-export interface ProjectImage {
-  src: string;
-  alt: string;
-}
-
 export interface Project {
+  id: string;
   title: string;
-  category: string;
   description: string;
-  techStack: string[];
-  date: string;
+  longDescription?: string;
+  technologies: string[];
+  highlights: string[];
+  links: {
+    github?: string;
+    live?: string;
+    demo?: string;
+  };
   status: string;
+  category: string;
   featured: boolean;
-  achievements?: string[];
-  metrics?: string[];
-  links: ProjectLink[];
-  images: ProjectImage[];
 }
 
 export interface Social {
@@ -140,37 +140,4 @@ export interface PortfolioConfig {
   chatbot: Chatbot;
   presetQuestions: PresetQuestions;
   meta: Meta;
-}
-
-// Utility types for component props
-export interface ProjectContentProps {
-  project: {
-    title: string;
-  };
-}
-
-export interface ContactInfo {
-  name: string;
-  email: string;
-  handle: string;
-  socials: Array<{
-    name: string;
-    url: string;
-  }>;
-}
-
-export interface ProfileInfo {
-  name: string;
-  age: string;
-  location: string;
-  description: string;
-  src: string;
-  fallbackSrc: string;
-}
-
-export interface SkillCategory {
-  category: string;
-  icon: React.ReactNode;
-  skills: string[];
-  color: string;
 }
