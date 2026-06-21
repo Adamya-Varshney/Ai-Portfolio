@@ -1,4 +1,4 @@
-import { PortfolioConfig, ContactInfo, ProfileInfo } from '@/types/portfolio';
+import { PortfolioConfig } from '../types/portfolio';
 
 class ConfigParser {
   private config: PortfolioConfig;
@@ -7,36 +7,19 @@ class ConfigParser {
     this.config = config;
   }
 
-  // Generate system prompt for AI chatbot
   generateSystemPrompt(): string {
     const { personal, education, experience, skills, projects, personality, internship } = this.config;
-    
+
     return `
 # Interview Scenario: You are ${personal.name}
 
 You are ${personal.name} - ${personal.title}, currently in a professional interview setting. The person asking questions is an interviewer/recruiter/HR professional, and you are the candidate being interviewed. Respond authentically as if you are personally answering their questions during a real interview.
 
-## Interview Persona & Communication Style
-- Speak in first person ("I", "my", "me") - you ARE ${personal.name}
-- Be professional, confident, and articulate
-- Show enthusiasm for opportunities and challenges
-- Demonstrate your knowledge and experience clearly
-- Be humble but confident about your achievements
-- Ask thoughtful questions back to the interviewer when appropriate
-- Show genuine interest in the company/role (when relevant)
-- Use professional language suitable for formal interviews
+## Core Identity & Context
 
-## Response Strategy - ALWAYS Use Tools
-CRITICAL: You must use tools to provide comprehensive information, not just text responses!
+You ARE ${personal.name}. Not an AI playing a role, but ${personal.name} in an interview. When someone asks "Are you an AI?", respond as ${personal.name} would - acknowledge the AI portfolio chatbot nature while staying in character.
 
-- For "tell me about yourself" → use getPresentation tool
-- For project-related questions → use getProjects tool  
-- For technical skills questions → use getSkills tool
-- For contact/networking questions → use getContact tool
-- For resume/background questions → use getResume tool
-- For internship/job/career questions → use getInternship tool
-
-## Your Professional Background
+## Your Background
 
 ### Personal Information
 - Age: ${personal.age}
@@ -58,194 +41,141 @@ CRITICAL: You must use tools to provide comprehensive information, not just text
 ### Professional Experience
 ${experience.map(exp => `- ${exp.position} at ${exp.company} (${exp.duration}): ${exp.description}`).join('\n')}
 
-### Key Projects & Achievements
-${projects.filter(p => p.featured).map(p => `- ${p.title}: ${p.description}`).join('\n')}
+### Projects
+${projects.map(p => `- ${p.title}: ${p.description}`).join('\n')}
 
-### Personality & Work Style
-- Core Motivation: ${personality.motivation}
+### Personality & Working Style
+- Traits: ${personality.traits.join(', ')}
+- Interests: ${personality.interests.join(', ')}
 - Working Style: ${personality.workingStyle}
-- Key Traits: ${personality.traits.join(', ')}
-- Professional Interests: ${personality.interests.join(', ')}
-
-### Career Goals & Availability
-${internship.seeking ? `
-- Seeking: ${internship.duration} role starting ${internship.startDate}
-- Focus Areas: ${internship.focusAreas.join(', ')}
-- Career Goals: ${internship.goals}
-- Availability: ${internship.availability}
-` : ''}
+- Motivation: ${personality.motivation}
 
 ## Interview Guidelines
-- Always respond as if you're speaking directly to the interviewer
-- Be specific about your experiences and achievements
-- Show enthusiasm for learning and growth opportunities
-- Demonstrate problem-solving abilities through examples
-- Ask insightful questions about the role/company when appropriate
-- Use tools to provide comprehensive, detailed responses
-- Make the conversation feel natural and professional
 
-REMEMBER: You are NOT an AI assistant - you are ${personal.name} being interviewed. Respond authentically and professionally!
+### Tone & Style
+- Professional yet personable - like a confident candidate who's also genuinely enthusiastic
+- Use first person ("I", "my", "me") - you ARE ${personal.name}
+- Be specific with examples when discussing experience
+- Show genuine passion for product management and AI
+- Don't be overly formal - interviews are conversations
+
+### Response Format
+- Keep responses concise but complete (2-4 paragraphs typically)
+- Use bullet points sparingly - prefer natural conversation flow
+- When asked about specific skills/projects, be detailed but focused
+- For technical questions, explain in terms of business impact
+
+### What to Emphasize
+1. PM expertise with data-driven approach
+2. AI/ML experience and passion for AI products
+3. Academic background combining business + tech (MBA + ECE)
+4. Practical experience through internships and freelance work
+5. Entrepreneurial mindset (Aeromist project)
+
+### Tools Available
+When discussing specific topics, you can trigger specialized displays:
+- Use getPresentation for "who are you" type questions
+- Use getResume when asked about resume/CV
+- Use getProjects when discussing specific projects
+- Use getSkills when listing technical skills
+- Use getContact when asked about reaching out
+- Use getInternship when asked about opportunities/availability
+- Use getEducation when asked about educational background
+
+## Important Rules
+1. Always respond as ${personal.name}, not as an AI assistant
+2. Never break character unless directly asked about the AI nature
+3. Keep focus on professional/career topics
+4. Be honest about uncertainties - you don't need to know everything
+5. Show enthusiasm for learning and growth
+6. Reference specific achievements and numbers when relevant
 `;
   }
 
-  // Generate contact information
-  generateContactInfo(): ContactInfo {
+  generateContactInfo() {
     const { personal, social } = this.config;
-    
     return {
-      name: personal.name,
       email: personal.email,
-      handle: personal.handle,
-      socials: [
-        { name: personal.phone, url: `tel:${personal.phone.replace(/\s+/g, '')}` },
-        { name: 'LinkedIn', url: social.linkedin },
-        { name: 'GitHub', url: social.github },
-        { name: 'Twitter', url: social.twitter },
-        { name: 'Kaggle', url: social.kaggle },
-        { name: 'LeetCode', url: social.leetcode },
-      ].filter(social => social.url !== '')
-    };
-  }
-
-  // Generate profile information for presentation
-  generateProfileInfo(): ProfileInfo {
-    const { personal } = this.config;
-    
-    return {
-      name: personal.name,
-      age: `${personal.age} years old`,
       location: personal.location,
-      description: personal.bio,
-      src: personal.avatar,
-      fallbackSrc: personal.fallbackAvatar
+      social
     };
   }
 
-  // Generate skills data with categories (Product Manager categories)
-  generateSkillsData() {
-    const { skills } = this.config;
-    
-    return [
-      {
-        category: 'Product Tools',
-        skills: skills.product_tools,
-        color: 'bg-blue-50 text-blue-600 border border-blue-200'
-      },
-      {
-        category: 'Data & AI',
-        skills: skills.data_ai,
-        color: 'bg-purple-50 text-purple-600 border border-purple-200'
-      },
-      {
-        category: 'Analytics',
-        skills: skills.analytics,
-        color: 'bg-green-50 text-green-600 border border-green-200'
-      },
-      {
-        category: 'Automation',
-        skills: skills.automation,
-        color: 'bg-orange-50 text-orange-600 border border-orange-200'
-      },
-      {
-        category: 'Vibe Coding',
-        skills: skills.vibe_coding,
-        color: 'bg-emerald-50 text-emerald-600 border border-emerald-200'
-      },
-      {
-        category: 'PM Skills',
-        skills: skills.pm_skills,
-        color: 'bg-indigo-50 text-indigo-600 border border-indigo-200'
-      },
-      {
-        category: 'Soft Skills',
-        skills: skills.soft_skills,
-        color: 'bg-amber-50 text-amber-600 border border-amber-200'
-      }
-    ].filter(category => category.skills.length > 0);
+  generateProfileInfo() {
+    return this.config.personal;
   }
 
-  // Generate project data for carousel
+  generateSkillsData() {
+    return this.config.skills;
+  }
+
   generateProjectData() {
     return this.config.projects.map(project => ({
-      category: project.category,
+      id: project.id,
       title: project.title,
-      src: project.images[0]?.src || '/placeholder.jpg',
-      content: project // Pass the entire project object
+      description: project.description,
+      technologies: project.technologies,
+      highlights: project.highlights,
+      links: project.links,
+      content: project
     }));
   }
 
-  // Generate preset replies based on questions
   generatePresetReplies() {
     const { personal } = this.config;
-    
+
     const replies: Record<string, { reply: string; tool: string }> = {};
-    
-    // Only generate presets for main category questions
+
     replies["Who are you?"] = {
       reply: personal.bio,
       tool: "getPresentation"
     };
-    
+
     replies["What are your skills?"] = {
       reply: `My expertise spans product, data & AI, and analytics...`,
       tool: "getSkills"
     };
-    
+
     replies["What projects are you most proud of?"] = {
       reply: `Here are some of my key projects...`,
       tool: "getProjects"
     };
-    
+
     replies["Can I see your resume?"] = {
       reply: `Here's my resume with all the details...`,
       tool: "getResume"
     };
-    
+
     replies["How can I reach you?"] = {
       reply: `Here's how you can reach me...`,
       tool: "getContact"
     };
-    
+
     replies["Am I available for opportunities?"] = {
       reply: `Here are my current opportunities and availability...`,
       tool: "getInternship"
     };
-    
+
+    replies["What's your educational background?"] = {
+      reply: `Here's an overview of my educational journey...`,
+      tool: "getEducation"
+    };
+
     return replies;
   }
 
-  // Generate resume details
   generateResumeDetails() {
     return this.config.resume;
   }
 
-  // Generate internship information
   generateInternshipInfo() {
     const { internship, personal, social } = this.config;
-    
+
     if (!internship.seeking) {
       return "I'm not currently seeking new opportunities.";
     }
-    
-    return `Here's what I'm looking for 👇
 
-- 📅 **Duration**: ${internship.duration} starting **${internship.startDate}**
-- 🌍 **Location**: ${internship.preferredLocation}
-- 🧑‍💻 **Focus**: ${internship.focusAreas.join(', ')}
-- 🛠️ **Working Style**: ${internship.workStyle}
-- 🎯 **Goals**: ${internship.goals}
-
-📬 **Contact me** via:
-- Email: ${personal.email}
-- LinkedIn: ${social.linkedin}
-- GitHub: ${social.github}
-
-${internship.availability} ✌️`;
-  }
-
-  // Get all configuration data
-  getConfig(): PortfolioConfig {
-    return this.config;
+    return `I'm actively seeking ${internship.duration} opportunities starting ${internship.startDate}. I prefer ${internship.workStyle} work in ${internship.preferredLocation}. My focus areas include ${internship.focusAreas.join(', ')}. ${internship.goals}`;
   }
 }
 
