@@ -63,16 +63,16 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
           <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
             <img
               src="/profile.png"
-              alt="Anuj's avatar"
+              alt="Adamya's avatar"
               className="h-full w-full object-cover object-[center_top_-5%] scale-95"
             />
           </div>
           <div>
             <h2 className="text-foreground text-2xl font-semibold">
-              Anuj Jain
+              Adamya Varshney
             </h2>
             <p className="text-muted-foreground text-sm">
-              Available for Opportunities
+              Product Manager
             </p>
           </div>
         </div>
@@ -87,7 +87,7 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
             Available Now
           </span>
           <p className="text-xs text-muted-foreground text-center sm:text-right">
-            Open to full-time & internship roles
+            Open to full-time roles
           </p>
         </div>
       </div>
@@ -95,10 +95,12 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
       {/* Availability Highlight Section */}
       <div className="mb-8 rounded-2xl bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-6 border border-green-200 dark:border-green-800">
         <div className="flex items-center gap-3 mb-4">
-          <div className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center">
+          <div className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
             <Briefcase className="h-4 w-4 text-white" />
           </div>
-          <h3 className="text-lg font-semibold text-foreground">Current Availability Status</h3>
+          <h3 className="text-lg font-semibold text-foreground">
+            Open to Product Management roles that let me build AI-enabled Digital Products and scale them to a billion users
+          </h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -121,9 +123,9 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
         <div className="flex items-start gap-3">
           <CalendarDays className="mt-1 h-5 w-5 text-blue-500" />
           <div>
-            <p className="text-foreground text-sm font-medium">Duration</p>
+            <p className="text-foreground text-sm font-medium">Availability</p>
             <p className="text-muted-foreground text-sm">
-              {data?.availability || "Available for full-time roles starting immediately"}
+              {data?.availability || "Open to senior PM roles — available to start with a standard notice period"}
             </p>
           </div>
         </div>
@@ -148,10 +150,10 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
                   <li key={index}>{skill}</li>
                 )) || (
                   <>
-                    <li>Python, SQL, JavaScript, HTML/CSS</li>
-                    <li>FastAPI, Flask, Django, React.js</li>
-                    <li>Scikit-learn, XGBoost, TensorFlow, OpenCV</li>
-                    <li>OpenAI API, LangChain, LangGraph</li>
+                    <li>Python, SQL, R</li>
+                    <li>Power BI, Tableau, Google Analytics</li>
+                    <li>JIRA, Figma, A/B Testing</li>
+                    <li>LangGraph, LangChain, RAG Systems</li>
                   </>
                 )}
               </ul>
@@ -160,10 +162,10 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
                   <li key={index}>{skill}</li>
                 )) || (
                   <>
-                    <li>Docker, Git, GitHub Actions, AWS</li>
-                    <li>Firebase, Heroku, ESP32, IoT</li>
-                    <li>Machine Learning, AI Agents</li>
-                    <li>Web Scraping, Automation</li>
+                    <li>Agentic AI, n8n, Make</li>
+                    <li>AI Workflow Automation</li>
+                    <li>Claude Code, Lovable, FastAPI</li>
+                    <li>Scikit-learn, NumPy, Pandas, Seaborn</li>
                   </>
                 )}
                 <li>
