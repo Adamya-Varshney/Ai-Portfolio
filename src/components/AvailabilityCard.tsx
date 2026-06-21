@@ -193,9 +193,9 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
           What I bring
         </p>
         <p className="text-foreground text-sm">
-          {data?.experience.internshipCompleted || "Owned the annual product lifecycle for IndiaMART's Premium B2B products — lifted seller retention 17% and added 3,000+ premium sellers through a 30-day GTM launching 4 new products."} <br />
-          {data?.achievements[0] || "Shipped 6 AI conversion-analytics dashboards and a RAG agent that cut cross-team knowledge retrieval from 3 days to seconds."} <br />
-          {data?.experience.freelanceWork || "Manage a portfolio of 6+ AI-driven B2B matchmaking products generating 100+ Cr in monthly revenue."}
+          {data?.experience.internshipCompleted || "An end-to-end PM toolkit — user and market research, roadmapping and prioritization, GTM strategy, A/B testing, and product analytics across SQL, Power BI, and Python."} <br />
+          {data?.achievements[0] || "Customer-first, data-first product sense: I pair design-thinking with quantitative rigor to turn ambiguous 0-to-N problems into outcomes you can measure on a dashboard."} <br />
+          {data?.experience.freelanceWork || "3.5+ years across B2B and D2C e-commerce shipping full product lifecycles end to end, with hands-on depth in AI & Agentic products — and the vibe-coding skills to prototype ideas, not just spec them."}
         </p>
       </div>
 
