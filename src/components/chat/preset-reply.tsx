@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sparkles, Zap, X, Download } from 'lucide-react';
+import { X, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ChatBubble, ChatBubbleMessage } from '@/components/ui/chat/chat-bubble';
 
@@ -18,18 +17,11 @@ interface PresetReplyProps {
   question: string;
   reply: string;
   tool: string;
-  onGetAIResponse: (question: string, tool: string) => void;
+  onGetAIResponse?: (question: string, tool: string) => void;
   onClose?: () => void;
 }
 
-export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }: PresetReplyProps) {
-  const [showAIOption, setShowAIOption] = useState(true);
-
-  const handleGetAIResponse = () => {
-    setShowAIOption(false);
-    onGetAIResponse(question, tool);
-  };
-
+export function PresetReply({ reply, tool, onClose }: PresetReplyProps) {
   // Render the same components as AI responses for better consistency
   const renderPresetComponent = () => {
     switch (tool) {
@@ -39,42 +31,42 @@ export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }:
             <Presentation />
           </div>
         );
-      
+
       case 'getProjects':
         return (
           <div className="w-full overflow-hidden rounded-lg mb-4">
             <AllProjects />
           </div>
         );
-      
+
       case 'getSkills':
         return (
           <div className="w-full rounded-lg mb-4">
             <Skills />
           </div>
         );
-      
+
       case 'getContact':
         return (
           <div className="w-full rounded-lg mb-4">
             <Contact />
           </div>
         );
-      
+
       case 'getResume':
         return (
           <div className="w-full rounded-lg mb-4">
             <Resume />
           </div>
         );
-      
+
       case 'getInternship':
         return (
           <div className="w-full rounded-lg mb-4">
             <AvailabilityCard />
           </div>
         );
-      
+
       default:
         return null;
     }
@@ -91,52 +83,20 @@ export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }:
     >
       {/* If we have a component to render, show it like AI responses */}
       {presetComponent ? (
-        <div className="w-full space-y-4">
-          {/* Render the component */}
-          {presetComponent}
-          
-          {/* Only show AI option when there's a major component - no text needed */}
-          {showAIOption && (
-            <ChatBubble variant="received">
-              <ChatBubbleMessage className="bg-gray-50/80 dark:bg-gray-800/80 w-full">
-                <div className="space-y-3 p-6 w-full">
-                  {onClose && (
-                    <div className="flex justify-end">
-                      <Button
-                        onClick={onClose}
-                        variant="ghost"
-                        size="sm"
-                        className="h-6 w-6 p-0 hover:bg-gray-200/50 rounded-full"
-                      >
-                        <X className="w-4 h-4" />
-                      </Button>
-                    </div>
-                  )}
-                  
-                  <div className="flex flex-col gap-3 px-2">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <div className="flex items-center gap-1.5 text-xs text-blue-600 dark:text-blue-400">
-                          <Zap className="w-3 h-3 flex-shrink-0" />
-                          <span className="font-medium">Preset Response</span>
-                        </div>
-                        <span className="text-xs text-gray-500">• I implemented this to save API quota</span>
-                      </div>
-                      <Button 
-                        onClick={handleGetAIResponse}
-                        variant="outline"
-                        size="sm"
-                        className="text-xs bg-gradient-to-r from-purple-500 to-blue-500 text-white border-0 hover:from-purple-600 hover:to-blue-600 hover:text-white shadow-sm transition-all duration-200 hover:shadow-md self-start sm:self-auto"
-                      >
-                        <Sparkles className="w-3 h-3 mr-1.5 flex-shrink-0" />
-                        Get AI Response
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </ChatBubbleMessage>
-            </ChatBubble>
+        <div className="w-full space-y-2">
+          {onClose && (
+            <div className="flex justify-end">
+              <Button
+                onClick={onClose}
+                variant="ghost"
+                size="sm"
+                className="h-6 w-6 p-0 hover:bg-gray-200/50 rounded-full"
+              >
+                <X className="w-4 h-4" />
+              </Button>
+            </div>
           )}
+          {presetComponent}
         </div>
       ) : (        // Fallback to text-based preset for tools without components
         <ChatBubble variant="received">
@@ -155,12 +115,12 @@ export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }:
                   </Button>
                 </div>
               )}
-              
+
               {/* Reply content with enhanced formatting */}
               <div className="prose prose-sm max-w-none text-gray-700 dark:text-gray-300 px-2">
                 {reply.split('\n').map((line, index) => {
                   if (line.trim() === '') return <br key={index} />;
-                  
+
                   // Handle download link specially
                   if (line.includes('Download Resume Here') && line.includes('http')) {
                     const urlMatch = line.match(/(https?:\/\/[^\s]+)/);
@@ -190,7 +150,7 @@ export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }:
                       );
                     }
                   }
-                  
+
                   // Handle regular links
                   if (line.includes('http')) {
                     const parts = line.split(/(https?:\/\/[^\s]+)/);
@@ -215,21 +175,21 @@ export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }:
                       </p>
                     );
                   }
-                  
+
                   // Handle bold markdown
                   if (line.includes('**')) {
                     const parts = line.split('**');
                     return (
                       <p key={index} className="mb-3 last:mb-0 leading-relaxed">
-                        {parts.map((part, partIndex) => 
-                          partIndex % 2 === 1 ? 
-                            <strong key={partIndex} className="font-semibold text-gray-800 dark:text-gray-200">{part}</strong> : 
+                        {parts.map((part, partIndex) =>
+                          partIndex % 2 === 1 ?
+                            <strong key={partIndex} className="font-semibold text-gray-800 dark:text-gray-200">{part}</strong> :
                             part
                         )}
                       </p>
                     );
                   }
-                  
+
                   // Handle emoji lines (headers)
                   if (/^[🎯🚀💼🏆📊🔧🌟💡🎓📍🌍⚡🤝]/u.test(line)) {
                     return (
@@ -238,7 +198,7 @@ export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }:
                       </p>
                     );
                   }
-                  
+
                   // Handle bullet points
                   if (line.startsWith('• ') || line.startsWith('- ')) {
                     return (
@@ -247,7 +207,7 @@ export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }:
                       </p>
                     );
                   }
-                  
+
                   return (
                     <p key={index} className="mb-2 last:mb-0 leading-relaxed">
                       {line}
@@ -255,35 +215,9 @@ export function PresetReply({ question, reply, tool, onGetAIResponse, onClose }:
                   );
                 })}
               </div>
-              
-              {/* Enhanced AI option */}
-              {showAIOption && (
-                <div className="border-t border-gray-200/60 pt-4 mt-4">
-                  <div className="flex flex-col gap-3">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <div className="flex items-center gap-1.5 text-xs text-blue-600 dark:text-blue-400">
-                          <Zap className="w-3 h-3 flex-shrink-0" />
-                          <span className="font-medium">Optimized Response</span>
-                        </div>
-                        <span className="text-xs text-gray-500">• I implemented this to save API quota</span>
-                      </div>
-                      <Button 
-                        onClick={handleGetAIResponse}
-                        variant="outline"
-                        size="sm"
-                        className="text-xs bg-gradient-to-r from-purple-500 to-blue-500 text-white border-0 hover:from-purple-600 hover:to-blue-600 hover:text-white shadow-sm transition-all duration-200 hover:shadow-md self-start sm:self-auto"
-                      >
-                        <Sparkles className="w-3 h-3 mr-1.5 flex-shrink-0" />
-                        Get AI Response
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
-        </ChatBubbleMessage>
-      </ChatBubble>
+          </ChatBubbleMessage>
+        </ChatBubble>
       )}
     </motion.div>
   );
