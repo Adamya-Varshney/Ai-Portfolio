@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CalendarDays, Code2, Globe, Briefcase } from 'lucide-react';
+import { CalendarDays, Code2, Globe, Target, Rocket } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 interface AvailabilityData {
@@ -94,26 +94,31 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
 
       {/* Availability Highlight Section */}
       <div className="mb-8 rounded-2xl bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-6 border border-green-200 dark:border-green-800">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-            <Briefcase className="h-4 w-4 text-white" />
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {/* Domain I'm Open to */}
+          <div className="flex items-start gap-3">
+            <div className="h-8 w-8 flex-shrink-0 rounded-full bg-green-500 flex items-center justify-center">
+              <Target className="h-4 w-4 text-white" />
+            </div>
+            <div>
+              <p className="text-sm font-medium text-foreground mb-1">Domain I'm Open to</p>
+              <p className="text-sm text-green-600 dark:text-green-400 font-semibold">
+                Product Management (Digital / AI), Product Strategy
+              </p>
+            </div>
           </div>
-          <h3 className="text-lg font-semibold text-foreground">
-            Open to Product Management roles that let me build AI-enabled Digital Products and scale them to a billion users
-          </h3>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <p className="text-sm font-medium text-foreground mb-1">Status</p>
-            <p className="text-sm text-green-600 dark:text-green-400 font-semibold">
-              {data?.availability || "✅ Available for immediate start"}
-            </p>
-          </div>
-          <div>
-            <p className="text-sm font-medium text-foreground mb-1">Looking for</p>
-            <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold">
-              Full-time roles, Internships & Contract work
-            </p>
+
+          {/* Looking for */}
+          <div className="flex items-start gap-3">
+            <div className="h-8 w-8 flex-shrink-0 rounded-full bg-blue-500 flex items-center justify-center">
+              <Rocket className="h-4 w-4 text-white" />
+            </div>
+            <div>
+              <p className="text-sm font-medium text-foreground mb-1">Looking for</p>
+              <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold">
+                To build AI-enabled Digital Products and scale them to a billion users
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -188,9 +193,9 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
           What I bring
         </p>
         <p className="text-foreground text-sm">
-          {data?.experience.internshipCompleted || "Real-world ML experience from MookMati (Genre classification, FastAPI deployment, AWS)."} <br /> 
-          {data?.achievements[0] || "2nd position in Smart India Hackathon 2025 among 88,221 teams with hideFlare cybersecurity tool."} <br /> 
-          {data?.experience.freelanceWork || "25+ freelance automation projects delivered on Fiverr, cutting manual work by 60%."}
+          {data?.experience.internshipCompleted || "Owned the annual product lifecycle for IndiaMART's Premium B2B products — lifted seller retention 17% and added 3,000+ premium sellers through a 30-day GTM launching 4 new products."} <br />
+          {data?.achievements[0] || "Shipped 6 AI conversion-analytics dashboards and a RAG agent that cut cross-team knowledge retrieval from 3 days to seconds."} <br />
+          {data?.experience.freelanceWork || "Manage a portfolio of 6+ AI-driven B2B matchmaking products generating 100+ Cr in monthly revenue."}
         </p>
       </div>
 
@@ -198,7 +203,7 @@ const AvailabilityCard = ({ data }: AvailabilityCardProps) => {
       <div className="mt-8">
         <p className="text-foreground mb-2 text-lg font-semibold">Goal</p>
         <p className="text-foreground text-sm">
-          {data?.lookingFor.growthOpportunities || "Looking for roles that offer learning and advancement opportunities with experienced teams."} I want to work on {data?.lookingFor.technicalChallenges || "cutting-edge technologies"} that {data?.lookingFor.impactfulWork || "solve real-world problems and make a meaningful impact"}. I'm passionate, adaptable, and ready to contribute to {data?.lookingFor.collaboration || "collaborative, innovative environments"}! 🚀
+          I want to own ambiguous 0-to-N product problems end to end — from customer research to GTM — and build AI-native products that move real metrics. I lead with the customer problem, validate with data, and ship in tight, measurable loops, on teams that value user empathy as much as measurable impact. 🚀
         </p>
       </div>
 
