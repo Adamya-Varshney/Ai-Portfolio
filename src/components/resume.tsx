@@ -79,11 +79,15 @@ export function Resume() {
         
         <div className="w-full h-[600px] bg-gray-50">
           <iframe
-            src={resumeDetails.downloadUrl}
+            src={resumeDetails.downloadUrl.replace(
+              /drive\.google\.com\/uc\?export=download&id=([^&]+)/,
+              'drive.google.com/file/d/$1/preview'
+            )}
             width="100%"
             height="100%"
             className="border-0"
             title="Resume Preview"
+            allow="autoplay"
           />
         </div>
       </motion.div>
