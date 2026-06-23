@@ -344,7 +344,7 @@
     {
       "title": "Niyam (AI Fitness Coach)",
       "category": "AI / Health & Fitness",
-      "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals. [DRAFT — replace with your own framing and any impact metrics.]",
+      "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals.",
       "techStack": [
         "Lovable",
         "AI",
@@ -354,7 +354,6 @@
       "date": "2026",
       "status": "Completed",
       "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
       "links": [
         {
           "name": "Prototype",
@@ -371,7 +370,7 @@
     {
       "title": "Onset : Investment Platform",
       "category": "FinTech / Product",
-      "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps. [DRAFT — replace with your own framing and any impact metrics.]",
+      "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps.",
       "techStack": [
         "Product Strategy",
         "Figma",
@@ -381,7 +380,6 @@
       "date": "2026",
       "status": "Completed",
       "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
       "links": [
         {
           "name": "Deck",
@@ -402,7 +400,7 @@
     {
       "title": "Zomato : Farm Fresh",
       "category": "Product Case Study / D2C",
-      "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce. [DRAFT — replace with your own framing and any impact metrics.]",
+      "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce.",
       "techStack": [
         "Product Case Study",
         "Lovable",
@@ -412,7 +410,6 @@
       "date": "2026",
       "status": "Completed",
       "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
       "links": [
         {
           "name": "Deck",
@@ -433,7 +430,7 @@
     {
       "title": "OpenAI : Project TAGs",
       "category": "Product Case Study / AI",
-      "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation. [DRAFT — replace with your own framing and any impact metrics.]",
+      "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation.",
       "techStack": [
         "Product Case Study",
         "Lovable",
@@ -442,7 +439,6 @@
       "date": "2026",
       "status": "Completed",
       "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
       "links": [
         {
           "name": "Deck",
@@ -463,7 +459,7 @@
     {
       "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
       "category": "Machine Learning / LLM",
-      "description": "Fine-tuned a Llama model on a custom dataset — covering data preparation, training, and evaluation. [DRAFT — replace with your own framing and results.]",
+      "description": "Fine-tuned a Llama model on a custom dataset — covering data preparation, training, and evaluation.",
       "techStack": [
         "Python",
         "Llama",
@@ -474,7 +470,6 @@
       "date": "2025",
       "status": "Completed",
       "featured": false,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
       "links": [
         {
           "name": "Notebook",
@@ -540,7 +535,7 @@
     "fileType": "PDF",
     "lastUpdated": "June 2026",
     "fileSize": "",
-    "downloadUrl": "/resume.pdf"
+    "downloadUrl": "/Adamya_Varshney_AIPM.pdf"
   },
   "chatbot": {
     "name": "Adamya",
@@ -612,7 +607,7 @@
   },
   "meta": {
     "configVersion": "2.0",
-    "lastUpdated": "2026-06-20",
+    "lastUpdated": "2026-06-23",
     "generatedBy": "Adamya Varshney",
     "description": "Portfolio configuration generated from Adamya Varshney's resume — Product Manager profile spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
   }
