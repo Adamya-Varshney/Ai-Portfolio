@@ -99,6 +99,7 @@ When discussing specific topics, you can trigger specialized displays:
       email: personal.email,
       handle: personal.handle,
       socials: [
+        { name: personal.phone, url: `tel:${personal.phone.replace(/\s+/g, '')}` },
         { name: 'LinkedIn', url: social.linkedin },
         { name: 'GitHub', url: social.github },
         { name: 'Twitter', url: social.twitter },

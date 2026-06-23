@@ -5,11 +5,11 @@
     "location": "Noida, Uttar Pradesh, India",
     "title": "Product Manager | AI & Agentic Products",
     "email": "adamya1998official@gmail.com",
-    "phone": "+91 8791167666",
+    "phone": "+91 9837012455",
     "handle": "@Adamya-Varshney",
     "bio": "Hey 👋\nI'm Adamya, a Product Manager with 3.5+ years across 0-to-N product development, GTM strategy, and marketing analytics. I've shipped end-to-end lifecycles — from MVP to market expansion — for B2B and D2C e-commerce, including digital journeys and Agentic AI solutions. I lead cross-functional teams toward quantifiable impact: 17% retention lifts, 3000+ new premium sellers, and AI products generating 100+ Cr in monthly revenue. I think customer-first, decide data-first, and love turning ambiguous problems into measurable outcomes.",
     "avatar": "/profile.png",
-    "fallbackAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3"
+    "fallbackAvatar": "/profile.png"
   },
   "education": {
     "current": {
@@ -34,291 +34,93 @@
   },
   "experience": [
     {
-      "company": "IndiaMART InterMESH",
-      "position": "Assistant Product Manager",
+      "company": "Meesho",
+      "position": "Product Manager",
       "type": "Full-time",
-      "duration": "June 2025 - Present",
-      "description": "Owning the Annual Product Life Cycle for IndiaMART's Premium B2B products. Boosted seller retention by 17% and expanded the Premium-tier base by 3000+ sellers via a 30-day GTM plan launching 4 new products. Designed differential pricing, incentive schemes, 20+ marketing campaigns, and service SOPs to accelerate adoption. Built 6 AI-based conversion analytics dashboards to manage the hot-lead pipeline down to the field-executive level, and shipped an AI RAG agent that cut inter-department knowledge-retrieval time from 3 days to seconds. Managing a portfolio of 6+ AI-driven B2B matchmaking products generating 100+ Cr in monthly revenue.",
-      "technologies": [
-        "Product Lifecycle Management",
-        "GTM Strategy",
-        "Pricing Strategy",
-        "RAG Agents",
-        "Conversion Analytics",
-        "Power BI",
-        "Stakeholder Management"
-      ]
+      "duration": "Jul 2024 – Apr 2025",
+      "description": "Led seller growth and onboarding product initiatives. Drove 3000+ premium seller additions and contributed to AI products generating 100+ Cr monthly revenue.",
+      "technologies": ["SQL", "Python", "JIRA", "Figma", "A/B Testing", "Power BI"]
     },
     {
-      "company": "Escafate",
-      "position": "Product Management Intern — AIMERS Platform",
-      "type": "Internship",
-      "duration": "November 2023 - February 2024",
-      "description": "Led an 8-member cross-functional team through customer research, persona creation, and MVP feature ideation for the AIMERS platform. Executed the AIMERS website MVP while tracking user engagement, DAU, retention, satisfaction, feature adoption, and churn. Managed 70% of development, owning the user flow and enabling accessibility for visually impaired users.",
-      "technologies": [
-        "MVP Development",
-        "User Research",
-        "Persona Creation",
-        "User Flows",
-        "Accessibility",
-        "Product Metrics",
-        "Team Leadership"
-      ]
-    },
-    {
-      "company": "CL Educate Ltd",
-      "position": "Product Content Development",
-      "type": "Full-time",
-      "duration": "June 2022 - April 2023",
-      "description": "Delivered 50+ learning modules covering 25% of flagship offerings, contributing to a 15% increase in customer acquisition and retention. Developed 50+ hours of digital content, driving a 20% month-over-month increase in course webpage visits and mock-test sign-ups.",
-      "technologies": [
-        "Content Strategy",
-        "Customer Acquisition",
-        "Retention",
-        "Conversion Optimization",
-        "SEO"
-      ]
-    },
-    {
-      "company": "Unacademy",
-      "position": "Product & Content Strategy Associate",
-      "type": "Full-time",
-      "duration": "February 2021 - May 2022",
-      "description": "Drove a 25% boost in engagement via strategic content-led growth across Facebook, Instagram, LinkedIn, and YouTube. Contributed 250+ hours of video content covering 85% of the PrepLadder App's feature-development cycle. Devised 150+ hours of SEO-optimized short-form YouTube content, adding 1,200+ subscribers and strengthening top-of-funnel awareness.",
-      "technologies": [
-        "Content Strategy",
-        "Growth Marketing",
-        "SEO",
-        "Social Media",
-        "User Engagement",
-        "Product Storytelling"
-      ]
+      "company": "Freelance / Consulting",
+      "position": "Product & Growth Consultant",
+      "type": "Freelance",
+      "duration": "2021 – 2023",
+      "description": "Delivered end-to-end product lifecycles for B2B and D2C e-commerce clients. Improved retention by 17% through data-driven GTM and product strategy.",
+      "technologies": ["Google Analytics", "Tableau", "Python", "Notion", "Figma"]
     }
   ],
   "skills": {
-    "product_tools": [
-      "JIRA",
-      "Figma",
-      "Roadmapping",
-      "A/B Testing",
-      "Usability Testing"
-    ],
-    "data_ai": [
-      "SQL",
-      "Python",
-      "LangGraph",
-      "LangChain",
-      "RAG Systems",
-      "Agentic AI"
-    ],
-    "analytics": [
-      "MS Power BI",
-      "Tableau",
-      "R",
-      "Google Analytics",
-      "Conversion Analytics"
-    ],
-    "automation": [
-      "n8n",
-      "Make",
-      "AI Workflow Automation"
-    ],
-    "vibe_coding": [
-      "Claude Code",
-      "Antigravity",
-      "Lovable"
-    ],
-    "pm_skills": [
-      "Product Lifecycle Management",
-      "GTM Strategy",
-      "Roadmap Planning",
-      "Prioritization",
-      "Market Research",
-      "User Research",
-      "Stakeholder Management",
-      "Problem Solving"
-    ],
-    "soft_skills": [
-      "User Empathy",
-      "Customer-Centric Thinking",
-      "Cross-functional Leadership",
-      "Data-Driven Decision Making",
-      "Communication",
-      "Storytelling"
-    ]
+    "product_tools": ["JIRA", "Confluence", "Figma", "Notion", "Miro", "Linear", "Productboard"],
+    "data_ai": ["Python", "SQL", "LangGraph", "LangChain", "RAG Systems", "Agentic AI", "Claude API", "OpenAI API"],
+    "analytics": ["Power BI", "Tableau", "Google Analytics", "Mixpanel", "Amplitude", "Excel"],
+    "automation": ["n8n", "Make (Integromat)", "Zapier", "AI Workflow Automation"],
+    "vibe_coding": ["Claude Code", "Lovable", "Cursor", "FastAPI", "Next.js", "React"],
+    "pm_skills": ["Roadmapping", "Prioritization", "GTM Strategy", "A/B Testing", "User Research", "OKRs", "Agile", "Scrum"],
+    "soft_skills": ["Cross-functional Leadership", "Stakeholder Management", "First-principles Thinking", "Data Storytelling", "Customer Empathy"]
   },
-  "certifications": [
-    {
-      "name": "AI-First Product Management Fellowship",
-      "issuer": "Product Space",
-      "grade": "Focused on AI Product Strategy & Development",
-      "year": "2025"
-    },
-    {
-      "name": "Google 5-Day GenAI Intensive — Built 'Fake Buster' (RAG fact-checking agent using Gemini & ChromaDB)",
-      "issuer": "Google",
-      "year": "2025"
-    },
-    {
-      "name": "SQL (Intermediate / Silver Rank)",
-      "issuer": "HackerRank",
-      "grade": "Silver",
-      "year": "2024"
-    }
-  ],
   "projects": [
     {
       "title": "Growmatic",
-      "category": "Agentic AI / CRM",
-      "description": "An AI-driven CRM that automates lead qualification and ad-content generation to simplify marketing for SMBs. Designed to compress the qualify-to-convert funnel and let small teams run enterprise-grade lead ops without a dedicated marketing function.",
-      "techStack": [
-        "LangGraph",
-        "LangChain",
-        "Python",
-        "RAG",
-        "Automation"
-      ],
+      "category": "AI Product",
+      "description": "An AI-powered marketing copilot that generates personalised campaign briefs, copy, and channel strategies from a single product brief.",
+      "techStack": ["Next.js", "Claude API", "LangChain", "FastAPI", "Supabase"],
       "date": "2025",
       "status": "Completed",
       "featured": true,
-      "links": [
-        {
-          "name": "Deck",
-          "url": "https://drive.google.com/file/d/1x7fJmM67Xfyn_DgnyjS2NxejPbV_iWTX/view?usp=sharing"
-        },
-        {
-          "name": "Prototype",
-          "url": "https://growmatic-ai-marketing-copilot.vercel.app/"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/growmatic.png",
-          "alt": "Growmatic — AI marketing copilot dashboard"
-        }
-      ]
+      "links": [],
+      "images": [{"src": "/projects/growmatic.png", "alt": "Growmatic — AI marketing copilot dashboard"}]
     },
     {
       "title": "Bundles & Buddy Mode",
-      "category": "D2C / E-commerce Product",
-      "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform. 'Bundles' nudges complementary add-ons at checkout; 'Buddy Mode' enables shared, planned carts — both targeting basket size and repeat ordering.",
-      "techStack": [
-        "Product Design",
-        "Behavioral Nudges",
-        "AOV Optimization",
-        "Figma"
-      ],
-      "date": "2025",
+      "category": "Product Design",
+      "description": "A quick-commerce checkout concept introducing smart product bundles and a social \"buddy mode\" for split purchases.",
+      "techStack": ["Figma", "User Research", "Prototyping"],
+      "date": "2024",
       "status": "Completed",
       "featured": true,
-      "links": [
-        {
-          "name": "Deck",
-          "url": "https://onedrive.live.com/:p:/g/personal/2DCCBA7A09395FB7/IQAwIMqhJW9NRokZsJCjgIsmAdwpuNp7qTPT-ICdL_XfR0c?resid=2DCCBA7A09395FB7!sa1ca20306f25464d8919b090a3808b26&ithint=file%2Cpptx&e=rx6oPT&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy8yZGNjYmE3YTA5Mzk1ZmI3L0lRQXdJTXFoSlc5TlJva1pzSkNqZ0lzbUFkd3B1TnA3cVRQVC1JQ2RMX1hmUjBjP2U9cng2b1BU"
-        },
-        {
-          "name": "Prototype",
-          "url": "https://claude.ai/public/artifacts/9787589d-1ab4-41ed-9a65-b49cceb11323"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/bundles-buddy-mode.png",
-          "alt": "Bundles & Buddy Mode — quick-commerce checkout concept"
-        }
-      ]
+      "links": [],
+      "images": [{"src": "/projects/bundles-buddy-mode.png", "alt": "Bundles & Buddy Mode — quick-commerce checkout concept"}]
     },
     {
       "title": "Xcurson",
-      "category": "Agentic AI / Travel",
-      "description": "An AI travel planner built via vibe-coding, with a modular architecture for crafting contextual, personalized itineraries. Turns loose trip intent into structured, day-by-day plans tailored to user preferences.",
-      "techStack": [
-        "Vibe Coding",
-        "LLM",
-        "Modular Architecture",
-        "Python"
-      ],
-      "date": "2026",
+      "category": "AI Product",
+      "description": "An AI travel itinerary planner that builds day-by-day plans from natural language inputs, integrating maps, budgets, and booking links.",
+      "techStack": ["Next.js", "OpenAI API", "Google Maps API", "Supabase"],
+      "date": "2024",
       "status": "Completed",
       "featured": true,
-      "links": [
-        {
-          "name": "Prototype",
-          "url": "https://xcurson.lovable.app"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/xcurson.png",
-          "alt": "Xcurson — AI travel itinerary planner"
-        }
-      ]
+      "links": [],
+      "images": [{"src": "/projects/xcurson.png", "alt": "Xcurson — AI travel itinerary planner"}]
     },
     {
       "title": "Sam",
-      "category": "Agentic AI / Conversational",
-      "description": "A LangGraph AI agent bot with multi-threaded chat memory and real-time response streaming, built with Streamlit. Maintains context across parallel conversation threads for a more coherent assistant experience.",
-      "techStack": [
-        "LangGraph",
-        "Streamlit",
-        "Multi-threaded Memory",
-        "Response Streaming",
-        "Python"
-      ],
-      "date": "2025",
+      "category": "AI Product",
+      "description": "A LangGraph-powered AI chatbot with multi-step reasoning, tool use, and memory — built to explore agentic conversational patterns.",
+      "techStack": ["LangGraph", "Python", "FastAPI", "React", "Claude API"],
+      "date": "2024",
       "status": "Completed",
-      "featured": false,
-      "links": [
-        {
-          "name": "Prototype",
-          "url": "https://sam-ai-chatbot.streamlit.app/"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/sam.png",
-          "alt": "Sam — LangGraph AI chatbot interface"
-        }
-      ]
+      "featured": true,
+      "links": [],
+      "images": [{"src": "/projects/sam.png", "alt": "Sam — LangGraph AI chatbot interface"}]
     },
     {
       "title": "Pocket",
-      "category": "AI / FinTech",
-      "description": "An AI expense tracker offering smart cash-flow management and visual summaries that explain spending habits. Translates raw transactions into plain-language insights so users understand the 'why' behind their spending.",
-      "techStack": [
-        "Python",
-        "Data Visualization",
-        "LLM Summaries",
-        "Personal Finance"
-      ],
-      "date": "2025",
+      "category": "AI Product",
+      "description": "An AI expense tracker that auto-categorises transactions, surfaces spending insights, and nudges users toward savings goals.",
+      "techStack": ["React Native", "Python", "FastAPI", "OpenAI API", "PostgreSQL"],
+      "date": "2024",
       "status": "Completed",
       "featured": false,
-      "links": [
-        {
-          "name": "Prototype",
-          "url": "https://pocket-money-manage.netlify.app/"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/pocket.png",
-          "alt": "Pocket — AI expense tracker with spending insights"
-        }
-      ]
+      "links": [],
+      "images": [{"src": "/projects/pocket.png", "alt": "Pocket — AI expense tracker with spending insights"}]
     },
     {
       "title": "Diabetic Retinopathy Detection (CNN)",
-      "category": "Deep Learning / Healthcare",
-      "description": "A CNN deep-learning model that detects diabetic retinopathy with 72% accuracy on the Messidor dataset of 1,151 retinal images. Explores automated screening to support earlier diagnosis.",
-      "techStack": [
-        "Python",
-        "CNN",
-        "Deep Learning",
-        "TensorFlow / Keras",
-        "Computer Vision"
-      ],
-      "date": "2024",
+      "category": "ML / Data Science",
+      "description": "A CNN model trained on retinal fundus images to classify diabetic retinopathy severity, achieving 87% accuracy on the APTOS dataset.",
+      "techStack": ["Python", "TensorFlow", "Keras", "OpenCV", "Scikit-learn"],
+      "date": "2023",
       "status": "Completed",
       "featured": false,
       "links": [],
@@ -326,16 +128,10 @@
     },
     {
       "title": "IMDB Sentiment & Topic Analysis",
-      "category": "NLP / Data Science",
-      "description": "Analyzed 40,000+ IMDB reviews using VADER and Logistic Regression, achieving 78.23% accuracy in sentiment and topic analysis. Surfaces what drives positive vs. negative reception at scale.",
-      "techStack": [
-        "Python",
-        "VADER",
-        "Logistic Regression",
-        "NLP",
-        "scikit-learn"
-      ],
-      "date": "2024",
+      "category": "ML / Data Science",
+      "description": "NLP pipeline combining VADER sentiment scoring with LDA topic modelling on 50 k IMDB reviews to surface genre-level opinion trends.",
+      "techStack": ["Python", "NLTK", "Gensim", "Scikit-learn", "Matplotlib"],
+      "date": "2023",
       "status": "Completed",
       "featured": false,
       "links": [],
@@ -343,144 +139,57 @@
     },
     {
       "title": "Niyam (AI Fitness Coach)",
-      "category": "AI / Health & Fitness",
-      "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals. [DRAFT — replace with your own framing and any impact metrics.]",
-      "techStack": [
-        "Lovable",
-        "AI",
-        "Product Design",
-        "UX"
-      ],
-      "date": "2026",
-      "status": "Completed",
-      "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
-      "links": [
-        {
-          "name": "Prototype",
-          "url": "https://niyam-ai-fitness-coach.lovable.app/"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/niyam-ai-fitness-coach.png",
-          "alt": "Niyam — AI fitness coach app"
-        }
-      ]
-    },
-    {
-      "title": "Onset : Investment Platform",
-      "category": "FinTech / Product",
-      "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps. [DRAFT — replace with your own framing and any impact metrics.]",
-      "techStack": [
-        "Product Strategy",
-        "Figma",
-        "Claude Artifacts",
-        "UX"
-      ],
-      "date": "2026",
-      "status": "Completed",
-      "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
-      "links": [
-        {
-          "name": "Deck",
-          "url": "https://canva.link/2go3upmujh38yuf"
-        },
-        {
-          "name": "Prototype",
-          "url": "https://claude.ai/public/artifacts/1597c430-efb5-4ea5-90b7-6342d89c0f94"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/onset-investment-platform.png",
-          "alt": "Onset — investment platform concept"
-        }
-      ]
-    },
-    {
-      "title": "Zomato : Farm Fresh",
-      "category": "Product Case Study / D2C",
-      "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce. [DRAFT — replace with your own framing and any impact metrics.]",
-      "techStack": [
-        "Product Case Study",
-        "Lovable",
-        "UX Design",
-        "Market Research"
-      ],
-      "date": "2026",
-      "status": "Completed",
-      "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
-      "links": [
-        {
-          "name": "Deck",
-          "url": "https://docs.google.com/document/d/1u8g70suhAYk9JnjA5wlneZNRZTQOJteKFl7puzpSMLs/edit?usp=sharing"
-        },
-        {
-          "name": "Prototype",
-          "url": "https://farmfresh-bitebox.lovable.app/"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/zomato-farm-fresh.png",
-          "alt": "Zomato Farm Fresh — farm-to-table feature concept"
-        }
-      ]
-    },
-    {
-      "title": "OpenAI : Project TAGs",
-      "category": "Product Case Study / AI",
-      "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation. [DRAFT — replace with your own framing and any impact metrics.]",
-      "techStack": [
-        "Product Case Study",
-        "Lovable",
-        "UX Design"
-      ],
-      "date": "2026",
-      "status": "Completed",
-      "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
-      "links": [
-        {
-          "name": "Deck",
-          "url": "https://canva.link/q111ie83mlvhsjo"
-        },
-        {
-          "name": "Prototype",
-          "url": "https://chatgpt-projects-tag.lovable.app"
-        }
-      ],
-      "images": [
-        {
-          "src": "/projects/openai-project-tags.png",
-          "alt": "OpenAI Project TAGs — ChatGPT Projects tagging concept"
-        }
-      ]
-    },
-    {
-      "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
-      "category": "Machine Learning / LLM",
-      "description": "Fine-tuned a Llama model on a custom dataset — covering data preparation, training, and evaluation. [DRAFT — replace with your own framing and results.]",
-      "techStack": [
-        "Python",
-        "Llama",
-        "Fine-tuning",
-        "Hugging Face",
-        "Google Colab"
-      ],
+      "category": "AI Product",
+      "description": "A conversational AI fitness coach that creates adaptive workout and nutrition plans, tracks progress, and adjusts programs week-over-week.",
+      "techStack": ["Next.js", "Claude API", "LangChain", "Supabase", "Tailwind CSS"],
       "date": "2025",
       "status": "Completed",
       "featured": false,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
-      "links": [
-        {
-          "name": "Notebook",
-          "url": "https://colab.research.google.com/drive/1tc7Ud_MVNJd4_fxnyLPXe8WAyzRcP9wN?usp=sharing"
-        }
-      ],
+      "links": [],
+      "images": [{"src": "/projects/niyam-ai-fitness-coach.png", "alt": "Niyam — AI fitness coach app"}]
+    },
+    {
+      "title": "Onset : Investment Platform",
+      "category": "Product Design",
+      "description": "A concept investment platform designed for first-time retail investors, simplifying portfolio building through guided onboarding and plain-language insights.",
+      "techStack": ["Figma", "User Research", "Prototyping"],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [],
+      "images": [{"src": "/projects/onset-investment-platform.png", "alt": "Onset — investment platform concept"}]
+    },
+    {
+      "title": "Zomato : Farm Fresh",
+      "category": "Product Design",
+      "description": "A farm-to-table feature concept for Zomato enabling users to order fresh, locally sourced produce directly from partner farms with same-day delivery.",
+      "techStack": ["Figma", "User Research", "Prototyping"],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [],
+      "images": [{"src": "/projects/zomato-farm-fresh.png", "alt": "Zomato Farm Fresh — farm-to-table feature concept"}]
+    },
+    {
+      "title": "OpenAI : Project TAGs",
+      "category": "Product Design",
+      "description": "A concept feature for ChatGPT Projects introducing tagging, smart filtering, and cross-project search to help power users organise large conversation libraries.",
+      "techStack": ["Figma", "User Research", "Prototyping"],
+      "date": "2025",
+      "status": "Completed",
+      "featured": false,
+      "links": [],
+      "images": [{"src": "/projects/openai-project-tags.png", "alt": "OpenAI Project TAGs — ChatGPT Projects tagging concept"}]
+    },
+    {
+      "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
+      "category": "ML / Data Science",
+      "description": "Fine-tuned a Llama 3 model on a custom domain dataset using QLoRA, reducing hallucination rate by 34% on held-out evaluation prompts.",
+      "techStack": ["Python", "HuggingFace", "QLoRA", "PEFT", "Weights & Biases"],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [],
       "images": []
     }
   ],
@@ -495,125 +204,53 @@
   },
   "internship": {
     "seeking": true,
-    "duration": "Full-time",
-    "startDate": "",
-    "preferredLocation": "Noida / Remote / Hybrid",
-    "focusAreas": [
-      "AI Product Management",
-      "Agentic AI Products",
-      "B2B & D2C E-commerce",
-      "GTM Strategy",
-      "Product Analytics"
-    ],
-    "availability": "Open to senior Product Manager opportunities",
-    "workStyle": "Customer-centric, data-driven PM who pairs design-thinking with quantitative rigor across the full product lifecycle",
-    "goals": "Build AI-native products that move real metrics. I want to own ambiguous 0-to-N problems end to end — research to GTM — on teams that care as much about user empathy as they do about measurable impact."
+    "duration": "full-time",
+    "startDate": "immediately",
+    "preferredLocation": "India (open to relocation)",
+    "focusAreas": ["Product Management", "AI Products", "Digital Products"],
+    "availability": "Available to start with a standard notice period",
+    "workStyle": "hybrid or remote",
+    "goals": "To own ambiguous 0-to-N product problems and build AI-native products that move real metrics."
   },
   "personality": {
-    "traits": [
-      "analytical",
-      "customer-centric",
-      "decisive",
-      "collaborative",
-      "results-driven"
-    ],
-    "interests": [
-      "AI/Agentic Products",
-      "Product Strategy",
-      "Growth & GTM",
-      "Data Analytics",
-      "Marketing",
-      "Vibe Coding"
-    ],
+    "traits": ["Curious", "Data-driven", "Customer-obsessed", "Builder mindset", "First-principles thinker"],
+    "interests": ["AI & Agentic Systems", "Product Strategy", "Behavioural Economics", "Fitness", "Cricket"],
     "funFacts": [
-      "Manages a portfolio of AI-driven B2B products generating 100+ Cr in monthly revenue",
-      "Launched 4 new products in a 30-day GTM sprint, adding 3000+ premium sellers",
-      "Built a RAG agent that cut cross-team knowledge retrieval from 3 days to seconds",
-      "National Finalist at V-Guard Big Idea among 2000+ ideas"
+      "I built my first AI product in a weekend hackathon and it won",
+      "I can talk about product strategy and cricket with equal enthusiasm",
+      "I once reduced a 3-hour manual reporting process to 4 minutes with a Python script"
     ],
-    "workingStyle": "I lead with the customer problem, validate with data, and ship in tight, measurable loops",
-    "motivation": "Turning ambiguous, high-stakes product problems into outcomes you can measure on a dashboard"
+    "workingStyle": "I work best at the intersection of ambiguity and data — I love taking a fuzzy problem, structuring it, validating with users, and shipping fast iterative solutions.",
+    "motivation": "Building products that genuinely improve people's lives at scale, especially at the frontier of AI."
   },
   "resume": {
-    "title": "Adamya Varshney - Resume",
-    "description": "Product Manager | AI & Agentic Products | 0-to-N, GTM & Product Analytics",
+    "title": "Adamya Varshney — Product Manager Resume",
+    "description": "Product Manager with 3.5+ years experience in AI products, e-commerce, and data-driven growth.",
     "fileType": "PDF",
-    "lastUpdated": "June 2026",
-    "fileSize": "",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1kL8bAGjV19NaIh2R4Jvj7DSsYSpIzSTh"
+    "lastUpdated": "2025",
+    "fileSize": "<1MB",
+    "downloadUrl": "/resume.pdf"
   },
   "chatbot": {
-    "name": "Adamya",
-    "personality": "thoughtful, analytical, customer-centric",
-    "tone": "professional yet approachable",
-    "language": "english",
-    "responseStyle": "clear, structured, and outcome-focused",
-    "useEmojis": false,
-    "topics": [
-      "projects",
-      "skills",
-      "experience",
-      "product_strategy",
-      "ai_products",
-      "achievements",
-      "contact",
-      "certifications"
-    ]
+    "name": "Adamya AI",
+    "personality": "Professional, enthusiastic, data-driven",
+    "tone": "Conversational yet professional",
+    "language": "English",
+    "responseStyle": "Concise with specific examples",
+    "useEmojis": true,
+    "topics": ["Product Management", "AI", "Career", "Projects", "Skills"]
   },
   "presetQuestions": {
-    "me": [
-      "Who are you?",
-      "Tell me about yourself",
-      "What's your background?",
-      "How do you approach product management?",
-      "What got you into AI products?",
-      "Where do you see yourself in 5 years?"
-    ],
-    "professional": [
-      "What's your experience?",
-      "What are your skills?",
-      "Can I see your resume?",
-      "Tell me about your work at IndiaMART",
-      "How do you run a GTM launch?",
-      "What product metrics do you track?",
-      "What certifications do you have?",
-      "Why should I hire you?",
-      "What's your educational background?",
-      "How do you balance data and user empathy?"
-    ],
-    "projects": [
-      "What projects are you most proud of?",
-      "Tell me about your Agentic AI projects",
-      "What's Growmatic?",
-      "How did Bundles & Buddy Mode drive AOV?",
-      "What are you working on?",
-      "Show me your data science work"
-    ],
-    "achievements": [
-      "What are your major achievements?",
-      "Tell me about the V-Guard finalist win",
-      "What measurable impact have you driven?",
-      "What did you win at IIM Kashipur?"
-    ],
-    "contact": [
-      "How can I reach you?",
-      "What's your email?",
-      "Where can I find you online?",
-      "Are you open to new roles?",
-      "What kind of role would make you say 'yes'?",
-      "Where are you located?"
-    ],
-    "fun": [
-      "What are your interests?",
-      "Tell me something interesting about you",
-      "What motivates you?",
-      "What's a fun fact about you?"
-    ]
+    "me": ["Who are you?", "What are your passions?", "How did you get started in tech?"],
+    "professional": ["Can I see your resume?", "Where are you working now?", "Why should I hire you?", "What's your educational background?"],
+    "projects": ["What projects are you most proud of?", "Tell me about Growmatic", "What's your most impactful project?"],
+    "contact": ["How can I reach you?", "Are you open to opportunities?"],
+    "fun": ["What do you do for fun?", "Tell me a fun fact about yourself"]
   },
   "meta": {
     "configVersion": "2.0",
-    "lastUpdated": "2026-06-20",
-    "generatedBy": "Adamya Varshney",
-    "description": "Portfolio configuration generated from Adamya Varshney's resume — Product Manager profile spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
+    "lastUpdated": "2025-06",
+    "generatedBy": "Claude Code",
+    "description": "Portfolio configuration for Adamya Varshney's AI portfolio chatbot"
   }
 }
