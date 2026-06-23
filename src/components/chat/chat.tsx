@@ -196,7 +196,11 @@ const Chat = () => {
   // Collapse the floating avatar + its placeholder once the user scrolls down,
   // and restore them when scrolled back near the top. The hysteresis gap
   // (collapse > 50px, restore < 10px) prevents flicker right at the threshold.
+  // Check if this is the initial empty state (no preset reply yet)
+  const isEmptyState = !presetReply && !loadingSubmit;
+
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    if (isEmptyState) return;
     const top = e.currentTarget.scrollTop;
     setIsCollapsed((prev) => {
       if (!prev && top > 50) return true;
@@ -204,9 +208,6 @@ const Chat = () => {
       return prev;
     });
   };
-
-  // Check if this is the initial empty state (no preset reply yet)
-  const isEmptyState = !presetReply && !loadingSubmit;
 
   // Calculate header height based on hasActiveTool
   const headerHeight = hasActiveTool ? 100 : 180;
