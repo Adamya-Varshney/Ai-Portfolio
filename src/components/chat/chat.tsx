@@ -193,6 +193,7 @@ const Chat = () => {
   };
 
   const isEmptyState = !presetReply && !loadingSubmit;
+  const hideAvatar = presetReply?.tool === 'getPresentation';
 
   const headerHeight = hasActiveTool ? 100 : 180;
 
@@ -200,7 +201,7 @@ const Chat = () => {
     <div className="relative h-screen overflow-hidden">
       {/* Fixed Avatar Header with Gradient */}
       <div
-        className="fixed top-0 right-0 left-0 z-50"
+        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ease-in-out ${hideAvatar ? 'pointer-events-none opacity-0 -translate-y-full' : ''}`}
         style={{
           background:
             'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
@@ -244,7 +245,7 @@ const Chat = () => {
         {/* Scrollable Chat Content */}
         <div
           className="flex-1 overflow-y-auto px-2 pb-4"
-          style={{ paddingTop: `${headerHeight}px` }}
+          style={{ paddingTop: hideAvatar ? '0px' : `${headerHeight}px`, transition: 'padding-top 300ms ease-in-out' }}
         >
           <AnimatePresence mode="wait">
             {isEmptyState ? (
