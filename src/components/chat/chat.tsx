@@ -18,7 +18,6 @@ import {
 } from '@/components/ui/chat/chat-bubble';
 import HelperBoost from './HelperBoost';
 
-// ClientOnly component for client-side rendering
 //@ts-ignore
 const ClientOnly = ({ children }) => {
   const [hasMounted, setHasMounted] = useState(false);
@@ -34,12 +33,10 @@ const ClientOnly = ({ children }) => {
   return <>{children}</>;
 };
 
-// Define Avatar component props interface
 interface AvatarProps {
   hasActiveTool: boolean;
 }
 
-// Dynamic import of Avatar component
 const Avatar = dynamic<AvatarProps>(
   () =>
     Promise.resolve(({ hasActiveTool }: AvatarProps) => {
@@ -81,7 +78,6 @@ const Chat = () => {
   const initialQuery = searchParams.get('query');
   const [autoSubmitted, setAutoSubmitted] = useState(false);
   const [loadingSubmit, setLoadingSubmit] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(false);
   const [presetReply, setPresetReply] = useState<{
     question: string;
     reply: string;
@@ -186,32 +182,15 @@ const Chat = () => {
     setLoadingSubmit(false);
   };
 
-  // Check if this is the initial empty state (no preset reply yet)
   const isEmptyState = !presetReply && !loadingSubmit;
 
-  // Only collapse the avatar when there is content to scroll — not on the landing page
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    if (isEmptyState) return;
-    const top = e.currentTarget.scrollTop;
-    setIsCollapsed((prev) => {
-      if (!prev && top > 50) return true;
-      if (prev && top < 10) return false;
-      return prev;
-    });
-  };
-
-  // Calculate header height based on hasActiveTool
   const headerHeight = hasActiveTool ? 100 : 180;
 
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Fixed Avatar Header with Gradient */}
       <div
-        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ease-in-out ${
-          isCollapsed
-            ? '-translate-y-full opacity-0 pointer-events-none'
-            : 'translate-y-0 opacity-100'
-        }`}
+        className="fixed top-0 right-0 left-0 z-50"
         style={{
           background:
             'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
@@ -254,12 +233,8 @@ const Chat = () => {
       <div className="container mx-auto flex h-full max-w-3xl flex-col">
         {/* Scrollable Chat Content */}
         <div
-          onScroll={handleScroll}
           className="flex-1 overflow-y-auto px-2 pb-4"
-          style={{
-            paddingTop: `${isCollapsed ? 16 : headerHeight}px`,
-            transition: 'padding-top 300ms ease-in-out',
-          }}
+          style={{ paddingTop: `${headerHeight}px` }}
         >
           <AnimatePresence mode="wait">
             {isEmptyState ? (
