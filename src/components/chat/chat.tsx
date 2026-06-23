@@ -3,7 +3,7 @@ import { useChat } from '@ai-sdk/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 // Component imports
 import ChatBottombar from '@/components/chat/chat-bottombar';
@@ -43,7 +43,6 @@ interface AvatarProps {
 const Avatar = dynamic<AvatarProps>(
   () =>
     Promise.resolve(({ hasActiveTool }: AvatarProps) => {
-      // Conditional rendering based on detection
       return (
         <div
           className={`flex items-center justify-center rounded-full transition-all duration-300 ${hasActiveTool ? 'h-20 w-20' : 'h-28 w-28'}`}
@@ -74,8 +73,6 @@ const MOTION_CONFIG = {
   },
 };
 
-// Live AI is disabled — any free-form question (or the old "Get AI Response"
-// action) now shows this graceful note instead of calling the Gemini API.
 const FALLBACK_REPLY =
   "Thanks for asking! I answer through the quick questions below — tap Me, Projects, Skills, Resume, or Contact. For anything more specific, the Contact section has the best ways to reach me directly.";
 
@@ -85,7 +82,6 @@ const Chat = () => {
   const [autoSubmitted, setAutoSubmitted] = useState(false);
   const [loadingSubmit, setLoadingSubmit] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
   const [presetReply, setPresetReply] = useState<{
     question: string;
     reply: string;
@@ -141,7 +137,6 @@ const Chat = () => {
   const submitQuery = (query) => {
     if (!query.trim()) return;
 
-    // Quick-question presets render instantly, with no API call.
     if (presetReplies[query]) {
       const preset = presetReplies[query];
       setPresetReply({ question: query, reply: preset.reply, tool: preset.tool });
@@ -149,14 +144,12 @@ const Chat = () => {
       return;
     }
 
-    // No preset match → graceful fallback (live AI is disabled).
     setPresetReply({ question: query, reply: FALLBACK_REPLY, tool: '' });
     setLoadingSubmit(false);
   };
 
   //@ts-ignore
   const submitQueryToAI = (query) => {
-    // AI disabled — route everything through the preset/fallback path.
     submitQuery(query);
   };
 
@@ -168,18 +161,9 @@ const Chat = () => {
 
   //@ts-ignore
   const handleGetAIResponse = (question, tool) => {
-    // AI disabled — show the graceful fallback instead of calling the API.
     setPresetReply({ question, reply: FALLBACK_REPLY, tool: '' });
     setLoadingSubmit(false);
   };
-
-  // Scroll to top whenever a new section is opened
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = 0;
-      setIsCollapsed(false);
-    }
-  }, [presetReply]);
 
   useEffect(() => {
     if (initialQuery && !autoSubmitted) {
@@ -202,10 +186,12 @@ const Chat = () => {
     setLoadingSubmit(false);
   };
 
-  // Collapse the floating avatar + its placeholder once the user scrolls down,
-  // and restore them when scrolled back near the top. The hysteresis gap
-  // (collapse > 50px, restore < 10px) prevents flicker right at the threshold.
+  // Check if this is the initial empty state (no preset reply yet)
+  const isEmptyState = !presetReply && !loadingSubmit;
+
+  // Only collapse the avatar when there is content to scroll — not on the landing page
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    if (isEmptyState) return;
     const top = e.currentTarget.scrollTop;
     setIsCollapsed((prev) => {
       if (!prev && top > 50) return true;
@@ -213,13 +199,6 @@ const Chat = () => {
       return prev;
     });
   };
-
-  // Check if this is the initial empty state (no preset reply yet)
-  const isEmptyState = !presetReply && !loadingSubmit;
-
-  // Hide the floating avatar when the Me/Presentation section is showing
-  // (the Presentation card renders its own profile picture)
-  const hideAvatar = presetReply?.tool === 'getPresentation';
 
   // Calculate header height based on hasActiveTool
   const headerHeight = hasActiveTool ? 100 : 180;
@@ -229,7 +208,7 @@ const Chat = () => {
       {/* Fixed Avatar Header with Gradient */}
       <div
         className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ease-in-out ${
-          isCollapsed || hideAvatar
+          isCollapsed
             ? '-translate-y-full opacity-0 pointer-events-none'
             : 'translate-y-0 opacity-100'
         }`}
@@ -275,11 +254,10 @@ const Chat = () => {
       <div className="container mx-auto flex h-full max-w-3xl flex-col">
         {/* Scrollable Chat Content */}
         <div
-          ref={scrollRef}
           onScroll={handleScroll}
           className="flex-1 overflow-y-auto px-2 pb-4"
           style={{
-            paddingTop: `${isCollapsed || hideAvatar ? 16 : headerHeight}px`,
+            paddingTop: `${isCollapsed ? 16 : headerHeight}px`,
             transition: 'padding-top 300ms ease-in-out',
           }}
         >
