@@ -3,7 +3,7 @@ import { useChat } from '@ai-sdk/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { useSearchParams } from 'next/navigation';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 // Component imports
 import ChatBottombar from '@/components/chat/chat-bottombar';
@@ -85,6 +85,7 @@ const Chat = () => {
   const [autoSubmitted, setAutoSubmitted] = useState(false);
   const [loadingSubmit, setLoadingSubmit] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [presetReply, setPresetReply] = useState<{
     question: string;
     reply: string;
@@ -172,6 +173,14 @@ const Chat = () => {
     setLoadingSubmit(false);
   };
 
+  // Scroll to top whenever a new section is opened
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = 0;
+      setIsCollapsed(false);
+    }
+  }, [presetReply]);
+
   useEffect(() => {
     if (initialQuery && !autoSubmitted) {
       setAutoSubmitted(true);
@@ -208,6 +217,10 @@ const Chat = () => {
   // Check if this is the initial empty state (no preset reply yet)
   const isEmptyState = !presetReply && !loadingSubmit;
 
+  // Hide the floating avatar when the Me/Presentation section is showing
+  // (the Presentation card renders its own profile picture)
+  const hideAvatar = presetReply?.tool === 'getPresentation';
+
   // Calculate header height based on hasActiveTool
   const headerHeight = hasActiveTool ? 100 : 180;
 
@@ -216,7 +229,7 @@ const Chat = () => {
       {/* Fixed Avatar Header with Gradient */}
       <div
         className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ease-in-out ${
-          isCollapsed
+          isCollapsed || hideAvatar
             ? '-translate-y-full opacity-0 pointer-events-none'
             : 'translate-y-0 opacity-100'
         }`}
@@ -262,10 +275,11 @@ const Chat = () => {
       <div className="container mx-auto flex h-full max-w-3xl flex-col">
         {/* Scrollable Chat Content */}
         <div
+          ref={scrollRef}
           onScroll={handleScroll}
           className="flex-1 overflow-y-auto px-2 pb-4"
           style={{
-            paddingTop: `${isCollapsed ? 16 : headerHeight}px`,
+            paddingTop: `${isCollapsed || hideAvatar ? 16 : headerHeight}px`,
             transition: 'padding-top 300ms ease-in-out',
           }}
         >
