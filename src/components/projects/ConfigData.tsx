@@ -140,9 +140,10 @@ const ProjectContent = ({ project }: { project: { title: string } }) => {
 };
 
 // Main data export - now dynamically generated from config
-export const data = projectData.map(project => ({
+export const data = PROJECT_CONTENT.map(project => ({
   category: project.category,
   title: project.title,
-  src: project.src,
+  src: project.images?.[0]?.src ?? '',
+  section: (project as any).section ?? 'Product & Tech Projects',
   content: <ProjectContent project={{ title: project.title }} />,
 }));

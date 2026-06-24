@@ -96,56 +96,13 @@
     }
   ],
   "skills": {
-    "product_tools": [
-      "JIRA",
-      "Figma",
-      "Roadmapping",
-      "A/B Testing",
-      "Usability Testing"
-    ],
-    "data_ai": [
-      "SQL",
-      "Python",
-      "LangGraph",
-      "LangChain",
-      "RAG Systems",
-      "Agentic AI"
-    ],
-    "analytics": [
-      "MS Power BI",
-      "Tableau",
-      "R",
-      "Google Analytics",
-      "Conversion Analytics"
-    ],
-    "automation": [
-      "n8n",
-      "Make",
-      "AI Workflow Automation"
-    ],
-    "vibe_coding": [
-      "Claude Code",
-      "Antigravity",
-      "Lovable"
-    ],
-    "pm_skills": [
-      "Product Lifecycle Management",
-      "GTM Strategy",
-      "Roadmap Planning",
-      "Prioritization",
-      "Market Research",
-      "User Research",
-      "Stakeholder Management",
-      "Problem Solving"
-    ],
-    "soft_skills": [
-      "User Empathy",
-      "Customer-Centric Thinking",
-      "Cross-functional Leadership",
-      "Data-Driven Decision Making",
-      "Communication",
-      "Storytelling"
-    ]
+    "product_tools": ["JIRA", "Figma", "Roadmapping", "A/B Testing", "Usability Testing"],
+    "data_ai": ["SQL", "Python", "LangGraph", "LangChain", "RAG Systems", "Agentic AI"],
+    "analytics": ["MS Power BI", "Tableau", "R", "Google Analytics", "Conversion Analytics"],
+    "automation": ["n8n", "Make", "AI Workflow Automation"],
+    "vibe_coding": ["Claude Code", "Antigravity", "Lovable"],
+    "pm_skills": ["Product Lifecycle Management", "GTM Strategy", "Roadmap Planning", "Prioritization", "Market Research", "User Research", "Stakeholder Management", "Problem Solving"],
+    "soft_skills": ["User Empathy", "Customer-Centric Thinking", "Cross-functional Leadership", "Data-Driven Decision Making", "Communication", "Storytelling"]
   },
   "certifications": [
     {
@@ -169,6 +126,7 @@
   "projects": [
     {
       "title": "Growmatic",
+      "section": "Product & Tech Projects",
       "category": "Agentic AI / CRM",
       "description": "An AI-driven CRM that automates lead qualification and ad-content generation to simplify marketing for SMBs. Designed to compress the qualify-to-convert funnel and let small teams run enterprise-grade lead ops without a dedicated marketing function.",
       "techStack": ["LangGraph", "LangChain", "Python", "RAG", "Automation"],
@@ -183,8 +141,9 @@
     },
     {
       "title": "Bundles & Buddy Mode",
+      "section": "Product & Tech Projects",
       "category": "D2C / E-commerce Product",
-      "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform.",
+      "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform. 'Bundles' nudges complementary add-ons at checkout; 'Buddy Mode' enables shared, planned carts — both targeting basket size and repeat ordering.",
       "techStack": ["Product Design", "Behavioral Nudges", "AOV Optimization", "Figma"],
       "date": "2025",
       "status": "Completed",
@@ -197,8 +156,9 @@
     },
     {
       "title": "Xcurson",
+      "section": "Product & Tech Projects",
       "category": "Agentic AI / Travel",
-      "description": "An AI travel planner built via vibe-coding, with a modular architecture for crafting contextual, personalized itineraries.",
+      "description": "An AI travel planner built via vibe-coding, with a modular architecture for crafting contextual, personalized itineraries. Turns loose trip intent into structured, day-by-day plans tailored to user preferences.",
       "techStack": ["Vibe Coding", "LLM", "Modular Architecture", "Python"],
       "date": "2026",
       "status": "Completed",
@@ -208,8 +168,9 @@
     },
     {
       "title": "Sam",
+      "section": "Product & Tech Projects",
       "category": "Agentic AI / Conversational",
-      "description": "A LangGraph AI agent bot with multi-threaded chat memory and real-time response streaming, built with Streamlit.",
+      "description": "A LangGraph AI agent bot with multi-threaded chat memory and real-time response streaming, built with Streamlit. Maintains context across parallel conversation threads for a more coherent assistant experience.",
       "techStack": ["LangGraph", "Streamlit", "Multi-threaded Memory", "Response Streaming", "Python"],
       "date": "2025",
       "status": "Completed",
@@ -219,8 +180,9 @@
     },
     {
       "title": "Pocket",
+      "section": "Product & Tech Projects",
       "category": "AI / FinTech",
-      "description": "An AI expense tracker offering smart cash-flow management and visual summaries that explain spending habits.",
+      "description": "An AI expense tracker offering smart cash-flow management and visual summaries that explain spending habits. Translates raw transactions into plain-language insights so users understand the 'why' behind their spending.",
       "techStack": ["Python", "Data Visualization", "LLM Summaries", "Personal Finance"],
       "date": "2025",
       "status": "Completed",
@@ -230,8 +192,9 @@
     },
     {
       "title": "Diabetic Retinopathy Detection (CNN)",
+      "section": "Product & Tech Projects",
       "category": "Deep Learning / Healthcare",
-      "description": "A CNN deep-learning model that detects diabetic retinopathy with 72% accuracy on the Messidor dataset of 1,151 retinal images.",
+      "description": "A CNN deep-learning model that detects diabetic retinopathy with 72% accuracy on the Messidor dataset of 1,151 retinal images. Explores automated screening to support earlier diagnosis.",
       "techStack": ["Python", "CNN", "Deep Learning", "TensorFlow / Keras", "Computer Vision"],
       "date": "2024",
       "status": "Completed",
@@ -241,8 +204,9 @@
     },
     {
       "title": "IMDB Sentiment & Topic Analysis",
+      "section": "Product & Tech Projects",
       "category": "NLP / Data Science",
-      "description": "Analyzed 40,000+ IMDB reviews using VADER and Logistic Regression, achieving 78.23% accuracy in sentiment and topic analysis.",
+      "description": "Analyzed 40,000+ IMDB reviews using VADER and Logistic Regression, achieving 78.23% accuracy in sentiment and topic analysis. Surfaces what drives positive vs. negative reception at scale.",
       "techStack": ["Python", "VADER", "Logistic Regression", "NLP", "scikit-learn"],
       "date": "2024",
       "status": "Completed",
@@ -252,6 +216,7 @@
     },
     {
       "title": "Niyam (AI Fitness Coach)",
+      "section": "Product & Tech Projects",
       "category": "AI / Health & Fitness",
       "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals.",
       "techStack": ["Lovable", "AI", "Product Design", "UX"],
@@ -263,6 +228,7 @@
     },
     {
       "title": "Onset : Investment Platform",
+      "section": "Product & Tech Projects",
       "category": "FinTech / Product",
       "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps.",
       "techStack": ["Product Strategy", "Figma", "Claude Artifacts", "UX"],
@@ -277,6 +243,7 @@
     },
     {
       "title": "Zomato : Farm Fresh",
+      "section": "Product & Tech Projects",
       "category": "Product Case Study / D2C",
       "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce.",
       "techStack": ["Product Case Study", "Lovable", "UX Design", "Market Research"],
@@ -291,6 +258,7 @@
     },
     {
       "title": "OpenAI : Project TAGs",
+      "section": "Product & Tech Projects",
       "category": "Product Case Study / AI",
       "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation.",
       "techStack": ["Product Case Study", "Lovable", "UX Design"],
@@ -305,6 +273,7 @@
     },
     {
       "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
+      "section": "Product & Tech Projects",
       "category": "Machine Learning / LLM",
       "description": "Fine-tuned a Llama model on a custom dataset — covering data preparation, training, and evaluation.",
       "techStack": ["Python", "Llama", "Fine-tuning", "Hugging Face", "Google Colab"],
@@ -313,6 +282,66 @@
       "featured": false,
       "links": [{"name": "Notebook", "url": "https://colab.research.google.com/drive/1tc7Ud_MVNJd4_fxnyLPXe8WAyzRcP9wN?usp=sharing"}],
       "images": []
+    },
+    {
+      "title": "Growth Strategy of Jio",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Business Strategy",
+      "description": "A comprehensive analysis of Reliance Jio's hypergrowth strategy — examining how it disrupted India's telecom market through aggressive pricing, vertical integration, and ecosystem lock-in to become the country's largest telecom operator.",
+      "techStack": ["Business Strategy", "Market Analysis", "Telecom", "Growth Frameworks"],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/rubnx347fl3g9qz"}],
+      "images": [{"src": "/projects/jio-growth-strategy.png", "alt": "Growth Strategy of Jio"}]
+    },
+    {
+      "title": "ML Applications in Diagnosis of Diabetes",
+      "section": "Business Strategy & GTM Projects",
+      "category": "ML Research",
+      "description": "An exploration of how machine learning models — including logistic regression, decision trees, and neural networks — can be applied to early diabetes diagnosis, comparing model accuracy, interpretability, and clinical applicability.",
+      "techStack": ["Machine Learning", "Healthcare", "Data Analysis", "Python"],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/u8g6sxis66ona4t"}],
+      "images": [{"src": "/projects/diabetes-ml-diagnosis.png", "alt": "ML Applications in Diagnosis of Diabetes"}]
+    },
+    {
+      "title": "Marketing Strategy of Nike",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Marketing Strategy",
+      "description": "A deep-dive into Nike's global marketing playbook — covering brand positioning, athlete endorsements, digital-first campaigns, community building through Nike Run Club & Training Club, and how storytelling drives premium pricing power.",
+      "techStack": ["Marketing Strategy", "Brand Management", "Consumer Behavior", "Digital Marketing"],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/rost4te7qbv1fto"}],
+      "images": [{"src": "/projects/nike-marketing-strategy.png", "alt": "Marketing Strategy of Nike"}]
+    },
+    {
+      "title": "GTM Strategy for New Product by Cisco",
+      "section": "Business Strategy & GTM Projects",
+      "category": "GTM Strategy",
+      "description": "A go-to-market plan for a new Cisco product targeting enterprise network security — covering ICP definition, channel strategy, competitive positioning, pricing model, and launch sequencing across geographies.",
+      "techStack": ["GTM Strategy", "B2B SaaS", "Enterprise Sales", "Product Launch"],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/ssllvtnt6mbvlff"}],
+      "images": [{"src": "/projects/cisco-gtm-strategy.png", "alt": "GTM Strategy for New Product by Cisco"}]
+    },
+    {
+      "title": "Business Strategy of ABC",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Business Strategy",
+      "description": "A strategic analysis of ABC's business model — examining competitive positioning, value chain, growth levers, and strategic recommendations to sustain long-term advantage in a dynamic market landscape.",
+      "techStack": ["Business Strategy", "Competitive Analysis", "Value Chain", "Strategic Planning"],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/4wn40q6i2epxi3u"}],
+      "images": [{"src": "/projects/abc-business-strategy.png", "alt": "Business Strategy of ABC"}]
     }
   ],
   "social": {
@@ -373,8 +402,8 @@
   },
   "meta": {
     "configVersion": "2.0",
-    "lastUpdated": "2026-06-23",
+    "lastUpdated": "2026-06-24",
     "generatedBy": "Adamya Varshney",
-    "description": "Portfolio configuration generated from Adamya Varshney's resume — Product Manager profile spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
+    "description": "Portfolio configuration for Adamya Varshney — Product Manager spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
   }
 }
