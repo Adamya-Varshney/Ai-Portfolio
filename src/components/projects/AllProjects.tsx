@@ -20,6 +20,9 @@ export default function AllProjects() {
         <h2 className="max-w-7xl mx-auto text-xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
           My Projects
         </h2>
+        <p className="max-w-7xl mx-auto text-sm md:text-base text-neutral-500 dark:text-neutral-400 font-sans mt-1">
+          Product Sense &amp; AI Applications
+        </p>
         <Carousel items={productCards} />
       </div>
 
@@ -27,6 +30,9 @@ export default function AllProjects() {
         <h2 className="max-w-7xl mx-auto text-xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-200 font-sans px-4 md:px-0">
           Business Strategy &amp; GTM Projects
         </h2>
+        <p className="max-w-7xl mx-auto text-sm md:text-base text-neutral-500 dark:text-neutral-400 font-sans mt-1 px-4 md:px-0">
+          GTM &amp; Growth Strategy
+        </p>
         <Carousel items={strategyCards} />
       </div>
     </div>
