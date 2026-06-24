@@ -39,15 +39,7 @@
       "type": "Full-time",
       "duration": "June 2025 - Present",
       "description": "Owning the Annual Product Life Cycle for IndiaMART's Premium B2B products. Boosted seller retention by 17% and expanded the Premium-tier base by 3000+ sellers via a 30-day GTM plan launching 4 new products. Designed differential pricing, incentive schemes, 20+ marketing campaigns, and service SOPs to accelerate adoption. Built 6 AI-based conversion analytics dashboards to manage the hot-lead pipeline down to the field-executive level, and shipped an AI RAG agent that cut inter-department knowledge-retrieval time from 3 days to seconds. Managing a portfolio of 6+ AI-driven B2B matchmaking products generating 100+ Cr in monthly revenue.",
-      "technologies": [
-        "Product Lifecycle Management",
-        "GTM Strategy",
-        "Pricing Strategy",
-        "RAG Agents",
-        "Conversion Analytics",
-        "Power BI",
-        "Stakeholder Management"
-      ]
+      "technologies": ["Product Lifecycle Management", "GTM Strategy", "Pricing Strategy", "RAG Agents", "Conversion Analytics", "Power BI", "Stakeholder Management"]
     },
     {
       "company": "Escafate",
@@ -55,15 +47,7 @@
       "type": "Internship",
       "duration": "November 2023 - February 2024",
       "description": "Led an 8-member cross-functional team through customer research, persona creation, and MVP feature ideation for the AIMERS platform. Executed the AIMERS website MVP while tracking user engagement, DAU, retention, satisfaction, feature adoption, and churn. Managed 70% of development, owning the user flow and enabling accessibility for visually impaired users.",
-      "technologies": [
-        "MVP Development",
-        "User Research",
-        "Persona Creation",
-        "User Flows",
-        "Accessibility",
-        "Product Metrics",
-        "Team Leadership"
-      ]
+      "technologies": ["MVP Development", "User Research", "Persona Creation", "User Flows", "Accessibility", "Product Metrics", "Team Leadership"]
     },
     {
       "company": "CL Educate Ltd",
@@ -71,13 +55,7 @@
       "type": "Full-time",
       "duration": "June 2022 - April 2023",
       "description": "Delivered 50+ learning modules covering 25% of flagship offerings, contributing to a 15% increase in customer acquisition and retention. Developed 50+ hours of digital content, driving a 20% month-over-month increase in course webpage visits and mock-test sign-ups.",
-      "technologies": [
-        "Content Strategy",
-        "Customer Acquisition",
-        "Retention",
-        "Conversion Optimization",
-        "SEO"
-      ]
+      "technologies": ["Content Strategy", "Customer Acquisition", "Retention", "Conversion Optimization", "SEO"]
     },
     {
       "company": "Unacademy",
@@ -85,14 +63,7 @@
       "type": "Full-time",
       "duration": "February 2021 - May 2022",
       "description": "Drove a 25% boost in engagement via strategic content-led growth across Facebook, Instagram, LinkedIn, and YouTube. Contributed 250+ hours of video content covering 85% of the PrepLadder App's feature-development cycle. Devised 150+ hours of SEO-optimized short-form YouTube content, adding 1,200+ subscribers and strengthening top-of-funnel awareness.",
-      "technologies": [
-        "Content Strategy",
-        "Growth Marketing",
-        "SEO",
-        "Social Media",
-        "User Engagement",
-        "Product Storytelling"
-      ]
+      "technologies": ["Content Strategy", "Growth Marketing", "SEO", "Social Media", "User Engagement", "Product Storytelling"]
     }
   ],
   "skills": {
@@ -293,7 +264,7 @@
       "status": "Completed",
       "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/rubnx347fl3g9qz"}],
-      "images": [{"src": "/projects/jio-growth-strategy.png", "alt": "Growth Strategy of Jio"}]
+      "images": [{"src": "/projects/Growth Strategy of Jio .png", "alt": "Growth Strategy of Jio"}]
     },
     {
       "title": "ML Applications in Diagnosis of Diabetes",
@@ -305,7 +276,7 @@
       "status": "Completed",
       "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/u8g6sxis66ona4t"}],
-      "images": [{"src": "/projects/diabetes-ml-diagnosis.png", "alt": "ML Applications in Diagnosis of Diabetes"}]
+      "images": [{"src": "/projects/ML Application in Medical Science.png", "alt": "ML Applications in Diagnosis of Diabetes"}]
     },
     {
       "title": "Marketing Strategy of Nike",
@@ -317,7 +288,7 @@
       "status": "Completed",
       "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/rost4te7qbv1fto"}],
-      "images": [{"src": "/projects/nike-marketing-strategy.png", "alt": "Marketing Strategy of Nike"}]
+      "images": [{"src": "/projects/Marketing Strategy of Nike.png", "alt": "Marketing Strategy of Nike"}]
     },
     {
       "title": "GTM Strategy for New Product by Cisco",
@@ -329,7 +300,7 @@
       "status": "Completed",
       "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/ssllvtnt6mbvlff"}],
-      "images": [{"src": "/projects/cisco-gtm-strategy.png", "alt": "GTM Strategy for New Product by Cisco"}]
+      "images": [{"src": "/projects/Marketing Strategy for New Service Cisco.png", "alt": "GTM Strategy for New Product by Cisco"}]
     },
     {
       "title": "Business Strategy of ABC",
@@ -341,7 +312,7 @@
       "status": "Completed",
       "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/4wn40q6i2epxi3u"}],
-      "images": [{"src": "/projects/abc-business-strategy.png", "alt": "Business Strategy of ABC"}]
+      "images": [{"src": "/projects/Strategy Management ABC.png", "alt": "Business Strategy of ABC"}]
     }
   ],
   "social": {
