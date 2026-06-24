@@ -7,7 +7,7 @@
     "email": "adamya1998official@gmail.com",
     "phone": "+91 8791167666",
     "handle": "@Adamya-Varshney",
-    "bio": "Hey 👋\nI'm Adamya, a Product Manager with 3.5+ years across 0-to-N product development, GTM strategy, and marketing analytics. I've shipped end-to-end lifecycles — from MVP to market expansion — for B2B and D2C e-commerce, including digital journeys and Agentic AI solutions. I lead cross-functional teams toward quantifiable impact: 17% retention lifts, 3000+ new premium sellers, and AI products generating 100+ Cr in monthly revenue. I think customer-first, decide data-first, and love turning ambiguous problems into measurable outcomes.",
+    "bio": "Hey \ud83d\udc4b\nI'm Adamya, a Product Manager with 3.5+ years across 0-to-N product development, GTM strategy, and marketing analytics. I've shipped end-to-end lifecycles \u2014 from MVP to market expansion \u2014 for B2B and D2C e-commerce, including digital journeys and Agentic AI solutions. I lead cross-functional teams toward quantifiable impact: 17% retention lifts, 3000+ new premium sellers, and AI products generating 100+ Cr in monthly revenue. I think customer-first, decide data-first, and love turning ambiguous problems into measurable outcomes.",
     "avatar": "/profile.png",
     "fallbackAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3"
   },
@@ -29,7 +29,7 @@
     "achievements": [
       "National Finalist at V-Guard Big Idea Business Plan Contest 2024 (competing against 2000+ product ideas with Aeromist)",
       "2nd Runners-up in DASHBOARD WAR 3.0 at IIM Kashipur (Data Cleaning, Visualization & Analysis)",
-      "Gold Medal in IIM Kashipur's URP — 3-month consulting engagement for an NGO on Process & Learning Management"
+      "Gold Medal in IIM Kashipur's URP \u2014 3-month consulting engagement for an NGO on Process & Learning Management"
     ]
   },
   "experience": [
@@ -51,7 +51,7 @@
     },
     {
       "company": "Escafate",
-      "position": "Product Management Intern — AIMERS Platform",
+      "position": "Product Management Intern \u2014 AIMERS Platform",
       "type": "Internship",
       "duration": "November 2023 - February 2024",
       "description": "Led an 8-member cross-functional team through customer research, persona creation, and MVP feature ideation for the AIMERS platform. Executed the AIMERS website MVP while tracking user engagement, DAU, retention, satisfaction, feature adoption, and churn. Managed 70% of development, owning the user flow and enabling accessibility for visually impaired users.",
@@ -155,7 +155,7 @@
       "year": "2025"
     },
     {
-      "name": "Google 5-Day GenAI Intensive — Built 'Fake Buster' (RAG fact-checking agent using Gemini & ChromaDB)",
+      "name": "Google 5-Day GenAI Intensive \u2014 Built 'Fake Buster' (RAG fact-checking agent using Gemini & ChromaDB)",
       "issuer": "Google",
       "year": "2025"
     },
@@ -194,14 +194,15 @@
       "images": [
         {
           "src": "/projects/growmatic.png",
-          "alt": "Growmatic — AI marketing copilot dashboard"
+          "alt": "Growmatic \u2014 AI marketing copilot dashboard"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "Bundles & Buddy Mode",
       "category": "D2C / E-commerce Product",
-      "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform. 'Bundles' nudges complementary add-ons at checkout; 'Buddy Mode' enables shared, planned carts — both targeting basket size and repeat ordering.",
+      "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform. 'Bundles' nudges complementary add-ons at checkout; 'Buddy Mode' enables shared, planned carts \u2014 both targeting basket size and repeat ordering.",
       "techStack": [
         "Product Design",
         "Behavioral Nudges",
@@ -224,9 +225,10 @@
       "images": [
         {
           "src": "/projects/bundles-buddy-mode.png",
-          "alt": "Bundles & Buddy Mode — quick-commerce checkout concept"
+          "alt": "Bundles & Buddy Mode \u2014 quick-commerce checkout concept"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "Xcurson",
@@ -250,9 +252,10 @@
       "images": [
         {
           "src": "/projects/xcurson.png",
-          "alt": "Xcurson — AI travel itinerary planner"
+          "alt": "Xcurson \u2014 AI travel itinerary planner"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "Sam",
@@ -277,9 +280,10 @@
       "images": [
         {
           "src": "/projects/sam.png",
-          "alt": "Sam — LangGraph AI chatbot interface"
+          "alt": "Sam \u2014 LangGraph AI chatbot interface"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "Pocket",
@@ -303,9 +307,10 @@
       "images": [
         {
           "src": "/projects/pocket.png",
-          "alt": "Pocket — AI expense tracker with spending insights"
+          "alt": "Pocket \u2014 AI expense tracker with spending insights"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "Diabetic Retinopathy Detection (CNN)",
@@ -322,7 +327,8 @@
       "status": "Completed",
       "featured": false,
       "links": [],
-      "images": []
+      "images": [],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "IMDB Sentiment & Topic Analysis",
@@ -339,12 +345,13 @@
       "status": "Completed",
       "featured": false,
       "links": [],
-      "images": []
+      "images": [],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "Niyam (AI Fitness Coach)",
       "category": "AI / Health & Fitness",
-      "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals. [DRAFT — replace with your own framing and any impact metrics.]",
+      "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals. [DRAFT \u2014 replace with your own framing and any impact metrics.]",
       "techStack": [
         "Lovable",
         "AI",
@@ -354,7 +361,7 @@
       "date": "2026",
       "status": "Completed",
       "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
+      "_draft": "Description, category, tech and date are DRAFT placeholders \u2014 please review/replace.",
       "links": [
         {
           "name": "Prototype",
@@ -364,14 +371,15 @@
       "images": [
         {
           "src": "/projects/niyam-ai-fitness-coach.png",
-          "alt": "Niyam — AI fitness coach app"
+          "alt": "Niyam \u2014 AI fitness coach app"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "Onset : Investment Platform",
       "category": "FinTech / Product",
-      "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps. [DRAFT — replace with your own framing and any impact metrics.]",
+      "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps. [DRAFT \u2014 replace with your own framing and any impact metrics.]",
       "techStack": [
         "Product Strategy",
         "Figma",
@@ -381,7 +389,7 @@
       "date": "2026",
       "status": "Completed",
       "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
+      "_draft": "Description, category, tech and date are DRAFT placeholders \u2014 please review/replace.",
       "links": [
         {
           "name": "Deck",
@@ -395,14 +403,15 @@
       "images": [
         {
           "src": "/projects/onset-investment-platform.png",
-          "alt": "Onset — investment platform concept"
+          "alt": "Onset \u2014 investment platform concept"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "Zomato : Farm Fresh",
       "category": "Product Case Study / D2C",
-      "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce. [DRAFT — replace with your own framing and any impact metrics.]",
+      "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce. [DRAFT \u2014 replace with your own framing and any impact metrics.]",
       "techStack": [
         "Product Case Study",
         "Lovable",
@@ -412,7 +421,7 @@
       "date": "2026",
       "status": "Completed",
       "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
+      "_draft": "Description, category, tech and date are DRAFT placeholders \u2014 please review/replace.",
       "links": [
         {
           "name": "Deck",
@@ -426,14 +435,15 @@
       "images": [
         {
           "src": "/projects/zomato-farm-fresh.png",
-          "alt": "Zomato Farm Fresh — farm-to-table feature concept"
+          "alt": "Zomato Farm Fresh \u2014 farm-to-table feature concept"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "OpenAI : Project TAGs",
       "category": "Product Case Study / AI",
-      "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation. [DRAFT — replace with your own framing and any impact metrics.]",
+      "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation. [DRAFT \u2014 replace with your own framing and any impact metrics.]",
       "techStack": [
         "Product Case Study",
         "Lovable",
@@ -442,7 +452,7 @@
       "date": "2026",
       "status": "Completed",
       "featured": true,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
+      "_draft": "Description, category, tech and date are DRAFT placeholders \u2014 please review/replace.",
       "links": [
         {
           "name": "Deck",
@@ -456,14 +466,15 @@
       "images": [
         {
           "src": "/projects/openai-project-tags.png",
-          "alt": "OpenAI Project TAGs — ChatGPT Projects tagging concept"
+          "alt": "OpenAI Project TAGs \u2014 ChatGPT Projects tagging concept"
         }
-      ]
+      ],
+      "section": "Product & Tech Projects"
     },
     {
       "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
       "category": "Machine Learning / LLM",
-      "description": "Fine-tuned a Llama model on a custom dataset — covering data preparation, training, and evaluation. [DRAFT — replace with your own framing and results.]",
+      "description": "Fine-tuned a Llama model on a custom dataset \u2014 covering data preparation, training, and evaluation. [DRAFT \u2014 replace with your own framing and results.]",
       "techStack": [
         "Python",
         "Llama",
@@ -474,14 +485,150 @@
       "date": "2025",
       "status": "Completed",
       "featured": false,
-      "_draft": "Description, category, tech and date are DRAFT placeholders — please review/replace.",
+      "_draft": "Description, category, tech and date are DRAFT placeholders \u2014 please review/replace.",
       "links": [
         {
           "name": "Notebook",
           "url": "https://colab.research.google.com/drive/1tc7Ud_MVNJd4_fxnyLPXe8WAyzRcP9wN?usp=sharing"
         }
       ],
-      "images": []
+      "images": [],
+      "section": "Product & Tech Projects"
+    },
+    {
+      "title": "Growth Strategy of Jio",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Business Strategy",
+      "description": "A comprehensive analysis of Reliance Jio's hypergrowth strategy \u2014 examining how it disrupted India's telecom market through aggressive pricing, vertical integration, and ecosystem lock-in to become the country's largest telecom operator.",
+      "techStack": [
+        "Business Strategy",
+        "Market Analysis",
+        "Telecom",
+        "Growth Frameworks"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/rubnx347fl3g9qz"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/jio-growth-strategy.png",
+          "alt": "Growth Strategy of Jio"
+        }
+      ]
+    },
+    {
+      "title": "ML Applications in Diagnosis of Diabetes",
+      "section": "Business Strategy & GTM Projects",
+      "category": "ML Research",
+      "description": "An exploration of how machine learning models \u2014 including logistic regression, decision trees, and neural networks \u2014 can be applied to early diabetes diagnosis, comparing model accuracy, interpretability, and clinical applicability.",
+      "techStack": [
+        "Machine Learning",
+        "Healthcare",
+        "Data Analysis",
+        "Python"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/u8g6sxis66ona4t"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/diabetes-ml-diagnosis.png",
+          "alt": "ML Applications in Diagnosis of Diabetes"
+        }
+      ]
+    },
+    {
+      "title": "Marketing Strategy of Nike",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Marketing Strategy",
+      "description": "A deep-dive into Nike's global marketing playbook \u2014 covering brand positioning, athlete endorsements, digital-first campaigns, community building through Nike Run Club & Training Club, and how storytelling drives premium pricing power.",
+      "techStack": [
+        "Marketing Strategy",
+        "Brand Management",
+        "Consumer Behavior",
+        "Digital Marketing"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/rost4te7qbv1fto"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/nike-marketing-strategy.png",
+          "alt": "Marketing Strategy of Nike"
+        }
+      ]
+    },
+    {
+      "title": "GTM Strategy for New Product by Cisco",
+      "section": "Business Strategy & GTM Projects",
+      "category": "GTM Strategy",
+      "description": "A go-to-market plan for a new Cisco product targeting enterprise network security \u2014 covering ICP definition, channel strategy, competitive positioning, pricing model, and launch sequencing across geographies.",
+      "techStack": [
+        "GTM Strategy",
+        "B2B SaaS",
+        "Enterprise Sales",
+        "Product Launch"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/ssllvtnt6mbvlff"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/cisco-gtm-strategy.png",
+          "alt": "GTM Strategy for New Product by Cisco"
+        }
+      ]
+    },
+    {
+      "title": "Business Strategy of ABC",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Business Strategy",
+      "description": "A strategic analysis of ABC's business model \u2014 examining competitive positioning, value chain, growth levers, and strategic recommendations to sustain long-term advantage in a dynamic market landscape.",
+      "techStack": [
+        "Business Strategy",
+        "Competitive Analysis",
+        "Value Chain",
+        "Strategic Planning"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/4wn40q6i2epxi3u"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/abc-business-strategy.png",
+          "alt": "Business Strategy of ABC"
+        }
+      ]
     }
   ],
   "social": {
@@ -507,7 +654,7 @@
     ],
     "availability": "Open to senior Product Manager opportunities",
     "workStyle": "Customer-centric, data-driven PM who pairs design-thinking with quantitative rigor across the full product lifecycle",
-    "goals": "Build AI-native products that move real metrics. I want to own ambiguous 0-to-N problems end to end — research to GTM — on teams that care as much about user empathy as they do about measurable impact."
+    "goals": "Build AI-native products that move real metrics. I want to own ambiguous 0-to-N problems end to end \u2014 research to GTM \u2014 on teams that care as much about user empathy as they do about measurable impact."
   },
   "personality": {
     "traits": [
@@ -614,6 +761,6 @@
     "configVersion": "2.0",
     "lastUpdated": "2026-06-20",
     "generatedBy": "Adamya Varshney",
-    "description": "Portfolio configuration generated from Adamya Varshney's resume — Product Manager profile spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
+    "description": "Portfolio configuration generated from Adamya Varshney's resume \u2014 Product Manager profile spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
   }
 }
