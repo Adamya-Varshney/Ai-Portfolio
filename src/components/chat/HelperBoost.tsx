@@ -216,7 +216,7 @@ export default function HelperBoost({
           {isVisible && (
             <div className="w-full">
               <div
-                className="flex w-full flex-wrap gap-1 md:gap-3"
+                className="flex w-full flex-wrap gap-1.5"
                 style={{ justifyContent: 'safe center' }}
               >
                 {questionConfig.map(({ key, color, icon: Icon }) => (
@@ -224,11 +224,11 @@ export default function HelperBoost({
                     key={key}
                     onClick={() => handleQuestionClick(key)}
                     variant="outline"
-                    className="border-border hover:bg-border/30 h-auto min-w-[100px] flex-shrink-0 cursor-pointer rounded-xl border bg-white/80 px-4 py-3 shadow-none backdrop-blur-sm transition-none active:scale-95"
+                    className="border-border hover:bg-border/30 h-auto min-w-[72px] flex-shrink-0 cursor-pointer rounded-xl border bg-white/80 px-3 py-2 sm:min-w-[100px] sm:px-4 sm:py-3 shadow-none backdrop-blur-sm transition-none active:scale-95"
                   >
-                    <div className="flex items-center gap-3 text-gray-700">
-                      <Icon size={18} strokeWidth={2} color={color} />
-                      <span className="text-sm font-medium">{key}</span>
+                    <div className="flex items-center gap-1.5 sm:gap-3 text-gray-700">
+                      <Icon size={16} strokeWidth={2} color={color} />
+                      <span className="text-xs sm:text-sm font-medium">{key}</span>
                     </div>
                   </Button>
                 ))}
@@ -238,13 +238,13 @@ export default function HelperBoost({
                     <TooltipTrigger asChild>
                       <Drawer.Trigger className="group relative flex flex-shrink-0 items-center justify-center">
                         <motion.div
-                          className="hover:bg-border/30 flex h-auto cursor-pointer items-center space-x-1 rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 text-sm backdrop-blur-sm transition-all duration-200 dark:border-neutral-800 dark:bg-neutral-900"
+                          className="hover:bg-border/30 flex h-auto cursor-pointer items-center space-x-1 rounded-xl border border-neutral-200 bg-white/80 px-3 py-2 sm:px-4 sm:py-3 text-sm backdrop-blur-sm transition-all duration-200 dark:border-neutral-800 dark:bg-neutral-900"
                           whileHover={{ scale: 1 }}
                           whileTap={{ scale: 0.98 }}
                         >
                           <div className="flex items-center gap-3 text-gray-700">
                             <CircleEllipsis
-                              className="h-[20px] w-[18px]"
+                              className="h-[18px] w-[16px] sm:h-[20px] sm:w-[18px]"
                               strokeWidth={2}
                             />
                           </div>
@@ -263,7 +263,7 @@ export default function HelperBoost({
 
         <Drawer.Portal>
           <Drawer.Overlay className="fixed inset-0 z-100 bg-black/60 backdrop-blur-xs" />
-          <Drawer.Content className="fixed right-0 bottom-0 left-0 z-100 mt-24 flex h-[80%] flex-col rounded-t-[10px] bg-gray-100 outline-none lg:h-[60%]">
+          <Drawer.Content className="fixed right-0 bottom-0 left-0 z-100 mt-24 flex h-[85%] sm:h-[80%] flex-col rounded-t-[10px] bg-gray-100 outline-none lg:h-[60%]">
             <div className="flex-1 overflow-y-auto rounded-t-[10px] bg-white p-4">
               <div className="mx-auto max-w-md space-y-4">
                 <div
@@ -309,7 +309,7 @@ function CategorySection({
     <div className="space-y-3">
       <div className="flex items-center gap-2.5 px-1">
         <Icon className="h-5 w-5" />
-        <Drawer.Title className="text-[22px] font-medium text-gray-900">
+        <Drawer.Title className="text-lg sm:text-[22px] font-medium text-gray-900">
           {name}
         </Drawer.Title>
       </div>
@@ -343,7 +343,7 @@ function QuestionItem({ question, onClick, isSpecial }: QuestionItemProps) {
     <motion.button
       className={cn(
         'flex w-full items-center justify-between rounded-[10px]',
-        'text-md px-6 py-4 text-left font-normal',
+        'text-sm sm:text-md px-4 sm:px-6 py-3 sm:py-4 text-left font-normal',
         'transition-all',
         'focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
         isSpecial ? 'bg-black' : 'bg-[#F7F8F9]'

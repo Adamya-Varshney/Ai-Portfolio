@@ -32,29 +32,29 @@ function ProjectCard({ project }: { project: any }) {
           />
         </div>
       )}
-      <div className="p-4 space-y-3">
+      <div className="p-3 sm:p-4 space-y-2 sm:space-y-3">
         <div className="flex items-start justify-between gap-2">
-          <div>
+          <div className="min-w-0">
             <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
-            <h3 className="text-base font-semibold text-foreground leading-snug">{project.title}</h3>
+            <h3 className="text-sm sm:text-base font-semibold text-foreground leading-snug">{project.title}</h3>
           </div>
           <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full ${
             project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
           }`}>{project.status}</span>
         </div>
 
-        <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{project.description}</p>
 
         {project.techStack?.length > 0 && (
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1 sm:gap-1.5">
             {project.techStack.map((t: string, i: number) => (
-              <span key={i} className="text-xs bg-background border rounded-full px-2.5 py-0.5 text-foreground">{t}</span>
+              <span key={i} className="text-xs bg-background border rounded-full px-2 sm:px-2.5 py-0.5 text-foreground">{t}</span>
             ))}
           </div>
         )}
 
         {project.links?.length > 0 && (
-          <div className="flex flex-wrap gap-2 pt-1">
+          <div className="flex flex-wrap gap-2 sm:gap-3 pt-1">
             {project.links.map((link: any, i: number) => (
               <a
                 key={i}
@@ -81,14 +81,14 @@ export default function AllProjects() {
   const projects = ALL_PROJECTS.filter(p => (p.section ?? 'Product & Tech Projects') === activeSection);
 
   return (
-    <div className="w-full py-6 space-y-4">
+    <div className="w-full py-4 sm:py-6 space-y-3 sm:space-y-4">
       {/* Tabs */}
-      <div className="flex gap-2 rounded-xl bg-accent p-1">
+      <div className="flex gap-1.5 rounded-xl bg-accent p-1">
         {TABS.map(tab => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex-1 rounded-lg px-3 py-2 text-xs font-medium transition-all duration-200 ${
+            className={`flex-1 rounded-lg px-2 sm:px-3 py-2 text-xs font-medium transition-all duration-200 leading-tight ${
               activeTab === tab.id
                 ? 'bg-background text-foreground shadow-sm'
                 : 'text-muted-foreground hover:text-foreground'
@@ -107,7 +107,7 @@ export default function AllProjects() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.15 }}
-          className="space-y-4"
+          className="space-y-3 sm:space-y-4"
         >
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
