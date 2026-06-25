@@ -18,7 +18,7 @@ export default function AllProjects() {
     <div className="w-full h-full pt-8 space-y-10">
       <div>
         <h2 className="max-w-7xl mx-auto text-xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-          My Projects
+          AI Enabled Product Management
         </h2>
         <p className="max-w-7xl mx-auto text-sm md:text-base text-neutral-500 dark:text-neutral-400 font-sans mt-1">
           Product Sense &amp; AI Applications
