@@ -22,12 +22,13 @@ function ProjectCard({ project }: { project: any }) {
       className="rounded-xl border bg-accent overflow-hidden"
     >
       {project.images?.[0]?.src && (
-        <div className="relative w-full h-44 bg-muted">
+        <div className="relative w-full bg-muted">
           <Image
             src={project.images[0].src}
             alt={project.images[0].alt || project.title}
-            fill
-            className="object-cover"
+            width={800}
+            height={600}
+            className="w-full h-auto"
           />
         </div>
       )}
@@ -108,7 +109,7 @@ export default function AllProjects() {
           transition={{ duration: 0.15 }}
           className="space-y-4"
         >
-          {projects.map((project, i) => (
+          {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </motion.div>
