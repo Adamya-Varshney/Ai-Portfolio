@@ -248,6 +248,26 @@
       "date": "2024", "status": "Completed", "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/4wn40q6i2epxi3u"}],
       "images": [{"src": "/projects/Strategy Management ABC.png", "alt": "Business Strategy of ABC"}]
+    },
+    {
+      "title": "Case Competition 1",
+      "section": "Case Competitions",
+      "category": "CX & Product Management",
+      "description": "Coming soon.",
+      "techStack": [],
+      "date": "2024", "status": "Completed", "featured": false,
+      "links": [],
+      "images": []
+    },
+    {
+      "title": "Case Competition 2",
+      "section": "Case Competitions",
+      "category": "CX & Product Management",
+      "description": "Coming soon.",
+      "techStack": [],
+      "date": "2024", "status": "Completed", "featured": false,
+      "links": [],
+      "images": []
     }
   ],
   "social": {
