@@ -11,6 +11,7 @@ const ALL_PROJECTS = config.projects as any[];
 const TABS = [
   { id: 'product', label: 'AI Enabled Product Management', section: 'Product & Tech Projects' },
   { id: 'strategy', label: 'Business Strategy & GTM', section: 'Business Strategy & GTM Projects' },
+  { id: 'case', label: 'CX & Product Management', section: 'Case Competitions' },
 ];
 
 function ProjectCard({ project }: { project: any }) {
