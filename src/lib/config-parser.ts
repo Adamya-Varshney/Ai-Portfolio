@@ -95,29 +95,51 @@ When discussing specific topics, you can trigger specialized displays:
   generateContactInfo() {
     const { personal, social } = this.config;
     return {
+      name: personal.name,
       email: personal.email,
-      location: personal.location,
-      social
+      handle: personal.handle,
+      socials: [
+        { name: personal.phone, url: `tel:${personal.phone.replace(/\s+/g, '')}` },
+        { name: 'LinkedIn', url: social.linkedin },
+        { name: 'GitHub', url: social.github },
+        { name: 'Twitter', url: social.twitter },
+        { name: 'Kaggle', url: social.kaggle },
+        { name: 'LeetCode', url: social.leetcode },
+      ].filter(s => s.url !== ''),
     };
   }
 
   generateProfileInfo() {
-    return this.config.personal;
+    const { personal } = this.config;
+    return {
+      name: personal.name,
+      age: `${personal.age} years old`,
+      location: personal.location,
+      description: personal.bio,
+      src: personal.avatar,
+      fallbackSrc: personal.fallbackAvatar,
+    };
   }
 
   generateSkillsData() {
-    return this.config.skills;
+    const { skills } = this.config;
+    return [
+      { category: 'Product Tools', skills: skills.product_tools, color: 'bg-blue-50 text-blue-600 border border-blue-200' },
+      { category: 'Data & AI', skills: skills.data_ai, color: 'bg-purple-50 text-purple-600 border border-purple-200' },
+      { category: 'Analytics', skills: skills.analytics, color: 'bg-green-50 text-green-600 border border-green-200' },
+      { category: 'Automation', skills: skills.automation, color: 'bg-orange-50 text-orange-600 border border-orange-200' },
+      { category: 'Vibe Coding', skills: skills.vibe_coding, color: 'bg-emerald-50 text-emerald-600 border border-emerald-200' },
+      { category: 'PM Skills', skills: skills.pm_skills, color: 'bg-indigo-50 text-indigo-600 border border-indigo-200' },
+      { category: 'Soft Skills', skills: skills.soft_skills, color: 'bg-amber-50 text-amber-600 border border-amber-200' },
+    ].filter(c => c.skills.length > 0);
   }
 
   generateProjectData() {
     return this.config.projects.map(project => ({
-      id: project.id,
+      category: project.category,
       title: project.title,
-      description: project.description,
-      technologies: project.technologies,
-      highlights: project.highlights,
-      links: project.links,
-      content: project
+      src: (project as any).images?.[0]?.src || '/placeholder.jpg',
+      content: project,
     }));
   }
 

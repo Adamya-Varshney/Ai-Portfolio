@@ -18,7 +18,6 @@ import {
 } from '@/components/ui/chat/chat-bubble';
 import HelperBoost from './HelperBoost';
 
-// ClientOnly component for client-side rendering
 //@ts-ignore
 const ClientOnly = ({ children }) => {
   const [hasMounted, setHasMounted] = useState(false);
@@ -34,16 +33,13 @@ const ClientOnly = ({ children }) => {
   return <>{children}</>;
 };
 
-// Define Avatar component props interface
 interface AvatarProps {
   hasActiveTool: boolean;
 }
 
-// Dynamic import of Avatar component
 const Avatar = dynamic<AvatarProps>(
   () =>
     Promise.resolve(({ hasActiveTool }: AvatarProps) => {
-      // Conditional rendering based on detection
       return (
         <div
           className={`flex items-center justify-center rounded-full transition-all duration-300 ${hasActiveTool ? 'h-20 w-20' : 'h-28 w-28'}`}
@@ -74,8 +70,6 @@ const MOTION_CONFIG = {
   },
 };
 
-// Live AI is disabled — any free-form question (or the old "Get AI Response"
-// action) now shows this graceful note instead of calling the Gemini API.
 const FALLBACK_REPLY =
   "Thanks for asking! I answer through the quick questions below — tap Me, Projects, Skills, Resume, or Contact. For anything more specific, the Contact section has the best ways to reach me directly.";
 
@@ -139,7 +133,6 @@ const Chat = () => {
   const submitQuery = (query) => {
     if (!query.trim()) return;
 
-    // Quick-question presets render instantly, with no API call.
     if (presetReplies[query]) {
       const preset = presetReplies[query];
       setPresetReply({ question: query, reply: preset.reply, tool: preset.tool });
@@ -147,14 +140,12 @@ const Chat = () => {
       return;
     }
 
-    // No preset match → graceful fallback (live AI is disabled).
     setPresetReply({ question: query, reply: FALLBACK_REPLY, tool: '' });
     setLoadingSubmit(false);
   };
 
   //@ts-ignore
   const submitQueryToAI = (query) => {
-    // AI disabled — route everything through the preset/fallback path.
     submitQuery(query);
   };
 
@@ -166,7 +157,6 @@ const Chat = () => {
 
   //@ts-ignore
   const handleGetAIResponse = (question, tool) => {
-    // AI disabled — show the graceful fallback instead of calling the API.
     setPresetReply({ question, reply: FALLBACK_REPLY, tool: '' });
     setLoadingSubmit(false);
   };

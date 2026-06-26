@@ -1,34 +1,119 @@
-"use client";
-import { Card, Carousel } from "@/components/projects/apple-cards-carousel";
-import { data } from "@/components/projects/ConfigData";
+'use client';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
+import { getConfig } from '@/lib/config-loader';
+import Image from 'next/image';
+
+const config = getConfig();
+const ALL_PROJECTS = config.projects as any[];
+
+const TABS = [
+  { id: 'product', label: 'AI Enabled Product Management', section: 'Product & Tech Projects' },
+  { id: 'strategy', label: 'Business Strategy & GTM', section: 'Business Strategy & GTM Projects' },
+];
+
+function ProjectCard({ project }: { project: any }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
+      className="rounded-xl border bg-accent overflow-hidden"
+    >
+      {project.images?.[0]?.src && (
+        <div className="relative w-full bg-muted">
+          <Image
+            src={project.images[0].src}
+            alt={project.images[0].alt || project.title}
+            width={800}
+            height={600}
+            className="w-full h-auto"
+          />
+        </div>
+      )}
+      <div className="p-3 sm:p-4 space-y-2 sm:space-y-3">
+        <div className="flex items-start justify-between gap-2">
+          <div className="min-w-0">
+            <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
+            <h3 className="text-sm sm:text-base font-semibold text-foreground leading-snug">{project.title}</h3>
+          </div>
+          <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full ${
+            project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+          }`}>{project.status}</span>
+        </div>
+
+        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+
+        {project.techStack?.length > 0 && (
+          <div className="flex flex-wrap gap-1 sm:gap-1.5">
+            {project.techStack.map((t: string, i: number) => (
+              <span key={i} className="text-xs bg-background border rounded-full px-2 sm:px-2.5 py-0.5 text-foreground">{t}</span>
+            ))}
+          </div>
+        )}
+
+        {project.links?.length > 0 && (
+          <div className="flex flex-wrap gap-2 sm:gap-3 pt-1">
+            {project.links.map((link: any, i: number) => (
+              <a
+                key={i}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                <ExternalLink className="h-3 w-3" />
+                {link.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </motion.div>
+  );
+}
 
 export default function AllProjects() {
-  const productProjects = data.filter(d => d.section === 'Product & Tech Projects');
-  const strategyProjects = data.filter(d => d.section === 'Business Strategy & GTM Projects');
+  const [activeTab, setActiveTab] = useState('product');
 
-  const productCards = productProjects.map((card, index) => (
-    <Card key={card.src} card={card} index={index} layout={true} />
-  ));
-
-  const strategyCards = strategyProjects.map((card, index) => (
-    <Card key={card.src} card={card} index={index} layout={true} />
-  ));
+  const activeSection = TABS.find(t => t.id === activeTab)!.section;
+  const projects = ALL_PROJECTS.filter(p => (p.section ?? 'Product & Tech Projects') === activeSection);
 
   return (
-    <div className="w-full h-full pt-8 space-y-10">
-      <div>
-        <h2 className="max-w-7xl mx-auto text-xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-          My Projects
-        </h2>
-        <Carousel items={productCards} />
+    <div className="w-full py-4 sm:py-6 space-y-3 sm:space-y-4">
+      {/* Tabs */}
+      <div className="flex gap-1.5 rounded-xl bg-accent p-1">
+        {TABS.map(tab => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`flex-1 rounded-lg px-2 sm:px-3 py-2 text-xs font-medium transition-all duration-200 leading-tight ${
+              activeTab === tab.id
+                ? 'bg-background text-foreground shadow-sm'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
       </div>
 
-      <div>
-        <h2 className="max-w-7xl mx-auto text-xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-200 font-sans px-4 md:px-0">
-          Business Strategy & GTM Projects
-        </h2>
-        <Carousel items={strategyCards} />
-      </div>
+      {/* Project list */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.15 }}
+          className="space-y-3 sm:space-y-4"
+        >
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

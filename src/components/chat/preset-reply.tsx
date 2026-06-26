@@ -12,6 +12,7 @@ import Skills from '@/components/skills';
 import { Contact } from '@/components/contact';
 import Resume from '@/components/resume';
 import AvailabilityCard from '@/components/AvailabilityCard';
+import Education from '@/components/Education';
 
 interface PresetReplyProps {
   question: string;
@@ -64,6 +65,13 @@ export function PresetReply({ reply, tool, onClose }: PresetReplyProps) {
         return (
           <div className="w-full rounded-lg mb-4">
             <AvailabilityCard />
+          </div>
+        );
+
+      case 'getEducation':
+        return (
+          <div className="w-full rounded-lg mb-4">
+            <Education />
           </div>
         );
 
@@ -191,7 +199,7 @@ export function PresetReply({ reply, tool, onClose }: PresetReplyProps) {
                   }
 
                   // Handle emoji lines (headers)
-                  if (/^[🎯🚀💼🏆📊🔧🌟💡🎓📍🌍⚡🤝]/u.test(line)) {
+                  if (/^[\u{1F3AF}\u{1F680}\u{1F4BC}\u{1F3C6}\u{1F4CA}\u{1F527}\u{1F31F}\u{1F4A1}\u{1F393}\u{1F4CD}\u{1F30D}⚡\u{1F91D}]/u.test(line)) {
                     return (
                       <p key={index} className="mb-2 last:mb-0 font-medium text-gray-800 dark:text-gray-200 text-base">
                         {line}

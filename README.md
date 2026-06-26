@@ -3,29 +3,13 @@
 **Create a powerful, modern developer portfolio in minutes — fully customizable through a single JSON file and enhanced by AI.**  
 No coding knowledge required. Just configure, deploy, and showcase your best self.
 
-![Portfolio Preview](https://raw.githubusercontent.com/anujjainbatu/ai-portfolio-system-landing-page/refs/heads/main/assets/portfolio.png)
-
 <p align="center">
-  <a href="https://portfolio.anujjainbatu.tech/"><img src="https://img.shields.io/badge/Demo-Live%20Site-brightgreen" alt="Live Demo"></a>
   <a href="docs/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-100%25-blue" alt="TypeScript"></a>
   <a href="docs/CONTRIBUTING.md"><img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg" alt="Contributions Welcome"></a>
   <a href="https://github.com/anujjainbatu/portfolio/issues"><img src="https://img.shields.io/github/issues/anujjainbatu/portfolio" alt="GitHub Issues"></a>
   <a href="https://github.com/anujjainbatu/portfolio/stargazers"><img src="https://img.shields.io/github/stars/anujjainbatu/portfolio" alt="GitHub Stars"></a>
 </p>
-
-> 🌟 **NEW**: Looking for the marketing landing page? Check out our [dedicated landing page repository](https://github.com/anujjainbatu/portfolio-builder-landing) with SEO-optimized content designed to showcase this portfolio builder to the world!
-
----
-
-## ✨ Why Choose This Portfolio?
-
-| Traditional Portfolios              | **This Portfolio**                                   |
-|-------------------------------------|-----------------------------------------------------|
-| Tedious manual edits                | **Edit 1 JSON file — instant updates**              |
-| Risk of breaking code               | **Zero coding required**                            |
-| Complex, hard-to-customize codebase | **Intuitive configuration, AI-powered assistance**  |
-| Outdated design                     | **Modern, responsive layout**                       |
 
 ---
 
@@ -208,22 +192,3 @@ Full guides in [`docs/`](docs/):
 - [Setup](#-quick-start-5-minutes)
 - [Troubleshooting](#-troubleshooting--support)
 
----
-
-## 🤝 Contributing
-
-We welcome your contributions!  
-Check [open issues](https://github.com/anujjainbatu/portfolio/issues) or read [CONTRIBUTING.md](docs/CONTRIBUTING.md) to get started.
-
----
-
-## 📄 License
-
-MIT License — see [LICENSE](docs/LICENSE) for details.
-
----
-
-<p align="center">
-  <b>Made with ❤️ by developers, for developers</b><br>
-  <a href="https://github.com/anujjainbatu/portfolio">⭐ Star on GitHub</a> | <a href="https://github.com/anujjainbatu/portfolio/issues">🐛 Report Bug</a> | <a href="https://github.com/anujjainbatu/portfolio/discussions">💬 Request Feature</a>
-</p>
