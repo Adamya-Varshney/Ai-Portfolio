@@ -260,13 +260,13 @@
       "images": []
     },
     {
-      "title": "Case Competition 2",
+      "title": "Tata Steel-A-Thon 2024",
       "section": "Case Competitions",
       "category": "CX & Product Management",
-      "description": "Coming soon.",
-      "techStack": [],
-      "date": "2024", "status": "Completed", "featured": false,
-      "links": [],
+      "description": "Competed in Tata Steel-A-Thon 2024, a national-level case competition challenging participants to solve real business problems across operations, strategy, and customer experience in the steel industry. Developed a structured solution combining market insight, operational analysis, and actionable recommendations — presented to a panel of Tata Steel industry leaders.",
+      "techStack": ["Case Competition", "Business Analysis", "CX Strategy", "Operations", "Presentation"],
+      "date": "2024", "status": "Completed", "featured": true,
+      "links": [{"name": "Presentation", "url": "https://canva.link/f5i180swd6f0pe4"}],
       "images": []
     }
   ],
@@ -317,7 +317,7 @@
     "fun": ["What are your interests?", "Tell me something interesting about you", "What motivates you?", "What's a fun fact about you?"]
   },
   "meta": {
-    "configVersion": "2.0", "lastUpdated": "2026-06-26",
+    "configVersion": "2.0", "lastUpdated": "2026-06-27",
     "generatedBy": "Adamya Varshney",
     "description": "Portfolio configuration for Adamya Varshney — Product Manager spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
   }
