@@ -257,7 +257,7 @@
       "techStack": ["Product Innovation", "Business Plan", "GTM Strategy", "Market Research", "Pitch"],
       "date": "2024", "status": "Completed", "featured": true,
       "links": [{"name": "Presentation", "url": "https://canva.link/ukagno8wsw36fm6"}],
-      "images": []
+      "images": [{"src": "/projects/BigIdea 2024.png", "alt": "V-Guard Big Idea 2024 Presentation Preview"}]
     },
     {
       "title": "Tata Steel-A-Thon 2024",
@@ -267,7 +267,7 @@
       "techStack": ["Case Competition", "Business Analysis", "CX Strategy", "Operations", "Presentation"],
       "date": "2024", "status": "Completed", "featured": true,
       "links": [{"name": "Presentation", "url": "https://canva.link/f5i180swd6f0pe4"}],
-      "images": []
+      "images": [{"src": "/projects/TATA Steel-A-Thon 2024.png", "alt": "Tata Steel-A-Thon 2024 Presentation Preview"}]
     }
   ],
   "social": {
@@ -317,7 +317,7 @@
     "fun": ["What are your interests?", "Tell me something interesting about you", "What motivates you?", "What's a fun fact about you?"]
   },
   "meta": {
-    "configVersion": "2.0", "lastUpdated": "2026-06-27",
+    "configVersion": "2.0", "lastUpdated": "2026-06-25",
     "generatedBy": "Adamya Varshney",
     "description": "Portfolio configuration for Adamya Varshney — Product Manager spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
   }
