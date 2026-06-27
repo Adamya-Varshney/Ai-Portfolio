@@ -257,7 +257,7 @@
       "techStack": ["Product Innovation", "Business Plan", "GTM Strategy", "Market Research", "Pitch"],
       "date": "2024", "status": "Completed", "featured": true,
       "links": [{"name": "Presentation", "url": "https://canva.link/ukagno8wsw36fm6"}],
-      "images": []
+      "images": [{"src": "/projects/BigIdea 2024.png", "alt": "V-Guard Big Idea 2024 Presentation Preview"}]
     },
     {
       "title": "Tata Steel-A-Thon 2024",
@@ -267,7 +267,7 @@
       "techStack": ["Case Competition", "Business Analysis", "CX Strategy", "Operations", "Presentation"],
       "date": "2024", "status": "Completed", "featured": true,
       "links": [{"name": "Presentation", "url": "https://canva.link/f5i180swd6f0pe4"}],
-      "images": []
+      "images": [{"src": "/projects/TATA Steel-A-Thon 2024.png", "alt": "Tata Steel-A-Thon 2024 Presentation Preview"}]
     }
   ],
   "social": {
