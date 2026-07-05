@@ -43,9 +43,9 @@ function ProjectDetail({ project }: { project: any }) {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -8 }}
       transition={{ duration: 0.2, ease: 'easeOut' }}
-      className="rounded-xl border bg-accent overflow-hidden"
+      className="rounded-xl border bg-accent overflow-hidden h-full"
     >
-      <div className={`flex ${project.images?.[0]?.src ? 'flex-row' : 'flex-col'} gap-0`}>
+      <div className={`flex h-full ${project.images?.[0]?.src ? 'flex-row' : 'flex-col'} gap-0`}>
         {project.images?.[0]?.src && (
           <div className="relative shrink-0 w-2/5 bg-muted">
             <Image
@@ -118,9 +118,9 @@ export default function AllProjects() {
   const currentProject = projects.find(p => p.title === activeProject) ?? projects[0];
 
   return (
-    <div className="w-full py-4 sm:py-6 space-y-3 sm:space-y-4">
+    <div className="w-full py-4 sm:py-6 flex flex-col gap-3 sm:gap-4" style={{ height: 'calc(100vh - 180px)' }}>
       {/* Section tabs */}
-      <div className="flex gap-1.5 rounded-xl bg-accent p-1">
+      <div className="flex gap-1.5 rounded-xl bg-accent p-1 shrink-0">
         {TABS.map(tab => (
           <button
             key={tab.id}
@@ -144,10 +144,10 @@ export default function AllProjects() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.15 }}
-          className="flex gap-3"
+          className="flex gap-3 flex-1 min-h-0"
         >
           {/* Left sidebar — color-coded project tabs */}
-          <div className="w-36 sm:w-44 shrink-0 flex flex-col gap-1.5">
+          <div className="w-36 sm:w-44 shrink-0 flex flex-col gap-1.5 overflow-y-auto">
             {projects.map(project => (
               <button
                 key={project.title}
@@ -160,7 +160,7 @@ export default function AllProjects() {
           </div>
 
           {/* Right panel — selected project detail */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 min-h-0">
             <AnimatePresence mode="wait">
               {currentProject && <ProjectDetail key={currentProject.title} project={currentProject} />}
             </AnimatePresence>
