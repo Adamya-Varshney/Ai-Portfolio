@@ -14,6 +14,27 @@ const TABS = [
   { id: 'case', label: 'CX & Product Management', section: 'Case Competitions' },
 ];
 
+// Color classification for project sidebar tabs
+const AI_APPS = new Set(['Growmatic', 'Xcurson', 'Pocket']);
+const AGENTIC_WORKFLOWS = new Set(['SAM: AI Chatbot with RAG', 'Niyam (AI Fitness Coach)']);
+
+function getTabStyle(title: string, isActive: boolean) {
+  if (AI_APPS.has(title)) {
+    return isActive
+      ? 'bg-sky-500 text-white shadow-sm'
+      : 'bg-sky-500/80 text-white hover:bg-sky-500';
+  }
+  if (AGENTIC_WORKFLOWS.has(title)) {
+    return isActive
+      ? 'bg-green-400 text-white shadow-sm'
+      : 'bg-green-400/80 text-white hover:bg-green-400';
+  }
+  // Default: turquoise
+  return isActive
+    ? 'bg-teal-400 text-white shadow-sm'
+    : 'bg-teal-400/80 text-white hover:bg-teal-400';
+}
+
 function ProjectDetail({ project }: { project: any }) {
   return (
     <motion.div
@@ -85,7 +106,6 @@ export default function AllProjects() {
 
   const [activeProject, setActiveProject] = useState<string>(projects[0]?.title ?? '');
 
-  // Reset active project when tab changes
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
     const section = TABS.find(t => t.id === tabId)!.section;
@@ -114,7 +134,7 @@ export default function AllProjects() {
         ))}
       </div>
 
-      {/* Two-column layout: project list sidebar + detail panel */}
+      {/* Two-column layout: sidebar + detail */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab}
@@ -124,17 +144,13 @@ export default function AllProjects() {
           transition={{ duration: 0.15 }}
           className="flex gap-3"
         >
-          {/* Left sidebar — project name tabs */}
-          <div className="w-36 sm:w-44 shrink-0 flex flex-col gap-1 rounded-xl bg-accent p-1.5">
+          {/* Left sidebar — color-coded project tabs */}
+          <div className="w-36 sm:w-44 shrink-0 flex flex-col gap-1.5">
             {projects.map(project => (
               <button
                 key={project.title}
                 onClick={() => setActiveProject(project.title)}
-                className={`w-full text-left rounded-lg px-2.5 py-2 text-xs font-medium transition-all duration-200 leading-snug ${
-                  activeProject === project.title
-                    ? 'bg-background text-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
+                className={`w-full text-left rounded-lg px-2.5 py-2 text-xs font-medium transition-all duration-200 leading-snug ${getTabStyle(project.title, activeProject === project.title)}`}
               >
                 {project.title}
               </button>
