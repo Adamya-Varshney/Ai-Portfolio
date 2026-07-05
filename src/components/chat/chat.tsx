@@ -183,7 +183,8 @@ const Chat = () => {
   };
 
   const isEmptyState = !presetReply && !loadingSubmit;
-  const hideAvatar = presetReply?.tool === 'getPresentation';
+  // Show avatar only on landing (isEmptyState) and ME section (getPresentation)
+  const hideAvatar = presetReply !== null && presetReply.tool !== 'getPresentation';
 
   const headerHeight = hasActiveTool ? 100 : 180;
 
