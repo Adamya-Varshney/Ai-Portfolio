@@ -35,7 +35,7 @@ export function PresetReply({ reply, tool, onClose }: PresetReplyProps) {
 
       case 'getProjects':
         return (
-          <div className="w-full overflow-hidden rounded-lg mb-4">
+          <div className="w-full rounded-lg mb-4">
             <AllProjects />
           </div>
         );
