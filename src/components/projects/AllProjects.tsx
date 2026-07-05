@@ -118,7 +118,7 @@ export default function AllProjects() {
   const currentProject = projects.find(p => p.title === activeProject) ?? projects[0];
 
   return (
-    <div className="w-full py-2 flex flex-col gap-3 sm:gap-4 -ml-2 sm:-ml-4 lg:-ml-8 pr-0" style={{ height: 'calc(100vh - 150px)', width: 'calc(100% + 2rem)' }}>
+    <div className="w-full py-2 flex flex-col gap-3 sm:gap-4" style={{ height: 'calc(100vh - 150px)' }}>
       {/* Section tabs */}
       <div className="flex gap-1.5 rounded-xl bg-accent p-1 shrink-0">
         {TABS.map(tab => (

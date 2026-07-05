@@ -232,10 +232,10 @@ const Chat = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="container mx-auto flex h-full max-w-3xl lg:max-w-5xl flex-col">
+      <div className={`mx-auto flex h-full flex-col w-full ${presetReply?.tool === 'getProjects' ? 'max-w-full px-4 lg:px-8' : 'container max-w-3xl lg:max-w-5xl'}`}>
         {/* Scrollable Chat Content */}
         <div
-          className={`flex-1 overflow-y-auto px-2 pb-4 ${isEmptyState ? 'lg:!pt-0' : ''}`}
+          className={`flex-1 overflow-y-auto pb-4 ${presetReply?.tool === 'getProjects' ? 'px-0' : 'px-2'} ${isEmptyState ? 'lg:!pt-0' : ''}`}
           style={{ paddingTop: hideAvatar ? '0px' : `${headerHeight}px`, transition: 'padding-top 300ms ease-in-out' }}
         >
           <AnimatePresence mode="wait">
@@ -286,7 +286,7 @@ const Chat = () => {
         </div>
 
         {/* Fixed Bottom Bar */}
-        <div className="sticky bottom-0 bg-white px-2 pt-3 md:px-0 md:pb-4">
+        <div className={`sticky bottom-0 bg-white pt-3 md:pb-4 ${presetReply?.tool === 'getProjects' ? 'px-4 lg:px-8' : 'px-2 md:px-0'}`}>
           <div className="relative flex flex-col items-center gap-3">
             <HelperBoost 
               submitQuery={submitQuery} 
