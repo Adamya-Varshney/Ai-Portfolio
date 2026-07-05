@@ -87,7 +87,7 @@ export function PresetReply({ reply, tool, onClose }: PresetReplyProps) {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="w-full max-w-3xl mx-auto mb-4"
+      className="w-full max-w-3xl lg:max-w-full mx-auto mb-4"
     >
       {/* If we have a component to render, show it like AI responses */}
       {presetComponent ? (
