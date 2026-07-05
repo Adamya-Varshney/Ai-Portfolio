@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Award, Briefcase, Code, Mail, MessageSquare, ArrowRight } from 'lucide-react';
+import { Award, Briefcase, Code, GraduationCap, Mail, MessageSquare, ArrowRight } from 'lucide-react';
 import React from 'react';
 
 import { presetReplies } from '@/lib/config-loader';
@@ -101,19 +101,12 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery, handlePresetRepl
           className="flex flex-col justify-center flex-1 max-w-lg"
           variants={containerVariants}
         >
-          <motion.div variants={itemVariants}>
-            <motion.button
-              onClick={() => handleQuestionClick('Am I available for opportunities?')}
-              className="mb-8 bg-white hover:bg-gray-50 border border-gray-200 rounded-full px-5 py-2.5 text-sm font-medium text-gray-700 transition-all duration-200 shadow-sm hover:shadow-md flex items-center gap-2"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-              </span>
-              Available for Opportunities
-            </motion.button>
+          <motion.div variants={itemVariants} className="mb-6">
+            <img
+              src="/profile.png"
+              alt="Adamya Varshney"
+              className="h-20 w-20 rounded-full object-cover object-[center_top_-5%] scale-95 border-2 border-border shadow-sm"
+            />
           </motion.div>
 
           <motion.h1
@@ -124,11 +117,26 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery, handlePresetRepl
           </motion.h1>
 
           <motion.p
-            className="text-base xl:text-lg text-muted-foreground mb-10 leading-relaxed max-w-sm"
+            className="text-base xl:text-lg text-muted-foreground mb-6 leading-relaxed max-w-sm"
             variants={itemVariants}
           >
             Ask me anything about his product work — projects, GTM strategy, and AI.
           </motion.p>
+
+          <motion.div variants={itemVariants} className="mb-8">
+            <motion.button
+              onClick={() => handleQuestionClick('Am I available for opportunities?')}
+              className="bg-white hover:bg-gray-50 border border-gray-200 rounded-full px-5 py-2.5 text-sm font-medium text-gray-700 transition-all duration-200 shadow-sm hover:shadow-md flex items-center gap-2"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+              </span>
+              Available for Opportunities
+            </motion.button>
+          </motion.div>
 
           <motion.div className="flex flex-wrap gap-3" variants={itemVariants}>
             {[
