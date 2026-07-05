@@ -189,9 +189,9 @@ const Chat = () => {
 
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Fixed Avatar Header with Gradient */}
+      {/* Fixed Avatar Header with Gradient — hidden on desktop landing */}
       <div
-        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ease-in-out ${hideAvatar ? 'pointer-events-none opacity-0 -translate-y-full' : ''}`}
+        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ease-in-out ${(hideAvatar || isEmptyState) ? 'lg:pointer-events-none lg:opacity-0 lg:-translate-y-full' : ''} ${hideAvatar ? 'pointer-events-none opacity-0 -translate-y-full' : ''}`}
         style={{
           background:
             'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
@@ -212,7 +212,7 @@ const Chat = () => {
             {latestUserMessage && !currentAIMessage && (
               <motion.div
                 {...MOTION_CONFIG}
-                className="mx-auto flex max-w-3xl px-4"
+                className="mx-auto flex max-w-3xl lg:max-w-5xl px-4"
               >
                 <ChatBubble variant="sent">
                   <ChatBubbleMessage>
@@ -231,10 +231,10 @@ const Chat = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="container mx-auto flex h-full max-w-3xl flex-col">
+      <div className="container mx-auto flex h-full max-w-3xl lg:max-w-5xl flex-col">
         {/* Scrollable Chat Content */}
         <div
-          className="flex-1 overflow-y-auto px-2 pb-4"
+          className={`flex-1 overflow-y-auto px-2 pb-4 ${isEmptyState ? 'lg:!pt-0' : ''}`}
           style={{ paddingTop: hideAvatar ? '0px' : `${headerHeight}px`, transition: 'padding-top 300ms ease-in-out' }}
         >
           <AnimatePresence mode="wait">
@@ -244,8 +244,8 @@ const Chat = () => {
                 className="flex min-h-full items-center justify-center"
                 {...MOTION_CONFIG}
               >
-                <ChatLanding 
-                  submitQuery={submitQuery} 
+                <ChatLanding
+                  submitQuery={submitQuery}
                   handlePresetReply={handlePresetReply}
                 />
               </motion.div>
@@ -287,9 +287,9 @@ const Chat = () => {
         {/* Fixed Bottom Bar */}
         <div className="sticky bottom-0 bg-white px-2 pt-3 md:px-0 md:pb-4">
           <div className="relative flex flex-col items-center gap-3">
-            <HelperBoost 
-              submitQuery={submitQuery} 
-              setInput={setInput} 
+            <HelperBoost
+              submitQuery={submitQuery}
+              setInput={setInput}
               handlePresetReply={handlePresetReply}
             />
             <ChatBottombar
