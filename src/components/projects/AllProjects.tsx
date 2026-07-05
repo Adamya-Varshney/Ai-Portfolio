@@ -21,18 +21,18 @@ const AGENTIC_WORKFLOWS = new Set(['SAM: AI Chatbot with RAG', 'Niyam (AI Fitnes
 function getTabStyle(title: string, isActive: boolean) {
   if (AI_APPS.has(title)) {
     return isActive
-      ? 'bg-sky-500 text-white shadow-sm'
-      : 'bg-sky-500/80 text-white hover:bg-sky-500';
+      ? 'bg-sky-700 text-white shadow-sm'
+      : 'bg-sky-700/80 text-white hover:bg-sky-700';
   }
   if (AGENTIC_WORKFLOWS.has(title)) {
     return isActive
-      ? 'bg-green-400 text-white shadow-sm'
-      : 'bg-green-400/80 text-white hover:bg-green-400';
+      ? 'bg-green-700 text-white shadow-sm'
+      : 'bg-green-700/80 text-white hover:bg-green-700';
   }
   // Default: turquoise
   return isActive
-    ? 'bg-teal-400 text-white shadow-sm'
-    : 'bg-teal-400/80 text-white hover:bg-teal-400';
+    ? 'bg-teal-700 text-white shadow-sm'
+    : 'bg-teal-700/80 text-white hover:bg-teal-700';
 }
 
 function ProjectDetail({ project }: { project: any }) {
