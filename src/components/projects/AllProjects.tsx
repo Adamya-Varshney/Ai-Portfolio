@@ -47,17 +47,17 @@ function ProjectDetail({ project }: { project: any }) {
     >
       <div className={`flex h-full ${project.images?.[0]?.src ? 'flex-row' : 'flex-col'} gap-0`}>
         {project.images?.[0]?.src && (
-          <div className="relative shrink-0 w-2/5 bg-muted">
+          <div className="relative shrink-0 w-3/5 bg-muted flex items-center justify-center">
             <Image
               src={project.images[0].src}
               alt={project.images[0].alt || project.title}
-              width={600}
+              width={800}
               height={600}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
         )}
-        <div className="flex-1 p-4 sm:p-5 space-y-3 overflow-y-auto">
+        <div className="w-2/5 shrink-0 p-4 sm:p-5 space-y-3 overflow-y-auto">
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
               <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
