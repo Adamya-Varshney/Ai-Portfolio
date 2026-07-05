@@ -11,6 +11,7 @@ const ALL_PROJECTS = config.projects as any[];
 const TABS = [
   { id: 'product', label: 'AI Enabled Product Management', section: 'Product & Tech Projects' },
   { id: 'strategy', label: 'Business Strategy & GTM', section: 'Business Strategy & GTM Projects' },
+  { id: 'bi', label: 'Business Intelligence & Data Analytics', section: 'Business Intelligence & Data Analytics' },
   { id: 'case', label: 'CX & Product Management', section: 'Case Competitions' },
 ];
 
@@ -163,6 +164,11 @@ export default function AllProjects() {
           <div className="flex-1 min-w-0 min-h-0">
             <AnimatePresence mode="wait">
               {currentProject && <ProjectDetail key={currentProject.title} project={currentProject} />}
+              {!currentProject && (
+                <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+                  No projects in this section yet.
+                </div>
+              )}
             </AnimatePresence>
           </div>
         </motion.div>
