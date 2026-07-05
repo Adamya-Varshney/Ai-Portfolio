@@ -45,54 +45,56 @@ function ProjectDetail({ project }: { project: any }) {
       transition={{ duration: 0.2, ease: 'easeOut' }}
       className="rounded-xl border bg-accent overflow-hidden"
     >
-      {project.images?.[0]?.src && (
-        <div className="relative w-full bg-muted">
-          <Image
-            src={project.images[0].src}
-            alt={project.images[0].alt || project.title}
-            width={800}
-            height={600}
-            className="w-full h-auto"
-          />
-        </div>
-      )}
-      <div className="p-4 sm:p-5 space-y-3">
-        <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
-            <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
-            <h3 className="text-sm sm:text-base font-semibold text-foreground leading-snug mt-0.5">{project.title}</h3>
-          </div>
-          <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full ${
-            project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
-          }`}>{project.status}</span>
-        </div>
-
-        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{project.description}</p>
-
-        {project.techStack?.length > 0 && (
-          <div className="flex flex-wrap gap-1 sm:gap-1.5">
-            {project.techStack.map((t: string, i: number) => (
-              <span key={i} className="text-xs bg-background border rounded-full px-2 sm:px-2.5 py-0.5 text-foreground">{t}</span>
-            ))}
+      <div className={`flex ${project.images?.[0]?.src ? 'flex-row' : 'flex-col'} gap-0`}>
+        {project.images?.[0]?.src && (
+          <div className="relative shrink-0 w-2/5 bg-muted">
+            <Image
+              src={project.images[0].src}
+              alt={project.images[0].alt || project.title}
+              width={600}
+              height={600}
+              className="w-full h-full object-cover"
+            />
           </div>
         )}
-
-        {project.links?.length > 0 && (
-          <div className="flex flex-wrap gap-2 sm:gap-3 pt-1">
-            {project.links.map((link: any, i: number) => (
-              <a
-                key={i}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
-              >
-                <ExternalLink className="h-3 w-3" />
-                {link.name}
-              </a>
-            ))}
+        <div className="flex-1 p-4 sm:p-5 space-y-3 overflow-y-auto">
+          <div className="flex items-start justify-between gap-2">
+            <div className="min-w-0">
+              <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
+              <h3 className="text-sm sm:text-base font-semibold text-foreground leading-snug mt-0.5">{project.title}</h3>
+            </div>
+            <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full ${
+              project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+            }`}>{project.status}</span>
           </div>
-        )}
+
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+
+          {project.techStack?.length > 0 && (
+            <div className="flex flex-wrap gap-1 sm:gap-1.5">
+              {project.techStack.map((t: string, i: number) => (
+                <span key={i} className="text-xs bg-background border rounded-full px-2 sm:px-2.5 py-0.5 text-foreground">{t}</span>
+              ))}
+            </div>
+          )}
+
+          {project.links?.length > 0 && (
+            <div className="flex flex-wrap gap-2 sm:gap-3 pt-1">
+              {project.links.map((link: any, i: number) => (
+                <a
+                  key={i}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  <ExternalLink className="h-3 w-3" />
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </motion.div>
   );
