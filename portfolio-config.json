@@ -148,7 +148,12 @@
       "techStack": ["AI Coaching", "Personalization AI", "Habit Intelligence", "Conversational UX", "AI Product Design", "Lovable"],
       "date": "2026", "status": "Completed", "featured": true,
       "links": [{"name": "Prototype", "url": "https://niyam-ai-fitness-coach.lovable.app/"}],
-      "images": [{"src": "/projects/niyam-ai-fitness-coach.png", "alt": "Niyam — AI fitness coach app"}]
+      "images": [{"src": "/projects/niyam-ai-fitness-coach.png", "alt": "Niyam — AI fitness coach app"}],
+      "workflowImages": [
+        {"src": "/projects/Niyam : Workflow Architecture/Niyam User Onboarding.png", "label": "User Onboarding"},
+        {"src": "/projects/Niyam : Workflow Architecture/Niyam Chat & Workout Sessions.png", "label": "Chat & Workout Sessions"},
+        {"src": "/projects/Niyam : Workflow Architecture/Niyam Daily Reminders & Logs.png", "label": "Daily Reminders & Logs"}
+      ]
     },
     {
       "title": "Onset : Investment Platform",

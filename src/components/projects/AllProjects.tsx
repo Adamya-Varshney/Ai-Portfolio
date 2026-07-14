@@ -79,6 +79,25 @@ function ProjectDetail({ project }: { project: any }) {
             </div>
           )}
 
+          {project.workflowImages?.length > 0 && (
+            <div className="space-y-3 pt-1">
+              {project.workflowImages.map((wf: any, i: number) => (
+                <div key={i} className="space-y-1">
+                  <span className="text-xs font-semibold text-foreground">{wf.label}</span>
+                  <div className="rounded-lg overflow-hidden border bg-muted">
+                    <Image
+                      src={wf.src}
+                      alt={wf.label}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
           {project.links?.length > 0 && (
             <div className="flex flex-wrap gap-2 sm:gap-3 pt-1">
               {project.links.map((link: any, i: number) => (
