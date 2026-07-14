@@ -86,7 +86,7 @@
       "section": "Product & Tech Projects",
       "category": "Agentic AI / CRM",
       "description": "An AI-driven CRM that automates lead qualification and ad-content generation to simplify marketing for SMBs. Designed to compress the qualify-to-convert funnel and let small teams run enterprise-grade lead ops without a dedicated marketing function.",
-      "techStack": ["LangGraph", "LangChain", "Python", "RAG", "Automation"],
+      "techStack": ["Agentic AI", "Multi-Agent Orchestration", "RAG Pipeline", "Lead Qualification AI", "LangGraph", "LangChain"],
       "date": "2025", "status": "Completed", "featured": true,
       "links": [{"name": "Deck", "url": "https://drive.google.com/file/d/1x7fJmM67Xfyn_DgnyjS2NxejPbV_iWTX/view?usp=sharing"}, {"name": "Prototype", "url": "https://growmatic-ai-crm.vercel.app/#/login"}],
       "images": [{"src": "/projects/growmatic.png", "alt": "Growmatic — AI marketing copilot dashboard"}]
@@ -96,7 +96,7 @@
       "section": "Product & Tech Projects",
       "category": "D2C / E-commerce Product",
       "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform. 'Bundles' nudges complementary add-ons at checkout; 'Buddy Mode' enables shared, planned carts — both targeting basket size and repeat ordering.",
-      "techStack": ["Product Design", "Behavioral Nudges", "AOV Optimization", "Figma"],
+      "techStack": ["AI-Driven Nudges", "Behavioral Design", "AOV Optimization", "Checkout Personalization", "User Psychology", "Figma"],
       "date": "2025", "status": "Completed", "featured": true,
       "links": [{"name": "Deck", "url": "https://onedrive.live.com/:p:/g/personal/2DCCBA7A09395FB7/IQAwIMqhJW9NRokZsJCjgIsmAdwpuNp7qTPT-ICdL_XfR0c?resid=2DCCBA7A09395FB7!sa1ca20306f25464d8919b090a3808b26&ithint=file%2Cpptx&e=rx6oPT&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy8yZGNjYmE3YTA5Mzk1ZmI3L0lRQXdJTXFoSlc5TlJva1pzSkNqZ0lzbUFkd3B1TnA3cVRQVC1JQ2RMX1hmUjBjP2U9cng2b1BU"}, {"name": "Prototype", "url": "https://claude.ai/public/artifacts/9787589d-1ab4-41ed-9a65-b49cceb11323"}],
       "images": [{"src": "/projects/bundles-buddy-mode.png", "alt": "Bundles & Buddy Mode — quick-commerce checkout concept"}]
@@ -106,7 +106,7 @@
       "section": "Product & Tech Projects",
       "category": "Agentic AI / Travel",
       "description": "An AI travel planner built via vibe-coding, with a modular architecture for crafting contextual, personalized itineraries. Turns loose trip intent into structured, day-by-day plans tailored to user preferences.",
-      "techStack": ["Vibe Coding", "LLM", "Modular Architecture", "Python"],
+      "techStack": ["Agentic AI", "LLM Orchestration", "Personalized Itinerary AI", "Vibe Coding", "Modular AI Architecture"],
       "date": "2026", "status": "Completed", "featured": true,
       "links": [{"name": "Prototype", "url": "https://xcurson.lovable.app"}],
       "images": [{"src": "/projects/xcurson.png", "alt": "Xcurson — AI travel itinerary planner"}]
@@ -116,7 +116,7 @@
       "section": "Product & Tech Projects",
       "category": "Agentic AI / Conversational",
       "description": "A multi-capability AI agent built with LangGraph and Streamlit, combining RAG-powered knowledge retrieval, live web search, and a code interpreter — all within a multi-threaded chat interface with real-time response streaming. Maintains persistent context across parallel conversation threads for a coherent, research-grade assistant experience.",
-      "techStack": ["LangGraph", "Streamlit", "Multi-threaded Memory", "Response Streaming", "Python", "RAG"],
+      "techStack": ["Agentic AI", "RAG Pipeline", "Multi-turn Memory", "LangGraph", "Real-time Streaming", "Web Search", "Code Interpreter"],
       "date": "2025", "status": "Completed", "featured": false,
       "links": [{"name": "Prototype", "url": "https://sam-ai-chatbot.streamlit.app/"}],
       "images": [{"src": "/projects/sam.png", "alt": "SAM — AI chatbot with RAG, web search and code interpreter"}]
@@ -126,7 +126,7 @@
       "section": "Product & Tech Projects",
       "category": "AI / FinTech",
       "description": "An AI expense tracker offering smart cash-flow management and visual summaries that explain spending habits. Translates raw transactions into plain-language insights so users understand the 'why' behind their spending.",
-      "techStack": ["Python", "Data Visualization", "LLM Summaries", "Personal Finance"],
+      "techStack": ["LLM Summarization", "AI Financial Insights", "Spending Pattern Analysis", "Personal Finance AI", "Data Visualization"],
       "date": "2025", "status": "Completed", "featured": false,
       "links": [{"name": "Prototype", "url": "https://pocket-money-manage.netlify.app/"}],
       "images": [{"src": "/projects/pocket.png", "alt": "Pocket — AI expense tracker with spending insights"}]
@@ -136,7 +136,7 @@
       "section": "Product & Tech Projects",
       "category": "Deep Learning / Healthcare",
       "description": "A CNN deep-learning model that detects diabetic retinopathy with 72% accuracy on the Messidor dataset of 1,151 retinal images. Explores automated screening to support earlier diagnosis.",
-      "techStack": ["Python", "CNN", "Deep Learning", "TensorFlow / Keras", "Computer Vision"],
+      "techStack": ["Computer Vision", "CNN", "Medical AI", "Image Classification", "Deep Learning", "TensorFlow / Keras"],
       "date": "2024", "status": "Completed", "featured": false,
       "links": [], "images": []
     },
@@ -145,7 +145,7 @@
       "section": "Product & Tech Projects",
       "category": "NLP / Data Science",
       "description": "Analyzed 40,000+ IMDB reviews using VADER and Logistic Regression, achieving 78.23% accuracy in sentiment and topic analysis. Surfaces what drives positive vs. negative reception at scale.",
-      "techStack": ["Python", "VADER", "Logistic Regression", "NLP", "scikit-learn"],
+      "techStack": ["NLP", "Sentiment Analysis", "Topic Modeling", "Text Classification", "VADER", "scikit-learn"],
       "date": "2024", "status": "Completed", "featured": false,
       "links": [], "images": []
     },
@@ -154,7 +154,7 @@
       "section": "Product & Tech Projects",
       "category": "AI / Health & Fitness",
       "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals.",
-      "techStack": ["Lovable", "AI", "Product Design", "UX"],
+      "techStack": ["AI Coaching", "Personalization AI", "Habit Intelligence", "Conversational UX", "AI Product Design", "Lovable"],
       "date": "2026", "status": "Completed", "featured": true,
       "links": [{"name": "Prototype", "url": "https://niyam-ai-fitness-coach.lovable.app/"}],
       "images": [{"src": "/projects/niyam-ai-fitness-coach.png", "alt": "Niyam — AI fitness coach app"}]
@@ -164,7 +164,7 @@
       "section": "Product & Tech Projects",
       "category": "FinTech / Product",
       "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps.",
-      "techStack": ["Product Strategy", "Figma", "Claude Artifacts", "UX"],
+      "techStack": ["AI-Assisted Prototyping", "Claude Artifacts", "Investment UX", "FinTech Product Strategy", "Figma"],
       "date": "2026", "status": "Completed", "featured": true,
       "links": [{"name": "Deck", "url": "https://canva.link/2go3upmujh38yuf"}, {"name": "Prototype", "url": "https://claude.ai/public/artifacts/1597c430-efb5-4ea5-90b7-6342d89c0f94"}],
       "images": [{"src": "/projects/onset-investment-platform.png", "alt": "Onset — investment platform concept"}]
@@ -174,7 +174,7 @@
       "section": "Product & Tech Projects",
       "category": "Product Case Study / D2C",
       "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce.",
-      "techStack": ["Product Case Study", "Lovable", "UX Design", "Market Research"],
+      "techStack": ["AI Prototyping", "D2C Strategy", "Go-to-Market", "Market Research", "UX Design", "Lovable"],
       "date": "2026", "status": "Completed", "featured": true,
       "links": [{"name": "Deck", "url": "https://docs.google.com/document/d/1u8g70suhAYk9JnjA5wlneZNRZTQOJteKFl7puzpSMLs/edit?usp=sharing"}, {"name": "Prototype", "url": "https://farmfresh-bitebox.lovable.app/"}],
       "images": [{"src": "/projects/zomato-farm-fresh.png", "alt": "Zomato Farm Fresh — farm-to-table feature concept"}]
@@ -184,7 +184,7 @@
       "section": "Product & Tech Projects",
       "category": "Product Case Study / AI",
       "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation.",
-      "techStack": ["Product Case Study", "Lovable", "UX Design"],
+      "techStack": ["AI Product Strategy", "ChatGPT Platform", "AI UX", "Feature Design", "AI Workspace", "Lovable"],
       "date": "2026", "status": "Completed", "featured": true,
       "links": [{"name": "Deck", "url": "https://canva.link/q111ie83mlvhsjo"}, {"name": "Prototype", "url": "https://chatgpt-projects-tag.lovable.app"}],
       "images": [{"src": "/projects/openai-project-tags.png", "alt": "OpenAI Project TAGs — ChatGPT Projects tagging concept"}]
@@ -194,7 +194,7 @@
       "section": "Product & Tech Projects",
       "category": "Machine Learning / LLM",
       "description": "Fine-tuned a Llama model on a custom dataset — covering data preparation, training, and evaluation.",
-      "techStack": ["Python", "Llama", "Fine-tuning", "Hugging Face", "Google Colab"],
+      "techStack": ["LLM Fine-tuning", "Instruction Tuning", "Llama 3", "PEFT / LoRA", "Hugging Face", "Custom Dataset"],
       "date": "2025", "status": "Completed", "featured": false,
       "links": [{"name": "Notebook", "url": "https://colab.research.google.com/drive/1tc7Ud_MVNJd4_fxnyLPXe8WAyzRcP9wN?usp=sharing"}],
       "images": []
@@ -204,7 +204,7 @@
       "section": "Business Strategy & GTM Projects",
       "category": "Business Strategy",
       "description": "A comprehensive analysis of Reliance Jio's hypergrowth strategy — examining how it disrupted India's telecom market through aggressive pricing, vertical integration, and ecosystem lock-in to become the country's largest telecom operator.",
-      "techStack": ["Business Strategy", "Market Analysis", "Telecom", "Growth Frameworks"],
+      "techStack": ["Growth Strategy", "Market Disruption", "Ecosystem Lock-in", "Competitive Intelligence", "Data-Driven Analysis"],
       "date": "2024", "status": "Completed", "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/rubnx347fl3g9qz"}],
       "images": [{"src": "/projects/Growth Strategy of Jio .png", "alt": "Growth Strategy of Jio"}]
@@ -214,7 +214,7 @@
       "section": "Business Strategy & GTM Projects",
       "category": "ML Research",
       "description": "An exploration of how machine learning models — including logistic regression, decision trees, and neural networks — can be applied to early diabetes diagnosis, comparing model accuracy, interpretability, and clinical applicability.",
-      "techStack": ["Machine Learning", "Healthcare", "Data Analysis", "Python"],
+      "techStack": ["Predictive ML", "Healthcare AI", "Classification Models", "Feature Engineering", "Clinical Decision Support"],
       "date": "2024", "status": "Completed", "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/u8g6sxis66ona4t"}],
       "images": [{"src": "/projects/ML Application in Medical Science.png", "alt": "ML Applications in Diagnosis of Diabetes"}]
@@ -224,7 +224,7 @@
       "section": "Business Strategy & GTM Projects",
       "category": "Marketing Strategy",
       "description": "A deep-dive into Nike's global marketing playbook — covering brand positioning, athlete endorsements, digital-first campaigns, community building through Nike Run Club & Training Club, and how storytelling drives premium pricing power.",
-      "techStack": ["Marketing Strategy", "Brand Management", "Consumer Behavior", "Digital Marketing"],
+      "techStack": ["Brand Strategy", "Data-Driven Marketing", "Consumer Behavior", "Community-Led Growth", "Digital Marketing"],
       "date": "2024", "status": "Completed", "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/rost4te7qbv1fto"}],
       "images": [{"src": "/projects/Marketing Strategy of Nike.png", "alt": "Marketing Strategy of Nike"}]
@@ -234,7 +234,7 @@
       "section": "Business Strategy & GTM Projects",
       "category": "GTM Strategy",
       "description": "A go-to-market plan for a new Cisco product targeting enterprise network security — covering ICP definition, channel strategy, competitive positioning, pricing model, and launch sequencing across geographies.",
-      "techStack": ["GTM Strategy", "B2B SaaS", "Enterprise Sales", "Product Launch"],
+      "techStack": ["GTM Strategy", "B2B SaaS", "Enterprise AI", "Competitive Positioning", "Product Launch"],
       "date": "2024", "status": "Completed", "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/ssllvtnt6mbvlff"}],
       "images": [{"src": "/projects/Marketing Strategy for New Service Cisco.png", "alt": "GTM Strategy for New Product by Cisco"}]
@@ -244,7 +244,7 @@
       "section": "Business Strategy & GTM Projects",
       "category": "Business Strategy",
       "description": "A strategic analysis of ABC's business model — examining competitive positioning, value chain, growth levers, and strategic recommendations to sustain long-term advantage in a dynamic market landscape.",
-      "techStack": ["Business Strategy", "Competitive Analysis", "Value Chain", "Strategic Planning"],
+      "techStack": ["Business Strategy", "Value Chain Analysis", "Competitive Intelligence", "Strategic Frameworks", "Data-Driven Decisions"],
       "date": "2024", "status": "Completed", "featured": false,
       "links": [{"name": "Presentation", "url": "https://canva.link/4wn40q6i2epxi3u"}],
       "images": [{"src": "/projects/Strategy Management ABC.png", "alt": "Business Strategy of ABC"}]
@@ -254,7 +254,7 @@
       "section": "Case Competitions",
       "category": "CX & Product Management",
       "description": "Ranked among the National Finalists at the V-Guard Big Idea Business Plan Contest 2024 — competing against 2000+ product ideas from across India. Developed and pitched a full product innovation concept, combining customer insight, market sizing, and go-to-market strategy to address a real consumer problem in the home appliances space.",
-      "techStack": ["Product Innovation", "Business Plan", "GTM Strategy", "Market Research", "Pitch"],
+      "techStack": ["Product Innovation", "AI-Enabled Features", "Business Plan", "GTM Strategy", "Customer Insight", "Market Research"],
       "date": "2024", "status": "Completed", "featured": true,
       "links": [{"name": "Presentation", "url": "https://canva.link/ukagno8wsw36fm6"}],
       "images": [{"src": "/projects/BigIdea 2024.png", "alt": "V-Guard Big Idea 2024 Presentation Preview"}]
@@ -264,7 +264,7 @@
       "section": "Case Competitions",
       "category": "CX & Product Management",
       "description": "Competed in Tata Steel-A-Thon 2024, a national-level case competition challenging participants to solve real business problems across operations, strategy, and customer experience in the steel industry. Developed a structured solution combining market insight, operational analysis, and actionable recommendations — presented to a panel of Tata Steel industry leaders.",
-      "techStack": ["Case Competition", "Business Analysis", "CX Strategy", "Operations", "Presentation"],
+      "techStack": ["CX Strategy", "Operations Analytics", "AI Applications", "Business Analysis", "Data-Driven Recommendations"],
       "date": "2024", "status": "Completed", "featured": true,
       "links": [{"name": "Presentation", "url": "https://canva.link/f5i180swd6f0pe4"}],
       "images": [{"src": "/projects/TATA Steel-A-Thon 2024.png", "alt": "Tata Steel-A-Thon 2024 Presentation Preview"}]
