@@ -132,15 +132,6 @@
       "images": [{"src": "/projects/pocket.png", "alt": "Pocket — AI expense tracker with spending insights"}]
     },
     {
-      "title": "Diabetic Retinopathy Detection (CNN)",
-      "section": "Product & Tech Projects",
-      "category": "Deep Learning / Healthcare",
-      "description": "A CNN deep-learning model that detects diabetic retinopathy with 72% accuracy on the Messidor dataset of 1,151 retinal images. Explores automated screening to support earlier diagnosis.",
-      "techStack": ["Computer Vision", "CNN", "Medical AI", "Image Classification", "Deep Learning", "TensorFlow / Keras"],
-      "date": "2024", "status": "Completed", "featured": false,
-      "links": [], "images": []
-    },
-    {
       "title": "IMDB Sentiment & Topic Analysis",
       "section": "Product & Tech Projects",
       "category": "NLP / Data Science",
