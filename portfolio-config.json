@@ -119,7 +119,12 @@
       "techStack": ["Agentic AI", "RAG Pipeline", "Multi-turn Memory", "LangGraph", "Real-time Streaming", "Web Search", "Code Interpreter"],
       "date": "2025", "status": "Completed", "featured": false,
       "links": [{"name": "Deck", "url": "/projects/SAM_Agentic_RAG_Deck.pptx"}, {"name": "Prototype", "url": "https://sam-ai-chatbot.streamlit.app/"}],
-      "images": [{"src": "/projects/sam.png", "alt": "SAM — AI chatbot with RAG, web search and code interpreter"}]
+      "images": [{"src": "/projects/sam.png", "alt": "SAM — AI chatbot with RAG, web search and code interpreter"}],
+      "workflowImages": [
+        {"src": "/projects/sam architecture/Agent Ingestion & Vectorization.png", "label": "Agent Ingestion & Vectorization"},
+        {"src": "/projects/sam architecture/Agent Tool Calling.png", "label": "Agent Tool Calling"},
+        {"src": "/projects/sam architecture/Agent Workflow.png", "label": "Agent Workflow"}
+      ]
     },
     {
       "title": "Pocket",
