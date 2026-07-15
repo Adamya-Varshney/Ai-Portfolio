@@ -118,7 +118,7 @@
       "description": "A multi-capability AI agent built with LangGraph and Streamlit, combining RAG-powered knowledge retrieval, live web search, and a code interpreter — all within a multi-threaded chat interface with real-time response streaming. Maintains persistent context across parallel conversation threads for a coherent, research-grade assistant experience.",
       "techStack": ["Agentic AI", "RAG Pipeline", "Multi-turn Memory", "LangGraph", "Real-time Streaming", "Web Search", "Code Interpreter"],
       "date": "2025", "status": "Completed", "featured": false,
-      "links": [{"name": "Prototype", "url": "https://sam-ai-chatbot.streamlit.app/"}],
+      "links": [{"name": "Deck", "url": "/projects/SAM_Agentic_RAG_Deck.pptx"}, {"name": "Prototype", "url": "https://sam-ai-chatbot.streamlit.app/"}],
       "images": [{"src": "/projects/sam.png", "alt": "SAM — AI chatbot with RAG, web search and code interpreter"}]
     },
     {
