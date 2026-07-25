@@ -67,13 +67,12 @@ function ProjectDetail({ project }: { project: any }) {
                 ))}
               </div>
             )}
-            <div className="relative flex-1 flex items-center justify-center">
+            <div className="relative flex-1 min-h-0 min-h-[160px]">
               <Image
                 src={project.images[0].src}
                 alt={project.images[0].alt || project.title}
-                width={800}
-                height={600}
-                className="w-full h-full object-contain"
+                fill
+                className="object-contain"
               />
             </div>
           </div>
