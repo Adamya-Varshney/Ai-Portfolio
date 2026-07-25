@@ -37,6 +37,7 @@ function getTabStyle(title: string, isActive: boolean) {
 }
 
 function ProjectDetail({ project }: { project: any }) {
+  const hasImage = !!project.images?.[0]?.src;
   return (
     <motion.div
       key={project.title}
@@ -44,11 +45,11 @@ function ProjectDetail({ project }: { project: any }) {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -8 }}
       transition={{ duration: 0.2, ease: 'easeOut' }}
-      className="rounded-xl border bg-accent overflow-hidden h-full"
+      className="rounded-xl border bg-accent overflow-hidden h-auto sm:h-full"
     >
-      <div className={`flex h-full ${project.images?.[0]?.src ? 'flex-row' : 'flex-col'} gap-0`}>
-        {project.images?.[0]?.src && (
-          <div className="relative shrink-0 w-3/5 bg-muted flex items-center justify-center">
+      <div className={`flex h-auto sm:h-full ${hasImage ? 'flex-col sm:flex-row' : 'flex-col'} gap-0`}>
+        {hasImage && (
+          <div className="relative w-full sm:w-3/5 sm:shrink-0 bg-muted flex items-center justify-center min-h-[200px] sm:min-h-0">
             <Image
               src={project.images[0].src}
               alt={project.images[0].alt || project.title}
@@ -58,7 +59,7 @@ function ProjectDetail({ project }: { project: any }) {
             />
           </div>
         )}
-        <div className="w-2/5 shrink-0 p-4 sm:p-5 space-y-3 overflow-y-auto">
+        <div className={`${hasImage ? 'w-full sm:w-2/5 sm:shrink-0' : 'w-full'} p-4 sm:p-5 space-y-3 sm:overflow-y-auto`}>
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
               <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
@@ -138,14 +139,14 @@ export default function AllProjects() {
   const currentProject = projects.find(p => p.title === activeProject) ?? projects[0];
 
   return (
-    <div className="w-full py-2 flex flex-col gap-3 sm:gap-4" style={{ height: 'calc(100vh - 150px)' }}>
-      {/* Section tabs */}
-      <div className="flex gap-1.5 rounded-xl bg-accent p-1 shrink-0">
+    <div className="w-full py-2 flex flex-col gap-3 sm:gap-4 lg:h-[calc(100vh-150px)]">
+      {/* Section tabs — horizontally scrollable on small screens */}
+      <div className="flex gap-1.5 rounded-xl bg-accent p-1 shrink-0 overflow-x-auto">
         {TABS.map(tab => (
           <button
             key={tab.id}
             onClick={() => handleTabChange(tab.id)}
-            className={`flex-1 rounded-lg px-2 sm:px-3 py-2 text-xs font-medium transition-all duration-200 leading-tight ${
+            className={`flex-1 min-w-max rounded-lg px-2 sm:px-3 py-2 text-xs font-medium transition-all duration-200 leading-tight whitespace-nowrap ${
               activeTab === tab.id
                 ? 'bg-background text-foreground shadow-sm'
                 : 'text-muted-foreground hover:text-foreground'
@@ -156,7 +157,7 @@ export default function AllProjects() {
         ))}
       </div>
 
-      {/* Two-column layout: sidebar + detail */}
+      {/* Content area: stacked on mobile, side-by-side on sm+ */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab}
@@ -164,15 +165,15 @@ export default function AllProjects() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.15 }}
-          className="flex gap-3 flex-1 min-h-0"
+          className="flex flex-col sm:flex-row gap-3 flex-1 min-h-0"
         >
-          {/* Left sidebar — color-coded project tabs */}
-          <div className="w-36 sm:w-44 shrink-0 flex flex-col gap-1.5 overflow-y-auto">
+          {/* Project list — horizontal scroll row on mobile, vertical sidebar on sm+ */}
+          <div className="flex sm:flex-col gap-1.5 overflow-x-auto sm:overflow-y-auto sm:overflow-x-hidden shrink-0 sm:w-36 lg:w-44 pb-1 sm:pb-0">
             {projects.map(project => (
               <button
                 key={project.title}
                 onClick={() => setActiveProject(project.title)}
-                className={`w-full text-left rounded-lg px-2.5 py-2 text-xs font-medium transition-all duration-200 leading-snug ${getTabStyle(project.title, activeProject === project.title)}`}
+                className={`shrink-0 sm:w-full text-left rounded-lg px-2.5 py-2 text-xs font-medium transition-all duration-200 leading-snug ${getTabStyle(project.title, activeProject === project.title)}`}
               >
                 {project.title}
               </button>
