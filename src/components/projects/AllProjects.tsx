@@ -49,14 +49,33 @@ function ProjectDetail({ project }: { project: any }) {
     >
       <div className={`flex h-auto sm:h-full ${hasImage ? 'flex-col sm:flex-row' : 'flex-col'} gap-0`}>
         {hasImage && (
-          <div className="relative w-full sm:w-3/5 sm:shrink-0 bg-muted flex items-center justify-center min-h-[200px] sm:min-h-0">
-            <Image
-              src={project.images[0].src}
-              alt={project.images[0].alt || project.title}
-              width={800}
-              height={600}
-              className="w-full h-full object-contain"
-            />
+          <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[200px] sm:min-h-0">
+            {/* Links bar above image */}
+            {project.links?.length > 0 && (
+              <div className="flex flex-wrap gap-2 sm:gap-3 px-3 py-2 border-b bg-muted/60">
+                {project.links.map((link: any, i: number) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <ExternalLink className="h-3 w-3" />
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            )}
+            <div className="relative flex-1 flex items-center justify-center">
+              <Image
+                src={project.images[0].src}
+                alt={project.images[0].alt || project.title}
+                width={800}
+                height={600}
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         )}
         <div className={`${hasImage ? 'w-full sm:w-2/5 sm:shrink-0' : 'w-full'} p-4 sm:p-5 space-y-3 sm:overflow-y-auto`}>
@@ -99,7 +118,8 @@ function ProjectDetail({ project }: { project: any }) {
             </div>
           )}
 
-          {project.links?.length > 0 && (
+          {/* Links for projects without a preview image */}
+          {!hasImage && project.links?.length > 0 && (
             <div className="flex flex-wrap gap-2 sm:gap-3 pt-1">
               {project.links.map((link: any, i: number) => (
                 <a
