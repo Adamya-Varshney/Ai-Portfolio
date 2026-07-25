@@ -52,16 +52,16 @@ function ProjectDetail({ project }: { project: any }) {
           <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[200px] sm:min-h-0">
             {/* Links bar above image */}
             {project.links?.length > 0 && (
-              <div className="flex flex-wrap gap-2 sm:gap-3 px-3 py-2 border-b bg-muted/60">
+              <div className="flex flex-wrap gap-2 px-3 py-2.5 border-b bg-muted/60">
                 {project.links.map((link: any, i: number) => (
                   <a
                     key={i}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                    className="flex items-center gap-1.5 rounded-md border border-primary/30 bg-background px-3 py-1.5 text-xs sm:text-sm font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
-                    <ExternalLink className="h-3 w-3" />
+                    <ExternalLink className="h-3.5 w-3.5" />
                     {link.name}
                   </a>
                 ))}
@@ -120,16 +120,16 @@ function ProjectDetail({ project }: { project: any }) {
 
           {/* Links for projects without a preview image */}
           {!hasImage && project.links?.length > 0 && (
-            <div className="flex flex-wrap gap-2 sm:gap-3 pt-1">
+            <div className="flex flex-wrap gap-2 pt-1">
               {project.links.map((link: any, i: number) => (
                 <a
                   key={i}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                  className="flex items-center gap-1.5 rounded-md border border-primary/30 bg-background px-3 py-1.5 text-xs sm:text-sm font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
-                  <ExternalLink className="h-3 w-3" />
+                  <ExternalLink className="h-3.5 w-3.5" />
                   {link.name}
                 </a>
               ))}
