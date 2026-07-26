@@ -142,7 +142,7 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery, handlePresetRepl
             {[
               { label: '3.5+ yrs', sub: 'PM experience' },
               { label: '100+ Cr', sub: 'Driving Monthly Revenue' },
-              { label: '17%', sub: 'retention lift' },
+              { label: '10%+', sub: 'Growth in KPIs' },
             ].map(stat => (
               <div key={stat.label} className="rounded-xl border bg-accent px-4 py-3 min-w-[90px]">
                 <div className="text-lg font-semibold text-foreground">{stat.label}</div>
