@@ -32,7 +32,13 @@ export function Contact() {
             className="group mb-5 cursor-pointer"
             onClick={() => openLink(`mailto:${contactInfo.email}`)}
           >
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true">
+                <path d="M0 3.75C0 2.784.784 2 1.75 2h20.5c.966 0 1.75.784 1.75 1.75v.253L12 12.58 0 4.003V3.75z" fill="#EA4335"/>
+                <path d="M0 5.478V20.25C0 21.216.784 22 1.75 22H6V9.367L0 5.478z" fill="#34A853"/>
+                <path d="M18 9.367V22h4.25c.966 0 1.75-.784 1.75-1.75V5.478L18 9.367z" fill="#4285F4"/>
+                <path d="M6 9.367L12 13.42l6-4.053V22H6V9.367z" fill="#FBBC05"/>
+              </svg>
               <span className="text-base font-medium text-blue-500 hover:underline sm:text-lg">
                 {contactInfo.email}
               </span>
