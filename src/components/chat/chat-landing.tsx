@@ -141,7 +141,7 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery, handlePresetRepl
           <motion.div className="flex flex-wrap gap-3" variants={itemVariants}>
             {[
               { label: '3.5+ yrs', sub: 'PM experience' },
-              { label: '100+ Cr', sub: 'monthly revenue' },
+              { label: '100+ Cr', sub: 'Driving Monthly Revenue' },
               { label: '17%', sub: 'retention lift' },
             ].map(stat => (
               <div key={stat.label} className="rounded-xl border bg-accent px-4 py-3 min-w-[90px]">
