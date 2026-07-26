@@ -42,7 +42,7 @@ const Avatar = dynamic<AvatarProps>(
     Promise.resolve(({ hasActiveTool }: AvatarProps) => {
       return (
         <div
-          className={`flex items-center justify-center rounded-full transition-all duration-300 ${hasActiveTool ? 'h-20 w-20' : 'h-28 w-28'}`}
+          className={`flex items-center justify-center transition-all duration-300 ${hasActiveTool ? 'h-20 w-20' : 'h-28 w-28'}`}
         >
           <div
             className="relative cursor-pointer"
@@ -51,7 +51,7 @@ const Avatar = dynamic<AvatarProps>(
             <img
               src="/profile.png"
               alt="Avatar"
-              className="h-full w-full object-cover object-[center_top_-5%] scale-95 rounded-full"
+              className="h-full w-full object-cover object-[center_top_-5%] scale-95"
             />
           </div>
         </div>
