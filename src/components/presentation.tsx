@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import React from 'react';
 import { profileInfo } from '@/lib/config-loader';
 
@@ -35,32 +34,7 @@ export function Presentation() {
 
   return (
     <div className="mx-auto w-full max-w-5xl py-6 font-sans">
-      <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-        {/* Image section */}
-        <div className="relative mx-auto aspect-square w-full max-w-sm">
-          <div className="relative h-full w-full overflow-hidden rounded-2xl">
-            <motion.div
-              initial={{ scale: 0.92, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-              className="h-full w-full"
-            >
-              <Image
-                src={profile.src}
-                alt={profile.name}
-                width={500}
-                height={500}
-                className="h-full w-full object-cover object-center"
-                onError={(e) => {
-                  // Fallback to placeholder if image fails to load
-                  const target = e.target as HTMLImageElement;
-                  target.src = profile.fallbackSrc;
-                }}
-              />
-            </motion.div>
-          </div>
-        </div>
-
+      <div className="grid grid-cols-1 items-center gap-10">
         {/* Text content section */}
         <div className="flex flex-col space-y">
           <motion.div
