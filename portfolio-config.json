@@ -1,0 +1,325 @@
+{
+  "personal": {
+    "name": "Adamya Varshney",
+    "age": 27,
+    "location": "Noida, Uttar Pradesh, India",
+    "title": "Product Manager | AI & Agentic Products",
+    "email": "adamya1998official@gmail.com",
+    "phone": "+91 8791167666",
+    "handle": "@Adamya-Varshney",
+    "bio": "Hey 👋\nI'm Adamya, a Product Manager with 3.5+ years across 0-to-N product development, GTM strategy, and marketing analytics. I've shipped end-to-end lifecycles — from MVP to market expansion — for B2B and D2C e-commerce, including digital journeys and Agentic AI solutions. I lead cross-functional teams toward quantifiable impact: 17% retention lifts, 3000+ new premium sellers, and AI products generating 100+ Cr in monthly revenue. I think customer-first, decide data-first, and love turning ambiguous problems into measurable outcomes.",
+    "avatar": "/profile.png",
+    "fallbackAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3"
+  },
+  "education": {
+    "current": {
+      "degree": "MBA, Majors in IT-Data Analytics & Marketing",
+      "institution": "Indian Institute of Management (IIM), Kashipur",
+      "duration": "2023-2025",
+      "cgpa": "6.76/10.0",
+      "graduationDate": "2025"
+    },
+    "previous": {
+      "degree": "B.Tech in Electronics & Communication Engineering (ECE)",
+      "institution": "Zakir Husain College of Engineering and Technology, A.M.U.",
+      "duration": "2016-2020",
+      "percentage": "71.22%",
+      "completionDate": "2020"
+    },
+    "achievements": [
+      "National Finalist at V-Guard Big Idea Business Plan Contest 2024 (competing against 2000+ product ideas with Aeromist)",
+      "2nd Runners-up in DASHBOARD WAR 3.0 at IIM Kashipur (Data Cleaning, Visualization & Analysis)",
+      "Gold Medal in IIM Kashipur's URP — 3-month consulting engagement for an NGO on Process & Learning Management"
+    ]
+  },
+  "experience": [
+    {
+      "company": "IndiaMART InterMESH",
+      "position": "Assistant Product Manager",
+      "type": "Full-time",
+      "duration": "June 2025 - Present",
+      "description": "Owning the Annual Product Life Cycle for IndiaMART's Premium B2B products. Boosted seller retention by 17% and expanded the Premium-tier base by 3000+ sellers via a 30-day GTM plan launching 4 new products. Designed differential pricing, incentive schemes, 20+ marketing campaigns, and service SOPs to accelerate adoption. Built 6 AI-based conversion analytics dashboards to manage the hot-lead pipeline down to the field-executive level, and shipped an AI RAG agent that cut inter-department knowledge-retrieval time from 3 days to seconds. Managing a portfolio of 6+ AI-driven B2B matchmaking products generating 100+ Cr in monthly revenue.",
+      "technologies": ["Product Lifecycle Management", "GTM Strategy", "Pricing Strategy", "RAG Agents", "Conversion Analytics", "Power BI", "Stakeholder Management"]
+    },
+    {
+      "company": "Escafate",
+      "position": "Product Management Intern — AIMERS Platform",
+      "type": "Internship",
+      "duration": "November 2023 - February 2024",
+      "description": "Led an 8-member cross-functional team through customer research, persona creation, and MVP feature ideation for the AIMERS platform. Executed the AIMERS website MVP while tracking user engagement, DAU, retention, satisfaction, feature adoption, and churn. Managed 70% of development, owning the user flow and enabling accessibility for visually impaired users.",
+      "technologies": ["MVP Development", "User Research", "Persona Creation", "User Flows", "Accessibility", "Product Metrics", "Team Leadership"]
+    },
+    {
+      "company": "CL Educate Ltd",
+      "position": "Product Content Development",
+      "type": "Full-time",
+      "duration": "June 2022 - April 2023",
+      "description": "Delivered 50+ learning modules covering 25% of flagship offerings, contributing to a 15% increase in customer acquisition and retention. Developed 50+ hours of digital content, driving a 20% month-over-month increase in course webpage visits and mock-test sign-ups.",
+      "technologies": ["Content Strategy", "Customer Acquisition", "Retention", "Conversion Optimization", "SEO"]
+    },
+    {
+      "company": "Unacademy",
+      "position": "Product & Content Strategy Associate",
+      "type": "Full-time",
+      "duration": "February 2021 - May 2022",
+      "description": "Drove a 25% boost in engagement via strategic content-led growth across Facebook, Instagram, LinkedIn, and YouTube. Contributed 250+ hours of video content covering 85% of the PrepLadder App's feature-development cycle. Devised 150+ hours of SEO-optimized short-form YouTube content, adding 1,200+ subscribers and strengthening top-of-funnel awareness.",
+      "technologies": ["Content Strategy", "Growth Marketing", "SEO", "Social Media", "User Engagement", "Product Storytelling"]
+    }
+  ],
+  "skills": {
+    "product_tools": ["JIRA", "Figma", "Roadmapping", "A/B Testing", "Usability Testing"],
+    "data_ai": ["SQL", "Python", "LangGraph", "LangChain", "RAG Systems", "Agentic AI"],
+    "analytics": ["MS Power BI", "Tableau", "R", "Google Analytics", "Conversion Analytics"],
+    "automation": ["n8n", "Make", "AI Workflow Automation"],
+    "vibe_coding": ["Claude Code", "Antigravity", "Lovable"],
+    "pm_skills": ["Product Lifecycle Management", "GTM Strategy", "Roadmap Planning", "Prioritization", "Market Research", "User Research", "Stakeholder Management", "Problem Solving"],
+    "soft_skills": ["User Empathy", "Customer-Centric Thinking", "Cross-functional Leadership", "Data-Driven Decision Making", "Communication", "Storytelling"]
+  },
+  "certifications": [
+    {"name": "AI-First Product Management Fellowship", "issuer": "Product Space", "grade": "Focused on AI Product Strategy & Development", "year": "2025"},
+    {"name": "Google 5-Day GenAI Intensive — Built 'Fake Buster' (RAG fact-checking agent using Gemini & ChromaDB)", "issuer": "Google", "year": "2025"},
+    {"name": "SQL (Intermediate / Silver Rank)", "issuer": "HackerRank", "grade": "Silver", "year": "2024"}
+  ],
+  "projects": [
+    {
+      "title": "Growmatic",
+      "section": "Product & Tech Projects",
+      "category": "Agentic AI / CRM",
+      "description": "An AI-driven CRM that automates lead qualification and ad-content generation to simplify marketing for SMBs. Designed to compress the qualify-to-convert funnel and let small teams run enterprise-grade lead ops without a dedicated marketing function.",
+      "techStack": ["Agentic AI", "Multi-Agent Orchestration", "RAG Pipeline", "Lead Qualification AI", "LangGraph", "LangChain"],
+      "date": "2025", "status": "Completed", "featured": true,
+      "links": [{"name": "Deck", "url": "https://drive.google.com/file/d/1x7fJmM67Xfyn_DgnyjS2NxejPbV_iWTX/view?usp=sharing"}, {"name": "Prototype", "url": "https://growmatic-ai-crm.vercel.app/#/login"}],
+      "images": [{"src": "/projects/growmatic.png", "alt": "Growmatic — AI marketing copilot dashboard"}]
+    },
+    {
+      "title": "Bundles & Buddy Mode",
+      "section": "Product & Tech Projects",
+      "category": "D2C / E-commerce Product",
+      "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform. 'Bundles' nudges complementary add-ons at checkout; 'Buddy Mode' enables shared, planned carts — both targeting basket size and repeat ordering.",
+      "techStack": ["AI-Driven Nudges", "Behavioral Design", "AOV Optimization", "Checkout Personalization", "User Psychology", "Figma"],
+      "date": "2025", "status": "Completed", "featured": true,
+      "links": [{"name": "Deck", "url": "https://onedrive.live.com/:p:/g/personal/2DCCBA7A09395FB7/IQAwIMqhJW9NRokZsJCjgIsmAdwpuNp7qTPT-ICdL_XfR0c?resid=2DCCBA7A09395FB7!sa1ca20306f25464d8919b090a3808b26&ithint=file%2Cpptx&e=rx6oPT&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy8yZGNjYmE3YTA5Mzk1ZmI3L0lRQXdJTXFoSlc5TlJva1pzSkNqZ0lzbUFkd3B1TnA3cVRQVC1JQ2RMX1hmUjBjP2U9cng2b1BU"}, {"name": "Prototype", "url": "https://claude.ai/public/artifacts/9787589d-1ab4-41ed-9a65-b49cceb11323"}],
+      "images": [{"src": "/projects/bundles-buddy-mode.png", "alt": "Bundles & Buddy Mode — quick-commerce checkout concept"}]
+    },
+    {
+      "title": "Xcurson",
+      "section": "Product & Tech Projects",
+      "category": "Agentic AI / Travel",
+      "description": "An AI travel planner built via vibe-coding, with a modular architecture for crafting contextual, personalized itineraries. Turns loose trip intent into structured, day-by-day plans tailored to user preferences.",
+      "techStack": ["Agentic AI", "LLM Orchestration", "Personalized Itinerary AI", "Vibe Coding", "Modular AI Architecture"],
+      "date": "2026", "status": "Completed", "featured": true,
+      "links": [{"name": "Prototype", "url": "https://xcurson.lovable.app"}],
+      "images": [{"src": "/projects/xcurson.png", "alt": "Xcurson — AI travel itinerary planner"}]
+    },
+    {
+      "title": "SAM: AI Chatbot with RAG",
+      "section": "Product & Tech Projects",
+      "category": "Agentic AI / Conversational",
+      "description": "A multi-capability AI agent built with LangGraph and Streamlit, combining RAG-powered knowledge retrieval, live web search, and a code interpreter — all within a multi-threaded chat interface with real-time response streaming. Maintains persistent context across parallel conversation threads for a coherent, research-grade assistant experience.",
+      "techStack": ["Agentic AI", "RAG Pipeline", "Multi-turn Memory", "LangGraph", "Real-time Streaming", "Web Search", "Code Interpreter"],
+      "date": "2025", "status": "Completed", "featured": false,
+      "links": [{"name": "Deck", "url": "/projects/SAM_Agentic_RAG_Deck.pptx"}, {"name": "Prototype", "url": "https://sam-ai-chatbot.streamlit.app/"}],
+      "images": [{"src": "/projects/sam.png", "alt": "SAM — AI chatbot with RAG, web search and code interpreter"}],
+      "workflowImages": [
+        {"src": "/projects/sam architecture/Agent Ingestion & Vectorization.png", "label": "Agent Ingestion & Vectorization"},
+        {"src": "/projects/sam architecture/Agent Tool Calling.png", "label": "Agent Tool Calling"},
+        {"src": "/projects/sam architecture/Agent Workflow.png", "label": "Agent Workflow"}
+      ]
+    },
+    {
+      "title": "Pocket",
+      "section": "Product & Tech Projects",
+      "category": "AI / FinTech",
+      "description": "An AI expense tracker offering smart cash-flow management and visual summaries that explain spending habits. Translates raw transactions into plain-language insights so users understand the 'why' behind their spending.",
+      "techStack": ["LLM Summarization", "AI Financial Insights", "Spending Pattern Analysis", "Personal Finance AI", "Data Visualization"],
+      "date": "2025", "status": "Completed", "featured": false,
+      "links": [{"name": "Prototype", "url": "https://pocket-money-manage.netlify.app/"}],
+      "images": [{"src": "/projects/pocket.png", "alt": "Pocket — AI expense tracker with spending insights"}]
+    },
+    {
+      "title": "IMDB Sentiment & Topic Analysis",
+      "section": "Product & Tech Projects",
+      "category": "NLP / Data Science",
+      "description": "Analyzed 40,000+ IMDB reviews using VADER and Logistic Regression, achieving 78.23% accuracy in sentiment and topic analysis. Surfaces what drives positive vs. negative reception at scale.",
+      "techStack": ["NLP", "Sentiment Analysis", "Topic Modeling", "Text Classification", "VADER", "scikit-learn"],
+      "date": "2024", "status": "Completed", "featured": false,
+      "links": [], "images": []
+    },
+    {
+      "title": "Niyam (AI Fitness Coach)",
+      "section": "Product & Tech Projects",
+      "category": "AI / Health & Fitness",
+      "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals.",
+      "techStack": ["AI Coaching", "Personalization AI", "Conversational UX", "Lovable", "AI Agents", "N8N"],
+      "date": "2026", "status": "Completed", "featured": true,
+      "links": [{"name": "Prototype", "url": "https://niyam-ai-fitness-coach.lovable.app/"}],
+      "images": [{"src": "/projects/niyam-ai-fitness-coach.png", "alt": "Niyam — AI fitness coach app"}],
+      "workflowImages": [
+        {"src": "/projects/Niyam : Workflow Architecture/Niyam User Onboarding.png", "label": "User Onboarding"},
+        {"src": "/projects/Niyam : Workflow Architecture/Niyam Chat & Workout Sessions.png", "label": "Chat & Workout Sessions"},
+        {"src": "/projects/Niyam : Workflow Architecture/Niyam Daily Reminders & Logs.png", "label": "Daily Reminders & Logs"}
+      ]
+    },
+    {
+      "title": "Onset : Investment Platform",
+      "section": "Product & Tech Projects",
+      "category": "FinTech / Product",
+      "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps.",
+      "techStack": ["AI-Assisted Prototyping", "Claude Artifacts", "Investment UX", "FinTech Product Strategy", "Figma"],
+      "date": "2026", "status": "Completed", "featured": true,
+      "links": [{"name": "Deck", "url": "https://canva.link/2go3upmujh38yuf"}, {"name": "Prototype", "url": "https://claude.ai/public/artifacts/1597c430-efb5-4ea5-90b7-6342d89c0f94"}],
+      "images": [{"src": "/projects/onset-investment-platform.png", "alt": "Onset — investment platform concept"}]
+    },
+    {
+      "title": "Zomato : Farm Fresh",
+      "section": "Product & Tech Projects",
+      "category": "Product Case Study / D2C",
+      "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce.",
+      "techStack": ["AI Prototyping", "D2C Strategy", "Go-to-Market", "Market Research", "UX Design", "Lovable"],
+      "date": "2026", "status": "Completed", "featured": true,
+      "links": [{"name": "Deck", "url": "https://docs.google.com/document/d/1u8g70suhAYk9JnjA5wlneZNRZTQOJteKFl7puzpSMLs/edit?usp=sharing"}, {"name": "Prototype", "url": "https://farmfresh-bitebox.lovable.app/"}],
+      "images": [{"src": "/projects/zomato-farm-fresh.png", "alt": "Zomato Farm Fresh — farm-to-table feature concept"}]
+    },
+    {
+      "title": "OpenAI : Project TAGs",
+      "section": "Product & Tech Projects",
+      "category": "Product Case Study / AI",
+      "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation.",
+      "techStack": ["AI Product Strategy", "ChatGPT Platform", "AI UX", "Feature Design", "AI Workspace", "Lovable"],
+      "date": "2026", "status": "Completed", "featured": true,
+      "links": [{"name": "Deck", "url": "https://canva.link/q111ie83mlvhsjo"}, {"name": "Prototype", "url": "https://chatgpt-projects-tag.lovable.app"}],
+      "images": [{"src": "/projects/openai-project-tags.png", "alt": "OpenAI Project TAGs — ChatGPT Projects tagging concept"}]
+    },
+    {
+      "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
+      "section": "Product & Tech Projects",
+      "category": "Machine Learning / LLM",
+      "description": "Fine-tuned a Llama model on a custom dataset — covering data preparation, training, and evaluation.",
+      "techStack": ["LLM Fine-tuning", "Instruction Tuning", "Llama 3", "PEFT / LoRA", "Hugging Face", "Custom Dataset"],
+      "date": "2025", "status": "Completed", "featured": false,
+      "links": [{"name": "Notebook", "url": "https://colab.research.google.com/drive/1tc7Ud_MVNJd4_fxnyLPXe8WAyzRcP9wN?usp=sharing"}],
+      "images": []
+    },
+    {
+      "title": "Growth Strategy of Jio",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Business Strategy",
+      "description": "A comprehensive analysis of Reliance Jio's hypergrowth strategy — examining how it disrupted India's telecom market through aggressive pricing, vertical integration, and ecosystem lock-in to become the country's largest telecom operator.",
+      "techStack": ["Growth Strategy", "Market Disruption", "Ecosystem Lock-in", "Competitive Intelligence", "Data-Driven Analysis"],
+      "date": "2024", "status": "Completed", "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/rubnx347fl3g9qz"}],
+      "images": [{"src": "/projects/Growth Strategy of Jio .png", "alt": "Growth Strategy of Jio"}]
+    },
+    {
+      "title": "ML Applications in Diagnosis of Diabetes",
+      "section": "Business Strategy & GTM Projects",
+      "category": "ML Research",
+      "description": "An exploration of how machine learning models — including logistic regression, decision trees, and neural networks — can be applied to early diabetes diagnosis, comparing model accuracy, interpretability, and clinical applicability.",
+      "techStack": ["Predictive ML", "Healthcare AI", "Classification Models", "Feature Engineering", "Clinical Decision Support"],
+      "date": "2024", "status": "Completed", "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/u8g6sxis66ona4t"}],
+      "images": [{"src": "/projects/ML Application in Medical Science.png", "alt": "ML Applications in Diagnosis of Diabetes"}]
+    },
+    {
+      "title": "Marketing Strategy of Nike",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Marketing Strategy",
+      "description": "A deep-dive into Nike's global marketing playbook — covering brand positioning, athlete endorsements, digital-first campaigns, community building through Nike Run Club & Training Club, and how storytelling drives premium pricing power.",
+      "techStack": ["Brand Strategy", "Data-Driven Marketing", "Consumer Behavior", "Community-Led Growth", "Digital Marketing"],
+      "date": "2024", "status": "Completed", "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/rost4te7qbv1fto"}],
+      "images": [{"src": "/projects/Marketing Strategy of Nike.png", "alt": "Marketing Strategy of Nike"}]
+    },
+    {
+      "title": "GTM Strategy for New Product by Cisco",
+      "section": "Business Strategy & GTM Projects",
+      "category": "GTM Strategy",
+      "description": "A go-to-market plan for a new Cisco product targeting enterprise network security — covering ICP definition, channel strategy, competitive positioning, pricing model, and launch sequencing across geographies.",
+      "techStack": ["GTM Strategy", "B2B SaaS", "Enterprise AI", "Competitive Positioning", "Product Launch"],
+      "date": "2024", "status": "Completed", "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/ssllvtnt6mbvlff"}],
+      "images": [{"src": "/projects/Marketing Strategy for New Service Cisco.png", "alt": "GTM Strategy for New Product by Cisco"}]
+    },
+    {
+      "title": "Business Strategy of ABC",
+      "section": "Business Strategy & GTM Projects",
+      "category": "Business Strategy",
+      "description": "A strategic analysis of ABC's business model — examining competitive positioning, value chain, growth levers, and strategic recommendations to sustain long-term advantage in a dynamic market landscape.",
+      "techStack": ["Business Strategy", "Value Chain Analysis", "Competitive Intelligence", "Strategic Frameworks", "Data-Driven Decisions"],
+      "date": "2024", "status": "Completed", "featured": false,
+      "links": [{"name": "Presentation", "url": "https://canva.link/4wn40q6i2epxi3u"}],
+      "images": [{"src": "/projects/Strategy Management ABC.png", "alt": "Business Strategy of ABC"}]
+    },
+    {
+      "title": "V-Guard Big Idea : Product Innovation",
+      "section": "Case Competitions",
+      "category": "CX & Product Management",
+      "description": "Ranked among the National Finalists at the V-Guard Big Idea Business Plan Contest 2024 — competing against 2000+ product ideas from across India. Developed and pitched a full product innovation concept, combining customer insight, market sizing, and go-to-market strategy to address a real consumer problem in the home appliances space.",
+      "techStack": ["Product Innovation", "AI-Enabled Features", "Business Plan", "GTM Strategy", "Customer Insight", "Market Research"],
+      "date": "2024", "status": "Completed", "featured": true,
+      "links": [{"name": "Presentation", "url": "https://canva.link/ukagno8wsw36fm6"}],
+      "images": [{"src": "/projects/BigIdea 2024.png", "alt": "V-Guard Big Idea 2024 Presentation Preview"}]
+    },
+    {
+      "title": "Tata Steel-A-Thon 2024",
+      "section": "Case Competitions",
+      "category": "CX & Product Management",
+      "description": "Competed in Tata Steel-A-Thon 2024, a national-level case competition challenging participants to solve real business problems across operations, strategy, and customer experience in the steel industry. Developed a structured solution combining market insight, operational analysis, and actionable recommendations — presented to a panel of Tata Steel industry leaders.",
+      "techStack": ["CX Strategy", "Operations Analytics", "AI Applications", "Business Analysis", "Data-Driven Recommendations"],
+      "date": "2024", "status": "Completed", "featured": true,
+      "links": [{"name": "Presentation", "url": "https://canva.link/f5i180swd6f0pe4"}],
+      "images": [{"src": "/projects/TATA Steel-A-Thon 2024.png", "alt": "Tata Steel-A-Thon 2024 Presentation Preview"}]
+    }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/adamya-varshney15/",
+    "github": "https://github.com/Adamya-Varshney",
+    "twitter": "", "kaggle": "https://www.kaggle.com/adam23082july",
+    "leetcode": "", "fiverr": "", "portfolio": ""
+  },
+  "internship": {
+    "seeking": true, "duration": "Full-time", "startDate": "",
+    "preferredLocation": "Noida / Remote / Hybrid",
+    "focusAreas": ["AI Product Management", "Agentic AI Products", "B2B & D2C E-commerce", "GTM Strategy", "Product Analytics"],
+    "availability": "Open to senior Product Manager opportunities",
+    "workStyle": "Customer-centric, data-driven PM who pairs design-thinking with quantitative rigor across the full product lifecycle",
+    "goals": "Build AI-native products that move real metrics. I want to own ambiguous 0-to-N problems end to end — research to GTM — on teams that care as much about user empathy as they do about measurable impact."
+  },
+  "personality": {
+    "traits": ["analytical", "customer-centric", "decisive", "collaborative", "results-driven"],
+    "interests": ["AI/Agentic Products", "Product Strategy", "Growth & GTM", "Data Analytics", "Marketing", "Vibe Coding"],
+    "funFacts": [
+      "Manages a portfolio of AI-driven B2B products generating 100+ Cr in monthly revenue",
+      "Launched 4 new products in a 30-day GTM sprint, adding 3000+ premium sellers",
+      "Built a RAG agent that cut cross-team knowledge retrieval from 3 days to seconds",
+      "National Finalist at V-Guard Big Idea among 2000+ ideas"
+    ],
+    "workingStyle": "I lead with the customer problem, validate with data, and ship in tight, measurable loops",
+    "motivation": "Turning ambiguous, high-stakes product problems into outcomes you can measure on a dashboard"
+  },
+  "resume": {
+    "title": "Adamya Varshney - Resume",
+    "description": "Product Manager | AI & Agentic Products | 0-to-N, GTM & Product Analytics",
+    "fileType": "PDF", "lastUpdated": "June 2026", "fileSize": "",
+    "downloadUrl": "/resume.pdf?v=2"
+  },
+  "chatbot": {
+    "name": "Adamya", "personality": "thoughtful, analytical, customer-centric",
+    "tone": "professional yet approachable", "language": "english",
+    "responseStyle": "clear, structured, and outcome-focused", "useEmojis": false,
+    "topics": ["projects", "skills", "experience", "product_strategy", "ai_products", "achievements", "contact", "certifications"]
+  },
+  "presetQuestions": {
+    "me": ["Who are you?", "Tell me about yourself", "What's your background?", "How do you approach product management?", "What got you into AI products?", "Where do you see yourself in 5 years?"],
+    "professional": ["What's your experience?", "What are your skills?", "Can I see your resume?", "Tell me about your work at IndiaMART", "How do you run a GTM launch?", "What product metrics do you track?", "What certifications do you have?", "Why should I hire you?", "What's your educational background?", "How do you balance data and user empathy?"],
+    "projects": ["What projects are you most proud of?", "Tell me about your Agentic AI projects", "What's Growmatic?", "How did Bundles & Buddy Mode drive AOV?", "What are you working on?", "Show me your data science work"],
+    "achievements": ["What are your major achievements?", "Tell me about the V-Guard finalist win", "What measurable impact have you driven?", "What did you win at IIM Kashipur?"],
+    "contact": ["How can I reach you?", "What's your email?", "Where can I find you online?", "Are you open to new roles?", "What kind of role would make you say 'yes'?", "Where are you located?"],
+    "fun": ["What are your interests?", "Tell me something interesting about you", "What motivates you?", "What's a fun fact about you?"]
+  },
+  "meta": {
+    "configVersion": "2.0", "lastUpdated": "2026-06-25",
+    "generatedBy": "Adamya Varshney",
+    "description": "Portfolio configuration for Adamya Varshney — Product Manager spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
+  }
+}
