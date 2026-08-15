@@ -107,7 +107,7 @@ function ProjectDetail({ project }: { project: any }) {
             </div>
           </div>
         )}
-        <div className={`${hasImage ? 'w-full sm:w-2/5 sm:shrink-0' : 'w-full'} p-4 sm:p-5 space-y-3 sm:overflow-y-auto`}>
+        <div className={`${hasMedia ? 'w-full sm:w-2/5 sm:shrink-0' : 'w-full'} p-4 sm:p-5 space-y-3 sm:overflow-y-auto`}>
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
               <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
