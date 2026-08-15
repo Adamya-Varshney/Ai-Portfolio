@@ -100,7 +100,7 @@
       "date": "2025", "status": "Completed", "featured": true,
       "links": [{"name": "Deck", "url": "https://onedrive.live.com/:p:/g/personal/2DCCBA7A09395FB7/IQAwIMqhJW9NRokZsJCjgIsmAdwpuNp7qTPT-ICdL_XfR0c?resid=2DCCBA7A09395FB7!sa1ca20306f25464d8919b090a3808b26&ithint=file%2Cpptx&e=rx6oPT&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy8yZGNjYmE3YTA5Mzk1ZmI3L0lRQXdJTXFoSlc5TlJva1pzSkNqZ0lzbUFkd3B1TnA3cVRQVC1JQ2RMX1hmUjBjP2U9cng2b1BU"}, {"name": "Prototype", "url": "https://claude.ai/public/artifacts/9787589d-1ab4-41ed-9a65-b49cceb11323"}],
       "images": [{"src": "/projects/bundles-buddy-mode.png", "alt": "Bundles & Buddy Mode — quick-commerce checkout concept"}],
-      "embedUrl": "https://docs.google.com/gviewer?url=https://raw.githubusercontent.com/adamya-varshney/ai-portfolio/main/public/bundles-buddy-deck.pptx&embedded=true"
+      "embedUrl": "/QCommerce_Blinkit.pdf"
     },
     {
       "title": "Xcurson",
