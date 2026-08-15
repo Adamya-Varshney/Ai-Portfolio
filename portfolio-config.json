@@ -191,8 +191,8 @@
       "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce.",
       "techStack": ["AI Prototyping", "D2C Strategy", "Go-to-Market", "Market Research", "UX Design", "Lovable"],
       "date": "2026", "status": "Completed", "featured": true,
-      "links": [{"name": "Deck", "url": "/projects/Zomato_FarmtoFresh_Deck.pdf"}, {"name": "Prototype", "url": "https://farmfresh-bitebox.lovable.app/"}],
-      "embedUrl": "/projects/Zomato_FarmtoFresh_Deck.pdf",
+      "links": [{"name": "Deck", "url": "/Zomato_FarmtoFresh_Deck.pdf"}, {"name": "Prototype", "url": "https://farmfresh-bitebox.lovable.app/"}],
+      "embedUrl": "/Zomato_FarmtoFresh_Deck.pdf",
       "images": [{"src": "/projects/zomato-farm-fresh.png", "alt": "Zomato Farm Fresh — farm-to-table feature concept"}]
     },
     {
