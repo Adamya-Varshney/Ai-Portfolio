@@ -129,6 +129,17 @@
       ]
     },
     {
+      "title": "LinkedIn : Creator & Connection Intelligence",
+      "section": "Product & Tech Projects",
+      "category": "Product Case Study / AI",
+      "description": "A product improvement case study proposing AI-powered features to help LinkedIn creators and professionals grow more intentionally — covering smarter content analytics, connection quality scoring, and personalized engagement nudges. Designed to address creator drop-off and passive browsing by turning LinkedIn into a proactive career growth engine.",
+      "techStack": ["Product Strategy", "AI Feature Design", "Creator Economy", "UX Improvement", "Engagement Optimization", "Behavioral Nudges", "Figma"],
+      "date": "2025", "status": "Completed", "featured": true,
+      "links": [{"name": "Deck", "url": "/projects/Linkedin_Improvement_CaseStudy.pdf"}],
+      "embedUrl": "/projects/Linkedin_Improvement_CaseStudy.pdf",
+      "images": []
+    },
+    {
       "title": "Pocket",
       "section": "Product & Tech Projects",
       "category": "AI / FinTech",
