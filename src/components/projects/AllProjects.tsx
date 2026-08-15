@@ -224,7 +224,7 @@ export default function AllProjects() {
                 onClick={() => setActiveProject(project.title)}
                 className={`shrink-0 sm:w-full text-left rounded-lg px-2.5 py-2 text-xs font-medium transition-all duration-200 leading-snug ${getTabStyle(project.title, activeProject === project.title)}`}
               >
-                {project.title}
+                {project.sidebarTitle || project.title}
               </button>
             ))}
           </div>
