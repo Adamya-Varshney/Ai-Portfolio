@@ -37,7 +37,9 @@ function getTabStyle(title: string, isActive: boolean) {
 }
 
 function ProjectDetail({ project }: { project: any }) {
-  const hasImage = !!project.images?.[0]?.src;
+  const hasEmbed = !!project.embedUrl;
+  const hasImage = !hasEmbed && !!project.images?.[0]?.src;
+  const hasMedia = hasEmbed || hasImage;
   return (
     <motion.div
       key={project.title}
@@ -47,7 +49,35 @@ function ProjectDetail({ project }: { project: any }) {
       transition={{ duration: 0.2, ease: 'easeOut' }}
       className="rounded-xl border bg-accent overflow-hidden h-auto sm:h-full"
     >
-      <div className={`flex h-auto sm:h-full ${hasImage ? 'flex-col sm:flex-row' : 'flex-col'} gap-0`}>
+      <div className={`flex h-auto sm:h-full ${hasMedia ? 'flex-col sm:flex-row' : 'flex-col'} gap-0`}>
+        {hasEmbed && (
+          <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
+            {project.links?.length > 0 && (
+              <div className="flex flex-wrap gap-2 px-3 py-2.5 border-b bg-muted/60">
+                {project.links.map((link: any, i: number) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 rounded-md border border-primary/30 bg-background px-3 py-1.5 text-xs sm:text-sm font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            )}
+            <div className="relative flex-1 min-h-0">
+              <iframe
+                src={project.embedUrl}
+                className="w-full h-full border-0"
+                title={project.title}
+                allowFullScreen
+              />
+            </div>
+          </div>
+        )}
         {hasImage && (
           <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[200px] sm:min-h-0">
             {/* Links bar above image */}
@@ -77,7 +107,7 @@ function ProjectDetail({ project }: { project: any }) {
             </div>
           </div>
         )}
-        <div className={`${hasImage ? 'w-full sm:w-2/5 sm:shrink-0' : 'w-full'} p-4 sm:p-5 space-y-3 sm:overflow-y-auto`}>
+        <div className={`${hasMedia ? 'w-full sm:w-2/5 sm:shrink-0' : 'w-full'} p-4 sm:p-5 space-y-3 sm:overflow-y-auto`}>
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
               <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
@@ -117,8 +147,8 @@ function ProjectDetail({ project }: { project: any }) {
             </div>
           )}
 
-          {/* Links for projects without a preview image */}
-          {!hasImage && project.links?.length > 0 && (
+          {/* Links for projects without a preview image or embed */}
+          {!hasMedia && project.links?.length > 0 && (
             <div className="flex flex-wrap gap-2 pt-1">
               {project.links.map((link: any, i: number) => (
                 <a
