@@ -13,6 +13,7 @@ import { Contact } from '@/components/contact';
 import Resume from '@/components/resume';
 import AvailabilityCard from '@/components/AvailabilityCard';
 import Education from '@/components/Education';
+import Writing from '@/components/Writing';
 
 interface PresetReplyProps {
   question: string;
@@ -72,6 +73,13 @@ export function PresetReply({ reply, tool, onClose }: PresetReplyProps) {
         return (
           <div className="w-full rounded-lg mb-4">
             <Education />
+          </div>
+        );
+
+      case 'getWriting':
+        return (
+          <div className="w-full rounded-lg mb-4">
+            <Writing />
           </div>
         );
 

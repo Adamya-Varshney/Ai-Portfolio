@@ -183,6 +183,11 @@ When discussing specific topics, you can trigger specialized displays:
       tool: "getEducation"
     };
 
+    replies["What have you written?"] = {
+      reply: `Here's my writing — PM teardowns, product lessons, and AI product essays.`,
+      tool: "getWriting"
+    };
+
     return replies;
   }
 

@@ -2,13 +2,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
-import { contactInfo } from '@/lib/config-loader';
+import { ChevronRight, CalendarDays } from 'lucide-react';
+import { contactInfo, getConfig } from '@/lib/config-loader';
 
 export function Contact() {
-  // Contact information now loaded from configuration
+  const bookACallUrl = (getConfig().personal as any).bookACall as string | undefined;
 
-  // Function to handle opening links
   const openLink = (url: string) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
@@ -17,13 +16,22 @@ export function Contact() {
     <div className="mx-auto mt-8 w-full">
       <div className="bg-accent w-full overflow-hidden rounded-3xl px-6 py-8 font-sans sm:px-10 md:px-16 md:py-12">
         {/* Header Section */}
-        <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-foreground text-3xl font-semibold md:text-4xl">
-            Contacts
-          </h2>
-          <span className="mt-2 sm:mt-0">
-            {contactInfo.handle}
-          </span>
+        <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div>
+            <h2 className="text-foreground text-3xl font-semibold md:text-4xl">
+              Contacts
+            </h2>
+            <span className="text-muted-foreground text-sm mt-1 block">{contactInfo.handle}</span>
+          </div>
+          {bookACallUrl && (
+            <button
+              onClick={() => openLink(bookACallUrl)}
+              className="flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity self-start sm:self-auto"
+            >
+              <CalendarDays className="h-4 w-4" />
+              Book a call
+            </button>
+          )}
         </div>
 
         {/* Email Section */}

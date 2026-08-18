@@ -9,7 +9,8 @@
     "handle": "@Adamya-Varshney",
     "bio": "Hey 👋\nI'm Adamya, a Product Manager with 3.5+ years across 0-to-N product development, GTM strategy, and marketing analytics. I've shipped end-to-end lifecycles — from MVP to market expansion — for B2B and D2C e-commerce, including digital journeys and Agentic AI solutions. I lead cross-functional teams toward quantifiable impact: 17% retention lifts, 3000+ new premium sellers, and AI products generating 100+ Cr in monthly revenue. I think customer-first, decide data-first, and love turning ambiguous problems into measurable outcomes.",
     "avatar": "/profile.png",
-    "fallbackAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3"
+    "fallbackAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
+    "bookACall": "https://www.linkedin.com/in/adamya-varshney15/"
   },
   "education": {
     "current": {
@@ -87,7 +88,7 @@
       "category": "Agentic AI / CRM",
       "description": "An AI-driven CRM that automates lead qualification and ad-content generation to simplify marketing for SMBs. Designed to compress the qualify-to-convert funnel and let small teams run enterprise-grade lead ops without a dedicated marketing function.",
       "techStack": ["Agentic AI", "Multi-Agent Orchestration", "RAG Pipeline", "Lead Qualification AI", "LangGraph", "LangChain"],
-      "date": "2025", "status": "Completed", "featured": true,
+      "date": "2025", "status": "Completed", "featured": true, "isLive": true,
       "links": [{"name": "Deck", "url": "https://drive.google.com/file/d/1x7fJmM67Xfyn_DgnyjS2NxejPbV_iWTX/view?usp=sharing"}, {"name": "Prototype", "url": "https://growmatic-ai-crm.vercel.app/#/login"}],
       "images": [{"src": "/projects/growmatic.png", "alt": "Growmatic — AI marketing copilot dashboard"}]
     },
@@ -108,7 +109,7 @@
       "category": "Agentic AI / Travel",
       "description": "An AI travel planner built via vibe-coding, with a modular architecture for crafting contextual, personalized itineraries. Turns loose trip intent into structured, day-by-day plans tailored to user preferences.",
       "techStack": ["Agentic AI", "LLM Orchestration", "Personalized Itinerary AI", "Vibe Coding", "Modular AI Architecture"],
-      "date": "2026", "status": "Completed", "featured": true,
+      "date": "2026", "status": "Completed", "featured": true, "isLive": true,
       "links": [{"name": "Prototype", "url": "https://xcurson.lovable.app"}],
       "images": [{"src": "/projects/xcurson.png", "alt": "Xcurson — AI travel itinerary planner"}]
     },
@@ -118,7 +119,7 @@
       "category": "Agentic AI / Conversational",
       "description": "A multi-capability AI agent built with LangGraph and Streamlit, combining RAG-powered knowledge retrieval, live web search, and a code interpreter — all within a multi-threaded chat interface with real-time response streaming. Maintains persistent context across parallel conversation threads for a coherent, research-grade assistant experience.",
       "techStack": ["Agentic AI", "RAG Pipeline", "Multi-turn Memory", "LangGraph", "Real-time Streaming", "Web Search", "Code Interpreter"],
-      "date": "2025", "status": "Completed", "featured": false,
+      "date": "2025", "status": "Completed", "featured": false, "isLive": true,
       "links": [{"name": "Deck", "url": "/projects/SAM_Agentic_RAG Architecture.pdf"}, {"name": "Prototype", "url": "https://sam-ai-chatbot.streamlit.app/"}],
       "embedUrl": "/projects/SAM_Agentic_RAG Architecture.pdf",
       "images": [{"src": "/projects/sam.png", "alt": "SAM — AI chatbot with RAG, web search and code interpreter"}],
@@ -146,7 +147,7 @@
       "category": "AI / FinTech",
       "description": "An AI expense tracker offering smart cash-flow management and visual summaries that explain spending habits. Translates raw transactions into plain-language insights so users understand the 'why' behind their spending.",
       "techStack": ["LLM Summarization", "AI Financial Insights", "Spending Pattern Analysis", "Personal Finance AI", "Data Visualization"],
-      "date": "2025", "status": "Completed", "featured": false,
+      "date": "2025", "status": "Completed", "featured": false, "isLive": true,
       "links": [{"name": "Prototype", "url": "https://pocket-money-manage.netlify.app/"}],
       "images": [{"src": "/projects/pocket.png", "alt": "Pocket — AI expense tracker with spending insights"}]
     },
@@ -165,7 +166,7 @@
       "category": "AI / Health & Fitness",
       "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals.",
       "techStack": ["AI Coaching", "Personalization AI", "Conversational UX", "Lovable", "AI Agents", "N8N"],
-      "date": "2026", "status": "Completed", "featured": true,
+      "date": "2026", "status": "Completed", "featured": true, "isLive": true,
       "links": [{"name": "Prototype", "url": "https://niyam-ai-fitness-coach.lovable.app/"}],
       "images": [{"src": "/projects/niyam-ai-fitness-coach.png", "alt": "Niyam — AI fitness coach app"}],
       "workflowImages": [
@@ -180,7 +181,7 @@
       "category": "FinTech / Product",
       "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps.",
       "techStack": ["AI-Assisted Prototyping", "Claude Artifacts", "Investment UX", "FinTech Product Strategy", "Figma"],
-      "date": "2026", "status": "Completed", "featured": true,
+      "date": "2026", "status": "Completed", "featured": true, "isLive": true,
       "links": [{"name": "Deck", "url": "https://canva.link/2go3upmujh38yuf"}, {"name": "Prototype", "url": "https://claude.ai/public/artifacts/1597c430-efb5-4ea5-90b7-6342d89c0f94"}],
       "images": [{"src": "/projects/onset-investment-platform.png", "alt": "Onset — investment platform concept"}]
     },
@@ -284,6 +285,29 @@
       "date": "2024", "status": "Completed", "featured": true,
       "links": [{"name": "Presentation", "url": "https://canva.link/f5i180swd6f0pe4"}],
       "images": [{"src": "/projects/TATA Steel-A-Thon 2024.png", "alt": "Tata Steel-A-Thon 2024 Presentation Preview"}]
+    }
+  ],
+  "writing": [
+    {
+      "title": "Why 'Unresponsive DMs' Is Killing LinkedIn for Active Job Seekers",
+      "type": "PM Teardown",
+      "date": "2025",
+      "summary": "A product teardown of LinkedIn's job-hunting flow — and how a native Referral Request loop could close the biggest friction gap between cold outreach and actual referrals.",
+      "url": "https://www.linkedin.com/in/adamya-varshney15/recent-activity/articles/"
+    },
+    {
+      "title": "Vibe Coding for PMs: When to Build vs. Spec",
+      "type": "AI Product",
+      "date": "2026",
+      "summary": "How tools like Lovable and Claude Code are reshaping the PM role — and when shipping a working prototype beats writing a PRD.",
+      "url": "https://www.linkedin.com/in/adamya-varshney15/recent-activity/articles/"
+    },
+    {
+      "title": "0→3000 Sellers in 30 Days: What the GTM Sprint Taught Me",
+      "type": "Product Lessons",
+      "date": "2025",
+      "summary": "The launch that added 3000+ premium sellers in one month — differential pricing, 4 new products, 20+ campaigns, and the things I'd do differently.",
+      "url": "https://www.linkedin.com/in/adamya-varshney15/recent-activity/articles/"
     }
   ],
   "social": {
