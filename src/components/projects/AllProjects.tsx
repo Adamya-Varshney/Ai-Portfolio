@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
+import { toSlug } from '@/lib/project-slug';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 const config = getConfig();
@@ -22,8 +24,8 @@ const AGENTIC_WORKFLOWS = new Set(['SAM: AI Chatbot with RAG', 'Niyam (AI Fitnes
 function getTabStyle(title: string, isActive: boolean) {
   if (AI_APPS.has(title)) {
     return isActive
-      ? 'bg-sky-700 text-white shadow-sm'
-      : 'bg-sky-700/80 text-white hover:bg-sky-700';
+      ? 'bg-violet-700 text-white shadow-sm'
+      : 'bg-violet-700/80 text-white hover:bg-violet-700';
   }
   if (AGENTIC_WORKFLOWS.has(title)) {
     return isActive
@@ -143,7 +145,8 @@ function PdfViewer({ url, pageCount, title, links }: { url: string; pageCount?: 
   );
 }
 
-function ProjectDetail({ project }: { project: any }) {
+function ProjectDetail({ project, navigable }: { project: any; navigable?: boolean }) {
+  const router = useRouter();
   const hasEmbed = !!project.embedUrl;
   const hasImage = !hasEmbed && !!project.images?.[0]?.src;
   const hasMedia = hasEmbed || hasImage;
@@ -210,7 +213,7 @@ function ProjectDetail({ project }: { project: any }) {
               </span>
             ) : (
               <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full ${
-                project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-violet-100 text-violet-700'
               }`}>{project.status}</span>
             )}
           </div>
@@ -242,6 +245,17 @@ function ProjectDetail({ project }: { project: any }) {
                 </div>
               ))}
             </div>
+          )}
+
+          {/* Navigate to full project page */}
+          {navigable && (
+            <button
+              onClick={() => router.push(`/projects/${toSlug(project.title)}`)}
+              className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 text-white w-full justify-center transition-opacity hover:opacity-90 mt-1"
+              style={{ background: 'linear-gradient(135deg, #7c3aed, #6d28d9)', boxShadow: '0 2px 8px rgba(124,58,237,0.25)' }}
+            >
+              View Full Project →
+            </button>
           )}
 
           {/* Links for projects without a preview image or embed */}
@@ -329,7 +343,7 @@ export default function AllProjects() {
           {/* Right panel — selected project detail */}
           <div className="flex-1 min-w-0 min-h-0">
             <AnimatePresence mode="wait">
-              {currentProject && <ProjectDetail key={currentProject.title} project={currentProject} />}
+              {currentProject && <ProjectDetail key={currentProject.title} project={currentProject} navigable={activeTab === 'product'} />}
             </AnimatePresence>
           </div>
         </motion.div>

@@ -27,7 +27,8 @@ export function Contact() {
 
   return (
     <div className="mx-auto mt-8 w-full">
-      <div className="bg-foreground text-background w-full overflow-hidden rounded-3xl px-6 py-10 font-sans sm:px-10 md:px-16 md:py-14">
+      <div className="w-full overflow-hidden rounded-3xl px-6 py-10 font-sans sm:px-10 md:px-16 md:py-14"
+        style={{ background: 'linear-gradient(135deg, #0f0820 0%, #1e1047 40%, #2d1b69 100%)' }}>
 
         {/* Hero */}
         <div className="mb-10 text-center">

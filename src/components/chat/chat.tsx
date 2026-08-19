@@ -236,7 +236,13 @@ const Chat = () => {
         {/* Scrollable Chat Content */}
         <div
           className={`flex-1 overflow-y-auto pb-4 ${presetReply?.tool === 'getProjects' ? 'px-0' : 'px-2'} ${isEmptyState ? 'lg:!pt-0' : ''}`}
-          style={{ paddingTop: hideAvatar ? '0px' : `${headerHeight}px`, transition: 'padding-top 300ms ease-in-out' }}
+          style={{
+            paddingTop: hideAvatar ? '0px' : `${headerHeight}px`,
+            transition: 'padding-top 300ms ease-in-out',
+            background: presetReply?.tool === 'getPresentation'
+              ? 'linear-gradient(160deg, #f5f3ff 0%, #ede9fe 50%, #f5f3ff 100%)'
+              : undefined,
+          }}
         >
           <AnimatePresence mode="wait">
             {isEmptyState ? (
