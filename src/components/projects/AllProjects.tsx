@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, BookOpen, X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
+import { toSlug } from '@/lib/project-slug';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 const config = getConfig();
@@ -151,19 +153,27 @@ function DeckModal({ project, onClose }: { project: any; onClose: () => void }) 
   );
 }
 
-function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: any) => void }) {
+function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewDeck: (p: any) => void; navigable?: boolean }) {
+  const router = useRouter();
   const hasImage = !!project.images?.[0]?.src;
   const shortDesc = project.description?.length > 130
     ? project.description.slice(0, 130).trimEnd() + '…'
     : project.description;
   const tags = (project.techStack ?? []).slice(0, 4);
 
+  const handleCardClick = (e: React.MouseEvent) => {
+    // Don't navigate if clicking a button/link inside the card
+    if ((e.target as HTMLElement).closest('button, a')) return;
+    if (navigable) router.push(`/projects/${toSlug(project.title)}`);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
-      className="group rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-0.5"
+      onClick={handleCardClick}
+      className={`group rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-0.5 ${navigable ? 'cursor-pointer' : ''}`}
       style={{
         background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.03))',
         border: '1px solid rgba(30,64,175,0.15)',
@@ -355,7 +365,7 @@ export default function AllProjects() {
               key={project.title}
               ref={el => { cardRefs.current[project.title] = el; }}
             >
-              <ProjectCard project={project} onViewDeck={setDeckProject} />
+              <ProjectCard project={project} onViewDeck={setDeckProject} navigable={activeTab === 'product'} />
             </div>
           ))}
         </motion.div>
