@@ -26,30 +26,30 @@ export function Contact() {
   };
 
   return (
-    <div className="mx-auto mt-8 w-full">
-      <div className="bg-foreground text-background w-full overflow-hidden rounded-3xl px-6 py-10 font-sans sm:px-10 md:px-16 md:py-14">
+    <div className="mx-auto mt-2 w-full">
+      <div className="bg-foreground text-background w-full overflow-hidden rounded-2xl px-5 py-6 font-sans sm:px-8 sm:py-8">
 
         {/* Hero */}
-        <div className="mb-10 text-center">
-          <span className="inline-block rounded-full border border-background/20 px-3 py-1 text-xs font-medium text-background/60 mb-4">Contact</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-background leading-tight mb-3">
+        <div className="mb-5 text-center">
+          <span className="inline-block rounded-full border border-background/20 px-3 py-0.5 text-xs font-medium text-background/60 mb-2">Contact</span>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-background leading-tight mb-1.5">
             Let's build something.
           </h2>
-          <p className="text-sm sm:text-base text-background/60 max-w-sm mx-auto">
+          <p className="text-xs text-background/60 max-w-sm mx-auto">
             Hiring for AI or 0→1 product? I'd love to hear from you. I reply to every thoughtful note.
           </p>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-3 mb-10">
-          <div className="flex gap-3">
+        <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-2 mb-5">
+          <div className="flex gap-2">
             <input
               type="text"
               placeholder="Your name"
               value={name}
               onChange={e => setName(e.target.value)}
               required
-              className="flex-1 rounded-xl border border-background/20 bg-background/10 px-4 py-3 text-sm text-background placeholder:text-background/40 focus:outline-none focus:border-background/50 transition-colors"
+              className="flex-1 rounded-xl border border-background/20 bg-background/10 px-3 py-2 text-sm text-background placeholder:text-background/40 focus:outline-none focus:border-background/50 transition-colors"
             />
             <input
               type="email"
@@ -57,7 +57,7 @@ export function Contact() {
               value={email}
               onChange={e => setEmail(e.target.value)}
               required
-              className="flex-1 rounded-xl border border-background/20 bg-background/10 px-4 py-3 text-sm text-background placeholder:text-background/40 focus:outline-none focus:border-background/50 transition-colors"
+              className="flex-1 rounded-xl border border-background/20 bg-background/10 px-3 py-2 text-sm text-background placeholder:text-background/40 focus:outline-none focus:border-background/50 transition-colors"
             />
           </div>
           <textarea
@@ -65,26 +65,26 @@ export function Contact() {
             value={message}
             onChange={e => setMessage(e.target.value)}
             required
-            rows={4}
-            className="w-full rounded-xl border border-background/20 bg-background/10 px-4 py-3 text-sm text-background placeholder:text-background/40 focus:outline-none focus:border-background/50 transition-colors resize-none"
+            rows={3}
+            className="w-full rounded-xl border border-background/20 bg-background/10 px-3 py-2 text-sm text-background placeholder:text-background/40 focus:outline-none focus:border-background/50 transition-colors resize-none"
           />
           <motion.button
             type="submit"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="flex items-center gap-2 rounded-xl bg-background text-foreground px-6 py-3 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
+            className="flex items-center gap-2 rounded-xl bg-background text-foreground px-5 py-2 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
           >
             {sent ? (
               <>Opening mail client…</>
             ) : (
-              <><Send className="h-4 w-4" /> Send message</>
+              <><Send className="h-3.5 w-3.5" /> Send message</>
             )}
           </motion.button>
         </form>
 
         {/* Divider */}
-        <div className="border-t border-background/10 pt-8">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+        <div className="border-t border-background/10 pt-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             {/* Social icons */}
             <div className="flex items-center gap-3">
               {contactInfo.socials.map((social) => (
