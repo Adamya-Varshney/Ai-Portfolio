@@ -110,7 +110,7 @@ function DeckModal({ project, onClose }: { project: any; onClose: () => void }) 
                     href={project.links.find((l: any) => l.name === 'Deck').url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-semibold text-blue-700 border border-blue-300 rounded-md px-3 py-1.5 hover:bg-indigo-50 transition-colors"
+                    className="flex items-center gap-1.5 text-xs font-semibold text-sky-700 border border-blue-300 rounded-md px-3 py-1.5 hover:bg-indigo-50 transition-colors"
                   >
                     <ExternalLink className="h-3 w-3" /> Open in Drive
                   </a>
@@ -175,15 +175,15 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
       onClick={handleCardClick}
       className={`group rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-0.5 ${navigable ? 'cursor-pointer' : ''}`}
       style={{
-        background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.03))',
-        border: '1px solid rgba(30,64,175,0.15)',
+        background: 'linear-gradient(145deg, rgba(2,132,199,0.04), rgba(14,165,233,0.03))',
+        border: '1px solid rgba(2,132,199,0.15)',
         boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
       }}
-      whileHover={{ boxShadow: '0 8px 24px rgba(30,64,175,0.15)' } as any}
+      whileHover={{ boxShadow: '0 8px 24px rgba(2,132,199,0.15)' } as any}
     >
       {/* Cover image */}
       <div className="relative h-44 sm:h-48 shrink-0 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #dbeafe 0%, #dbeafe 50%, #eff6ff 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #e0f2fe 50%, #f0f9ff 100%)' }}
       >
         {hasImage ? (
           <Image
@@ -219,7 +219,7 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
             style={{ background: 'linear-gradient(to top, rgba(30,27,75,0.7) 0%, transparent 60%)' }}
           >
             <span className="flex items-center gap-1.5 text-xs font-semibold text-white rounded-lg px-3 py-1.5 shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)', boxShadow: '0 2px 12px rgba(30,64,175,0.5)' }}>
+              style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)', boxShadow: '0 2px 12px rgba(2,132,199,0.5)' }}>
               <BookOpen className="h-3.5 w-3.5" />
               View Deck
             </span>
@@ -231,7 +231,7 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
       <div className="flex flex-col gap-2 p-4 flex-1">
         <div>
           <span className="text-[11px] font-semibold uppercase tracking-wide"
-            style={{ background: 'linear-gradient(135deg, #1e40af, #2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            style={{ background: 'linear-gradient(135deg, #0284c7, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             {project.category}
           </span>
           <h3 className="text-sm font-semibold text-foreground mt-0.5 leading-snug">{project.title}</h3>
@@ -241,7 +241,7 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
           <div className="flex flex-wrap gap-1 mt-auto pt-1">
             {tags.map((t: string, i: number) => (
               <span key={i} className="text-[11px] rounded-full px-2 py-0.5 font-medium"
-                style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.2)' }}>
+                style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.2)' }}>
                 {t}
               </span>
             ))}
@@ -252,7 +252,7 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
             <button
               onClick={() => onViewDeck(project)}
               className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-all duration-200 hover:opacity-90"
-              style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)', color: '#fff', boxShadow: '0 1px 6px rgba(30,64,175,0.3)' }}
+              style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)', color: '#fff', boxShadow: '0 1px 6px rgba(2,132,199,0.3)' }}
             >
               <BookOpen className="h-3 w-3" />
               View Deck
@@ -265,7 +265,7 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-colors hover:opacity-80"
-              style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.25)' }}
+              style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.25)' }}
             >
               <ExternalLink className="h-3 w-3" />
               {link.name}
@@ -319,7 +319,7 @@ export default function AllProjects() {
                 : 'text-muted-foreground hover:text-foreground'
             }`}
             style={activeTab === tab.id ? {
-              background: 'linear-gradient(135deg, #1e40af 0%, #1d4ed8 50%, #2563eb 100%)',
+              background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0ea5e9 100%)',
               boxShadow: '0 2px 12px rgba(139, 92, 246, 0.4)',
             } : {}}
           >
@@ -340,7 +340,7 @@ export default function AllProjects() {
                 : 'bg-accent/70 text-muted-foreground hover:text-foreground hover:bg-accent'
             }`}
             style={activeProject === project.title ? {
-              background: 'linear-gradient(135deg, #1e40af 0%, #1d4ed8 60%, #2563eb 100%)',
+              background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 60%, #0ea5e9 100%)',
               boxShadow: '0 1px 8px rgba(139, 92, 246, 0.35)',
             } : {}}
           >

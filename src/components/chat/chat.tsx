@@ -240,7 +240,7 @@ const Chat = () => {
             paddingTop: hideAvatar ? '0px' : `${headerHeight}px`,
             transition: 'padding-top 300ms ease-in-out',
             background: presetReply?.tool === 'getPresentation'
-              ? 'linear-gradient(160deg, #f8faff 0%, #f0f4ff 50%, #eef2ff 100%)'
+              ? 'linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%)'
               : undefined,
           }}
         >

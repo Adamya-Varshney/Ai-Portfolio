@@ -34,11 +34,11 @@ export default function ProjectPage() {
 
   return (
     <div className="min-h-screen w-full font-sans"
-      style={{ background: 'linear-gradient(160deg, #f8faff 0%, #f0f4ff 50%, #f5f3ff 100%)' }}>
+      style={{ background: 'linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 50%, #f5f3ff 100%)' }}>
 
       {/* Top nav bar */}
       <div className="sticky top-0 z-40 backdrop-blur-md border-b"
-        style={{ background: 'rgba(248,250,255,0.85)', borderColor: 'rgba(30,64,175,0.12)' }}>
+        style={{ background: 'rgba(248,250,255,0.85)', borderColor: 'rgba(2,132,199,0.12)' }}>
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
           <button
             onClick={() => router.back()}
@@ -60,7 +60,7 @@ export default function ProjectPage() {
             {links.map((l: any) => (
               <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-1 text-[11px] font-semibold rounded-md px-2.5 py-1 transition-opacity hover:opacity-80"
-                style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.2)' }}>
+                style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.2)' }}>
                 <ExternalLink className="h-3 w-3" />
                 {l.name}
               </a>
@@ -77,16 +77,16 @@ export default function ProjectPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="rounded-2xl overflow-hidden"
-          style={{ border: '1px solid rgba(30,64,175,0.15)', boxShadow: '0 4px 24px rgba(30,64,175,0.08)' }}
+          style={{ border: '1px solid rgba(2,132,199,0.15)', boxShadow: '0 4px 24px rgba(2,132,199,0.08)' }}
         >
           {/* Cover image / gradient banner */}
           <div className="relative h-44 sm:h-52"
-            style={{ background: 'linear-gradient(135deg, #dbeafe 0%, #dbeafe 50%, #eff6ff 100%)' }}>
+            style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #e0f2fe 50%, #f0f9ff 100%)' }}>
             {project.images?.[0]?.src ? (
               <Image src={project.images[0].src} alt={project.title} fill className="object-cover" />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-lg font-bold text-blue-200 text-center px-6">{project.title}</span>
+                <span className="text-lg font-bold text-sky-200 text-center px-6">{project.title}</span>
               </div>
             )}
             {/* Gradient overlay */}
@@ -106,7 +106,7 @@ export default function ProjectPage() {
               )}
               {project.status && (
                 <span className="text-[11px] px-2 py-0.5 rounded-full font-medium backdrop-blur-sm"
-                  style={{ background: 'rgba(30,64,175,0.15)', color: '#dbeafe', border: '1px solid rgba(96,165,250,0.3)' }}>
+                  style={{ background: 'rgba(2,132,199,0.15)', color: '#e0f2fe', border: '1px solid rgba(96,165,250,0.3)' }}>
                   {project.status}
                 </span>
               )}
@@ -114,23 +114,23 @@ export default function ProjectPage() {
 
             {/* Title at bottom of banner */}
             <div className="absolute bottom-0 left-0 right-0 px-4 pb-3">
-              <p className="text-[11px] font-semibold uppercase tracking-wide text-blue-200 mb-0.5">{project.category}</p>
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-sky-200 mb-0.5">{project.category}</p>
               <h1 className="text-lg sm:text-xl font-bold text-white leading-tight">{project.title}</h1>
             </div>
           </div>
 
           {/* Meta row */}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 px-4 py-3"
-            style={{ background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.02))', borderTop: '1px solid rgba(30,64,175,0.1)' }}>
+            style={{ background: 'linear-gradient(145deg, rgba(2,132,199,0.04), rgba(14,165,233,0.02))', borderTop: '1px solid rgba(2,132,199,0.1)' }}>
             {project.date && (
               <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                <Calendar className="h-3.5 w-3.5" style={{ color: '#1e40af' }} />
+                <Calendar className="h-3.5 w-3.5" style={{ color: '#0284c7' }} />
                 {project.date}
               </span>
             )}
             {project.techStack?.slice(0, 5).map((t: string, i: number) => (
               <span key={i} className="text-[11px] rounded-full px-2 py-0.5 font-medium"
-                style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.18)' }}>
+                style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.18)' }}>
                 {t}
               </span>
             ))}
@@ -140,14 +140,14 @@ export default function ProjectPage() {
         {/* Tab switcher (Overview / Deck) */}
         {hasDeck && (
           <div className="flex gap-1 rounded-xl p-1"
-            style={{ background: 'rgba(30,64,175,0.06)', border: '1px solid rgba(30,64,175,0.12)' }}>
+            style={{ background: 'rgba(2,132,199,0.06)', border: '1px solid rgba(2,132,199,0.12)' }}>
             {(['overview', 'deck'] as const).map(tab => (
               <button key={tab} onClick={() => setActiveTab(tab)}
                 className="flex-1 rounded-lg px-3 py-2 text-xs font-semibold capitalize transition-all duration-200"
                 style={activeTab === tab ? {
-                  background: 'linear-gradient(135deg, #1e40af, #1d4ed8)',
+                  background: 'linear-gradient(135deg, #0284c7, #0369a1)',
                   color: '#fff',
-                  boxShadow: '0 2px 10px rgba(30,64,175,0.3)',
+                  boxShadow: '0 2px 10px rgba(2,132,199,0.3)',
                 } : { color: 'var(--muted-foreground)' }}>
                 {tab === 'deck' ? '📊 View Deck' : '📋 Overview'}
               </button>
@@ -175,7 +175,7 @@ export default function ProjectPage() {
                 <div className="flex flex-wrap gap-1.5">
                   {project.techStack.map((t: string, i: number) => (
                     <span key={i} className="text-[11px] rounded-full px-2.5 py-0.5 font-medium"
-                      style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.18)' }}>
+                      style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.18)' }}>
                       {t}
                     </span>
                   ))}
@@ -189,13 +189,13 @@ export default function ProjectPage() {
                 <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
                   {project.status && (
                     <span className="flex items-center gap-1.5">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-blue-500" />
+                      <CheckCircle2 className="h-3.5 w-3.5 text-sky-500" />
                       {project.status}
                     </span>
                   )}
                   {project.date && (
                     <span className="flex items-center gap-1.5">
-                      <Clock className="h-3.5 w-3.5 text-blue-400" />
+                      <Clock className="h-3.5 w-3.5 text-sky-400" />
                       {project.date}
                     </span>
                   )}
@@ -210,7 +210,7 @@ export default function ProjectPage() {
                   {hasDeck && (
                     <button onClick={() => setActiveTab('deck')}
                       className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 text-white transition-opacity hover:opacity-90"
-                      style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)', boxShadow: '0 2px 10px rgba(30,64,175,0.25)' }}>
+                      style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)', boxShadow: '0 2px 10px rgba(2,132,199,0.25)' }}>
                       <BookOpen className="h-3.5 w-3.5" />
                       View Deck
                     </button>
@@ -218,7 +218,7 @@ export default function ProjectPage() {
                   {links.map((l: any) => (
                     <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 transition-colors hover:opacity-80"
-                      style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.2)' }}>
+                      style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.2)' }}>
                       <ExternalLink className="h-3.5 w-3.5" />
                       {l.name}
                     </a>
@@ -237,17 +237,17 @@ export default function ProjectPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25 }}
             className="rounded-xl overflow-hidden"
-            style={{ border: '1px solid rgba(30,64,175,0.18)', boxShadow: '0 2px 16px rgba(30,64,175,0.08)' }}
+            style={{ border: '1px solid rgba(2,132,199,0.18)', boxShadow: '0 2px 16px rgba(2,132,199,0.08)' }}
           >
             <div className="flex items-center justify-between px-3 py-2"
-              style={{ background: 'linear-gradient(145deg, rgba(30,64,175,0.08), rgba(37,99,235,0.06))', borderBottom: '1px solid rgba(30,64,175,0.12)' }}>
+              style={{ background: 'linear-gradient(145deg, rgba(2,132,199,0.08), rgba(14,165,233,0.06))', borderBottom: '1px solid rgba(2,132,199,0.12)' }}>
               <div className="flex items-center gap-2">
-                <BookOpen className="h-3.5 w-3.5" style={{ color: '#1e40af' }} />
+                <BookOpen className="h-3.5 w-3.5" style={{ color: '#0284c7' }} />
                 <span className="text-xs font-medium text-foreground">{project.title} — Deck</span>
               </div>
               <a href={project.embedUrl} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-md text-white"
-                style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)' }}>
+                style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)' }}>
                 <ExternalLink className="h-3 w-3" />
                 Full screen
               </a>
@@ -256,7 +256,7 @@ export default function ProjectPage() {
               src={`${project.embedUrl}#toolbar=0&navpanes=0`}
               width="100%"
               className="border-0"
-              style={{ height: '70vh', background: 'rgba(30,64,175,0.02)' }}
+              style={{ height: '70vh', background: 'rgba(2,132,199,0.02)' }}
               title={`${project.title} deck`}
             />
           </motion.div>
@@ -269,9 +269,9 @@ export default function ProjectPage() {
 function Section({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) {
   return (
     <div className="rounded-xl p-4"
-      style={{ background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.02))', border: '1px solid rgba(30,64,175,0.12)' }}>
+      style={{ background: 'linear-gradient(145deg, rgba(2,132,199,0.04), rgba(14,165,233,0.02))', border: '1px solid rgba(2,132,199,0.12)' }}>
       <div className="flex items-center gap-2 mb-3">
-        <span style={{ color: '#1e40af' }}>{icon}</span>
+        <span style={{ color: '#0284c7' }}>{icon}</span>
         <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground">{title}</h2>
       </div>
       {children}

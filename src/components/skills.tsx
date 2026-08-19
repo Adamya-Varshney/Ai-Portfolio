@@ -7,13 +7,13 @@ import { getConfig } from '@/lib/config-loader';
 const config = getConfig();
 
 const ICON_GRADIENTS = [
-  ['#1e40af', '#1d4ed8'],
-  ['#1d4ed8', '#2563eb'],
-  ['#2563eb', '#3b82f6'],
-  ['#1e40af', '#1e3a8a'],
-  ['#1e3a8a', '#1e40af'],
-  ['#1d4ed8', '#1e40af'],
-  ['#2563eb', '#1d4ed8'],
+  ['#0284c7', '#0369a1'],
+  ['#0369a1', '#0ea5e9'],
+  ['#0ea5e9', '#38bdf8'],
+  ['#0284c7', '#075985'],
+  ['#075985', '#0284c7'],
+  ['#0369a1', '#0284c7'],
+  ['#0ea5e9', '#0369a1'],
 ];
 
 const skillsData = [
@@ -36,7 +36,7 @@ const Skills = () => (
     {/* Header */}
     <div className="mb-4">
       <h2 className="text-lg font-bold"
-        style={{ background: 'linear-gradient(135deg, #1e40af, #2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+        style={{ background: 'linear-gradient(135deg, #0284c7, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
         Skills & Expertise
       </h2>
     </div>
@@ -52,7 +52,7 @@ const Skills = () => (
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05, duration: 0.35 }}
             className="rounded-xl p-3 border border-border/50"
-            style={{ background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.03))' }}
+            style={{ background: 'linear-gradient(145deg, rgba(2,132,199,0.04), rgba(14,165,233,0.03))' }}
           >
             <div className="flex items-center gap-2 mb-2">
               <span
@@ -69,7 +69,7 @@ const Skills = () => (
                   key={idx}
                   whileHover={{ scale: 1.05 }}
                   className="text-[11px] rounded-full px-2 py-0.5 font-medium cursor-default"
-                  style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.2)' }}
+                  style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.2)' }}
                 >
                   {skill}
                 </motion.span>
