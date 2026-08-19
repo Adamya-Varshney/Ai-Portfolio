@@ -11,10 +11,14 @@ export function Resume() {
   };
 
   return (
-    <div className="mx-auto w-full py-6 font-sans">
+    <div className="mx-auto w-full font-sans">
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900">Resume</h2>
+        <p className="text-sm text-gray-500 mt-1">Download or preview my latest resume.</p>
+      </div>
       {/* Resume Card */}
       <motion.div
-        className="group relative overflow-hidden rounded-xl bg-accent p-0 transition-all duration-300 mb-4"
+        className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-0 transition-all duration-300 mb-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.0, ease: 'easeOut' }}
@@ -65,7 +69,7 @@ export function Resume() {
           </div>
           <button
             onClick={handleDownload}
-            className="flex items-center gap-1 px-2 sm:px-3 py-1 text-xs bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            className="flex items-center gap-1 px-2 sm:px-3 py-1 text-xs bg-gray-900 text-white rounded-md hover:bg-gray-700 transition-colors"
           >
             <ExternalLink className="h-3 w-3" />
             Open Full

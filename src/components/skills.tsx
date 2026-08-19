@@ -1,152 +1,63 @@
 'use client';
 
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { BarChart3, Brain, Code, PenTool, Sparkles, Target, Users, Workflow } from 'lucide-react';
+import { BarChart3, Brain, Code, PenTool, Target, Users, Workflow } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 
-const Skills = () => {
-  // Get skills from configuration
+const CATEGORIES = [
+  { key: 'product_tools', label: 'Product Tools', icon: PenTool, color: '#6366f1' },
+  { key: 'data_ai', label: 'Data & AI', icon: Brain, color: '#8b5cf6' },
+  { key: 'analytics', label: 'Analytics', icon: BarChart3, color: '#10b981' },
+  { key: 'automation', label: 'Automation', icon: Workflow, color: '#f59e0b' },
+  { key: 'vibe_coding', label: 'Vibe Coding', icon: Code, color: '#0ea5e9' },
+  { key: 'pm_skills', label: 'PM Skills', icon: Target, color: '#ef4444' },
+  { key: 'soft_skills', label: 'Soft Skills', icon: Users, color: '#64748b' },
+];
+
+const fade = (delay = 0) => ({
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.4, ease: 'easeOut', delay },
+});
+
+export default function Skills() {
   const config = getConfig();
 
-  // Transform skills data with icons (Product Manager categories)
-  const skillsData = [
-    {
-      category: 'Product Tools',
-      icon: <PenTool className="h-5 w-5" />,
-      skills: config.skills.product_tools,
-      color: 'bg-blue-50 text-blue-600 border border-blue-200',
-    },
-    {
-      category: 'Data & AI',
-      icon: <Brain className="h-5 w-5" />,
-      skills: config.skills.data_ai,
-      color: 'bg-purple-50 text-purple-600 border border-purple-200',
-    },
-    {
-      category: 'Analytics',
-      icon: <BarChart3 className="h-5 w-5" />,
-      skills: config.skills.analytics,
-      color: 'bg-green-50 text-green-600 border border-green-200',
-    },
-    {
-      category: 'Automation',
-      icon: <Workflow className="h-5 w-5" />,
-      skills: config.skills.automation,
-      color: 'bg-orange-50 text-orange-600 border border-orange-200',
-    },
-    {
-      category: 'Vibe Coding',
-      icon: <Code className="h-5 w-5" />,
-      skills: config.skills.vibe_coding,
-      color: 'bg-emerald-50 text-emerald-600 border border-emerald-200',
-    },
-    {
-      category: 'PM Skills',
-      icon: <Target className="h-5 w-5" />,
-      skills: config.skills.pm_skills,
-      color: 'bg-indigo-50 text-indigo-600 border border-indigo-200',
-    },
-    {
-      category: 'Soft Skills',
-      icon: <Users className="h-5 w-5" />,
-      skills: config.skills.soft_skills,
-      color: 'bg-amber-50 text-amber-600 border border-amber-200',
-    },
-  ].filter(category => category.skills && category.skills.length > 0);
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
-    },
-  };
-
-  const badgeVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.3, ease: 'easeOut' },
-    },
-  };
+  const sections = CATEGORIES
+    .map(c => ({ ...c, skills: (config.skills as any)[c.key] as string[] | undefined }))
+    .filter(c => c.skills && c.skills.length > 0);
 
   return (
-    <motion.div
-      initial={{ scale: 0.98, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
-      className="mx-auto w-full max-w-5xl rounded-4xl px-4 sm:px-6"
-    >
-      <Card className="w-full border-none px-0 pb-8 sm:pb-12 shadow-none">
-        <CardHeader className="px-0 pb-1">
-          <CardTitle className="text-primary px-0 text-2xl sm:text-3xl lg:text-4xl font-bold">
-            Skills & Expertise
-          </CardTitle>
-        </CardHeader>
+    <div className="w-full font-sans">
+      <motion.div {...fade(0)} className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900">Skills & Expertise</h2>
+        <p className="text-sm text-gray-500 mt-1">Tools, frameworks, and competencies I work with.</p>
+      </motion.div>
 
-        <CardContent className="px-0">
-          <motion.div
-            className="space-y-6 sm:space-y-8 px-0"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {skillsData.map((section, index) => (
-              <motion.div
-                key={index}
-                className="space-y-3 px-0"
-                variants={itemVariants}
-              >
-                <div className="flex items-center gap-2">
-                  {section.icon}
-                  <h3 className="text-accent-foreground text-base sm:text-lg font-semibold">
-                    {section.category}
-                  </h3>
-                </div>
-
-                <motion.div
-                  className="flex flex-wrap gap-1.5 sm:gap-2"
-                  variants={containerVariants}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  {section.skills.map((skill, idx) => (
-                    <motion.div
-                      key={idx}
-                      variants={badgeVariants}
-                      whileHover={{
-                        scale: 1.04,
-                        transition: { duration: 0.2 },
-                      }}
-                    >
-                      <Badge className={`border px-2 py-1 sm:px-3 sm:py-1.5 font-normal text-xs sm:text-sm`}>
-                        {skill}
-                      </Badge>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </CardContent>
-      </Card>
-    </motion.div>
+      <div className="space-y-7">
+        {sections.map((section, i) => {
+          const Icon = section.icon;
+          return (
+            <motion.div key={section.key} {...fade(0.04 * i)}>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="flex items-center justify-center h-7 w-7 rounded-lg text-white shrink-0"
+                  style={{ background: section.color }}>
+                  <Icon className="h-3.5 w-3.5" />
+                </span>
+                <h3 className="text-sm font-semibold text-gray-700">{section.label}</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {section.skills!.map((skill, idx) => (
+                  <span key={idx}
+                    className="text-xs font-medium px-2.5 py-1 rounded-lg border border-gray-200 bg-white text-gray-600 hover:border-gray-300 transition-colors">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
   );
-};
-
-export default Skills;
+}
