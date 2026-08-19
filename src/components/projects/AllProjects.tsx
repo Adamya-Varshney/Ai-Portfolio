@@ -163,25 +163,37 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
-      className="rounded-2xl border bg-background overflow-hidden flex flex-col h-full hover:shadow-md transition-shadow"
+      className="group rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-0.5"
+      style={{
+        background: 'linear-gradient(145deg, rgba(99,102,241,0.04), rgba(168,85,247,0.03))',
+        border: '1px solid rgba(99,102,241,0.15)',
+        boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+      }}
+      whileHover={{ boxShadow: '0 8px 24px rgba(99,102,241,0.15)' } as any}
     >
       {/* Cover image */}
-      <div className="relative h-44 sm:h-48 shrink-0 bg-gradient-to-br from-indigo-100 via-violet-50 to-purple-100 dark:from-indigo-950 dark:via-violet-950 dark:to-purple-950">
+      <div className="relative h-44 sm:h-48 shrink-0 overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #e0e7ff 0%, #ede9fe 50%, #f3e8ff 100%)' }}
+      >
         {hasImage ? (
           <Image
             src={project.images[0].src}
             alt={project.title}
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center p-4">
-            <span className="text-sm font-semibold text-indigo-400/50 text-center leading-snug">{project.title}</span>
+            <span className="text-sm font-semibold text-indigo-300 text-center leading-snug">{project.title}</span>
           </div>
         )}
+        {/* Gradient vignette on bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+
         {/* Live badge */}
         {project.isLive && (
-          <span className="absolute top-2 right-2 flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-emerald-100/90 text-emerald-700 backdrop-blur-sm">
+          <span className="absolute top-2.5 right-2.5 flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full font-medium backdrop-blur-sm"
+            style={{ background: 'rgba(209,250,229,0.9)', color: '#065f46', border: '1px solid rgba(167,243,208,0.8)' }}>
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
@@ -189,13 +201,15 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
             Live
           </span>
         )}
-        {/* View Deck overlay button */}
+        {/* View Deck overlay */}
         {project.embedUrl && (
           <button
             onClick={() => onViewDeck(project)}
-            className="absolute inset-0 flex items-end justify-start p-3 opacity-0 hover:opacity-100 transition-opacity bg-gradient-to-t from-black/50 to-transparent"
+            className="absolute inset-0 flex items-end justify-start p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            style={{ background: 'linear-gradient(to top, rgba(30,27,75,0.7) 0%, transparent 60%)' }}
           >
-            <span className="flex items-center gap-1.5 text-xs font-semibold text-white bg-indigo-600 rounded-lg px-3 py-1.5 shadow-lg">
+            <span className="flex items-center gap-1.5 text-xs font-semibold text-white rounded-lg px-3 py-1.5 shadow-lg"
+              style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', boxShadow: '0 2px 12px rgba(99,102,241,0.5)' }}>
               <BookOpen className="h-3.5 w-3.5" />
               View Deck
             </span>
@@ -206,14 +220,20 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
       {/* Card body */}
       <div className="flex flex-col gap-2 p-4 flex-1">
         <div>
-          <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
+          <span className="text-[11px] font-semibold uppercase tracking-wide"
+            style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            {project.category}
+          </span>
           <h3 className="text-sm font-semibold text-foreground mt-0.5 leading-snug">{project.title}</h3>
         </div>
         <p className="text-xs text-muted-foreground leading-relaxed">{shortDesc}</p>
         {tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-auto pt-1">
             {tags.map((t: string, i: number) => (
-              <span key={i} className="text-xs bg-accent border rounded-full px-2 py-0.5 text-foreground">{t}</span>
+              <span key={i} className="text-[11px] rounded-full px-2 py-0.5 font-medium"
+                style={{ background: 'rgba(99,102,241,0.08)', color: '#6366f1', border: '1px solid rgba(99,102,241,0.2)' }}>
+                {t}
+              </span>
             ))}
           </div>
         )}
@@ -221,7 +241,8 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
           {project.embedUrl && (
             <button
               onClick={() => onViewDeck(project)}
-              className="flex items-center gap-1 text-xs font-semibold text-indigo-600 border border-indigo-300 rounded-md px-2.5 py-1 hover:bg-indigo-50 dark:hover:bg-indigo-950 transition-colors"
+              className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-all duration-200 hover:opacity-90"
+              style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', color: '#fff', boxShadow: '0 1px 6px rgba(99,102,241,0.3)' }}
             >
               <BookOpen className="h-3 w-3" />
               View Deck
@@ -233,7 +254,8 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-xs font-semibold text-primary border border-primary/30 rounded-md px-2.5 py-1 hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-colors hover:opacity-80"
+              style={{ background: 'rgba(99,102,241,0.08)', color: '#6366f1', border: '1px solid rgba(99,102,241,0.25)' }}
             >
               <ExternalLink className="h-3 w-3" />
               {link.name}
