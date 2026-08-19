@@ -16,13 +16,13 @@ export default function Home() {
       <SiteNav />
 
       {/* Me */}
-      <section id="me" className="max-w-7xl mx-auto px-4 sm:px-10 py-14 sm:py-20">
+      <section id="me" className="w-full px-6 sm:px-12 py-14 sm:py-20">
         <Presentation />
       </section>
 
       {/* Projects */}
       <section id="projects" style={{ background: '#f8fafc' }} className="py-14 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-10">
+        <div className="w-full px-6 sm:px-12">
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900">Projects</h2>
             <p className="text-sm text-gray-500 mt-1">A selection of things I've built and shipped.</p>
@@ -32,25 +32,25 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="max-w-7xl mx-auto px-4 sm:px-10 py-14 sm:py-20">
+      <section id="skills" className="w-full px-6 sm:px-12 py-14 sm:py-20">
         <Skills />
       </section>
 
       {/* Education */}
       <section id="education" style={{ background: '#f8fafc' }} className="py-14 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-10">
+        <div className="w-full px-6 sm:px-12">
           <Education />
         </div>
       </section>
 
       {/* Resume */}
-      <section id="resume" className="max-w-7xl mx-auto px-4 sm:px-10 py-14 sm:py-20">
+      <section id="resume" className="w-full px-6 sm:px-12 py-14 sm:py-20">
         <Resume />
       </section>
 
       {/* Contact */}
       <section id="contact" style={{ background: '#0f172a' }} className="py-14 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-10">
+        <div className="w-full px-6 sm:px-12">
           <Contact />
         </div>
       </section>
