@@ -183,8 +183,8 @@ const Chat = () => {
   };
 
   const isEmptyState = !presetReply && !loadingSubmit;
-  // Show avatar only on landing (isEmptyState) and ME section (getPresentation)
-  const hideAvatar = presetReply !== null && presetReply.tool !== 'getPresentation';
+  // Show avatar only on landing (isEmptyState); collapse for all sections including ME
+  const hideAvatar = presetReply !== null;
 
   const headerHeight = hasActiveTool ? 100 : 180;
 
@@ -236,7 +236,13 @@ const Chat = () => {
         {/* Scrollable Chat Content */}
         <div
           className={`flex-1 overflow-y-auto pb-4 ${presetReply?.tool === 'getProjects' ? 'px-0' : 'px-2'} ${isEmptyState ? 'lg:!pt-0' : ''}`}
-          style={{ paddingTop: hideAvatar ? '0px' : `${headerHeight}px`, transition: 'padding-top 300ms ease-in-out' }}
+          style={{
+            paddingTop: hideAvatar ? '0px' : `${headerHeight}px`,
+            transition: 'padding-top 300ms ease-in-out',
+            background: presetReply?.tool === 'getPresentation'
+              ? 'linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%)'
+              : undefined,
+          }}
         >
           <AnimatePresence mode="wait">
             {isEmptyState ? (
@@ -288,19 +294,21 @@ const Chat = () => {
         {/* Fixed Bottom Bar */}
         <div className={`sticky bottom-0 bg-white pt-3 md:pb-4 ${presetReply?.tool === 'getProjects' ? 'px-4 lg:px-8' : 'px-2 md:px-0'}`}>
           <div className="relative flex flex-col items-center gap-3">
-            <HelperBoost 
-              submitQuery={submitQuery} 
-              setInput={setInput} 
+            <HelperBoost
+              submitQuery={submitQuery}
+              setInput={setInput}
               handlePresetReply={handlePresetReply}
             />
-            <ChatBottombar
-              input={input}
-              handleInputChange={handleInputChange}
-              handleSubmit={onSubmit}
-              isLoading={isLoading}
-              stop={handleStop}
-              isToolInProgress={isToolInProgress}
-            />
+            {presetReply?.tool !== 'getProjects' && (
+              <ChatBottombar
+                input={input}
+                handleInputChange={handleInputChange}
+                handleSubmit={onSubmit}
+                isLoading={isLoading}
+                stop={handleStop}
+                isToolInProgress={isToolInProgress}
+              />
+            )}
           </div>
         </div>
 
