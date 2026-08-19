@@ -2,85 +2,145 @@
 
 import { motion } from 'framer-motion';
 import React from 'react';
+import { MapPin, Briefcase, TrendingUp, Users, Zap } from 'lucide-react';
 import { profileInfo } from '@/lib/config-loader';
+import Image from 'next/image';
+
+const fade = (delay = 0) => ({
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.4, ease: 'easeOut', delay },
+});
+
+const stats = [
+  { value: '3.5+ yrs', label: 'PM Experience', gradient: 'from-blue-800 to-blue-600' },
+  { value: '100+ Cr', label: 'Monthly Revenue', gradient: 'from-blue-700 to-blue-500' },
+  { value: '17%', label: 'Retention Lift', gradient: 'from-blue-600 to-blue-400' },
+  { value: '3000+', label: 'New Sellers', gradient: 'from-blue-500 to-blue-300' },
+];
+
+const highlights = [
+  {
+    icon: <Zap className="h-3.5 w-3.5" />,
+    title: 'AI & Agentic Products',
+    desc: 'End-to-end RAG pipelines, multi-agent orchestration, and AI-driven CRMs.',
+    from: '#1e40af', to: '#1d4ed8',
+  },
+  {
+    icon: <TrendingUp className="h-3.5 w-3.5" />,
+    title: '0-to-N Builder',
+    desc: 'Full product lifecycles from MVP to market expansion for B2B & D2C.',
+    from: '#1d4ed8', to: '#2563eb',
+  },
+  {
+    icon: <Users className="h-3.5 w-3.5" />,
+    title: 'Cross-functional Lead',
+    desc: 'Quantifiable impact with a customer-first, data-first mindset.',
+    from: '#2563eb', to: '#3b82f6',
+  },
+  {
+    icon: <Briefcase className="h-3.5 w-3.5" />,
+    title: 'GTM & Analytics',
+    desc: 'GTM strategy and marketing analytics driving measurable growth.',
+    from: '#1e40af', to: '#1e3a8a',
+  },
+];
+
+const tags = ['Product Manager', 'AI & Agentic Products', 'GTM Strategy', 'Product Analytics', '0-to-N'];
 
 export function Presentation() {
-  // Personal information now loaded from configuration
   const profile = profileInfo;
 
-  // Animation variants for text elements
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
-    },
-  };
-
-  // Animation for the entire paragraph rather than word-by-word
-  const paragraphAnimation = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-        delay: 0.2,
-      },
-    },
-  };
-
   return (
-    <div className="mx-auto w-full max-w-5xl py-6 font-sans">
-      <div className="grid grid-cols-1 items-center gap-10">
-        {/* Text content section */}
-        <div className="flex flex-col space-y">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
-          >
-            <h1 className="from-foreground to-muted-foreground bg-gradient-to-r bg-clip-text text-xl font-semibold text-transparent md:text-3xl">
-              {profile.name}
-            </h1>
-            <div className="mt-1 flex flex-col gap-1 md:flex-row md:items-center md:gap-4">
-              <p className="text-muted-foreground">{profile.age}</p>
-              <div className="bg-border hidden h-1.5 w-1.5 rounded-full md:block" />
-              <p className="text-muted-foreground">{profile.location}</p>
+    <div className="w-full py-2 font-sans">
+      {/* Hero card: avatar + name + gradient bg */}
+      <motion.div {...fade(0)} className="relative overflow-hidden rounded-2xl mb-4 p-4"
+        style={{ background: 'linear-gradient(135deg, #030d1f 0%, #0c1e4a 40%, #1e3a8a 100%)' }}
+      >
+        {/* Subtle radial glow */}
+        <div className="absolute -top-8 -right-8 h-32 w-32 rounded-full opacity-20 blur-2xl"
+          style={{ background: 'radial-gradient(circle, #93c5fd, transparent)' }} />
+        <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full opacity-15 blur-2xl"
+          style={{ background: 'radial-gradient(circle, #60a5fa, transparent)' }} />
+
+        <div className="relative flex items-center gap-4">
+          {/* Avatar with gradient ring */}
+          <div className="relative shrink-0">
+            <div className="absolute inset-0 rounded-2xl p-0.5"
+              style={{ background: 'linear-gradient(135deg, #60a5fa, #c084fc)', borderRadius: '14px' }}>
+              <div className="h-full w-full rounded-2xl bg-blue-950" />
             </div>
-          </motion.div>
+            <div className="relative h-14 w-14 rounded-2xl overflow-hidden border-2 border-blue-400/30">
+              <Image src="/profile.png" alt={profile.name} fill className="object-cover object-[center_top_-5%]" />
+            </div>
+          </div>
 
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={paragraphAnimation}
-            className="text-foreground mt-6 leading-relaxed whitespace-pre-line"
-          >
-            {profile.description}
-          </motion.p>
-
-          {/* Tags/Keywords */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="mt-4 flex flex-wrap gap-2"
-          >
-            {['Product Manager', 'AI & Agentic Products', 'GTM Strategy', 'Product Analytics', '0-to-N'].map(
-              (tag) => (
-                <span
-                  key={tag}
-                  className="bg-secondary text-secondary-foreground rounded-full px-3 py-1 text-sm"
-                >
-                  {tag}
+          <div>
+            <div className="flex items-center gap-2 mb-0.5">
+              <h1 className="text-base font-bold text-white leading-tight">{profile.name}</h1>
+              <span className="flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded-full font-medium"
+                style={{ background: 'rgba(134,239,172,0.15)', color: '#86efac', border: '1px solid rgba(134,239,172,0.3)' }}>
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-400"></span>
                 </span>
-              )
-            )}
-          </motion.div>
+                Open to work
+              </span>
+            </div>
+            <p className="text-xs text-blue-200 font-medium">{(profile as any).title ?? 'Product Manager'}</p>
+            <div className="flex items-center gap-1 mt-1 text-[11px] text-blue-300/80">
+              <MapPin className="h-3 w-3" />
+              <span>{profile.location}</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </motion.div>
+
+      {/* Stats row */}
+      <motion.div {...fade(0.08)} className="grid grid-cols-4 gap-2 mb-4">
+        {stats.map(s => (
+          <div key={s.value}
+            className="rounded-xl p-2.5 text-center relative overflow-hidden border border-white/10"
+            style={{ background: 'linear-gradient(135deg, rgba(30,64,175,0.12), rgba(37,99,235,0.12))' }}
+          >
+            <div className={`text-sm font-bold bg-gradient-to-r ${s.gradient} bg-clip-text text-transparent`}>{s.value}</div>
+            <div className="text-[10px] text-muted-foreground mt-0.5 leading-tight">{s.label}</div>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Highlights grid */}
+      <motion.div {...fade(0.16)} className="grid grid-cols-2 gap-2 mb-4">
+        {highlights.map((h, i) => (
+          <div key={i}
+            className="rounded-xl p-3 flex flex-col gap-1.5 border border-border/60 hover:border-blue-300/40 transition-all duration-200 group"
+            style={{ background: 'linear-gradient(135deg, rgba(30,64,175,0.04), rgba(37,99,235,0.04))' }}
+          >
+            <div className="flex items-center gap-2">
+              <span
+                className="flex items-center justify-center h-6 w-6 rounded-lg text-white shrink-0 shadow-sm"
+                style={{ background: `linear-gradient(135deg, ${h.from}, ${h.to})`, boxShadow: `0 2px 8px ${h.from}40` }}
+              >
+                {h.icon}
+              </span>
+              <span className="text-xs font-semibold text-foreground leading-tight group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">{h.title}</span>
+            </div>
+            <p className="text-[11px] text-muted-foreground leading-relaxed">{h.desc}</p>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Tags */}
+      <motion.div {...fade(0.24)} className="flex flex-wrap gap-1.5">
+        {tags.map(tag => (
+          <span key={tag}
+            className="rounded-full px-2.5 py-1 text-xs font-medium border border-blue-200/50 dark:border-blue-800/50 text-blue-700 dark:text-blue-300"
+            style={{ background: 'linear-gradient(135deg, rgba(30,64,175,0.08), rgba(37,99,235,0.08))' }}
+          >
+            {tag}
+          </span>
+        ))}
+      </motion.div>
     </div>
   );
 }

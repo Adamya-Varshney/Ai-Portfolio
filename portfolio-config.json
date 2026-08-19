@@ -89,6 +89,7 @@
       "description": "An AI-driven CRM that automates lead qualification and ad-content generation to simplify marketing for SMBs. Designed to compress the qualify-to-convert funnel and let small teams run enterprise-grade lead ops without a dedicated marketing function.",
       "techStack": ["Agentic AI", "Multi-Agent Orchestration", "RAG Pipeline", "Lead Qualification AI", "LangGraph", "LangChain"],
       "date": "2025", "status": "Completed", "featured": true, "isLive": true,
+      "embedUrl": "/projects/Growmatic_Deck_MVP Final.pdf",
       "links": [{"name": "Deck", "url": "https://drive.google.com/file/d/1x7fJmM67Xfyn_DgnyjS2NxejPbV_iWTX/view?usp=sharing"}, {"name": "Prototype", "url": "https://growmatic-ai-crm.vercel.app/#/login"}],
       "images": [{"src": "/projects/growmatic.png", "alt": "Growmatic — AI marketing copilot dashboard"}]
     },

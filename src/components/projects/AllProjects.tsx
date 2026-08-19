@@ -1,7 +1,7 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { ExternalLink, BookOpen, X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 import Image from 'next/image';
 
@@ -11,256 +11,256 @@ const ALL_PROJECTS = config.projects as any[];
 const TABS = [
   { id: 'product', label: 'AI Enabled Product Management', section: 'Product & Tech Projects' },
   { id: 'strategy', label: 'Business Strategy & GTM', section: 'Business Strategy & GTM Projects' },
-  // { id: 'bi', label: 'Business Intelligence & Data Analytics', section: 'Business Intelligence & Data Analytics' },
   { id: 'case', label: 'CX & Product Management', section: 'Case Competitions' },
 ];
 
-// Color classification for project sidebar tabs
-const AI_APPS = new Set(['Growmatic', 'Xcurson', 'Pocket']);
-const AGENTIC_WORKFLOWS = new Set(['SAM: AI Chatbot with RAG', 'Niyam (AI Fitness Coach)']);
-
-function getTabStyle(title: string, isActive: boolean) {
-  if (AI_APPS.has(title)) {
-    return isActive
-      ? 'bg-sky-700 text-white shadow-sm'
-      : 'bg-sky-700/80 text-white hover:bg-sky-700';
-  }
-  if (AGENTIC_WORKFLOWS.has(title)) {
-    return isActive
-      ? 'bg-green-700 text-white shadow-sm'
-      : 'bg-green-700/80 text-white hover:bg-green-700';
-  }
-  // Default: turquoise
-  return isActive
-    ? 'bg-teal-700 text-white shadow-sm'
-    : 'bg-teal-700/80 text-white hover:bg-teal-700';
-}
-
-function PdfViewer({ url, pageCount, title, links }: { url: string; pageCount?: number; title: string; links?: any[] }) {
+function DeckModal({ project, onClose }: { project: any; onClose: () => void }) {
   const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(project.pageCount ?? null);
   const [available, setAvailable] = useState<boolean | null>(null);
-  const total = pageCount ?? 0;
-  const src = total > 0 ? `${url}#page=${page}` : url;
 
   useEffect(() => {
-    setAvailable(null);
-    setPage(1);
-    fetch(url, { method: 'HEAD' })
+    // Lock body scroll
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = ''; };
+  }, []);
+
+  useEffect(() => {
+    fetch(project.embedUrl, { method: 'HEAD' })
       .then(r => setAvailable(r.ok))
       .catch(() => setAvailable(false));
-  }, [url]);
+  }, [project.embedUrl]);
 
-  const toolbar = (
-    <div className="flex items-center gap-2 px-3 py-2 border-b bg-muted/60 shrink-0">
-      <div className="flex flex-wrap gap-1.5">
-        {links?.map((link: any, i: number) => (
-          <a
-            key={i}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 rounded-md border border-primary/30 bg-background px-2.5 py-1 text-xs font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-          >
-            <ExternalLink className="h-3 w-3" />
-            {link.name}
-          </a>
-        ))}
-      </div>
-      {available && (
-        <div className="flex items-center gap-1 ml-auto">
-          {total > 0 && (
-            <>
+  // Close on Escape
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [onClose]);
+
+  const isPdf = project.embedUrl?.toLowerCase().endsWith('.pdf');
+  const iframeUrl = isPdf && totalPages
+    ? `${project.embedUrl}#page=${page}&toolbar=0&navpanes=0`
+    : `${project.embedUrl}#toolbar=0&navpanes=0`;
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8"
+        onClick={e => { if (e.target === e.currentTarget) onClose(); }}
+      >
+        {/* Backdrop */}
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+
+        {/* Modal */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 10 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: 10 }}
+          transition={{ duration: 0.2 }}
+          className="relative z-10 w-full max-w-4xl bg-background rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+          style={{ maxHeight: '90vh' }}
+        >
+          {/* Header */}
+          <div className="flex items-center justify-between px-4 py-3 border-b shrink-0">
+            <div className="flex items-center gap-2 min-w-0">
+              <BookOpen className="h-4 w-4 text-blue-600 shrink-0" />
+              <span className="text-sm font-semibold text-foreground truncate">{project.title}</span>
+              {totalPages && (
+                <span className="text-xs text-muted-foreground shrink-0">— Page {page} of {totalPages}</span>
+              )}
+            </div>
+            <div className="flex items-center gap-1 shrink-0 ml-2">
+              <a
+                href={project.embedUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground px-2 py-1 rounded-md hover:bg-accent transition-colors"
+              >
+                <Maximize2 className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">Full screen</span>
+              </a>
+              <button
+                onClick={onClose}
+                className="flex items-center justify-center h-7 w-7 rounded-full hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* PDF area */}
+          <div className="flex-1 min-h-0 bg-muted/30">
+            {available === null && (
+              <div className="h-full flex items-center justify-center">
+                <div className="h-5 w-5 rounded-full border-2 border-blue-600 border-t-transparent animate-spin" />
+              </div>
+            )}
+            {available === false && (
+              <div className="h-full flex flex-col items-center justify-center gap-3 p-8 text-center">
+                <span className="text-2xl">📄</span>
+                <p className="text-sm text-muted-foreground">Deck not yet uploaded.</p>
+                {project.links?.find((l: any) => l.name === 'Deck') && (
+                  <a
+                    href={project.links.find((l: any) => l.name === 'Deck').url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs font-semibold text-blue-700 border border-blue-300 rounded-md px-3 py-1.5 hover:bg-indigo-50 transition-colors"
+                  >
+                    <ExternalLink className="h-3 w-3" /> Open in Drive
+                  </a>
+                )}
+              </div>
+            )}
+            {available === true && (
+              <iframe
+                src={iframeUrl}
+                className="w-full h-full"
+                style={{ minHeight: '60vh' }}
+                title={project.title}
+              />
+            )}
+          </div>
+
+          {/* Page controls */}
+          {available === true && isPdf && totalPages && totalPages > 1 && (
+            <div className="flex items-center justify-center gap-3 px-4 py-2.5 border-t shrink-0">
               <button
                 onClick={() => setPage(p => Math.max(1, p - 1))}
                 disabled={page === 1}
-                className="rounded p-1 hover:bg-background disabled:opacity-40 transition-colors"
+                className="flex items-center justify-center h-7 w-7 rounded-full hover:bg-accent disabled:opacity-30 transition-colors"
               >
-                <ChevronLeft className="h-3.5 w-3.5" />
+                <ChevronLeft className="h-4 w-4" />
               </button>
-              <span className="text-xs text-muted-foreground min-w-[44px] text-center tabular-nums">{page} / {total}</span>
+              <span className="text-xs text-muted-foreground w-20 text-center">{page} / {totalPages}</span>
               <button
-                onClick={() => setPage(p => Math.min(total, p + 1))}
-                disabled={page === total}
-                className="rounded p-1 hover:bg-background disabled:opacity-40 transition-colors"
+                onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                disabled={page === totalPages}
+                className="flex items-center justify-center h-7 w-7 rounded-full hover:bg-accent disabled:opacity-30 transition-colors"
               >
-                <ChevronRight className="h-3.5 w-3.5" />
+                <ChevronRight className="h-4 w-4" />
               </button>
-            </>
+            </div>
           )}
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Open full screen"
-            className="rounded p-1 hover:bg-background transition-colors text-muted-foreground hover:text-foreground"
-          >
-            <Maximize2 className="h-3.5 w-3.5" />
-          </a>
-        </div>
-      )}
-    </div>
-  );
-
-  // Still checking
-  if (available === null) {
-    return (
-      <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
-        {toolbar}
-        <div className="flex flex-1 items-center justify-center">
-          <span className="text-xs text-muted-foreground animate-pulse">Loading…</span>
-        </div>
-      </div>
-    );
-  }
-
-  // File doesn't exist
-  if (!available) {
-    return (
-      <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
-        {toolbar}
-        <div className="flex flex-1 flex-col items-center justify-center gap-3 p-6 text-center">
-          <span className="text-3xl">📄</span>
-          <p className="text-sm font-medium text-foreground">Deck not yet uploaded</p>
-          <p className="text-xs text-muted-foreground max-w-[200px]">Use the link above to view the full presentation.</p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
-      {toolbar}
-      <div className="relative flex-1 min-h-0">
-        <iframe
-          key={src}
-          src={src}
-          className="w-full h-full border-0"
-          title={title}
-          allowFullScreen
-        />
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
-function ProjectDetail({ project }: { project: any }) {
-  const hasEmbed = !!project.embedUrl;
-  const hasImage = !hasEmbed && !!project.images?.[0]?.src;
-  const hasMedia = hasEmbed || hasImage;
+function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: any) => void }) {
+  const hasImage = !!project.images?.[0]?.src;
+  const shortDesc = project.description?.length > 130
+    ? project.description.slice(0, 130).trimEnd() + '…'
+    : project.description;
+  const tags = (project.techStack ?? []).slice(0, 4);
+
   return (
     <motion.div
-      key={project.title}
-      initial={{ opacity: 0, x: 8 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -8 }}
-      transition={{ duration: 0.2, ease: 'easeOut' }}
-      className="rounded-xl border bg-accent overflow-hidden h-auto sm:h-full"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2 }}
+      className="group rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-0.5"
+      style={{
+        background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.03))',
+        border: '1px solid rgba(30,64,175,0.15)',
+        boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
+      }}
+      whileHover={{ boxShadow: '0 8px 24px rgba(30,64,175,0.15)' } as any}
     >
-      <div className={`flex h-auto sm:h-full ${hasMedia ? 'flex-col sm:flex-row' : 'flex-col'} gap-0`}>
-        {hasEmbed && (
-          <PdfViewer
-            url={project.embedUrl}
-            pageCount={project.pageCount}
-            title={project.title}
-            links={project.links}
+      {/* Cover image */}
+      <div className="relative h-44 sm:h-48 shrink-0 overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #dbeafe 0%, #dbeafe 50%, #eff6ff 100%)' }}
+      >
+        {hasImage ? (
+          <Image
+            src={project.images[0].src}
+            alt={project.title}
+            fill
+            className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
           />
-        )}
-        {hasImage && (
-          <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[200px] sm:min-h-0">
-            {/* Links bar above image */}
-            {project.links?.length > 0 && (
-              <div className="flex flex-wrap gap-2 px-3 py-2.5 border-b bg-muted/60">
-                {project.links.map((link: any, i: number) => (
-                  <a
-                    key={i}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-md border border-primary/30 bg-background px-3 py-1.5 text-xs sm:text-sm font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    {link.name}
-                  </a>
-                ))}
-              </div>
-            )}
-            <div className="relative flex-1 min-h-0 min-h-[160px]">
-              <Image
-                src={project.images[0].src}
-                alt={project.images[0].alt || project.title}
-                fill
-                className="object-contain"
-              />
-            </div>
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <span className="text-sm font-semibold text-blue-300 text-center leading-snug">{project.title}</span>
           </div>
         )}
-        <div className={`${hasMedia ? 'w-full sm:w-2/5 sm:shrink-0' : 'w-full'} p-4 sm:p-5 space-y-3 sm:overflow-y-auto`}>
-          <div className="flex items-start justify-between gap-2">
-            <div className="min-w-0">
-              <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
-              <h3 className="text-sm sm:text-base font-semibold text-foreground leading-snug mt-0.5">{project.title}</h3>
-            </div>
-            {project.isLive ? (
-              <span className="shrink-0 flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-                </span>
-                Live
+        {/* Gradient vignette on bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+
+        {/* Live badge */}
+        {project.isLive && (
+          <span className="absolute top-2.5 right-2.5 flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full font-medium backdrop-blur-sm"
+            style={{ background: 'rgba(209,250,229,0.9)', color: '#065f46', border: '1px solid rgba(167,243,208,0.8)' }}>
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+            </span>
+            Live
+          </span>
+        )}
+        {/* View Deck overlay */}
+        {project.embedUrl && (
+          <button
+            onClick={() => onViewDeck(project)}
+            className="absolute inset-0 flex items-end justify-start p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            style={{ background: 'linear-gradient(to top, rgba(30,27,75,0.7) 0%, transparent 60%)' }}
+          >
+            <span className="flex items-center gap-1.5 text-xs font-semibold text-white rounded-lg px-3 py-1.5 shadow-lg"
+              style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)', boxShadow: '0 2px 12px rgba(30,64,175,0.5)' }}>
+              <BookOpen className="h-3.5 w-3.5" />
+              View Deck
+            </span>
+          </button>
+        )}
+      </div>
+
+      {/* Card body */}
+      <div className="flex flex-col gap-2 p-4 flex-1">
+        <div>
+          <span className="text-[11px] font-semibold uppercase tracking-wide"
+            style={{ background: 'linear-gradient(135deg, #1e40af, #2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            {project.category}
+          </span>
+          <h3 className="text-sm font-semibold text-foreground mt-0.5 leading-snug">{project.title}</h3>
+        </div>
+        <p className="text-xs text-muted-foreground leading-relaxed">{shortDesc}</p>
+        {tags.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-auto pt-1">
+            {tags.map((t: string, i: number) => (
+              <span key={i} className="text-[11px] rounded-full px-2 py-0.5 font-medium"
+                style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.2)' }}>
+                {t}
               </span>
-            ) : (
-              <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full ${
-                project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
-              }`}>{project.status}</span>
-            )}
+            ))}
           </div>
-
-          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{project.description}</p>
-
-          {project.techStack?.length > 0 && (
-            <div className="flex flex-wrap gap-1 sm:gap-1.5">
-              {project.techStack.map((t: string, i: number) => (
-                <span key={i} className="text-xs bg-background border rounded-full px-2 sm:px-2.5 py-0.5 text-foreground">{t}</span>
-              ))}
-            </div>
+        )}
+        <div className="flex flex-wrap gap-1.5 pt-1">
+          {project.embedUrl && (
+            <button
+              onClick={() => onViewDeck(project)}
+              className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-all duration-200 hover:opacity-90"
+              style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)', color: '#fff', boxShadow: '0 1px 6px rgba(30,64,175,0.3)' }}
+            >
+              <BookOpen className="h-3 w-3" />
+              View Deck
+            </button>
           )}
-
-          {project.workflowImages?.length > 0 && (
-            <div className="space-y-3 pt-1">
-              {project.workflowImages.map((wf: any, i: number) => (
-                <div key={i} className="space-y-1">
-                  <span className="text-xs font-semibold text-foreground">{wf.label}</span>
-                  <div className="rounded-lg overflow-hidden border bg-muted">
-                    <Image
-                      src={wf.src}
-                      alt={wf.label}
-                      width={600}
-                      height={400}
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Links for projects without a preview image or embed */}
-          {!hasMedia && project.links?.length > 0 && (
-            <div className="flex flex-wrap gap-2 pt-1">
-              {project.links.map((link: any, i: number) => (
-                <a
-                  key={i}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 rounded-md border border-primary/30 bg-background px-3 py-1.5 text-xs sm:text-sm font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  <ExternalLink className="h-3.5 w-3.5" />
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          )}
+          {project.links?.map((link: any, i: number) => (
+            <a
+              key={i}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-colors hover:opacity-80"
+              style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.25)' }}
+            >
+              <ExternalLink className="h-3 w-3" />
+              {link.name}
+            </a>
+          ))}
         </div>
       </div>
     </motion.div>
@@ -269,69 +269,95 @@ function ProjectDetail({ project }: { project: any }) {
 
 export default function AllProjects() {
   const [activeTab, setActiveTab] = useState('product');
+  const [activeProject, setActiveProject] = useState<string | null>(null);
+  const [deckProject, setDeckProject] = useState<any | null>(null);
+  const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const activeSection = TABS.find(t => t.id === activeTab)!.section;
   const projects = ALL_PROJECTS.filter(p => (p.section ?? 'Product & Tech Projects') === activeSection);
 
-  const [activeProject, setActiveProject] = useState<string>(projects[0]?.title ?? '');
-
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
-    const section = TABS.find(t => t.id === tabId)!.section;
-    const tabProjects = ALL_PROJECTS.filter(p => (p.section ?? 'Product & Tech Projects') === section);
-    setActiveProject(tabProjects[0]?.title ?? '');
+    setActiveProject(null);
   };
 
-  const currentProject = projects.find(p => p.title === activeProject) ?? projects[0];
+  const scrollToProject = (title: string) => {
+    setActiveProject(title);
+    const el = cardRefs.current[title];
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  };
 
   return (
-    <div className="w-full py-2 flex flex-col gap-3 sm:gap-4 lg:h-[calc(100vh-150px)]">
-      {/* Section tabs — horizontally scrollable on small screens */}
-      <div className="flex gap-1.5 rounded-xl bg-accent p-1 shrink-0 overflow-x-auto">
+    <div className="w-full py-2 flex flex-col gap-3 sm:gap-4">
+      {/* Deck modal */}
+      {deckProject && (
+        <DeckModal project={deckProject} onClose={() => setDeckProject(null)} />
+      )}
+
+      {/* Category tabs */}
+      <div className="flex gap-1 rounded-xl bg-accent/60 p-1 shrink-0 overflow-x-auto scrollbar-none">
         {TABS.map(tab => (
           <button
             key={tab.id}
             onClick={() => handleTabChange(tab.id)}
-            className={`flex-1 min-w-max rounded-lg px-2 sm:px-3 py-2 text-xs font-medium transition-all duration-200 leading-tight whitespace-nowrap ${
+            className={`relative flex-1 min-w-max rounded-lg px-3 py-2 text-xs font-medium transition-all duration-300 leading-tight whitespace-nowrap ${
               activeTab === tab.id
-                ? 'bg-background text-foreground shadow-sm'
+                ? 'text-white shadow-lg'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
+            style={activeTab === tab.id ? {
+              background: 'linear-gradient(135deg, #1e40af 0%, #1d4ed8 50%, #2563eb 100%)',
+              boxShadow: '0 2px 12px rgba(139, 92, 246, 0.4)',
+            } : {}}
           >
             {tab.label}
           </button>
         ))}
       </div>
 
-      {/* Content area: stacked on mobile, side-by-side on sm+ */}
+      {/* Project name chips */}
+      <div className="flex gap-1.5 overflow-x-auto pb-0.5 shrink-0 scrollbar-none">
+        {projects.map(project => (
+          <button
+            key={project.title}
+            onClick={() => scrollToProject(project.title)}
+            className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-medium transition-all duration-200 whitespace-nowrap ${
+              activeProject === project.title
+                ? 'text-white shadow-md'
+                : 'bg-accent/70 text-muted-foreground hover:text-foreground hover:bg-accent'
+            }`}
+            style={activeProject === project.title ? {
+              background: 'linear-gradient(135deg, #1e40af 0%, #1d4ed8 60%, #2563eb 100%)',
+              boxShadow: '0 1px 8px rgba(139, 92, 246, 0.35)',
+            } : {}}
+          >
+            {project.sidebarTitle || project.title}
+          </button>
+        ))}
+      </div>
+
+      {/* 2-column project grid */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab}
+          ref={gridRef}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.15 }}
-          className="flex flex-col sm:flex-row gap-3 flex-1 min-h-0"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
-          {/* Project list — horizontal scroll row on mobile, vertical sidebar on sm+ */}
-          <div className="flex sm:flex-col gap-1.5 overflow-x-auto sm:overflow-y-auto sm:overflow-x-hidden shrink-0 sm:w-36 lg:w-44 pb-1 sm:pb-0">
-            {projects.map(project => (
-              <button
-                key={project.title}
-                onClick={() => setActiveProject(project.title)}
-                className={`shrink-0 sm:w-full text-left rounded-lg px-2.5 py-2 text-xs font-medium transition-all duration-200 leading-snug ${getTabStyle(project.title, activeProject === project.title)}`}
-              >
-                {project.sidebarTitle || project.title}
-              </button>
-            ))}
-          </div>
-
-          {/* Right panel — selected project detail */}
-          <div className="flex-1 min-w-0 min-h-0">
-            <AnimatePresence mode="wait">
-              {currentProject && <ProjectDetail key={currentProject.title} project={currentProject} />}
-            </AnimatePresence>
-          </div>
+          {projects.map(project => (
+            <div
+              key={project.title}
+              ref={el => { cardRefs.current[project.title] = el; }}
+            >
+              <ProjectCard project={project} onViewDeck={setDeckProject} />
+            </div>
+          ))}
         </motion.div>
       </AnimatePresence>
     </div>
