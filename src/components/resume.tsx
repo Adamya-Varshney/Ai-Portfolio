@@ -11,7 +11,7 @@ export function Resume() {
   };
 
   return (
-    <div className="mx-auto w-full py-6 font-sans">
+    <div className="mx-auto w-full py-2 font-sans">
       {/* Resume Card */}
       <motion.div
         className="group relative overflow-hidden rounded-xl bg-accent p-0 transition-all duration-300 mb-4"
@@ -72,7 +72,7 @@ export function Resume() {
           </button>
         </div>
 
-        <div className="w-full h-[420px] sm:h-[520px] md:h-[640px] bg-gray-50">
+        <div className="w-full h-[320px] sm:h-[400px] md:h-[480px] bg-gray-50">
           <iframe
             src={resumeDetails.downloadUrl}
             width="100%"
