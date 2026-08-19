@@ -211,20 +211,6 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
             Live
           </span>
         )}
-        {/* View Deck overlay */}
-        {project.embedUrl && (
-          <button
-            onClick={() => onViewDeck(project)}
-            className="absolute inset-0 flex items-end justify-start p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-            style={{ background: 'linear-gradient(to top, rgba(30,27,75,0.7) 0%, transparent 60%)' }}
-          >
-            <span className="flex items-center gap-1.5 text-xs font-semibold text-white rounded-lg px-3 py-1.5 shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)', boxShadow: '0 2px 12px rgba(2,132,199,0.5)' }}>
-              <BookOpen className="h-3.5 w-3.5" />
-              View Deck
-            </span>
-          </button>
-        )}
       </div>
 
       {/* Card body */}
@@ -248,16 +234,6 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
           </div>
         )}
         <div className="flex flex-wrap gap-1.5 pt-1">
-          {project.embedUrl && (
-            <button
-              onClick={() => onViewDeck(project)}
-              className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-all duration-200 hover:opacity-90"
-              style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)', color: '#fff', boxShadow: '0 1px 6px rgba(2,132,199,0.3)' }}
-            >
-              <BookOpen className="h-3 w-3" />
-              View Deck
-            </button>
-          )}
           {project.links?.map((link: any, i: number) => (
             <a
               key={i}
