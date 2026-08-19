@@ -46,9 +46,10 @@ const highlights = [
 ];
 
 const timeline = [
-  { role: 'Product Manager — AI & Agentic', org: 'IndiaMART InterMESH', period: '2022 – Present', current: true },
-  { role: 'Product Management Intern', org: 'YourDOST', period: '2021', current: false },
-  { role: 'MBA — Marketing & Finance', org: 'IIM Kashipur', period: '2020 – 2022', current: false },
+  { role: 'Assistant Product Manager', org: 'IndiaMART InterMESH', period: 'Jun 2025 – Present', current: true },
+  { role: 'Product Management Intern — AIMERS Platform', org: 'Escafate', period: 'Nov 2023 – Feb 2024', current: false },
+  { role: 'Product Content Development', org: 'CL Educate Ltd', period: 'Jun 2022 – Apr 2023', current: false },
+  { role: 'Product & Content Strategy Associate', org: 'Unacademy', period: 'Feb 2021 – May 2022', current: false },
 ];
 
 export function Presentation() {
