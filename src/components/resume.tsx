@@ -11,14 +11,36 @@ export function Resume() {
   };
 
   return (
-    <div className="mx-auto w-full py-2 font-sans">
-      {/* Header */}
-      <div className="mb-4">
-        <h2 className="text-lg font-bold"
-          style={{ background: 'linear-gradient(135deg, #0284c7, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-          Resume
-        </h2>
+    <div className="mx-auto w-full font-sans">
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900">Resume</h2>
+        <p className="text-sm text-gray-500 mt-1">Download or preview my latest resume.</p>
       </div>
+      {/* Resume Card */}
+      <motion.div
+        className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-0 transition-all duration-300 mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.0, ease: 'easeOut' }}
+      >
+        <div className="p-4 sm:p-5">
+          <div className="flex items-center justify-between gap-3">
+            <div className="min-w-0">
+              <h3 className="text-base sm:text-lg font-medium text-foreground truncate">
+                {resumeDetails.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                {resumeDetails.description}
+              </p>
+              <div className="mt-1 flex flex-wrap text-xs text-muted-foreground gap-x-2">
+                <span>{resumeDetails.fileType}</span>
+                <span className="hidden sm:inline">•</span>
+                <span>Updated {resumeDetails.lastUpdated}</span>
+                {resumeDetails.fileSize && (
+                  <><span className="hidden sm:inline">•</span><span>{resumeDetails.fileSize}</span></>
+                )}
+              </div>
+            </div>
 
       {/* Resume info card */}
       <motion.div
@@ -77,8 +99,7 @@ export function Resume() {
           </div>
           <button
             onClick={handleDownload}
-            className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-md text-white transition-opacity hover:opacity-90"
-            style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)' }}
+            className="flex items-center gap-1 px-2 sm:px-3 py-1 text-xs bg-gray-900 text-white rounded-md hover:bg-gray-700 transition-colors"
           >
             <ExternalLink className="h-3 w-3" />
             Open Full

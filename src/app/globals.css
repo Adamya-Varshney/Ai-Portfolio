@@ -120,6 +120,15 @@
   }
 }
 
+/* Hide all scrollbars globally */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
 .custom-scrollbar {
   /* For Firefox */
   scrollbar-width: thin;
