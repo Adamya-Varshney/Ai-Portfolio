@@ -1,102 +1,150 @@
 'use client';
 
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { BarChart3, Brain, Code, PenTool, Target, Users, Workflow } from 'lucide-react';
+import { BarChart3, Brain, Code, PenTool, Sparkles, Target, Users, Workflow } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 
 const Skills = () => {
+  // Get skills from configuration
   const config = getConfig();
 
+  // Transform skills data with icons (Product Manager categories)
   const skillsData = [
     {
       category: 'Product Tools',
-      icon: <PenTool className="h-4 w-4" />,
+      icon: <PenTool className="h-5 w-5" />,
       skills: config.skills.product_tools,
-      from: '#7c3aed', to: '#6d28d9',
+      color: 'bg-blue-50 text-blue-600 border border-blue-200',
     },
     {
       category: 'Data & AI',
-      icon: <Brain className="h-4 w-4" />,
+      icon: <Brain className="h-5 w-5" />,
       skills: config.skills.data_ai,
-      from: '#8b5cf6', to: '#7c3aed',
+      color: 'bg-purple-50 text-purple-600 border border-purple-200',
     },
     {
       category: 'Analytics',
-      icon: <BarChart3 className="h-4 w-4" />,
+      icon: <BarChart3 className="h-5 w-5" />,
       skills: config.skills.analytics,
-      from: '#a78bfa', to: '#8b5cf6',
+      color: 'bg-green-50 text-green-600 border border-green-200',
     },
     {
       category: 'Automation',
-      icon: <Workflow className="h-4 w-4" />,
+      icon: <Workflow className="h-5 w-5" />,
       skills: config.skills.automation,
-      from: '#6d28d9', to: '#4c1d95',
+      color: 'bg-orange-50 text-orange-600 border border-orange-200',
     },
     {
       category: 'Vibe Coding',
-      icon: <Code className="h-4 w-4" />,
+      icon: <Code className="h-5 w-5" />,
       skills: config.skills.vibe_coding,
-      from: '#7c3aed', to: '#a78bfa',
+      color: 'bg-emerald-50 text-emerald-600 border border-emerald-200',
     },
     {
       category: 'PM Skills',
-      icon: <Target className="h-4 w-4" />,
+      icon: <Target className="h-5 w-5" />,
       skills: config.skills.pm_skills,
-      from: '#8b5cf6', to: '#6d28d9',
+      color: 'bg-indigo-50 text-indigo-600 border border-indigo-200',
     },
     {
       category: 'Soft Skills',
-      icon: <Users className="h-4 w-4" />,
+      icon: <Users className="h-5 w-5" />,
       skills: config.skills.soft_skills,
-      from: '#a78bfa', to: '#7c3aed',
+      color: 'bg-amber-50 text-amber-600 border border-amber-200',
     },
-  ].filter(c => c.skills && c.skills.length > 0);
+  ].filter(category => category.skills && category.skills.length > 0);
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: 'easeOut' },
+    },
+  };
+
+  const badgeVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.3, ease: 'easeOut' },
+    },
+  };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
-      className="w-full py-2 font-sans flex flex-col gap-4"
+      initial={{ scale: 0.98, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
+      className="mx-auto w-full max-w-5xl rounded-4xl px-4 sm:px-6"
     >
-      {/* Header */}
-      <div>
-        <h1 className="text-xl font-bold bg-gradient-to-r from-violet-700 to-purple-500 bg-clip-text text-transparent">
-          Skills & Expertise
-        </h1>
-        <p className="text-xs text-muted-foreground mt-0.5">Tools, frameworks & capabilities</p>
-      </div>
+      <Card className="w-full border-none px-0 pb-8 sm:pb-12 shadow-none">
+        <CardHeader className="px-0 pb-1">
+          <CardTitle className="text-primary px-0 text-2xl sm:text-3xl lg:text-4xl font-bold">
+            Skills & Expertise
+          </CardTitle>
+        </CardHeader>
 
-      {/* Skill categories */}
-      <div className="space-y-3">
-        {skillsData.map((section, i) => (
+        <CardContent className="px-0">
           <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: i * 0.05 }}
-            className="rounded-xl p-3.5 border"
-            style={{ background: 'linear-gradient(145deg, rgba(124,58,237,0.05), rgba(139,92,246,0.03))', borderColor: 'rgba(124,58,237,0.12)' }}
+            className="space-y-6 sm:space-y-8 px-0"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
           >
-            <div className="flex items-center gap-2 mb-2.5">
-              <span className="flex items-center justify-center h-6 w-6 rounded-lg text-white shrink-0"
-                style={{ background: `linear-gradient(135deg, ${section.from}, ${section.to})`, boxShadow: `0 2px 6px ${section.from}40` }}>
-                {section.icon}
-              </span>
-              <h3 className="text-xs font-semibold text-foreground">{section.category}</h3>
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {section.skills.map((skill: string, idx: number) => (
-                <span key={idx}
-                  className="text-[11px] rounded-full px-2.5 py-0.5 font-medium border"
-                  style={{ background: 'rgba(124,58,237,0.07)', color: '#7c3aed', borderColor: 'rgba(124,58,237,0.2)' }}>
-                  {skill}
-                </span>
-              ))}
-            </div>
+            {skillsData.map((section, index) => (
+              <motion.div
+                key={index}
+                className="space-y-3 px-0"
+                variants={itemVariants}
+              >
+                <div className="flex items-center gap-2">
+                  {section.icon}
+                  <h3 className="text-accent-foreground text-base sm:text-lg font-semibold">
+                    {section.category}
+                  </h3>
+                </div>
+
+                <motion.div
+                  className="flex flex-wrap gap-1.5 sm:gap-2"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {section.skills.map((skill, idx) => (
+                    <motion.div
+                      key={idx}
+                      variants={badgeVariants}
+                      whileHover={{
+                        scale: 1.04,
+                        transition: { duration: 0.2 },
+                      }}
+                    >
+                      <Badge className={`border px-2 py-1 sm:px-3 sm:py-1.5 font-normal text-xs sm:text-sm`}>
+                        {skill}
+                      </Badge>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </motion.div>
+            ))}
           </motion.div>
-        ))}
-      </div>
+        </CardContent>
+      </Card>
     </motion.div>
   );
 };
