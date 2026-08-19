@@ -56,23 +56,21 @@ export function Presentation() {
   const profile = profileInfo;
 
   return (
-    <div className="w-full font-sans flex flex-col gap-12">
+    <div className="w-full font-sans flex flex-col gap-14">
 
-      {/* Hero row */}
-      <motion.div {...fade(0)} className="flex flex-col sm:flex-row items-start gap-8">
-        {/* Profile photo */}
-        <div className="shrink-0">
-          <div className="h-24 w-24 sm:h-28 sm:w-28 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
-            <Image src="/profile.png" alt={profile.name} fill={false}
-              width={112} height={112}
-              className="object-cover object-[center_top_-5%] w-full h-full" />
-          </div>
+      {/* Hero — centered */}
+      <motion.div {...fade(0)} className="flex flex-col items-center text-center gap-5 pt-6">
+        {/* Avatar */}
+        <div className="h-28 w-28 rounded-full overflow-hidden border-4 border-white shadow-lg ring-1 ring-gray-200">
+          <Image src="/profile.png" alt={profile.name} fill={false}
+            width={112} height={112}
+            className="object-cover object-[center_top_-5%] w-full h-full" />
         </div>
 
-        {/* Name + bio */}
-        <div className="flex-1 min-w-0">
-          <div className="flex flex-wrap items-center gap-3 mb-1">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{profile.name}</h1>
+        {/* Name + badge */}
+        <div>
+          <div className="flex flex-wrap items-center justify-center gap-2.5 mb-1">
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-tight">{profile.name}</h1>
             <span className="flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-0.5 rounded-full"
               style={{ background: '#f0fdf4', color: '#15803d', border: '1px solid #bbf7d0' }}>
               <span className="relative flex h-1.5 w-1.5">
@@ -82,32 +80,35 @@ export function Presentation() {
               Open to work
             </span>
           </div>
-          <p className="text-sm font-medium text-gray-600 mb-1">{(profile as any).title ?? 'Product Manager'}</p>
-          <div className="flex items-center gap-1 text-xs text-gray-400 mb-4">
+          <p className="text-base font-medium text-gray-500">{(profile as any).title ?? 'Product Manager'}</p>
+          <div className="flex items-center justify-center gap-1 text-xs text-gray-400 mt-1">
             <MapPin className="h-3 w-3" />
             <span>{profile.location}</span>
           </div>
-          <p className="text-sm text-gray-600 leading-relaxed max-w-lg mb-4">
-            3.5+ years shipping 0-to-N products across B2B & D2C — from seller growth at IndiaMART to AI-native CRMs, RAG pipelines, and agentic workflows. Open to senior PM roles in AI & digital products.
-          </p>
-          <div className="flex items-center gap-2">
-            <a href="https://www.linkedin.com/in/adamya-varshney15/" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 transition-colors hover:opacity-90 text-white"
-              style={{ background: '#0a66c2' }}>
-              LinkedIn <ArrowUpRight className="h-3 w-3" />
-            </a>
-          </div>
         </div>
+
+        {/* Bio */}
+        <p className="text-sm text-gray-500 leading-relaxed max-w-xl">
+          3.5+ years shipping 0-to-N products across B2B & D2C — from seller growth at IndiaMART to AI-native CRMs, RAG pipelines, and agentic workflows. Open to senior PM roles in AI & digital products.
+        </p>
+
+        {/* CTA */}
+        <a href="https://www.linkedin.com/in/adamya-varshney15/" target="_blank" rel="noopener noreferrer"
+          className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-4 py-2.5 transition-opacity hover:opacity-90 text-white"
+          style={{ background: '#0a66c2' }}>
+          LinkedIn <ArrowUpRight className="h-3 w-3" />
+        </a>
       </motion.div>
+
+      {/* Divider */}
+      <div className="border-t border-gray-100" />
 
       {/* Stats */}
       <motion.div {...fade(0.05)} className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {stats.map(s => (
-          <div key={s.value}
-            className="rounded-xl p-4 border border-gray-100 bg-gray-50"
-          >
-            <div className="text-xl font-bold text-gray-900">{s.value}</div>
-            <div className="text-xs text-gray-500 mt-0.5 leading-tight">{s.label}</div>
+          <div key={s.value} className="rounded-xl p-5 border border-gray-100 bg-gray-50 text-center">
+            <div className="text-2xl font-bold text-gray-900">{s.value}</div>
+            <div className="text-xs text-gray-500 mt-1 leading-tight">{s.label}</div>
           </div>
         ))}
       </motion.div>
