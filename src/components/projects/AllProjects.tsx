@@ -276,16 +276,20 @@ export default function AllProjects() {
       )}
 
       {/* Category tabs */}
-      <div className="flex gap-1.5 rounded-xl bg-accent p-1 shrink-0 overflow-x-auto">
+      <div className="flex gap-1 rounded-xl bg-accent/60 p-1 shrink-0 overflow-x-auto scrollbar-none">
         {TABS.map(tab => (
           <button
             key={tab.id}
             onClick={() => handleTabChange(tab.id)}
-            className={`flex-1 min-w-max rounded-lg px-2 sm:px-3 py-2 text-xs font-medium transition-all duration-200 leading-tight whitespace-nowrap ${
+            className={`relative flex-1 min-w-max rounded-lg px-3 py-2 text-xs font-medium transition-all duration-300 leading-tight whitespace-nowrap ${
               activeTab === tab.id
-                ? 'bg-background text-foreground shadow-sm'
+                ? 'text-white shadow-lg'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
+            style={activeTab === tab.id ? {
+              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%)',
+              boxShadow: '0 2px 12px rgba(139, 92, 246, 0.4)',
+            } : {}}
           >
             {tab.label}
           </button>
@@ -293,16 +297,20 @@ export default function AllProjects() {
       </div>
 
       {/* Project name chips */}
-      <div className="flex gap-1.5 overflow-x-auto pb-0.5 shrink-0">
+      <div className="flex gap-1.5 overflow-x-auto pb-0.5 shrink-0 scrollbar-none">
         {projects.map(project => (
           <button
             key={project.title}
             onClick={() => scrollToProject(project.title)}
             className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-medium transition-all duration-200 whitespace-nowrap ${
               activeProject === project.title
-                ? 'bg-indigo-600 text-white shadow-sm'
-                : 'bg-accent text-muted-foreground hover:text-foreground'
+                ? 'text-white shadow-md'
+                : 'bg-accent/70 text-muted-foreground hover:text-foreground hover:bg-accent'
             }`}
+            style={activeProject === project.title ? {
+              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 60%, #a855f7 100%)',
+              boxShadow: '0 1px 8px rgba(139, 92, 246, 0.35)',
+            } : {}}
           >
             {project.sidebarTitle || project.title}
           </button>

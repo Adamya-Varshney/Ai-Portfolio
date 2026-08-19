@@ -147,6 +147,15 @@
   background-color: rgba(155, 155, 155, 0.7);
 }
 
+/* Hide scrollbars while keeping scroll functionality */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* Ensure code blocks can scroll horizontally */
 pre {
   white-space: pre;
