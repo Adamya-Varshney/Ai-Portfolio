@@ -1,7 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { getConfig } from '@/lib/config-loader';
 import Image from 'next/image';
 
@@ -36,6 +36,113 @@ function getTabStyle(title: string, isActive: boolean) {
     : 'bg-teal-700/80 text-white hover:bg-teal-700';
 }
 
+function PdfViewer({ url, pageCount, title, links }: { url: string; pageCount?: number; title: string; links?: any[] }) {
+  const [page, setPage] = useState(1);
+  const [available, setAvailable] = useState<boolean | null>(null);
+  const total = pageCount ?? 0;
+  const src = total > 0 ? `${url}#page=${page}` : url;
+
+  useEffect(() => {
+    setAvailable(null);
+    setPage(1);
+    fetch(url, { method: 'HEAD' })
+      .then(r => setAvailable(r.ok))
+      .catch(() => setAvailable(false));
+  }, [url]);
+
+  const toolbar = (
+    <div className="flex items-center gap-2 px-3 py-2 border-b bg-muted/60 shrink-0">
+      <div className="flex flex-wrap gap-1.5">
+        {links?.map((link: any, i: number) => (
+          <a
+            key={i}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 rounded-md border border-primary/30 bg-background px-2.5 py-1 text-xs font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <ExternalLink className="h-3 w-3" />
+            {link.name}
+          </a>
+        ))}
+      </div>
+      {available && (
+        <div className="flex items-center gap-1 ml-auto">
+          {total > 0 && (
+            <>
+              <button
+                onClick={() => setPage(p => Math.max(1, p - 1))}
+                disabled={page === 1}
+                className="rounded p-1 hover:bg-background disabled:opacity-40 transition-colors"
+              >
+                <ChevronLeft className="h-3.5 w-3.5" />
+              </button>
+              <span className="text-xs text-muted-foreground min-w-[44px] text-center tabular-nums">{page} / {total}</span>
+              <button
+                onClick={() => setPage(p => Math.min(total, p + 1))}
+                disabled={page === total}
+                className="rounded p-1 hover:bg-background disabled:opacity-40 transition-colors"
+              >
+                <ChevronRight className="h-3.5 w-3.5" />
+              </button>
+            </>
+          )}
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open full screen"
+            className="rounded p-1 hover:bg-background transition-colors text-muted-foreground hover:text-foreground"
+          >
+            <Maximize2 className="h-3.5 w-3.5" />
+          </a>
+        </div>
+      )}
+    </div>
+  );
+
+  // Still checking
+  if (available === null) {
+    return (
+      <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
+        {toolbar}
+        <div className="flex flex-1 items-center justify-center">
+          <span className="text-xs text-muted-foreground animate-pulse">Loading…</span>
+        </div>
+      </div>
+    );
+  }
+
+  // File doesn't exist
+  if (!available) {
+    return (
+      <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
+        {toolbar}
+        <div className="flex flex-1 flex-col items-center justify-center gap-3 p-6 text-center">
+          <span className="text-3xl">📄</span>
+          <p className="text-sm font-medium text-foreground">Deck not yet uploaded</p>
+          <p className="text-xs text-muted-foreground max-w-[200px]">Use the link above to view the full presentation.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
+      {toolbar}
+      <div className="relative flex-1 min-h-0">
+        <iframe
+          key={src}
+          src={src}
+          className="w-full h-full border-0"
+          title={title}
+          allowFullScreen
+        />
+      </div>
+    </div>
+  );
+}
+
 function ProjectDetail({ project }: { project: any }) {
   const hasEmbed = !!project.embedUrl;
   const hasImage = !hasEmbed && !!project.images?.[0]?.src;
@@ -51,32 +158,12 @@ function ProjectDetail({ project }: { project: any }) {
     >
       <div className={`flex h-auto sm:h-full ${hasMedia ? 'flex-col sm:flex-row' : 'flex-col'} gap-0`}>
         {hasEmbed && (
-          <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
-            {project.links?.length > 0 && (
-              <div className="flex flex-wrap gap-2 px-3 py-2.5 border-b bg-muted/60">
-                {project.links.map((link: any, i: number) => (
-                  <a
-                    key={i}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-md border border-primary/30 bg-background px-3 py-1.5 text-xs sm:text-sm font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    {link.name}
-                  </a>
-                ))}
-              </div>
-            )}
-            <div className="relative flex-1 min-h-0">
-              <iframe
-                src={project.embedUrl}
-                className="w-full h-full border-0"
-                title={project.title}
-                allowFullScreen
-              />
-            </div>
-          </div>
+          <PdfViewer
+            url={project.embedUrl}
+            pageCount={project.pageCount}
+            title={project.title}
+            links={project.links}
+          />
         )}
         {hasImage && (
           <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[200px] sm:min-h-0">
@@ -113,9 +200,19 @@ function ProjectDetail({ project }: { project: any }) {
               <span className="text-xs text-muted-foreground font-medium">{project.category}</span>
               <h3 className="text-sm sm:text-base font-semibold text-foreground leading-snug mt-0.5">{project.title}</h3>
             </div>
-            <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full ${
-              project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
-            }`}>{project.status}</span>
+            {project.isLive ? (
+              <span className="shrink-0 flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                </span>
+                Live
+              </span>
+            ) : (
+              <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full ${
+                project.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+              }`}>{project.status}</span>
+            )}
           </div>
 
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{project.description}</p>
