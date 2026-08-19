@@ -67,7 +67,7 @@ function DeckModal({ project, onClose }: { project: any; onClose: () => void }) 
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b shrink-0">
             <div className="flex items-center gap-2 min-w-0">
-              <BookOpen className="h-4 w-4 text-indigo-500 shrink-0" />
+              <BookOpen className="h-4 w-4 text-blue-600 shrink-0" />
               <span className="text-sm font-semibold text-foreground truncate">{project.title}</span>
               {totalPages && (
                 <span className="text-xs text-muted-foreground shrink-0">— Page {page} of {totalPages}</span>
@@ -96,7 +96,7 @@ function DeckModal({ project, onClose }: { project: any; onClose: () => void }) 
           <div className="flex-1 min-h-0 bg-muted/30">
             {available === null && (
               <div className="h-full flex items-center justify-center">
-                <div className="h-5 w-5 rounded-full border-2 border-indigo-500 border-t-transparent animate-spin" />
+                <div className="h-5 w-5 rounded-full border-2 border-blue-600 border-t-transparent animate-spin" />
               </div>
             )}
             {available === false && (
@@ -108,7 +108,7 @@ function DeckModal({ project, onClose }: { project: any; onClose: () => void }) 
                     href={project.links.find((l: any) => l.name === 'Deck').url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-semibold text-indigo-600 border border-indigo-300 rounded-md px-3 py-1.5 hover:bg-indigo-50 transition-colors"
+                    className="flex items-center gap-1.5 text-xs font-semibold text-blue-700 border border-blue-300 rounded-md px-3 py-1.5 hover:bg-indigo-50 transition-colors"
                   >
                     <ExternalLink className="h-3 w-3" /> Open in Drive
                   </a>
@@ -165,15 +165,15 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
       transition={{ duration: 0.2 }}
       className="group rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-0.5"
       style={{
-        background: 'linear-gradient(145deg, rgba(99,102,241,0.04), rgba(168,85,247,0.03))',
-        border: '1px solid rgba(99,102,241,0.15)',
+        background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.03))',
+        border: '1px solid rgba(30,64,175,0.15)',
         boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
       }}
-      whileHover={{ boxShadow: '0 8px 24px rgba(99,102,241,0.15)' } as any}
+      whileHover={{ boxShadow: '0 8px 24px rgba(30,64,175,0.15)' } as any}
     >
       {/* Cover image */}
       <div className="relative h-44 sm:h-48 shrink-0 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #e0e7ff 0%, #ede9fe 50%, #f3e8ff 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #dbeafe 0%, #dbeafe 50%, #eff6ff 100%)' }}
       >
         {hasImage ? (
           <Image
@@ -184,7 +184,7 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center p-4">
-            <span className="text-sm font-semibold text-indigo-300 text-center leading-snug">{project.title}</span>
+            <span className="text-sm font-semibold text-blue-300 text-center leading-snug">{project.title}</span>
           </div>
         )}
         {/* Gradient vignette on bottom */}
@@ -209,7 +209,7 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
             style={{ background: 'linear-gradient(to top, rgba(30,27,75,0.7) 0%, transparent 60%)' }}
           >
             <span className="flex items-center gap-1.5 text-xs font-semibold text-white rounded-lg px-3 py-1.5 shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', boxShadow: '0 2px 12px rgba(99,102,241,0.5)' }}>
+              style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)', boxShadow: '0 2px 12px rgba(30,64,175,0.5)' }}>
               <BookOpen className="h-3.5 w-3.5" />
               View Deck
             </span>
@@ -221,7 +221,7 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
       <div className="flex flex-col gap-2 p-4 flex-1">
         <div>
           <span className="text-[11px] font-semibold uppercase tracking-wide"
-            style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            style={{ background: 'linear-gradient(135deg, #1e40af, #2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             {project.category}
           </span>
           <h3 className="text-sm font-semibold text-foreground mt-0.5 leading-snug">{project.title}</h3>
@@ -231,7 +231,7 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
           <div className="flex flex-wrap gap-1 mt-auto pt-1">
             {tags.map((t: string, i: number) => (
               <span key={i} className="text-[11px] rounded-full px-2 py-0.5 font-medium"
-                style={{ background: 'rgba(99,102,241,0.08)', color: '#6366f1', border: '1px solid rgba(99,102,241,0.2)' }}>
+                style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.2)' }}>
                 {t}
               </span>
             ))}
@@ -242,7 +242,7 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
             <button
               onClick={() => onViewDeck(project)}
               className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-all duration-200 hover:opacity-90"
-              style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', color: '#fff', boxShadow: '0 1px 6px rgba(99,102,241,0.3)' }}
+              style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)', color: '#fff', boxShadow: '0 1px 6px rgba(30,64,175,0.3)' }}
             >
               <BookOpen className="h-3 w-3" />
               View Deck
@@ -255,7 +255,7 @@ function ProjectCard({ project, onViewDeck }: { project: any; onViewDeck: (p: an
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-colors hover:opacity-80"
-              style={{ background: 'rgba(99,102,241,0.08)', color: '#6366f1', border: '1px solid rgba(99,102,241,0.25)' }}
+              style={{ background: 'rgba(30,64,175,0.08)', color: '#1e40af', border: '1px solid rgba(30,64,175,0.25)' }}
             >
               <ExternalLink className="h-3 w-3" />
               {link.name}
@@ -309,7 +309,7 @@ export default function AllProjects() {
                 : 'text-muted-foreground hover:text-foreground'
             }`}
             style={activeTab === tab.id ? {
-              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%)',
+              background: 'linear-gradient(135deg, #1e40af 0%, #1d4ed8 50%, #2563eb 100%)',
               boxShadow: '0 2px 12px rgba(139, 92, 246, 0.4)',
             } : {}}
           >
@@ -330,7 +330,7 @@ export default function AllProjects() {
                 : 'bg-accent/70 text-muted-foreground hover:text-foreground hover:bg-accent'
             }`}
             style={activeProject === project.title ? {
-              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 60%, #a855f7 100%)',
+              background: 'linear-gradient(135deg, #1e40af 0%, #1d4ed8 60%, #2563eb 100%)',
               boxShadow: '0 1px 8px rgba(139, 92, 246, 0.35)',
             } : {}}
           >

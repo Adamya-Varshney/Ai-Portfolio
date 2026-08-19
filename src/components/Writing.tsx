@@ -8,13 +8,13 @@ const config = getConfig();
 const writing: any[] = (config as any).writing ?? [];
 
 const TYPE_STYLES: Record<string, { bg: string; color: string; border: string }> = {
-  'PM Teardown':     { bg: 'rgba(99,102,241,0.10)',  color: '#6366f1', border: 'rgba(99,102,241,0.25)' },
-  'AI Product':      { bg: 'rgba(168,85,247,0.10)',  color: '#a855f7', border: 'rgba(168,85,247,0.25)' },
-  'Product Lessons': { bg: 'rgba(139,92,246,0.10)',  color: '#8b5cf6', border: 'rgba(139,92,246,0.25)' },
+  'PM Teardown':     { bg: 'rgba(30,64,175,0.10)',  color: '#1e40af', border: 'rgba(30,64,175,0.25)' },
+  'AI Product':      { bg: 'rgba(37,99,235,0.10)',  color: '#2563eb', border: 'rgba(37,99,235,0.25)' },
+  'Product Lessons': { bg: 'rgba(29,78,216,0.10)',  color: '#1d4ed8', border: 'rgba(29,78,216,0.25)' },
 };
 
 function typeStyle(type: string) {
-  return TYPE_STYLES[type] ?? { bg: 'rgba(99,102,241,0.08)', color: '#6366f1', border: 'rgba(99,102,241,0.2)' };
+  return TYPE_STYLES[type] ?? { bg: 'rgba(30,64,175,0.08)', color: '#1e40af', border: 'rgba(30,64,175,0.2)' };
 }
 
 export default function Writing() {
@@ -30,7 +30,7 @@ export default function Writing() {
       {/* Header */}
       <div className="mb-4">
         <h2 className="text-lg font-bold"
-          style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          style={{ background: 'linear-gradient(135deg, #1e40af, #2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           Writing
         </h2>
         <p className="text-xs text-muted-foreground mt-0.5">PM essays, product teardowns, and lessons from the field.</p>
@@ -39,10 +39,10 @@ export default function Writing() {
       {empty ? (
         <div
           className="flex flex-col items-center justify-center py-12 gap-3 text-center rounded-2xl border"
-          style={{ background: 'linear-gradient(145deg, rgba(99,102,241,0.04), rgba(168,85,247,0.03))', borderColor: 'rgba(99,102,241,0.15)' }}
+          style={{ background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.03))', borderColor: 'rgba(30,64,175,0.15)' }}
         >
           <span className="flex items-center justify-center h-12 w-12 rounded-2xl"
-            style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)', boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}>
+            style={{ background: 'linear-gradient(135deg, #1e40af, #2563eb)', boxShadow: '0 4px 16px rgba(30,64,175,0.3)' }}>
             <PenLine className="h-5 w-5 text-white" />
           </span>
           <p className="text-sm text-muted-foreground max-w-xs">Articles coming soon. Follow on LinkedIn for PM thoughts in the meantime.</p>
@@ -51,7 +51,7 @@ export default function Writing() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-            style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', boxShadow: '0 2px 10px rgba(99,102,241,0.3)' }}
+            style={{ background: 'linear-gradient(135deg, #1e40af, #1d4ed8)', boxShadow: '0 2px 10px rgba(30,64,175,0.3)' }}
           >
             LinkedIn <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
@@ -71,11 +71,11 @@ export default function Writing() {
                 transition={{ delay: i * 0.06 }}
                 className="group flex flex-col gap-2.5 rounded-xl p-4 cursor-pointer transition-all duration-200 hover:-translate-y-0.5"
                 style={{
-                  background: 'linear-gradient(145deg, rgba(99,102,241,0.04), rgba(168,85,247,0.03))',
-                  border: '1px solid rgba(99,102,241,0.15)',
+                  background: 'linear-gradient(145deg, rgba(30,64,175,0.04), rgba(37,99,235,0.03))',
+                  border: '1px solid rgba(30,64,175,0.15)',
                   boxShadow: '0 1px 4px rgba(0,0,0,0.05)',
                 }}
-                whileHover={{ boxShadow: '0 6px 20px rgba(99,102,241,0.13)' } as any}
+                whileHover={{ boxShadow: '0 6px 20px rgba(30,64,175,0.13)' } as any}
               >
                 <div className="flex items-start justify-between gap-2">
                   <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full"
@@ -84,12 +84,12 @@ export default function Writing() {
                   </span>
                   <span className="text-[11px] text-muted-foreground shrink-0">{post.date}</span>
                 </div>
-                <h3 className="text-sm font-semibold text-foreground leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                <h3 className="text-sm font-semibold text-foreground leading-snug group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-xs text-muted-foreground leading-relaxed flex-1">{post.summary}</p>
                 <div className="flex items-center gap-1 text-xs font-semibold"
-                  style={{ color: '#6366f1' }}>
+                  style={{ color: '#1e40af' }}>
                   Read <ArrowUpRight className="h-3 w-3" />
                 </div>
               </motion.a>
