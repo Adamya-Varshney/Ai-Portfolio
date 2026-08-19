@@ -38,57 +38,35 @@ function getTabStyle(title: string, isActive: boolean) {
 
 function PdfViewer({ url, pageCount, title, links }: { url: string; pageCount?: number; title: string; links?: any[] }) {
   const [page, setPage] = useState(1);
-  const [error, setError] = useState(false);
+  const [available, setAvailable] = useState<boolean | null>(null);
   const total = pageCount ?? 0;
   const src = total > 0 ? `${url}#page=${page}` : url;
 
   useEffect(() => {
-    setError(false);
+    setAvailable(null);
     setPage(1);
     fetch(url, { method: 'HEAD' })
-      .then(r => { if (!r.ok) setError(true); })
-      .catch(() => setError(true));
+      .then(r => setAvailable(r.ok))
+      .catch(() => setAvailable(false));
   }, [url]);
 
-  if (error) {
-    return (
-      <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
-        <div className="flex flex-wrap gap-1.5 px-3 py-2 border-b bg-muted/60">
-          {links?.map((link: any, i: number) => (
-            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer"
-               className="flex items-center gap-1 rounded-md border border-primary/30 bg-background px-2.5 py-1 text-xs font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors">
-              <ExternalLink className="h-3 w-3" />{link.name}
-            </a>
-          ))}
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-center gap-3 p-6 text-center">
-          <span className="text-3xl">📄</span>
-          <p className="text-sm font-medium text-foreground">Deck not yet uploaded</p>
-          <p className="text-xs text-muted-foreground max-w-[200px]">Open the link above to view the full presentation.</p>
-        </div>
+  const toolbar = (
+    <div className="flex items-center gap-2 px-3 py-2 border-b bg-muted/60 shrink-0">
+      <div className="flex flex-wrap gap-1.5">
+        {links?.map((link: any, i: number) => (
+          <a
+            key={i}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 rounded-md border border-primary/30 bg-background px-2.5 py-1 text-xs font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <ExternalLink className="h-3 w-3" />
+            {link.name}
+          </a>
+        ))}
       </div>
-    );
-  }
-
-  return (
-    <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
-      <div className="flex items-center gap-2 px-3 py-2 border-b bg-muted/60">
-        {/* Links */}
-        <div className="flex flex-wrap gap-1.5">
-          {links?.map((link: any, i: number) => (
-            <a
-              key={i}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 rounded-md border border-primary/30 bg-background px-2.5 py-1 text-xs font-semibold text-primary shadow-sm hover:bg-primary hover:text-primary-foreground transition-colors"
-            >
-              <ExternalLink className="h-3 w-3" />
-              {link.name}
-            </a>
-          ))}
-        </div>
-        {/* Page navigation */}
+      {available && (
         <div className="flex items-center gap-1 ml-auto">
           {total > 0 && (
             <>
@@ -119,7 +97,39 @@ function PdfViewer({ url, pageCount, title, links }: { url: string; pageCount?: 
             <Maximize2 className="h-3.5 w-3.5" />
           </a>
         </div>
+      )}
+    </div>
+  );
+
+  // Still checking
+  if (available === null) {
+    return (
+      <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
+        {toolbar}
+        <div className="flex flex-1 items-center justify-center">
+          <span className="text-xs text-muted-foreground animate-pulse">Loading…</span>
+        </div>
       </div>
+    );
+  }
+
+  // File doesn't exist
+  if (!available) {
+    return (
+      <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
+        {toolbar}
+        <div className="flex flex-1 flex-col items-center justify-center gap-3 p-6 text-center">
+          <span className="text-3xl">📄</span>
+          <p className="text-sm font-medium text-foreground">Deck not yet uploaded</p>
+          <p className="text-xs text-muted-foreground max-w-[200px]">Use the link above to view the full presentation.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col w-full sm:w-3/5 sm:shrink-0 bg-muted min-h-[260px] sm:min-h-0">
+      {toolbar}
       <div className="relative flex-1 min-h-0">
         <iframe
           key={src}
