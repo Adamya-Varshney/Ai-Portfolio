@@ -134,30 +134,27 @@ export function Presentation() {
 
       {/* Experience timeline */}
       <motion.div {...fade(0.15)}>
-        <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">Experience</h3>
-        <div className="space-y-4">
+        <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-5">Experience</h3>
+        <div className="rounded-xl border border-gray-200 bg-white divide-y divide-gray-100 overflow-hidden">
           {timeline.map((t, i) => (
-            <div key={i} className="flex items-start gap-4">
-              <div className="mt-1.5 shrink-0 flex flex-col items-center">
+            <div key={i} className="flex items-start gap-4 px-5 py-4">
+              <div className="mt-1 shrink-0">
                 <div className="h-2.5 w-2.5 rounded-full border-2"
                   style={{
                     borderColor: t.current ? '#111827' : '#d1d5db',
                     background: t.current ? '#111827' : 'white',
                   }} />
-                {i < timeline.length - 1 && (
-                  <div className="w-px flex-1 mt-1 mb-0" style={{ height: '28px', background: '#e5e7eb' }} />
-                )}
               </div>
-              <div className="flex-1 pb-4">
-                <div className="flex items-start justify-between gap-2 flex-wrap">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start justify-between gap-3 flex-wrap">
                   <div>
                     <span className="text-sm font-semibold text-gray-900">{t.role}</span>
                     {t.current && (
-                      <span className="ml-2 text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-600">current</span>
+                      <span className="ml-2 text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-gray-900 text-white">current</span>
                     )}
-                    <p className="text-xs text-gray-400 mt-0.5">{t.org}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{t.org}</p>
                   </div>
-                  <span className="text-xs text-gray-400 shrink-0">{t.period}</span>
+                  <span className="text-xs font-bold text-gray-700 shrink-0 tabular-nums">{t.period}</span>
                 </div>
               </div>
             </div>
