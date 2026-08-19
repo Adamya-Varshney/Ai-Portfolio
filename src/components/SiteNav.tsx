@@ -44,7 +44,7 @@ export default function SiteNav() {
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
       }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 h-14 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 h-14 flex items-center justify-between gap-4">
         {/* Logo */}
         <button
           onClick={() => scrollTo('me')}
