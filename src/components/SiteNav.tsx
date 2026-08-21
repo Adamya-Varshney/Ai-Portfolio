@@ -57,12 +57,12 @@ export default function SiteNav() {
         </button>
 
         {/* Nav links */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5 overflow-x-auto scrollbar-none">
           {NAV_ITEMS.map(item => (
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-              className="px-3 py-1.5 text-xs font-medium rounded-lg transition-colors duration-150"
+              className="shrink-0 px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-lg transition-colors duration-150"
               style={{
                 color: active === item.id ? '#111827' : '#6b7280',
                 background: active === item.id ? '#f3f4f6' : 'transparent',
