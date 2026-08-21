@@ -341,7 +341,7 @@ export default function AllProjects() {
               key={project.title}
               ref={el => { cardRefs.current[project.title] = el; }}
             >
-              <ProjectCard project={project} onViewDeck={setDeckProject} navigable={activeTab === 'product'} />
+              <ProjectCard project={project} onViewDeck={setDeckProject} navigable={true} />
             </div>
           ))}
         </motion.div>
