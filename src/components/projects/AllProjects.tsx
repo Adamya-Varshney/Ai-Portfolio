@@ -11,10 +11,16 @@ const config = getConfig();
 const ALL_PROJECTS = config.projects as any[];
 
 const TABS = [
-  { id: 'product', label: 'AI Enabled Product Management', section: 'Product & Tech Projects' },
-  { id: 'strategy', label: 'Business Strategy & GTM', section: 'Business Strategy & GTM Projects' },
-  { id: 'case', label: 'CX & Product Management', section: 'Case Competitions' },
+  { id: 'product', label: 'AI Enabled Product Management', section: 'Product & Tech Projects', color: '#2563eb' },
+  { id: 'strategy', label: 'Business Strategy & GTM', section: 'Business Strategy & GTM Projects', color: '#dc2626' },
+  { id: 'case', label: 'CX & Product Management', section: 'Case Competitions', color: '#16a34a' },
 ];
+
+const SECTION_COLOR: Record<string, string> = {
+  'Product & Tech Projects': '#2563eb',
+  'Business Strategy & GTM Projects': '#dc2626',
+  'Case Competitions': '#16a34a',
+};
 
 function DeckModal({ project, onClose }: { project: any; onClose: () => void }) {
   const [page, setPage] = useState(1);
@@ -167,24 +173,18 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
     if (navigable) router.push(`/projects/${toSlug(project.title)}`);
   };
 
+  const accent = SECTION_COLOR[project.section ?? 'Product & Tech Projects'] ?? '#2563eb';
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
       onClick={handleCardClick}
-      className={`group rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-0.5 ${navigable ? 'cursor-pointer' : ''}`}
-      style={{
-        background: 'linear-gradient(145deg, rgba(2,132,199,0.04), rgba(14,165,233,0.03))',
-        border: '1px solid rgba(2,132,199,0.15)',
-        boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
-      }}
-      whileHover={{ boxShadow: '0 8px 24px rgba(2,132,199,0.15)' } as any}
+      className={`group rounded-2xl overflow-hidden flex flex-col h-full bg-white border border-gray-200 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${navigable ? 'cursor-pointer' : ''}`}
     >
       {/* Cover image */}
-      <div className="relative h-44 sm:h-48 shrink-0 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #e0f2fe 50%, #f0f9ff 100%)' }}
-      >
+      <div className="relative h-44 sm:h-48 shrink-0 overflow-hidden bg-gray-100">
         {hasImage ? (
           <Image
             src={project.images[0].src}
@@ -194,16 +194,14 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center p-4">
-            <span className="text-sm font-semibold text-blue-300 text-center leading-snug">{project.title}</span>
+            <span className="text-sm font-semibold text-gray-300 text-center leading-snug">{project.title}</span>
           </div>
         )}
-        {/* Gradient vignette on bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
 
-        {/* Live badge */}
         {project.isLive && (
-          <span className="absolute top-2.5 right-2.5 flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full font-medium backdrop-blur-sm"
-            style={{ background: 'rgba(209,250,229,0.9)', color: '#065f46', border: '1px solid rgba(167,243,208,0.8)' }}>
+          <span className="absolute top-2.5 right-2.5 flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full font-medium"
+            style={{ background: 'rgba(209,250,229,0.92)', color: '#065f46', border: '1px solid rgba(167,243,208,0.8)' }}>
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
@@ -213,21 +211,22 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
         )}
       </div>
 
+      {/* Accent stripe */}
+      <div className="h-0.5 shrink-0" style={{ background: accent }} />
+
       {/* Card body */}
       <div className="flex flex-col gap-2 p-4 flex-1">
         <div>
-          <span className="text-[11px] font-semibold uppercase tracking-wide"
-            style={{ background: 'linear-gradient(135deg, #0284c7, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <span className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: accent }}>
             {project.category}
           </span>
-          <h3 className="text-sm font-semibold text-foreground mt-0.5 leading-snug">{project.title}</h3>
+          <h3 className="text-sm font-semibold text-gray-900 mt-0.5 leading-snug">{project.title}</h3>
         </div>
-        <p className="text-xs text-muted-foreground leading-relaxed">{shortDesc}</p>
+        <p className="text-xs text-gray-500 leading-relaxed">{shortDesc}</p>
         {tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-auto pt-1">
             {tags.map((t: string, i: number) => (
-              <span key={i} className="text-[11px] rounded-full px-2 py-0.5 font-medium"
-                style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.2)' }}>
+              <span key={i} className="text-[11px] rounded-lg px-2 py-0.5 font-medium bg-gray-100 text-gray-600 border border-gray-200">
                 {t}
               </span>
             ))}
@@ -240,8 +239,7 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 transition-colors hover:opacity-80"
-              style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.25)' }}
+              className="flex items-center gap-1 text-xs font-semibold rounded-md px-2.5 py-1 bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200 transition-colors"
             >
               <ExternalLink className="h-3 w-3" />
               {link.name}
@@ -295,8 +293,8 @@ export default function AllProjects() {
                 : 'text-muted-foreground hover:text-foreground'
             }`}
             style={activeTab === tab.id ? {
-              background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0ea5e9 100%)',
-              boxShadow: '0 2px 12px rgba(139, 92, 246, 0.4)',
+              background: tab.color,
+              boxShadow: `0 2px 10px ${tab.color}40`,
             } : {}}
           >
             {tab.label}
@@ -316,8 +314,8 @@ export default function AllProjects() {
                 : 'bg-accent/70 text-muted-foreground hover:text-foreground hover:bg-accent'
             }`}
             style={activeProject === project.title ? {
-              background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 60%, #0ea5e9 100%)',
-              boxShadow: '0 1px 8px rgba(139, 92, 246, 0.35)',
+              background: TABS.find(t => t.id === activeTab)?.color ?? '#2563eb',
+              boxShadow: `0 1px 8px ${TABS.find(t => t.id === activeTab)?.color ?? '#2563eb'}50`,
             } : {}}
           >
             {project.sidebarTitle || project.title}
@@ -341,7 +339,7 @@ export default function AllProjects() {
               key={project.title}
               ref={el => { cardRefs.current[project.title] = el; }}
             >
-              <ProjectCard project={project} onViewDeck={setDeckProject} navigable={activeTab === 'product'} />
+              <ProjectCard project={project} onViewDeck={setDeckProject} navigable={true} />
             </div>
           ))}
         </motion.div>

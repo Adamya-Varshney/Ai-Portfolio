@@ -42,7 +42,7 @@ export function Contact() {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-2 mb-5">
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <input
               type="text"
               placeholder="Your name"

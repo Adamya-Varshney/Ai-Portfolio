@@ -2,65 +2,65 @@
 
 import { useParams, useRouter } from 'next/navigation';
 import { getConfig } from '@/lib/config-loader';
-import { toSlug, fromSlug } from '@/lib/project-slug';
+import { fromSlug } from '@/lib/project-slug';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import {
-  ArrowLeft, ExternalLink, BookOpen, Calendar, Tag,
-  CheckCircle2, Clock, Layers, ChevronRight
+  ArrowLeft, ExternalLink, Calendar, Tag,
+  Layers, ChevronRight, FileText
 } from 'lucide-react';
-import { useState } from 'react';
 
 const config = getConfig();
 const ALL_PROJECTS: any[] = config.projects as any[];
+
+const SECTION_COLOR: Record<string, string> = {
+  'Product & Tech Projects': '#2563eb',
+  'Business Strategy & GTM Projects': '#dc2626',
+  'Case Competitions': '#16a34a',
+};
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
   const router = useRouter();
   const project = fromSlug(slug, ALL_PROJECTS);
-  const [activeTab, setActiveTab] = useState<'overview' | 'deck'>('overview');
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center flex-col gap-4">
-        <p className="text-muted-foreground text-sm">Project not found.</p>
-        <button onClick={() => router.back()} className="text-xs text-blue-600 underline">Go back</button>
+      <div className="min-h-screen flex items-center justify-center flex-col gap-4 bg-white">
+        <p className="text-gray-400 text-sm">Project not found.</p>
+        <button onClick={() => router.back()} className="text-xs text-gray-600 underline">Go back</button>
       </div>
     );
   }
 
+  const accent = SECTION_COLOR[project.section ?? 'Product & Tech Projects'] ?? '#2563eb';
   const hasDeck = !!project.embedUrl;
   const links: { name: string; url: string }[] = project.links ?? [];
 
   return (
-    <div className="min-h-screen w-full font-sans"
-      style={{ background: 'linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 50%, #f5f3ff 100%)' }}>
+    <div className="min-h-screen w-full font-sans bg-white">
 
-      {/* Top nav bar */}
-      <div className="sticky top-0 z-40 backdrop-blur-md border-b"
-        style={{ background: 'rgba(248,250,255,0.85)', borderColor: 'rgba(2,132,199,0.12)' }}>
-        <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      {/* Sticky nav */}
+      <div className="sticky top-0 z-40 bg-white/95 border-b border-gray-200 backdrop-blur-sm">
+        <div className="w-full px-6 sm:px-12 py-3 flex items-center justify-between gap-4">
           <button
             onClick={() => router.back()}
-            className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-gray-900 transition-colors shrink-0"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            Back to Projects
+            Back
           </button>
 
-          {/* Breadcrumb */}
-          <div className="hidden sm:flex items-center gap-1 text-[11px] text-muted-foreground">
+          <div className="hidden sm:flex items-center gap-1 text-[11px] text-gray-400 min-w-0">
             <span>Projects</span>
-            <ChevronRight className="h-3 w-3" />
-            <span className="text-foreground font-medium truncate max-w-[180px]">{project.sidebarTitle || project.title}</span>
+            <ChevronRight className="h-3 w-3 shrink-0" />
+            <span className="text-gray-700 font-medium truncate">{project.sidebarTitle || project.title}</span>
           </div>
 
-          {/* Quick links */}
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 shrink-0">
             {links.map((l: any) => (
               <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1 text-[11px] font-semibold rounded-md px-2.5 py-1 transition-opacity hover:opacity-80"
-                style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.2)' }}>
+                className="flex items-center gap-1 text-[11px] font-semibold rounded-md px-2.5 py-1 bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
                 <ExternalLink className="h-3 w-3" />
                 {l.name}
               </a>
@@ -69,196 +69,114 @@ export default function ProjectPage() {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 py-6 space-y-5">
+      <div className="w-full px-6 sm:px-12 py-10 max-w-4xl mx-auto space-y-6">
 
-        {/* Hero card */}
+        {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="rounded-2xl overflow-hidden"
-          style={{ border: '1px solid rgba(2,132,199,0.15)', boxShadow: '0 4px 24px rgba(2,132,199,0.08)' }}
+          transition={{ duration: 0.35 }}
         >
-          {/* Cover image / gradient banner */}
-          <div className="relative h-44 sm:h-52"
-            style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #e0f2fe 50%, #f0f9ff 100%)' }}>
+          {/* Cover image */}
+          <div className="relative h-52 sm:h-64 rounded-xl overflow-hidden mb-6 bg-gray-100">
             {project.images?.[0]?.src ? (
               <Image src={project.images[0].src} alt={project.title} fill className="object-cover" />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-lg font-bold text-sky-200 text-center px-6">{project.title}</span>
+                <span className="text-base font-semibold text-gray-300 text-center px-8">{project.title}</span>
               </div>
             )}
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
 
-            {/* Status + Live badges */}
-            <div className="absolute top-3 left-3 flex gap-2">
-              {project.isLive && (
-                <span className="flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full font-medium backdrop-blur-sm"
-                  style={{ background: 'rgba(209,250,229,0.9)', color: '#065f46', border: '1px solid rgba(167,243,208,0.8)' }}>
-                  <span className="relative flex h-1.5 w-1.5">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                  </span>
-                  Live
+            {project.isLive && (
+              <span className="absolute top-3 left-3 flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full font-medium"
+                style={{ background: 'rgba(209,250,229,0.92)', color: '#065f46', border: '1px solid rgba(167,243,208,0.8)' }}>
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
                 </span>
-              )}
-              {project.status && (
-                <span className="text-[11px] px-2 py-0.5 rounded-full font-medium backdrop-blur-sm"
-                  style={{ background: 'rgba(2,132,199,0.15)', color: '#e0f2fe', border: '1px solid rgba(96,165,250,0.3)' }}>
-                  {project.status}
-                </span>
-              )}
-            </div>
-
-            {/* Title at bottom of banner */}
-            <div className="absolute bottom-0 left-0 right-0 px-4 pb-3">
-              <p className="text-[11px] font-semibold uppercase tracking-wide text-sky-200 mb-0.5">{project.category}</p>
-              <h1 className="text-lg sm:text-xl font-bold text-white leading-tight">{project.title}</h1>
-            </div>
-          </div>
-
-          {/* Meta row */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 px-4 py-3"
-            style={{ background: 'linear-gradient(145deg, rgba(2,132,199,0.04), rgba(14,165,233,0.02))', borderTop: '1px solid rgba(2,132,199,0.1)' }}>
-            {project.date && (
-              <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                <Calendar className="h-3.5 w-3.5" style={{ color: '#0284c7' }} />
-                {project.date}
+                Live
               </span>
             )}
-            {project.techStack?.slice(0, 5).map((t: string, i: number) => (
-              <span key={i} className="text-[11px] rounded-full px-2 py-0.5 font-medium"
-                style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.18)' }}>
-                {t}
-              </span>
-            ))}
+          </div>
+
+          {/* Title */}
+          <div>
+            <span className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: accent }}>
+              {project.category}
+            </span>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-1 leading-tight">{project.title}</h1>
+            {project.date && (
+              <div className="flex items-center gap-1.5 mt-2 text-xs text-gray-400">
+                <Calendar className="h-3.5 w-3.5" />
+                {project.date}
+              </div>
+            )}
           </div>
         </motion.div>
 
-        {/* Tab switcher (Overview / Deck) */}
-        {hasDeck && (
-          <div className="flex gap-1 rounded-xl p-1"
-            style={{ background: 'rgba(2,132,199,0.06)', border: '1px solid rgba(2,132,199,0.12)' }}>
-            {(['overview', 'deck'] as const).map(tab => (
-              <button key={tab} onClick={() => setActiveTab(tab)}
-                className="flex-1 rounded-lg px-3 py-2 text-xs font-semibold capitalize transition-all duration-200"
-                style={activeTab === tab ? {
-                  background: 'linear-gradient(135deg, #0284c7, #0369a1)',
-                  color: '#fff',
-                  boxShadow: '0 2px 10px rgba(2,132,199,0.3)',
-                } : { color: 'var(--muted-foreground)' }}>
-                {tab === 'deck' ? '📊 View Deck' : '📋 Overview'}
-              </button>
-            ))}
-          </div>
-        )}
+        {/* About */}
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.05 }}>
+          <Section title="About" icon={<Layers className="h-4 w-4" />} accent={accent}>
+            <p className="text-sm text-gray-600 leading-relaxed">{project.description}</p>
+          </Section>
+        </motion.div>
 
-        {/* Overview content */}
-        {activeTab === 'overview' && (
-          <motion.div
-            key="overview"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25 }}
-            className="space-y-4"
-          >
-            {/* Description */}
-            <Section title="About this project" icon={<Layers className="h-4 w-4" />}>
-              <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+        {/* Tech stack */}
+        {project.techStack?.length > 0 && (
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.1 }}>
+            <Section title="Tech & Tools" icon={<Tag className="h-4 w-4" />} accent={accent}>
+              <div className="flex flex-wrap gap-1.5">
+                {project.techStack.map((t: string, i: number) => (
+                  <span key={i} className="text-[11px] rounded-lg px-2.5 py-1 font-medium bg-gray-100 text-gray-600 border border-gray-200">
+                    {t}
+                  </span>
+                ))}
+              </div>
             </Section>
-
-            {/* Tech stack full */}
-            {project.techStack?.length > 0 && (
-              <Section title="Tech stack" icon={<Tag className="h-4 w-4" />}>
-                <div className="flex flex-wrap gap-1.5">
-                  {project.techStack.map((t: string, i: number) => (
-                    <span key={i} className="text-[11px] rounded-full px-2.5 py-0.5 font-medium"
-                      style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.18)' }}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </Section>
-            )}
-
-            {/* Status / timeline */}
-            {(project.status || project.date) && (
-              <Section title="Status" icon={<CheckCircle2 className="h-4 w-4" />}>
-                <div className="flex flex-wrap gap-3 text-xs text-muted-foreground">
-                  {project.status && (
-                    <span className="flex items-center gap-1.5">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-sky-500" />
-                      {project.status}
-                    </span>
-                  )}
-                  {project.date && (
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="h-3.5 w-3.5 text-sky-400" />
-                      {project.date}
-                    </span>
-                  )}
-                </div>
-              </Section>
-            )}
-
-            {/* Links */}
-            {links.length > 0 && (
-              <Section title="Resources" icon={<ExternalLink className="h-4 w-4" />}>
-                <div className="flex flex-wrap gap-2">
-                  {hasDeck && (
-                    <button onClick={() => setActiveTab('deck')}
-                      className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 text-white transition-opacity hover:opacity-90"
-                      style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)', boxShadow: '0 2px 10px rgba(2,132,199,0.25)' }}>
-                      <BookOpen className="h-3.5 w-3.5" />
-                      View Deck
-                    </button>
-                  )}
-                  {links.map((l: any) => (
-                    <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 transition-colors hover:opacity-80"
-                      style={{ background: 'rgba(2,132,199,0.08)', color: '#0284c7', border: '1px solid rgba(2,132,199,0.2)' }}>
-                      <ExternalLink className="h-3.5 w-3.5" />
-                      {l.name}
-                    </a>
-                  ))}
-                </div>
-              </Section>
-            )}
           </motion.div>
         )}
 
-        {/* Deck tab */}
-        {activeTab === 'deck' && hasDeck && (
-          <motion.div
-            key="deck"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25 }}
-            className="rounded-xl overflow-hidden"
-            style={{ border: '1px solid rgba(2,132,199,0.18)', boxShadow: '0 2px 16px rgba(2,132,199,0.08)' }}
-          >
-            <div className="flex items-center justify-between px-3 py-2"
-              style={{ background: 'linear-gradient(145deg, rgba(2,132,199,0.08), rgba(14,165,233,0.06))', borderBottom: '1px solid rgba(2,132,199,0.12)' }}>
-              <div className="flex items-center gap-2">
-                <BookOpen className="h-3.5 w-3.5" style={{ color: '#0284c7' }} />
-                <span className="text-xs font-medium text-foreground">{project.title} — Deck</span>
+        {/* External links */}
+        {links.length > 0 && (
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.15 }}>
+            <Section title="Links" icon={<ExternalLink className="h-4 w-4" />} accent={accent}>
+              <div className="flex flex-wrap gap-2">
+                {links.map((l: any) => (
+                  <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200 transition-colors">
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    {l.name}
+                  </a>
+                ))}
               </div>
-              <a href={project.embedUrl} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-md text-white"
-                style={{ background: 'linear-gradient(135deg, #0284c7, #0369a1)' }}>
-                <ExternalLink className="h-3 w-3" />
-                Full screen
-              </a>
+            </Section>
+          </motion.div>
+        )}
+
+        {/* Deck — always visible when available */}
+        {hasDeck && (
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.2 }}>
+            <div className="rounded-xl overflow-hidden border border-gray-200">
+              <div className="flex items-center justify-between px-3 py-2.5 bg-gray-50 border-b border-gray-200">
+                <div className="flex items-center gap-2">
+                  <FileText className="h-3.5 w-3.5 text-gray-500" />
+                  <span className="text-xs font-medium text-gray-700">Project Deck</span>
+                </div>
+                <a href={project.embedUrl} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-md bg-gray-900 text-white hover:bg-gray-700 transition-colors">
+                  <ExternalLink className="h-3 w-3" />
+                  Full screen
+                </a>
+              </div>
+              <iframe
+                src={`${project.embedUrl}#toolbar=0&navpanes=0`}
+                width="100%"
+                className="border-0"
+                style={{ height: '72vh' }}
+                title={`${project.title} deck`}
+              />
             </div>
-            <iframe
-              src={`${project.embedUrl}#toolbar=0&navpanes=0`}
-              width="100%"
-              className="border-0"
-              style={{ height: '70vh', background: 'rgba(2,132,199,0.02)' }}
-              title={`${project.title} deck`}
-            />
           </motion.div>
         )}
       </div>
@@ -266,13 +184,12 @@ export default function ProjectPage() {
   );
 }
 
-function Section({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) {
+function Section({ title, icon, accent, children }: { title: string; icon: React.ReactNode; accent: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-xl p-4"
-      style={{ background: 'linear-gradient(145deg, rgba(2,132,199,0.04), rgba(14,165,233,0.02))', border: '1px solid rgba(2,132,199,0.12)' }}>
+    <div className="rounded-xl border border-gray-200 bg-white p-5">
       <div className="flex items-center gap-2 mb-3">
-        <span style={{ color: '#0284c7' }}>{icon}</span>
-        <h2 className="text-xs font-semibold uppercase tracking-wide text-foreground">{title}</h2>
+        <span style={{ color: accent }}>{icon}</span>
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-500">{title}</h2>
       </div>
       {children}
     </div>

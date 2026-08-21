@@ -17,15 +17,16 @@ export function Resume() {
         <p className="text-sm text-gray-500 mt-1">Download or preview my latest resume.</p>
       </div>
 
+      {/* Info card */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35 }}
-        className="rounded-xl border border-gray-200 bg-white p-4 mb-4 flex items-center justify-between gap-3"
+        className="rounded-xl border border-gray-200 bg-white p-4 mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
       >
         <div className="flex items-center gap-3 min-w-0">
-          <span className="flex items-center justify-center h-9 w-9 rounded-xl shrink-0 bg-gray-900">
-            <FileText className="h-4 w-4 text-white" />
+          <span className="flex items-center justify-center h-9 w-9 rounded-lg bg-gray-100 shrink-0">
+            <FileText className="h-4 w-4 text-gray-600" />
           </span>
           <div className="min-w-0">
             <h3 className="text-sm font-semibold text-gray-900 truncate">{resumeDetails.title}</h3>
@@ -42,13 +43,14 @@ export function Resume() {
           onClick={handleDownload}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
-          className="shrink-0 flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-white bg-gray-900 hover:bg-gray-700 transition-colors"
+          className="flex shrink-0 items-center gap-1.5 rounded-lg px-4 py-2 text-xs font-semibold bg-gray-900 text-white hover:bg-gray-700 transition-colors self-start sm:self-auto"
         >
           <Download className="h-3.5 w-3.5" />
           Download
         </motion.button>
       </motion.div>
 
+      {/* PDF Preview */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -57,7 +59,7 @@ export function Resume() {
       >
         <div className="px-3 py-2 flex items-center justify-between bg-gray-50 border-b border-gray-200">
           <div className="flex items-center gap-2">
-            <FileText className="h-3.5 w-3.5 text-gray-400" />
+            <FileText className="h-3.5 w-3.5 text-gray-500" />
             <span className="text-xs font-medium text-gray-700">Resume Preview</span>
           </div>
           <button
@@ -68,7 +70,7 @@ export function Resume() {
             Open Full
           </button>
         </div>
-        <div className="w-full h-[320px] sm:h-[400px] md:h-[480px] bg-gray-50">
+        <div className="w-full h-[320px] sm:h-[480px] md:h-[600px] bg-gray-50">
           <iframe
             src={resumeDetails.downloadUrl}
             width="100%"

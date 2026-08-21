@@ -186,7 +186,7 @@ export function Presentation() {
                   }} />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="flex items-start justify-between gap-3 flex-wrap">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-3">
                   <div>
                     <span className="text-sm font-semibold text-gray-900">{t.role}</span>
                     {t.current && (
@@ -194,7 +194,7 @@ export function Presentation() {
                     )}
                     <p className="text-xs text-gray-500 mt-0.5">{t.org}</p>
                   </div>
-                  <span className="text-xs font-bold text-gray-700 shrink-0 tabular-nums">{t.period}</span>
+                  <span className="text-xs font-bold text-gray-700 sm:shrink-0 tabular-nums">{t.period}</span>
                 </div>
               </div>
             </div>
