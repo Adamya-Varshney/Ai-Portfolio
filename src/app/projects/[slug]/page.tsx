@@ -59,11 +59,20 @@ export default function ProjectPage() {
 
           <div className="flex items-center gap-1.5 shrink-0">
             {links.map((l: any) => (
-              <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1 text-[11px] font-semibold rounded-md px-2.5 py-1 bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-                <ExternalLink className="h-3 w-3" />
-                {l.name}
-              </a>
+              l.name === 'Deck' && hasDeck ? (
+                <button key={l.name}
+                  onClick={() => document.getElementById('project-deck')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="flex items-center gap-1 text-[11px] font-semibold rounded-md px-2.5 py-1 bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+                  <FileText className="h-3 w-3" />
+                  {l.name}
+                </button>
+              ) : (
+                <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-[11px] font-semibold rounded-md px-2.5 py-1 bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+                  <ExternalLink className="h-3 w-3" />
+                  {l.name}
+                </a>
+              )
             ))}
           </div>
         </div>
@@ -171,11 +180,20 @@ export default function ProjectPage() {
             <Section title="Links" icon={<ExternalLink className="h-4 w-4" />} accent={accent}>
               <div className="flex flex-wrap gap-2">
                 {links.map((l: any) => (
-                  <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200 transition-colors">
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    {l.name}
-                  </a>
+                  l.name === 'Deck' && hasDeck ? (
+                    <button key={l.name}
+                      onClick={() => document.getElementById('project-deck')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200 transition-colors">
+                      <FileText className="h-3.5 w-3.5" />
+                      {l.name}
+                    </button>
+                  ) : (
+                    <a key={l.name} href={l.url} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-2 bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200 transition-colors">
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      {l.name}
+                    </a>
+                  )
                 ))}
               </div>
             </Section>
@@ -184,7 +202,7 @@ export default function ProjectPage() {
 
         {/* Deck — always visible when available */}
         {hasDeck && (
-          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.2 }}>
+          <motion.div id="project-deck" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.2 }}>
             <div className="rounded-xl overflow-hidden border border-gray-200">
               <div className="flex items-center justify-between px-3 py-2.5 bg-gray-50 border-b border-gray-200">
                 <div className="flex items-center gap-2">
