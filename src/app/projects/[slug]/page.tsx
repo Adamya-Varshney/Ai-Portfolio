@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import {
   ArrowLeft, ExternalLink, Calendar, Tag,
-  Layers, ChevronRight, FileText
+  Layers, ChevronRight, FileText, Target, Lightbulb
 } from 'lucide-react';
 
 const config = getConfig();
@@ -115,8 +115,36 @@ export default function ProjectPage() {
           </div>
         </motion.div>
 
+        {/* Objective */}
+        {project.objective && (
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.05 }}>
+            <Section title="Objective" icon={<Target className="h-4 w-4" />} accent={accent}>
+              <p className="text-sm text-gray-700 leading-relaxed font-medium">{project.objective}</p>
+            </Section>
+          </motion.div>
+        )}
+
+        {/* Key Insights */}
+        {project.keyInsights?.length > 0 && (
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.08 }}>
+            <Section title="Key Insights" icon={<Lightbulb className="h-4 w-4" />} accent={accent}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {project.keyInsights.map((insight: any, i: number) => (
+                  <div key={i} className="flex items-start gap-3 rounded-lg p-3 bg-gray-50 border border-gray-100">
+                    <span className="text-xl shrink-0 mt-0.5">{insight.icon}</span>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-800 mb-0.5">{insight.label}</p>
+                      <p className="text-xs text-gray-500 leading-relaxed">{insight.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          </motion.div>
+        )}
+
         {/* About */}
-        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.05 }}>
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.11 }}>
           <Section title="About" icon={<Layers className="h-4 w-4" />} accent={accent}>
             <p className="text-sm text-gray-600 leading-relaxed">{project.description}</p>
           </Section>
@@ -124,7 +152,7 @@ export default function ProjectPage() {
 
         {/* Tech stack */}
         {project.techStack?.length > 0 && (
-          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.1 }}>
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.14 }}>
             <Section title="Tech & Tools" icon={<Tag className="h-4 w-4" />} accent={accent}>
               <div className="flex flex-wrap gap-1.5">
                 {project.techStack.map((t: string, i: number) => (
@@ -139,7 +167,7 @@ export default function ProjectPage() {
 
         {/* External links */}
         {links.length > 0 && (
-          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.15 }}>
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2, delay: 0.17 }}>
             <Section title="Links" icon={<ExternalLink className="h-4 w-4" />} accent={accent}>
               <div className="flex flex-wrap gap-2">
                 {links.map((l: any) => (

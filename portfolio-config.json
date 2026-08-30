@@ -40,7 +40,15 @@
       "type": "Full-time",
       "duration": "June 2025 - Present",
       "description": "Owning the Annual Product Life Cycle for IndiaMART's Premium B2B products. Boosted seller retention by 17% and expanded the Premium-tier base by 3000+ sellers via a 30-day GTM plan launching 4 new products. Designed differential pricing, incentive schemes, 20+ marketing campaigns, and service SOPs to accelerate adoption. Built 6 AI-based conversion analytics dashboards to manage the hot-lead pipeline down to the field-executive level, and shipped an AI RAG agent that cut inter-department knowledge-retrieval time from 3 days to seconds. Managing a portfolio of 6+ AI-driven B2B matchmaking products generating 100+ Cr in monthly revenue.",
-      "technologies": ["Product Lifecycle Management", "GTM Strategy", "Pricing Strategy", "RAG Agents", "Conversion Analytics", "Power BI", "Stakeholder Management"]
+      "technologies": [
+        "Product Lifecycle Management",
+        "GTM Strategy",
+        "Pricing Strategy",
+        "RAG Agents",
+        "Conversion Analytics",
+        "Power BI",
+        "Stakeholder Management"
+      ]
     },
     {
       "company": "Escafate",
@@ -48,7 +56,15 @@
       "type": "Internship",
       "duration": "November 2023 - February 2024",
       "description": "Led an 8-member cross-functional team through customer research, persona creation, and MVP feature ideation for the AIMERS platform. Executed the AIMERS website MVP while tracking user engagement, DAU, retention, satisfaction, feature adoption, and churn. Managed 70% of development, owning the user flow and enabling accessibility for visually impaired users.",
-      "technologies": ["MVP Development", "User Research", "Persona Creation", "User Flows", "Accessibility", "Product Metrics", "Team Leadership"]
+      "technologies": [
+        "MVP Development",
+        "User Research",
+        "Persona Creation",
+        "User Flows",
+        "Accessibility",
+        "Product Metrics",
+        "Team Leadership"
+      ]
     },
     {
       "company": "CL Educate Ltd",
@@ -56,7 +72,13 @@
       "type": "Full-time",
       "duration": "June 2022 - April 2023",
       "description": "Delivered 50+ learning modules covering 25% of flagship offerings, contributing to a 15% increase in customer acquisition and retention. Developed 50+ hours of digital content, driving a 20% month-over-month increase in course webpage visits and mock-test sign-ups.",
-      "technologies": ["Content Strategy", "Customer Acquisition", "Retention", "Conversion Optimization", "SEO"]
+      "technologies": [
+        "Content Strategy",
+        "Customer Acquisition",
+        "Retention",
+        "Conversion Optimization",
+        "SEO"
+      ]
     },
     {
       "company": "Unacademy",
@@ -64,22 +86,86 @@
       "type": "Full-time",
       "duration": "February 2021 - May 2022",
       "description": "Drove a 25% boost in engagement via strategic content-led growth across Facebook, Instagram, LinkedIn, and YouTube. Contributed 250+ hours of video content covering 85% of the PrepLadder App's feature-development cycle. Devised 150+ hours of SEO-optimized short-form YouTube content, adding 1,200+ subscribers and strengthening top-of-funnel awareness.",
-      "technologies": ["Content Strategy", "Growth Marketing", "SEO", "Social Media", "User Engagement", "Product Storytelling"]
+      "technologies": [
+        "Content Strategy",
+        "Growth Marketing",
+        "SEO",
+        "Social Media",
+        "User Engagement",
+        "Product Storytelling"
+      ]
     }
   ],
   "skills": {
-    "product_tools": ["JIRA", "Figma", "Roadmapping", "A/B Testing", "Usability Testing"],
-    "data_ai": ["SQL", "Python", "LangGraph", "LangChain", "RAG Systems", "Agentic AI"],
-    "analytics": ["MS Power BI", "Tableau", "R", "Google Analytics", "Conversion Analytics"],
-    "automation": ["n8n", "Make", "AI Workflow Automation"],
-    "vibe_coding": ["Claude Code", "Antigravity", "Lovable"],
-    "pm_skills": ["Product Lifecycle Management", "GTM Strategy", "Roadmap Planning", "Prioritization", "Market Research", "User Research", "Stakeholder Management", "Problem Solving"],
-    "soft_skills": ["User Empathy", "Customer-Centric Thinking", "Cross-functional Leadership", "Data-Driven Decision Making", "Communication", "Storytelling"]
+    "product_tools": [
+      "JIRA",
+      "Figma",
+      "Roadmapping",
+      "A/B Testing",
+      "Usability Testing"
+    ],
+    "data_ai": [
+      "SQL",
+      "Python",
+      "LangGraph",
+      "LangChain",
+      "RAG Systems",
+      "Agentic AI"
+    ],
+    "analytics": [
+      "MS Power BI",
+      "Tableau",
+      "R",
+      "Google Analytics",
+      "Conversion Analytics"
+    ],
+    "automation": [
+      "n8n",
+      "Make",
+      "AI Workflow Automation"
+    ],
+    "vibe_coding": [
+      "Claude Code",
+      "Antigravity",
+      "Lovable"
+    ],
+    "pm_skills": [
+      "Product Lifecycle Management",
+      "GTM Strategy",
+      "Roadmap Planning",
+      "Prioritization",
+      "Market Research",
+      "User Research",
+      "Stakeholder Management",
+      "Problem Solving"
+    ],
+    "soft_skills": [
+      "User Empathy",
+      "Customer-Centric Thinking",
+      "Cross-functional Leadership",
+      "Data-Driven Decision Making",
+      "Communication",
+      "Storytelling"
+    ]
   },
   "certifications": [
-    {"name": "AI-First Product Management Fellowship", "issuer": "Product Space", "grade": "Focused on AI Product Strategy & Development", "year": "2025"},
-    {"name": "Google 5-Day GenAI Intensive — Built 'Fake Buster' (RAG fact-checking agent using Gemini & ChromaDB)", "issuer": "Google", "year": "2025"},
-    {"name": "SQL (Intermediate / Silver Rank)", "issuer": "HackerRank", "grade": "Silver", "year": "2024"}
+    {
+      "name": "AI-First Product Management Fellowship",
+      "issuer": "Product Space",
+      "grade": "Focused on AI Product Strategy & Development",
+      "year": "2025"
+    },
+    {
+      "name": "Google 5-Day GenAI Intensive — Built 'Fake Buster' (RAG fact-checking agent using Gemini & ChromaDB)",
+      "issuer": "Google",
+      "year": "2025"
+    },
+    {
+      "name": "SQL (Intermediate / Silver Rank)",
+      "issuer": "HackerRank",
+      "grade": "Silver",
+      "year": "2024"
+    }
   ],
   "projects": [
     {
@@ -87,47 +173,259 @@
       "section": "Product & Tech Projects",
       "category": "Agentic AI / CRM",
       "description": "An AI-driven CRM that automates lead qualification and ad-content generation to simplify marketing for SMBs. Designed to compress the qualify-to-convert funnel and let small teams run enterprise-grade lead ops without a dedicated marketing function.",
-      "techStack": ["Agentic AI", "Multi-Agent Orchestration", "RAG Pipeline", "Lead Qualification AI", "LangGraph", "LangChain"],
-      "date": "2025", "status": "Completed", "featured": true, "isLive": true,
+      "techStack": [
+        "Agentic AI",
+        "Multi-Agent Orchestration",
+        "RAG Pipeline",
+        "Lead Qualification AI",
+        "LangGraph",
+        "LangChain"
+      ],
+      "date": "2025",
+      "status": "Completed",
+      "featured": true,
+      "isLive": true,
       "embedUrl": "/projects/Growmatic_Deck_MVP Final.pdf",
-      "links": [{"name": "Deck", "url": "https://drive.google.com/file/d/1x7fJmM67Xfyn_DgnyjS2NxejPbV_iWTX/view?usp=sharing"}, {"name": "Prototype", "url": "https://growmatic-ai-crm.vercel.app/#/login"}],
-      "images": [{"src": "/projects/growmatic.png", "alt": "Growmatic — AI marketing copilot dashboard"}]
+      "links": [
+        {
+          "name": "Deck",
+          "url": "https://drive.google.com/file/d/1x7fJmM67Xfyn_DgnyjS2NxejPbV_iWTX/view?usp=sharing"
+        },
+        {
+          "name": "Prototype",
+          "url": "https://growmatic-ai-crm.vercel.app/#/login"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/growmatic.png",
+          "alt": "Growmatic — AI marketing copilot dashboard"
+        }
+      ],
+      "objective": "SMBs lack the bandwidth and budget for a dedicated marketing team — yet still need to qualify leads and generate ad content daily. Growmatic plugs that gap with an AI-driven CRM that automates both, letting small teams run enterprise-grade lead operations without extra headcount.",
+      "keyInsights": [
+        {
+          "icon": "🎯",
+          "label": "Core Problem",
+          "text": "SMBs spend 60%+ of their time manually sorting leads and rewriting ad copy instead of selling."
+        },
+        {
+          "icon": "🤖",
+          "label": "Multi-Agent Orchestration",
+          "text": "Separate agents handle lead scoring, qualification dialogue, and ad-copy generation — each specialised, all coordinated."
+        },
+        {
+          "icon": "📚",
+          "label": "RAG-Powered Context",
+          "text": "A retrieval-augmented pipeline feeds each agent live product and CRM data so outputs are accurate and personalised."
+        },
+        {
+          "icon": "⚡",
+          "label": "Funnel Compression",
+          "text": "End-to-end automation compresses the qualify-to-convert cycle from days to minutes."
+        },
+        {
+          "icon": "🚀",
+          "label": "Live Prototype",
+          "text": "Deployed on Vercel — fully functional with login, lead dashboard, and AI-generated ad previews."
+        }
+      ]
     },
     {
       "title": "Bundles & Buddy Mode",
       "section": "Product & Tech Projects",
       "category": "D2C / E-commerce Product",
       "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform. 'Bundles' nudges complementary add-ons at checkout; 'Buddy Mode' enables shared, planned carts — both targeting basket size and repeat ordering.",
-      "techStack": ["AI-Driven Nudges", "Behavioral Design", "AOV Optimization", "Checkout Personalization", "User Psychology", "Figma"],
-      "date": "2025", "status": "Completed", "featured": true,
-      "links": [{"name": "Deck", "url": "https://onedrive.live.com/:p:/g/personal/2DCCBA7A09395FB7/IQAwIMqhJW9NRokZsJCjgIsmAdwpuNp7qTPT-ICdL_XfR0c?resid=2DCCBA7A09395FB7!sa1ca20306f25464d8919b090a3808b26&ithint=file%2Cpptx&e=rx6oPT&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy8yZGNjYmE3YTA5Mzk1ZmI3L0lRQXdJTXFoSlc5TlJva1pzSkNqZ0lzbUFkd3B1TnA3cVRQVC1JQ2RMX1hmUjBjP2U9cng2b1BU"}, {"name": "Prototype", "url": "https://claude.ai/public/artifacts/9787589d-1ab4-41ed-9a65-b49cceb11323"}],
-      "images": [{"src": "/projects/bundles-buddy-mode.png", "alt": "Bundles & Buddy Mode — quick-commerce checkout concept"}],
-      "embedUrl": "/QCommerce_Blinkit.pdf"
+      "techStack": [
+        "AI-Driven Nudges",
+        "Behavioral Design",
+        "AOV Optimization",
+        "Checkout Personalization",
+        "User Psychology",
+        "Figma"
+      ],
+      "date": "2025",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "Deck",
+          "url": "https://onedrive.live.com/:p:/g/personal/2DCCBA7A09395FB7/IQAwIMqhJW9NRokZsJCjgIsmAdwpuNp7qTPT-ICdL_XfR0c?resid=2DCCBA7A09395FB7!sa1ca20306f25464d8919b090a3808b26&ithint=file%2Cpptx&e=rx6oPT&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy8yZGNjYmE3YTA5Mzk1ZmI3L0lRQXdJTXFoSlc5TlJva1pzSkNqZ0lzbUFkd3B1TnA3cVRQVC1JQ2RMX1hmUjBjP2U9cng2b1BU"
+        },
+        {
+          "name": "Prototype",
+          "url": "https://claude.ai/public/artifacts/9787589d-1ab4-41ed-9a65-b49cceb11323"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/bundles-buddy-mode.png",
+          "alt": "Bundles & Buddy Mode — quick-commerce checkout concept"
+        }
+      ],
+      "embedUrl": "/QCommerce_Blinkit.pdf",
+      "objective": "Quick-commerce platforms like Blinkit have strong repeat visit rates but low average order values — users buy reactively, one or two items at a time. Two features fix this: Bundles nudges smart add-ons at checkout; Buddy Mode turns solo runs into shared, planned carts.",
+      "keyInsights": [
+        {
+          "icon": "📦",
+          "label": "Bundles",
+          "text": "AI-curated complementary product nudges shown at checkout — increasing basket size without feeling pushy."
+        },
+        {
+          "icon": "👥",
+          "label": "Buddy Mode",
+          "text": "Shared cart feature that lets friends or flatmates plan grocery runs together, driving commitment to larger orders."
+        },
+        {
+          "icon": "🧠",
+          "label": "Behavioural Design",
+          "text": "Leverages loss aversion and social commitment loops to convert reactive shoppers into planned purchasers."
+        },
+        {
+          "icon": "💰",
+          "label": "AOV Impact",
+          "text": "Both features target average order value and repeat ordering — two of the highest-leverage quick-commerce metrics."
+        },
+        {
+          "icon": "📐",
+          "label": "Platform Fit",
+          "text": "Designed specifically for Blinkit's UX patterns and logistics model — not a generic add-on."
+        }
+      ]
     },
     {
       "title": "Xcurson",
       "section": "Product & Tech Projects",
       "category": "Agentic AI / Travel",
       "description": "An AI travel planner built via vibe-coding, with a modular architecture for crafting contextual, personalized itineraries. Turns loose trip intent into structured, day-by-day plans tailored to user preferences.",
-      "techStack": ["Agentic AI", "LLM Orchestration", "Personalized Itinerary AI", "Vibe Coding", "Modular AI Architecture"],
-      "date": "2026", "status": "Completed", "featured": true, "isLive": true,
-      "links": [{"name": "Prototype", "url": "https://xcurson.lovable.app"}],
-      "images": [{"src": "/projects/xcurson.png", "alt": "Xcurson — AI travel itinerary planner"}]
+      "techStack": [
+        "Agentic AI",
+        "LLM Orchestration",
+        "Personalized Itinerary AI",
+        "Vibe Coding",
+        "Modular AI Architecture"
+      ],
+      "date": "2026",
+      "status": "Completed",
+      "featured": true,
+      "isLive": true,
+      "links": [
+        {
+          "name": "Prototype",
+          "url": "https://xcurson.lovable.app"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/xcurson.png",
+          "alt": "Xcurson — AI travel itinerary planner"
+        }
+      ],
+      "objective": "Planning a trip means juggling blogs, spreadsheets, maps, and review sites for hours — only to end up with a generic itinerary. Xcurson converts vague travel intent into a structured, personalised day-by-day plan in a single conversation.",
+      "keyInsights": [
+        {
+          "icon": "✈️",
+          "label": "The Problem",
+          "text": "Trip planning is fragmented across 5+ tools and takes an average of 4–6 hours even for a short getaway."
+        },
+        {
+          "icon": "🧩",
+          "label": "Modular AI Architecture",
+          "text": "Separate agents handle preference capture, destination research, logistics, and day sequencing independently."
+        },
+        {
+          "icon": "🗓️",
+          "label": "Structured Output",
+          "text": "Produces readable, day-by-day itineraries with place-specific context — not generic suggestions."
+        },
+        {
+          "icon": "🛠️",
+          "label": "Vibe-Coded",
+          "text": "Built end-to-end using Lovable + LLM orchestration — from product concept to live prototype in days."
+        },
+        {
+          "icon": "🌐",
+          "label": "Live",
+          "text": "Deployed and publicly accessible — real users can plan trips right now."
+        }
+      ]
     },
     {
       "title": "SAM: AI Chatbot with RAG",
       "section": "Product & Tech Projects",
       "category": "Agentic AI / Conversational",
       "description": "A multi-capability AI agent built with LangGraph and Streamlit, combining RAG-powered knowledge retrieval, live web search, and a code interpreter — all within a multi-threaded chat interface with real-time response streaming. Maintains persistent context across parallel conversation threads for a coherent, research-grade assistant experience.",
-      "techStack": ["Agentic AI", "RAG Pipeline", "Multi-turn Memory", "LangGraph", "Real-time Streaming", "Web Search", "Code Interpreter"],
-      "date": "2025", "status": "Completed", "featured": false, "isLive": true,
-      "links": [{"name": "Deck", "url": "/projects/SAM_Agentic_RAG Architecture.pdf"}, {"name": "Prototype", "url": "https://sam-ai-chatbot.streamlit.app/"}],
+      "techStack": [
+        "Agentic AI",
+        "RAG Pipeline",
+        "Multi-turn Memory",
+        "LangGraph",
+        "Real-time Streaming",
+        "Web Search",
+        "Code Interpreter"
+      ],
+      "date": "2025",
+      "status": "Completed",
+      "featured": false,
+      "isLive": true,
+      "links": [
+        {
+          "name": "Deck",
+          "url": "/projects/SAM_Agentic_RAG Architecture.pdf"
+        },
+        {
+          "name": "Prototype",
+          "url": "https://sam-ai-chatbot.streamlit.app/"
+        }
+      ],
       "embedUrl": "/projects/SAM_Agentic_RAG Architecture.pdf",
-      "images": [{"src": "/projects/sam.png", "alt": "SAM — AI chatbot with RAG, web search and code interpreter"}],
+      "images": [
+        {
+          "src": "/projects/sam.png",
+          "alt": "SAM — AI chatbot with RAG, web search and code interpreter"
+        }
+      ],
       "workflowImages": [
-        {"src": "/projects/sam architecture/Agent Ingestion & Vectorization.png", "label": "Agent Ingestion & Vectorization"},
-        {"src": "/projects/sam architecture/Agent Tool Calling.png", "label": "Agent Tool Calling"},
-        {"src": "/projects/sam architecture/Agent Workflow.png", "label": "Agent Workflow"}
+        {
+          "src": "/projects/sam architecture/Agent Ingestion & Vectorization.png",
+          "label": "Agent Ingestion & Vectorization"
+        },
+        {
+          "src": "/projects/sam architecture/Agent Tool Calling.png",
+          "label": "Agent Tool Calling"
+        },
+        {
+          "src": "/projects/sam architecture/Agent Workflow.png",
+          "label": "Agent Workflow"
+        }
+      ],
+      "objective": "Most AI assistants are stateless and single-purpose — they forget context and can't combine knowledge retrieval, live search, and code execution in one conversation. SAM is a multi-capability research agent that does all three, across parallel threads with persistent memory.",
+      "keyInsights": [
+        {
+          "icon": "📚",
+          "label": "RAG Knowledge Retrieval",
+          "text": "Retrieval-augmented generation ensures factual, document-grounded answers — not hallucinations."
+        },
+        {
+          "icon": "🌐",
+          "label": "Live Web Search",
+          "text": "Real-time search integration keeps responses current beyond the model's training cutoff."
+        },
+        {
+          "icon": "💻",
+          "label": "Code Interpreter",
+          "text": "Inline code execution lets SAM run Python, debug logic, and return results — all within the chat."
+        },
+        {
+          "icon": "🧵",
+          "label": "Multi-threaded Memory",
+          "text": "Parallel conversation threads each maintain their own persistent context for coherent, long-running sessions."
+        },
+        {
+          "icon": "⚡",
+          "label": "Real-time Streaming",
+          "text": "Token-by-token response streaming makes the interface feel fast and natural — not a loading spinner."
+        }
       ]
     },
     {
@@ -136,44 +434,232 @@
       "section": "Product & Tech Projects",
       "category": "Product Case Study / AI",
       "description": "A PM case study focused on improving the job-hunting experience for Active Job Seekers on LinkedIn. Identified 'unresponsive DMs' as the top pain point causing seeker churn, then designed a native Referral Request loop — a structured 3-part MVP (request creation, feed-surface delivery, and follow-through automation) that closes the gap between cold outreach and actual referrals. Includes network effect mapping, pain point prioritization, solution scoping, mockups, and a metrics framework.",
-      "techStack": ["Product Strategy", "User Research", "Pain Point Prioritization", "Network Effects", "UX Design", "Figma", "MVP Scoping", "Engagement Optimization", "Behavioral Nudges", "Jobs-to-be-Done"],
-      "date": "2025", "status": "Completed", "featured": true,
-      "links": [{"name": "Deck", "url": "/projects/Linkedin_Improvement_CaseStudy.pdf"}],
+      "techStack": [
+        "Product Strategy",
+        "User Research",
+        "Pain Point Prioritization",
+        "Network Effects",
+        "UX Design",
+        "Figma",
+        "MVP Scoping",
+        "Engagement Optimization",
+        "Behavioral Nudges",
+        "Jobs-to-be-Done"
+      ],
+      "date": "2025",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "Deck",
+          "url": "/projects/Linkedin_Improvement_CaseStudy.pdf"
+        }
+      ],
       "embedUrl": "/projects/Linkedin_Improvement_CaseStudy.pdf",
-      "images": []
+      "images": [],
+      "objective": "Active job seekers on LinkedIn hit a wall after applying — cold DMs go unanswered, and the platform offers no structured way to ask for or give referrals. The biggest friction isn't finding jobs; it's closing the gap between outreach and a real conversation.",
+      "keyInsights": [
+        {
+          "icon": "😞",
+          "label": "Root Cause",
+          "text": "Cold DMs feel transactional to referrers — no context, no structure, no incentive to respond."
+        },
+        {
+          "icon": "🔄",
+          "label": "The Solution",
+          "text": "A native Referral Request loop: a 3-part MVP (request creation → feed delivery → follow-through automation)."
+        },
+        {
+          "icon": "📬",
+          "label": "Request Creation",
+          "text": "Structured ask form with role context, personalisation fields, and a clear call-to-action — reducing friction for both parties."
+        },
+        {
+          "icon": "📰",
+          "label": "Feed Surface Delivery",
+          "text": "Referral requests appear in the giver's feed as cards, making them visible without requiring cold outreach."
+        },
+        {
+          "icon": "🤝",
+          "label": "Follow-through Automation",
+          "text": "Automated status tracking closes the loop — seekers know where they stand, referrers stay accountable."
+        }
+      ]
     },
     {
       "title": "Pocket",
       "section": "Product & Tech Projects",
       "category": "AI / FinTech",
       "description": "An AI expense tracker offering smart cash-flow management and visual summaries that explain spending habits. Translates raw transactions into plain-language insights so users understand the 'why' behind their spending.",
-      "techStack": ["LLM Summarization", "AI Financial Insights", "Spending Pattern Analysis", "Personal Finance AI", "Data Visualization"],
-      "date": "2025", "status": "Completed", "featured": false, "isLive": true,
-      "links": [{"name": "Prototype", "url": "https://pocket-money-manage.netlify.app/"}],
-      "images": [{"src": "/projects/pocket.png", "alt": "Pocket — AI expense tracker with spending insights"}]
+      "techStack": [
+        "LLM Summarization",
+        "AI Financial Insights",
+        "Spending Pattern Analysis",
+        "Personal Finance AI",
+        "Data Visualization"
+      ],
+      "date": "2025",
+      "status": "Completed",
+      "featured": false,
+      "isLive": true,
+      "links": [
+        {
+          "name": "Prototype",
+          "url": "https://pocket-money-manage.netlify.app/"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/pocket.png",
+          "alt": "Pocket — AI expense tracker with spending insights"
+        }
+      ],
+      "objective": "Most expense trackers show you what you spent — but not why, and not what to change. Pocket uses AI to translate raw transactions into plain-language spending narratives, so users actually understand their cash flow instead of just watching it.",
+      "keyInsights": [
+        {
+          "icon": "💸",
+          "label": "The Gap",
+          "text": "Raw transaction lists don't change behaviour — users need context and narrative, not just numbers."
+        },
+        {
+          "icon": "🧠",
+          "label": "AI-Powered Insights",
+          "text": "LLM summaries explain spending patterns in plain language: 'You spent 40% more on food delivery this week because of 3 late nights.'"
+        },
+        {
+          "icon": "📊",
+          "label": "Visual Cash Flow",
+          "text": "Interactive charts surface spending trends, category breakdowns, and month-over-month shifts at a glance."
+        },
+        {
+          "icon": "🔮",
+          "label": "Proactive Alerts",
+          "text": "Predictive nudges flag overspend risk before it happens — not after the bill arrives."
+        },
+        {
+          "icon": "🎯",
+          "label": "Goal",
+          "text": "Turn passive expense tracking into an active financial awareness tool that changes how people relate to money."
+        }
+      ]
     },
     {
       "title": "IMDB Sentiment & Topic Analysis",
       "section": "Product & Tech Projects",
       "category": "NLP / Data Science",
       "description": "Analyzed 40,000+ IMDB reviews using VADER and Logistic Regression, achieving 78.23% accuracy in sentiment and topic analysis. Surfaces what drives positive vs. negative reception at scale.",
-      "techStack": ["NLP", "Sentiment Analysis", "Topic Modeling", "Text Classification", "VADER", "scikit-learn"],
-      "date": "2024", "status": "Completed", "featured": false,
-      "links": [], "images": []
+      "techStack": [
+        "NLP",
+        "Sentiment Analysis",
+        "Topic Modeling",
+        "Text Classification",
+        "VADER",
+        "scikit-learn"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [],
+      "images": [],
+      "objective": "Understanding what makes a film review positive or negative at scale requires more than reading samples. This project applied NLP pipelines to 40,000+ IMDB reviews to surface the themes and signals that drive audience sentiment — at machine speed.",
+      "keyInsights": [
+        {
+          "icon": "📊",
+          "label": "Scale",
+          "text": "40,000+ IMDB reviews processed — large enough to surface statistically meaningful patterns across genres and release periods."
+        },
+        {
+          "icon": "🎭",
+          "label": "VADER Sentiment",
+          "text": "Rule-based lexicon scoring for fast, interpretable sentiment classification without training data overhead."
+        },
+        {
+          "icon": "🤖",
+          "label": "Logistic Regression",
+          "text": "Supervised classifier achieving 78.23% accuracy — strong baseline for a text-only, feature-engineered model."
+        },
+        {
+          "icon": "🔑",
+          "label": "Topic Modeling",
+          "text": "Latent themes extracted from reviews — revealing what viewers actually write about: acting, pacing, story, and visuals."
+        },
+        {
+          "icon": "📈",
+          "label": "Outcome",
+          "text": "A reproducible NLP framework for reception analysis — applicable to any text review corpus at scale."
+        }
+      ]
     },
     {
       "title": "Niyam (AI Fitness Coach)",
       "section": "Product & Tech Projects",
       "category": "AI / Health & Fitness",
       "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals.",
-      "techStack": ["AI Coaching", "Personalization AI", "Conversational UX", "Lovable", "AI Agents", "N8N"],
-      "date": "2026", "status": "Completed", "featured": true, "isLive": true,
-      "links": [{"name": "Prototype", "url": "https://niyam-ai-fitness-coach.lovable.app/"}],
-      "images": [{"src": "/projects/niyam-ai-fitness-coach.png", "alt": "Niyam — AI fitness coach app"}],
+      "techStack": [
+        "AI Coaching",
+        "Personalization AI",
+        "Conversational UX",
+        "Lovable",
+        "AI Agents",
+        "N8N"
+      ],
+      "date": "2026",
+      "status": "Completed",
+      "featured": true,
+      "isLive": true,
+      "links": [
+        {
+          "name": "Prototype",
+          "url": "https://niyam-ai-fitness-coach.lovable.app/"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/niyam-ai-fitness-coach.png",
+          "alt": "Niyam — AI fitness coach app"
+        }
+      ],
       "workflowImages": [
-        {"src": "/projects/Niyam : Workflow Architecture/Niyam User Onboarding.png", "label": "User Onboarding"},
-        {"src": "/projects/Niyam : Workflow Architecture/Niyam Chat & Workout Sessions.png", "label": "Chat & Workout Sessions"},
-        {"src": "/projects/Niyam : Workflow Architecture/Niyam Daily Reminders & Logs.png", "label": "Daily Reminders & Logs"}
+        {
+          "src": "/projects/Niyam : Workflow Architecture/Niyam User Onboarding.png",
+          "label": "User Onboarding"
+        },
+        {
+          "src": "/projects/Niyam : Workflow Architecture/Niyam Chat & Workout Sessions.png",
+          "label": "Chat & Workout Sessions"
+        },
+        {
+          "src": "/projects/Niyam : Workflow Architecture/Niyam Daily Reminders & Logs.png",
+          "label": "Daily Reminders & Logs"
+        }
+      ],
+      "objective": "Generic fitness apps give everyone the same plan regardless of their goals, schedule, or progress. Niyam generates personalised workout and habit plans in a conversational interface — then acts as a daily accountability partner that adapts as you improve.",
+      "keyInsights": [
+        {
+          "icon": "🏋️",
+          "label": "Personalisation",
+          "text": "AI-generated plans built around individual goals, current fitness level, available equipment, and weekly schedule."
+        },
+        {
+          "icon": "💬",
+          "label": "Conversational UX",
+          "text": "Chat-first interface for check-ins, plan adjustments, and motivation — not a rigid form-fill flow."
+        },
+        {
+          "icon": "🔔",
+          "label": "Accountability Automation",
+          "text": "Daily reminders and session logs automated via N8N workflows — so the coach follows up even when you forget."
+        },
+        {
+          "icon": "📈",
+          "label": "Adaptive Plans",
+          "text": "Workout plans evolve based on logged sessions and progress — getting harder or easier based on real performance."
+        },
+        {
+          "icon": "🛠️",
+          "label": "Built With",
+          "text": "Vibe-coded using Lovable for the UI + N8N for backend automation workflows — shipped in days, not months."
+        }
       ]
     },
     {
@@ -181,112 +667,630 @@
       "section": "Product & Tech Projects",
       "category": "FinTech / Product",
       "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps.",
-      "techStack": ["AI-Assisted Prototyping", "Claude Artifacts", "Investment UX", "FinTech Product Strategy", "Figma"],
-      "date": "2026", "status": "Completed", "featured": true, "isLive": true,
-      "links": [{"name": "Deck", "url": "https://canva.link/2go3upmujh38yuf"}, {"name": "Prototype", "url": "https://claude.ai/public/artifacts/1597c430-efb5-4ea5-90b7-6342d89c0f94"}],
-      "images": [{"src": "/projects/onset-investment-platform.png", "alt": "Onset — investment platform concept"}]
+      "techStack": [
+        "AI-Assisted Prototyping",
+        "Claude Artifacts",
+        "Investment UX",
+        "FinTech Product Strategy",
+        "Figma"
+      ],
+      "date": "2026",
+      "status": "Completed",
+      "featured": true,
+      "isLive": true,
+      "links": [
+        {
+          "name": "Deck",
+          "url": "https://canva.link/2go3upmujh38yuf"
+        },
+        {
+          "name": "Prototype",
+          "url": "https://claude.ai/public/artifacts/1597c430-efb5-4ea5-90b7-6342d89c0f94"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/onset-investment-platform.png",
+          "alt": "Onset — investment platform concept"
+        }
+      ],
+      "objective": "First-time investors get overwhelmed the moment they open a brokerage app — complex dashboards, financial jargon, and no guided starting point. Onset simplifies portfolio building with a step-by-step, AI-assisted onboarding experience designed for beginners.",
+      "keyInsights": [
+        {
+          "icon": "😰",
+          "label": "The Drop-off Problem",
+          "text": "Most first-time investors abandon investment apps in their first week — not from lack of intent, but from decision paralysis."
+        },
+        {
+          "icon": "🗺️",
+          "label": "Guided Journey",
+          "text": "Step-by-step onboarding walks users from 'what's my risk profile' to 'here's your starter portfolio' — no prior knowledge needed."
+        },
+        {
+          "icon": "🤖",
+          "label": "AI-Assisted Prototype",
+          "text": "Built using Claude Artifacts — demonstrating how AI-assisted prototyping can compress concept-to-demo from weeks to hours."
+        },
+        {
+          "icon": "📊",
+          "label": "Simplicity-First Design",
+          "text": "Jargon-free interface with visual risk indicators and plain-language explanations for every financial concept shown."
+        },
+        {
+          "icon": "🎯",
+          "label": "Core Goal",
+          "text": "Lower the psychological and UX barrier between 'I want to invest' and 'I made my first investment'."
+        }
+      ]
     },
     {
       "title": "Zomato : Farm Fresh",
       "section": "Product & Tech Projects",
       "category": "Product Case Study / D2C",
       "description": "A farm-to-table feature concept for Zomato ('Farm Fresh' / BiteBox) connecting users with fresh local produce.",
-      "techStack": ["AI Prototyping", "D2C Strategy", "Go-to-Market", "Market Research", "UX Design", "Lovable"],
-      "date": "2026", "status": "Completed", "featured": true,
-      "links": [{"name": "Deck", "url": "/Zomato_FarmtoFresh_Deck.pdf"}, {"name": "Prototype", "url": "https://farmfresh-bitebox.lovable.app/"}],
+      "techStack": [
+        "AI Prototyping",
+        "D2C Strategy",
+        "Go-to-Market",
+        "Market Research",
+        "UX Design",
+        "Lovable"
+      ],
+      "date": "2026",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "Deck",
+          "url": "/Zomato_FarmtoFresh_Deck.pdf"
+        },
+        {
+          "name": "Prototype",
+          "url": "https://farmfresh-bitebox.lovable.app/"
+        }
+      ],
       "embedUrl": "/Zomato_FarmtoFresh_Deck.pdf",
-      "images": [{"src": "/projects/zomato-farm-fresh.png", "alt": "Zomato Farm Fresh — farm-to-table feature concept"}]
+      "images": [
+        {
+          "src": "/projects/zomato-farm-fresh.png",
+          "alt": "Zomato Farm Fresh — farm-to-table feature concept"
+        }
+      ],
+      "objective": "India's quick-commerce platforms dominate packaged and processed groceries — but no major player owns the 'fresh, traceable, locally-sourced produce' category. Farm Fresh / BiteBox creates that channel for Zomato, targeting health-conscious urban users who distrust packaged goods.",
+      "keyInsights": [
+        {
+          "icon": "🌱",
+          "label": "Market Gap",
+          "text": "No major quick-commerce player credibly owns fresh, farm-sourced produce — a high-trust, growing category."
+        },
+        {
+          "icon": "🧑‍🌾",
+          "label": "Supply-side Model",
+          "text": "Direct farmer-to-door supply chain bypasses mandis — ensuring freshness while improving farmer margins."
+        },
+        {
+          "icon": "🛒",
+          "label": "Target Segment",
+          "text": "Health-conscious urban millennials and families who care about provenance, not just price and speed."
+        },
+        {
+          "icon": "📦",
+          "label": "BiteBox Subscription",
+          "text": "Curated weekly produce box model drives predictable demand and reduces logistics complexity."
+        },
+        {
+          "icon": "🗺️",
+          "label": "GTM Strategy",
+          "text": "Hyper-local city-by-city launch starting with farmer-dense metro fringe zones — proving unit economics before scaling."
+        }
+      ]
     },
     {
       "title": "OpenAI : Project TAGs",
       "section": "Product & Tech Projects",
       "category": "Product Case Study / AI",
       "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation.",
-      "techStack": ["AI Product Strategy", "ChatGPT Platform", "AI UX", "Feature Design", "AI Workspace", "Lovable"],
-      "date": "2026", "status": "Completed", "featured": true,
-      "links": [{"name": "Deck", "url": "/ChatGPT_Tags_Feature.pdf"}, {"name": "Prototype", "url": "https://claude.ai/code/artifact/5e658c7a-af35-481f-9efc-f21d7aed363a"}],
+      "techStack": [
+        "AI Product Strategy",
+        "ChatGPT Platform",
+        "AI UX",
+        "Feature Design",
+        "AI Workspace",
+        "Lovable"
+      ],
+      "date": "2026",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "Deck",
+          "url": "/ChatGPT_Tags_Feature.pdf"
+        },
+        {
+          "name": "Prototype",
+          "url": "https://claude.ai/code/artifact/5e658c7a-af35-481f-9efc-f21d7aed363a"
+        }
+      ],
       "embedUrl": "/ChatGPT_Tags_Feature.pdf",
-      "images": [{"src": "/projects/openai-project-tags.png", "alt": "OpenAI Project TAGs — ChatGPT Projects tagging concept"}]
+      "images": [
+        {
+          "src": "/projects/openai-project-tags.png",
+          "alt": "OpenAI Project TAGs — ChatGPT Projects tagging concept"
+        }
+      ],
+      "objective": "As ChatGPT Projects grow in number, users end up with dozens of unorganised projects and no fast way to find what they need. Project TAGs adds a lightweight tagging layer that lets users organise and navigate their workspace in seconds.",
+      "keyInsights": [
+        {
+          "icon": "🗂️",
+          "label": "The Problem",
+          "text": "ChatGPT Projects has no search, filter, or organisational layer — users scroll through an ever-growing flat list."
+        },
+        {
+          "icon": "🏷️",
+          "label": "The Solution",
+          "text": "User-defined tags applied to Projects — self-organised, flexible, and zero-friction to create."
+        },
+        {
+          "icon": "🔍",
+          "label": "Instant Navigation",
+          "text": "Tag-based filtering cuts workspace navigation from scrolling to a single click."
+        },
+        {
+          "icon": "✨",
+          "label": "UX Principle",
+          "text": "Minimum viable interaction — tag inline, filter in one click, no modal or settings required."
+        },
+        {
+          "icon": "🛠️",
+          "label": "Prototype",
+          "text": "Interactive concept built with Lovable and visualised via Claude Artifact — shareable and explorable."
+        }
+      ]
     },
     {
       "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
       "section": "Product & Tech Projects",
       "category": "Machine Learning / LLM",
       "description": "Fine-tuned a Llama model on a custom dataset — covering data preparation, training, and evaluation.",
-      "techStack": ["LLM Fine-tuning", "Instruction Tuning", "Llama 3", "PEFT / LoRA", "Hugging Face", "Custom Dataset"],
-      "date": "2025", "status": "Completed", "featured": false,
-      "links": [{"name": "Notebook", "url": "https://colab.research.google.com/drive/1tc7Ud_MVNJd4_fxnyLPXe8WAyzRcP9wN?usp=sharing"}],
-      "images": []
+      "techStack": [
+        "LLM Fine-tuning",
+        "Instruction Tuning",
+        "Llama 3",
+        "PEFT / LoRA",
+        "Hugging Face",
+        "Custom Dataset"
+      ],
+      "date": "2025",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Notebook",
+          "url": "https://colab.research.google.com/drive/1tc7Ud_MVNJd4_fxnyLPXe8WAyzRcP9wN?usp=sharing"
+        }
+      ],
+      "images": [],
+      "objective": "Pre-trained LLMs excel at general tasks but underperform on domain-specific queries without adaptation. This project demonstrates a complete fine-tuning pipeline — from dataset preparation to training and evaluation — using parameter-efficient methods on Llama 3.",
+      "keyInsights": [
+        {
+          "icon": "🦙",
+          "label": "Base Model",
+          "text": "Llama 3 fine-tuned via instruction tuning to follow domain-specific prompts accurately."
+        },
+        {
+          "icon": "⚡",
+          "label": "PEFT / LoRA",
+          "text": "Parameter-Efficient Fine-Tuning with LoRA adapters — dramatically reduces GPU memory and training time vs. full fine-tuning."
+        },
+        {
+          "icon": "📚",
+          "label": "Dataset Pipeline",
+          "text": "End-to-end custom dataset preparation: collection, cleaning, formatting into instruction-response pairs, and tokenisation."
+        },
+        {
+          "icon": "📊",
+          "label": "Evaluation",
+          "text": "Model benchmarked on accuracy, perplexity, and response quality against the base model baseline."
+        },
+        {
+          "icon": "🔧",
+          "label": "Stack",
+          "text": "Hugging Face Transformers + PEFT library + Google Colab — fully reproducible via the linked notebook."
+        }
+      ]
     },
     {
       "title": "Growth Strategy of Jio",
       "section": "Business Strategy & GTM Projects",
       "category": "Business Strategy",
       "description": "A comprehensive analysis of Reliance Jio's hypergrowth strategy — examining how it disrupted India's telecom market through aggressive pricing, vertical integration, and ecosystem lock-in to become the country's largest telecom operator.",
-      "techStack": ["Growth Strategy", "Market Disruption", "Ecosystem Lock-in", "Competitive Intelligence", "Data-Driven Analysis"],
-      "date": "2024", "status": "Completed", "featured": false,
-      "links": [{"name": "Presentation", "url": "https://canva.link/rubnx347fl3g9qz"}],
-      "images": [{"src": "/projects/Growth Strategy of Jio .png", "alt": "Growth Strategy of Jio"}]
+      "techStack": [
+        "Growth Strategy",
+        "Market Disruption",
+        "Ecosystem Lock-in",
+        "Competitive Intelligence",
+        "Data-Driven Analysis"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/rubnx347fl3g9qz"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/Growth Strategy of Jio .png",
+          "alt": "Growth Strategy of Jio"
+        }
+      ],
+      "objective": "How does a new entrant with no customers disrupt and dominate India's entrenched telecom market in under three years? This analysis deconstructs Jio's sequenced strategy — from infrastructure-first investment to ecosystem lock-in — and why incumbents couldn't respond fast enough.",
+      "keyInsights": [
+        {
+          "icon": "📡",
+          "label": "Free Launch Blitzkrieg",
+          "text": "6 months of free data and voice calls acquired 100M+ users before any revenue pressure — forcing competitors into price wars they couldn't win."
+        },
+        {
+          "icon": "🏗️",
+          "label": "Infrastructure Moat",
+          "text": "₹1.5 lakh crore in 4G rollout before launch — Jio was the only operator with nationwide coverage from day one."
+        },
+        {
+          "icon": "🔒",
+          "label": "Ecosystem Lock-in",
+          "text": "JioTV, JioCinema, JioSaavn, JioMart — a closed app ecosystem that made switching costly beyond just the SIM."
+        },
+        {
+          "icon": "⚔️",
+          "label": "Competitive Collapse",
+          "text": "Forced Airtel, Idea, and Vodafone into survival mergers — reducing a fragmented market of 8+ operators to effectively 3."
+        },
+        {
+          "icon": "📈",
+          "label": "Macro Outcome",
+          "text": "India went from one of the world's most expensive data markets to the cheapest — under $0.10/GB average."
+        }
+      ]
     },
     {
       "title": "ML Applications in Diagnosis of Diabetes",
       "section": "Business Strategy & GTM Projects",
       "category": "ML Research",
       "description": "An exploration of how machine learning models — including logistic regression, decision trees, and neural networks — can be applied to early diabetes diagnosis, comparing model accuracy, interpretability, and clinical applicability.",
-      "techStack": ["Predictive ML", "Healthcare AI", "Classification Models", "Feature Engineering", "Clinical Decision Support"],
-      "date": "2024", "status": "Completed", "featured": false,
-      "links": [{"name": "Presentation", "url": "https://canva.link/u8g6sxis66ona4t"}],
-      "images": [{"src": "/projects/ML Application in Medical Science.png", "alt": "ML Applications in Diagnosis of Diabetes"}]
+      "techStack": [
+        "Predictive ML",
+        "Healthcare AI",
+        "Classification Models",
+        "Feature Engineering",
+        "Clinical Decision Support"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/u8g6sxis66ona4t"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/ML Application in Medical Science.png",
+          "alt": "ML Applications in Diagnosis of Diabetes"
+        }
+      ],
+      "objective": "Over 77 million adults in India have diabetes — and a significant portion are undiagnosed until complications arise. This research explores whether ML models can flag risk earlier and more reliably than traditional clinical thresholds, comparing accuracy, interpretability, and real-world applicability.",
+      "keyInsights": [
+        {
+          "icon": "🏥",
+          "label": "Clinical Urgency",
+          "text": "1 in 11 adults globally has diabetes; most Type 2 diagnoses come 5–7 years after onset — early detection saves lives."
+        },
+        {
+          "icon": "🤖",
+          "label": "Models Compared",
+          "text": "Logistic Regression, Decision Trees, and Neural Networks evaluated on the same feature set and dataset."
+        },
+        {
+          "icon": "📊",
+          "label": "Key Predictors",
+          "text": "Glucose level, BMI, age, insulin, and blood pressure emerged as the strongest diagnostic signals."
+        },
+        {
+          "icon": "🔍",
+          "label": "Accuracy vs. Explainability",
+          "text": "Neural nets had the highest raw accuracy; decision trees offered comparable performance with clinically interpretable rules."
+        },
+        {
+          "icon": "✅",
+          "label": "Clinical Recommendation",
+          "text": "Decision Tree emerged as the best balance of accuracy and explainability — a doctor can follow its logic at bedside."
+        }
+      ]
     },
     {
       "title": "Marketing Strategy of Nike",
       "section": "Business Strategy & GTM Projects",
       "category": "Marketing Strategy",
       "description": "A deep-dive into Nike's global marketing playbook — covering brand positioning, athlete endorsements, digital-first campaigns, community building through Nike Run Club & Training Club, and how storytelling drives premium pricing power.",
-      "techStack": ["Brand Strategy", "Data-Driven Marketing", "Consumer Behavior", "Community-Led Growth", "Digital Marketing"],
-      "date": "2024", "status": "Completed", "featured": false,
-      "links": [{"name": "Presentation", "url": "https://canva.link/rost4te7qbv1fto"}],
-      "images": [{"src": "/projects/Marketing Strategy of Nike.png", "alt": "Marketing Strategy of Nike"}]
+      "techStack": [
+        "Brand Strategy",
+        "Data-Driven Marketing",
+        "Consumer Behavior",
+        "Community-Led Growth",
+        "Digital Marketing"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/rost4te7qbv1fto"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/Marketing Strategy of Nike.png",
+          "alt": "Marketing Strategy of Nike"
+        }
+      ],
+      "objective": "Nike sells sneakers at 3–5x the price of comparable products. This analysis unpacks how — reverse-engineering the brand strategy, athlete partnerships, digital community tools, and storytelling playbook that sustain premium pricing power and global brand loyalty.",
+      "keyInsights": [
+        {
+          "icon": "👟",
+          "label": "Brand Positioning",
+          "text": "'Just Do It' is a motivational identity, not a product slogan — it sells aspiration, not shoes."
+        },
+        {
+          "icon": "🏆",
+          "label": "Athlete Endorsements",
+          "text": "Cultural identity transfer: associating with elite athletes makes consumers feel the brand elevates them too."
+        },
+        {
+          "icon": "📱",
+          "label": "Community-Led Loyalty",
+          "text": "Nike Run Club and Training Club build daily habits — turning customers into participants in a movement."
+        },
+        {
+          "icon": "🎬",
+          "label": "Emotion-First Campaigns",
+          "text": "Advertising leads with human stories and triumph — products appear last, if at all."
+        },
+        {
+          "icon": "💰",
+          "label": "Premium Pricing Power",
+          "text": "Brand identity perceived as self-expression sustains margins even as production costs remain commodity-level."
+        }
+      ]
     },
     {
       "title": "GTM Strategy for New Product by Cisco",
       "section": "Business Strategy & GTM Projects",
       "category": "GTM Strategy",
       "description": "A go-to-market plan for a new Cisco product targeting enterprise network security — covering ICP definition, channel strategy, competitive positioning, pricing model, and launch sequencing across geographies.",
-      "techStack": ["GTM Strategy", "B2B SaaS", "Enterprise AI", "Competitive Positioning", "Product Launch"],
-      "date": "2024", "status": "Completed", "featured": false,
-      "links": [{"name": "Presentation", "url": "https://canva.link/ssllvtnt6mbvlff"}],
-      "images": [{"src": "/projects/Marketing Strategy for New Service Cisco.png", "alt": "GTM Strategy for New Product by Cisco"}]
+      "techStack": [
+        "GTM Strategy",
+        "B2B SaaS",
+        "Enterprise AI",
+        "Competitive Positioning",
+        "Product Launch"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/ssllvtnt6mbvlff"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/Marketing Strategy for New Service Cisco.png",
+          "alt": "GTM Strategy for New Product by Cisco"
+        }
+      ],
+      "objective": "Launching a new enterprise network security product into a saturated B2B market requires more than a feature list — it needs a sequenced market entry, a razor-sharp ICP, differentiated positioning against legacy players, and a channel strategy that scales.",
+      "keyInsights": [
+        {
+          "icon": "🎯",
+          "label": "ICP Definition",
+          "text": "Mid-to-large enterprises with multi-cloud exposure and legacy perimeter security — highest pain, highest willingness to pay."
+        },
+        {
+          "icon": "🗺️",
+          "label": "Channel Strategy",
+          "text": "Direct enterprise sales for large accounts; MSSP partner ecosystem for mid-market reach without headcount."
+        },
+        {
+          "icon": "⚔️",
+          "label": "Competitive Positioning",
+          "text": "AI-first threat detection vs. rule-based legacy solutions — faster response, fewer false positives, less analyst fatigue."
+        },
+        {
+          "icon": "💵",
+          "label": "Pricing Model",
+          "text": "Usage-based SaaS subscription aligns with enterprise budget cycles and removes CapEx friction from the buying decision."
+        },
+        {
+          "icon": "🚀",
+          "label": "Launch Sequencing",
+          "text": "Pilot with 3 lighthouse accounts → case study-led scale → geographic expansion across 3 priority regions."
+        }
+      ]
     },
     {
       "title": "Business Strategy of ABC",
       "section": "Business Strategy & GTM Projects",
       "category": "Business Strategy",
       "description": "A strategic analysis of ABC's business model — examining competitive positioning, value chain, growth levers, and strategic recommendations to sustain long-term advantage in a dynamic market landscape.",
-      "techStack": ["Business Strategy", "Value Chain Analysis", "Competitive Intelligence", "Strategic Frameworks", "Data-Driven Decisions"],
-      "date": "2024", "status": "Completed", "featured": false,
-      "links": [{"name": "Presentation", "url": "https://canva.link/4wn40q6i2epxi3u"}],
-      "images": [{"src": "/projects/Strategy Management ABC.png", "alt": "Business Strategy of ABC"}]
+      "techStack": [
+        "Business Strategy",
+        "Value Chain Analysis",
+        "Competitive Intelligence",
+        "Strategic Frameworks",
+        "Data-Driven Decisions"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": false,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/4wn40q6i2epxi3u"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/Strategy Management ABC.png",
+          "alt": "Business Strategy of ABC"
+        }
+      ],
+      "objective": "Sustaining competitive advantage in a price-sensitive, crowded market requires more than cost efficiency — it demands identifying where you create unique value and doubling down on it. This analysis maps ABC's value chain, surfaces strategic gaps, and proposes concrete levers for differentiation.",
+      "keyInsights": [
+        {
+          "icon": "🔍",
+          "label": "Value Chain Mapping",
+          "text": "Primary and support activities mapped against key competitors — identifying where ABC leads and where it leaks value."
+        },
+        {
+          "icon": "💪",
+          "label": "Core Strengths",
+          "text": "Deep distribution network and high customer relationship density — advantages that take years for competitors to replicate."
+        },
+        {
+          "icon": "⚠️",
+          "label": "Strategic Gaps",
+          "text": "Underdeveloped digital channels and weak brand premium leave ABC vulnerable to D2C disruptors and price wars."
+        },
+        {
+          "icon": "🛠️",
+          "label": "Recommendations",
+          "text": "D2C channel pivot, loyalty programme launch, and AI-enabled operations to reduce cost-to-serve."
+        },
+        {
+          "icon": "📈",
+          "label": "Growth Levers",
+          "text": "Premiumisation of core SKUs + geographic expansion into Tier 2/3 markets as the dual growth engine."
+        }
+      ]
     },
     {
       "title": "V-Guard Big Idea : Product Innovation",
       "section": "Case Competitions",
       "category": "CX & Product Management",
       "description": "Ranked among the National Finalists at the V-Guard Big Idea Business Plan Contest 2024 — competing against 2000+ product ideas from across India. Developed and pitched a full product innovation concept, combining customer insight, market sizing, and go-to-market strategy to address a real consumer problem in the home appliances space.",
-      "techStack": ["Product Innovation", "AI-Enabled Features", "Business Plan", "GTM Strategy", "Customer Insight", "Market Research"],
-      "date": "2024", "status": "Completed", "featured": true,
-      "links": [{"name": "Presentation", "url": "https://canva.link/ukagno8wsw36fm6"}],
-      "images": [{"src": "/projects/BigIdea 2024.png", "alt": "V-Guard Big Idea 2024 Presentation Preview"}]
+      "techStack": [
+        "Product Innovation",
+        "AI-Enabled Features",
+        "Business Plan",
+        "GTM Strategy",
+        "Customer Insight",
+        "Market Research"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/ukagno8wsw36fm6"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/BigIdea 2024.png",
+          "alt": "V-Guard Big Idea 2024 Presentation Preview"
+        }
+      ],
+      "objective": "V-Guard challenged participants to develop a new product concept for India's home appliances market — from consumer insight to business case. Competing among 2000+ ideas from across the country, this concept combined a real unmet need, full market sizing, and an AI-enabled product vision.",
+      "keyInsights": [
+        {
+          "icon": "🏆",
+          "label": "Result",
+          "text": "National Finalist among 2000+ product ideas from colleges and institutions across India."
+        },
+        {
+          "icon": "🏠",
+          "label": "Consumer Insight",
+          "text": "Identified an unmet need in the home appliances category through primary research and pain-point mapping."
+        },
+        {
+          "icon": "📊",
+          "label": "Market Sizing",
+          "text": "TAM/SAM/SOM analysis quantified the opportunity — giving the business case credibility beyond the concept."
+        },
+        {
+          "icon": "🤖",
+          "label": "AI-Enabled Features",
+          "text": "Product concept incorporated smart home integration and AI-driven personalisation as core differentiators."
+        },
+        {
+          "icon": "🚀",
+          "label": "Full GTM Plan",
+          "text": "Channel strategy, pricing tiers, launch roadmap, and partnership model — a complete go-to-market blueprint."
+        }
+      ]
     },
     {
       "title": "Tata Steel-A-Thon 2024",
       "section": "Case Competitions",
       "category": "CX & Product Management",
       "description": "Competed in Tata Steel-A-Thon 2024, a national-level case competition challenging participants to solve real business problems across operations, strategy, and customer experience in the steel industry. Developed a structured solution combining market insight, operational analysis, and actionable recommendations — presented to a panel of Tata Steel industry leaders.",
-      "techStack": ["CX Strategy", "Operations Analytics", "AI Applications", "Business Analysis", "Data-Driven Recommendations"],
-      "date": "2024", "status": "Completed", "featured": true,
-      "links": [{"name": "Presentation", "url": "https://canva.link/f5i180swd6f0pe4"}],
-      "images": [{"src": "/projects/TATA Steel-A-Thon 2024.png", "alt": "Tata Steel-A-Thon 2024 Presentation Preview"}]
+      "techStack": [
+        "CX Strategy",
+        "Operations Analytics",
+        "AI Applications",
+        "Business Analysis",
+        "Data-Driven Recommendations"
+      ],
+      "date": "2024",
+      "status": "Completed",
+      "featured": true,
+      "links": [
+        {
+          "name": "Presentation",
+          "url": "https://canva.link/f5i180swd6f0pe4"
+        }
+      ],
+      "images": [
+        {
+          "src": "/projects/TATA Steel-A-Thon 2024.png",
+          "alt": "Tata Steel-A-Thon 2024 Presentation Preview"
+        }
+      ],
+      "objective": "Tata Steel challenged participants to solve real business problems across operations, CX, and strategy in one of India's most complex industries. This solution combined operational analysis, data-driven recommendations, and a structured CX improvement framework — presented to a panel of Tata Steel leaders.",
+      "keyInsights": [
+        {
+          "icon": "🏭",
+          "label": "Industry Context",
+          "text": "Steel is capital-intensive and operationally complex — small efficiency gains translate to crores in savings at scale."
+        },
+        {
+          "icon": "📊",
+          "label": "Operational Analysis",
+          "text": "Mapped inefficiency hotspots across the value chain using data — identifying where losses were systemic vs. incidental."
+        },
+        {
+          "icon": "🤖",
+          "label": "AI Application",
+          "text": "Proposed ML-based demand forecasting to reduce inventory carrying costs and production over-runs."
+        },
+        {
+          "icon": "🧑‍💼",
+          "label": "CX Strategy",
+          "text": "B2B customer experience framework addressing response time, order visibility, and relationship management gaps."
+        },
+        {
+          "icon": "🏆",
+          "label": "Presentation",
+          "text": "Solution presented to a panel of Tata Steel industry leaders — combining analytical rigour with executive-ready storytelling."
+        }
+      ]
     }
   ],
   "writing": [
@@ -315,20 +1319,44 @@
   "social": {
     "linkedin": "https://www.linkedin.com/in/adamya-varshney15/",
     "github": "https://github.com/Adamya-Varshney",
-    "twitter": "", "kaggle": "https://www.kaggle.com/adam23082july",
-    "leetcode": "", "fiverr": "", "portfolio": ""
+    "twitter": "",
+    "kaggle": "https://www.kaggle.com/adam23082july",
+    "leetcode": "",
+    "fiverr": "",
+    "portfolio": ""
   },
   "internship": {
-    "seeking": true, "duration": "Full-time", "startDate": "",
+    "seeking": true,
+    "duration": "Full-time",
+    "startDate": "",
     "preferredLocation": "Noida / Remote / Hybrid",
-    "focusAreas": ["AI Product Management", "Agentic AI Products", "B2B & D2C E-commerce", "GTM Strategy", "Product Analytics"],
+    "focusAreas": [
+      "AI Product Management",
+      "Agentic AI Products",
+      "B2B & D2C E-commerce",
+      "GTM Strategy",
+      "Product Analytics"
+    ],
     "availability": "Open to senior Product Manager opportunities",
     "workStyle": "Customer-centric, data-driven PM who pairs design-thinking with quantitative rigor across the full product lifecycle",
     "goals": "Build AI-native products that move real metrics. I want to own ambiguous 0-to-N problems end to end — research to GTM — on teams that care as much about user empathy as they do about measurable impact."
   },
   "personality": {
-    "traits": ["analytical", "customer-centric", "decisive", "collaborative", "results-driven"],
-    "interests": ["AI/Agentic Products", "Product Strategy", "Growth & GTM", "Data Analytics", "Marketing", "Vibe Coding"],
+    "traits": [
+      "analytical",
+      "customer-centric",
+      "decisive",
+      "collaborative",
+      "results-driven"
+    ],
+    "interests": [
+      "AI/Agentic Products",
+      "Product Strategy",
+      "Growth & GTM",
+      "Data Analytics",
+      "Marketing",
+      "Vibe Coding"
+    ],
     "funFacts": [
       "Manages a portfolio of AI-driven B2B products generating 100+ Cr in monthly revenue",
       "Launched 4 new products in a 30-day GTM sprint, adding 3000+ premium sellers",
@@ -341,25 +1369,82 @@
   "resume": {
     "title": "Adamya Varshney - Resume",
     "description": "Product Manager | AI & Agentic Products | 0-to-N, GTM & Product Analytics",
-    "fileType": "PDF", "lastUpdated": "June 2026", "fileSize": "",
+    "fileType": "PDF",
+    "lastUpdated": "June 2026",
+    "fileSize": "",
     "downloadUrl": "/resume.pdf?v=2"
   },
   "chatbot": {
-    "name": "Adamya", "personality": "thoughtful, analytical, customer-centric",
-    "tone": "professional yet approachable", "language": "english",
-    "responseStyle": "clear, structured, and outcome-focused", "useEmojis": false,
-    "topics": ["projects", "skills", "experience", "product_strategy", "ai_products", "achievements", "contact", "certifications"]
+    "name": "Adamya",
+    "personality": "thoughtful, analytical, customer-centric",
+    "tone": "professional yet approachable",
+    "language": "english",
+    "responseStyle": "clear, structured, and outcome-focused",
+    "useEmojis": false,
+    "topics": [
+      "projects",
+      "skills",
+      "experience",
+      "product_strategy",
+      "ai_products",
+      "achievements",
+      "contact",
+      "certifications"
+    ]
   },
   "presetQuestions": {
-    "me": ["Who are you?", "Tell me about yourself", "What's your background?", "How do you approach product management?", "What got you into AI products?", "Where do you see yourself in 5 years?"],
-    "professional": ["What's your experience?", "What are your skills?", "Can I see your resume?", "Tell me about your work at IndiaMART", "How do you run a GTM launch?", "What product metrics do you track?", "What certifications do you have?", "Why should I hire you?", "What's your educational background?", "How do you balance data and user empathy?"],
-    "projects": ["What projects are you most proud of?", "Tell me about your Agentic AI projects", "What's Growmatic?", "How did Bundles & Buddy Mode drive AOV?", "What are you working on?", "Show me your data science work"],
-    "achievements": ["What are your major achievements?", "Tell me about the V-Guard finalist win", "What measurable impact have you driven?", "What did you win at IIM Kashipur?"],
-    "contact": ["How can I reach you?", "What's your email?", "Where can I find you online?", "Are you open to new roles?", "What kind of role would make you say 'yes'?", "Where are you located?"],
-    "fun": ["What are your interests?", "Tell me something interesting about you", "What motivates you?", "What's a fun fact about you?"]
+    "me": [
+      "Who are you?",
+      "Tell me about yourself",
+      "What's your background?",
+      "How do you approach product management?",
+      "What got you into AI products?",
+      "Where do you see yourself in 5 years?"
+    ],
+    "professional": [
+      "What's your experience?",
+      "What are your skills?",
+      "Can I see your resume?",
+      "Tell me about your work at IndiaMART",
+      "How do you run a GTM launch?",
+      "What product metrics do you track?",
+      "What certifications do you have?",
+      "Why should I hire you?",
+      "What's your educational background?",
+      "How do you balance data and user empathy?"
+    ],
+    "projects": [
+      "What projects are you most proud of?",
+      "Tell me about your Agentic AI projects",
+      "What's Growmatic?",
+      "How did Bundles & Buddy Mode drive AOV?",
+      "What are you working on?",
+      "Show me your data science work"
+    ],
+    "achievements": [
+      "What are your major achievements?",
+      "Tell me about the V-Guard finalist win",
+      "What measurable impact have you driven?",
+      "What did you win at IIM Kashipur?"
+    ],
+    "contact": [
+      "How can I reach you?",
+      "What's your email?",
+      "Where can I find you online?",
+      "Are you open to new roles?",
+      "What kind of role would make you say 'yes'?",
+      "Where are you located?"
+    ],
+    "fun": [
+      "What are your interests?",
+      "Tell me something interesting about you",
+      "What motivates you?",
+      "What's a fun fact about you?"
+    ]
   },
   "meta": {
-    "configVersion": "2.0", "lastUpdated": "2026-06-25",
+    "configVersion": "2.0",
+    "lastUpdated": "2026-06-25",
     "generatedBy": "Adamya Varshney",
     "description": "Portfolio configuration for Adamya Varshney — Product Manager spanning B2B/D2C e-commerce, GTM strategy, product analytics, and Agentic AI projects."
   }
