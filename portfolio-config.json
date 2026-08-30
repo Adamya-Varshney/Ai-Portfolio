@@ -681,13 +681,14 @@
       "links": [
         {
           "name": "Deck",
-          "url": "https://canva.link/2go3upmujh38yuf"
+          "url": "/Onset App Investment Decision Overload.pdf"
         },
         {
           "name": "Prototype",
           "url": "https://claude.ai/public/artifacts/1597c430-efb5-4ea5-90b7-6342d89c0f94"
         }
       ],
+      "embedUrl": "/Onset App Investment Decision Overload.pdf",
       "images": [
         {
           "src": "/projects/onset-investment-platform.png",
