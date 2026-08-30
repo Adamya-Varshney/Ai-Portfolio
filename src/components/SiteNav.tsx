@@ -57,20 +57,12 @@ export default function SiteNav() {
         </button>
 
         {/* Nav links */}
-<<<<<<< HEAD
-        <div className="flex items-center gap-0.5 overflow-x-auto scrollbar-none">
-=======
         <div className="flex items-center gap-1 overflow-x-auto scrollbar-none">
->>>>>>> e6c50da (Make nav tabs larger and more prominent)
           {NAV_ITEMS.map(item => (
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-<<<<<<< HEAD
-              className="shrink-0 px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-lg transition-colors duration-150"
-=======
               className="shrink-0 px-4 py-2 text-sm rounded-lg transition-all duration-150"
->>>>>>> e6c50da (Make nav tabs larger and more prominent)
               style={{
                 color: active === item.id ? '#111827' : '#9ca3af',
                 background: active === item.id ? '#f3f4f6' : 'transparent',
