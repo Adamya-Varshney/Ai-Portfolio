@@ -204,7 +204,8 @@
       "description": "A feature concept that adds tagging and organization to ChatGPT Projects for faster workspace navigation.",
       "techStack": ["AI Product Strategy", "ChatGPT Platform", "AI UX", "Feature Design", "AI Workspace", "Lovable"],
       "date": "2026", "status": "Completed", "featured": true,
-      "links": [{"name": "Deck", "url": "https://canva.link/q111ie83mlvhsjo"}, {"name": "Prototype", "url": "https://claude.ai/code/artifact/5e658c7a-af35-481f-9efc-f21d7aed363a"}],
+      "links": [{"name": "Deck", "url": "/ChatGPT_Tags_Feature.pdf"}, {"name": "Prototype", "url": "https://claude.ai/code/artifact/5e658c7a-af35-481f-9efc-f21d7aed363a"}],
+      "embedUrl": "/ChatGPT_Tags_Feature.pdf",
       "images": [{"src": "/projects/openai-project-tags.png", "alt": "OpenAI Project TAGs — ChatGPT Projects tagging concept"}]
     },
     {
