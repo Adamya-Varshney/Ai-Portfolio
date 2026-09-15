@@ -87,9 +87,9 @@ export default function ProjectPage() {
           transition={{ duration: 0.35 }}
         >
           {/* Cover image */}
-          <div className={`relative rounded-xl overflow-hidden mb-6 ${project.imageFit === 'contain' ? 'h-56 sm:h-72 bg-white' : 'h-52 sm:h-64 bg-gray-100'}`}>
+          <div className={`relative rounded-xl overflow-hidden mb-6 bg-gray-100 ${project.imageFit === 'contain' ? 'aspect-[4/3]' : 'h-52 sm:h-64'}`}>
             {project.images?.[0]?.src ? (
-              <Image src={project.images[0].src} alt={project.title} fill className={project.imageFit === 'contain' ? 'object-contain p-4' : 'object-cover'} />
+              <Image src={project.images[0].src} alt={project.title} fill className="object-cover" />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-base font-semibold text-gray-300 text-center px-8">{project.title}</span>
