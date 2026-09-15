@@ -315,6 +315,7 @@
           "url": "https://xcurson.lovable.app"
         }
       ],
+      "imageFit": "contain",
       "images": [
         {
           "src": "/projects/xcurson.png",

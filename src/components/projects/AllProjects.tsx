@@ -184,13 +184,13 @@ function ProjectCard({ project, onViewDeck, navigable }: { project: any; onViewD
       className={`group rounded-2xl overflow-hidden flex flex-col h-full bg-white border border-gray-200 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${navigable ? 'cursor-pointer' : ''}`}
     >
       {/* Cover image */}
-      <div className="relative h-44 sm:h-48 shrink-0 overflow-hidden bg-gray-100">
+      <div className={`relative shrink-0 overflow-hidden bg-white ${project.imageFit === 'contain' ? 'h-48 sm:h-52' : 'h-44 sm:h-48 bg-gray-100'}`}>
         {hasImage ? (
           <Image
             src={project.images[0].src}
             alt={project.title}
             fill
-            className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            className={`${project.imageFit === 'contain' ? 'object-contain p-2' : 'object-cover group-hover:scale-[1.02] transition-transform duration-500'}`}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center p-4">
