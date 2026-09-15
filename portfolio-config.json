@@ -185,6 +185,7 @@
       "status": "Completed",
       "featured": true,
       "isLive": true,
+      "imageFit": "contain",
       "embedUrl": "/projects/Growmatic_Deck_MVP Final.pdf",
       "links": [
         {
