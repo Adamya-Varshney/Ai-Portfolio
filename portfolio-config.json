@@ -677,6 +677,7 @@
       "title": "Onset : Investment Platform",
       "section": "Product & Tech Projects",
       "category": "FinTech / Product",
+      "imageFit": "contain",
       "description": "An investment platform concept that simplifies portfolio building and guides first-time investors through their first steps.",
       "techStack": [
         "AI-Assisted Prototyping",
@@ -702,7 +703,7 @@
       "embedUrl": "/Onset App Investment Decision Overload.pdf",
       "images": [
         {
-          "src": "/projects/onset-investment-platform.png",
+          "src": "/projects/onset-investing-platform.png",
           "alt": "Onset — investment platform concept"
         }
       ],
