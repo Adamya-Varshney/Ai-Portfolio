@@ -236,6 +236,7 @@
       "title": "Bundles & Buddy Mode",
       "section": "Product & Tech Projects",
       "category": "D2C / E-commerce Product",
+      "imageFit": "contain",
       "description": "Quick-commerce features that convert reactive checkouts into planned purchases, designed to drive AOV growth for a Blinkit-style platform. 'Bundles' nudges complementary add-ons at checkout; 'Buddy Mode' enables shared, planned carts — both targeting basket size and repeat ordering.",
       "techStack": [
         "AI-Driven Nudges",
