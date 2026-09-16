@@ -860,7 +860,8 @@
           "label": "Prototype",
           "text": "Interactive concept built with Lovable and visualised via Claude Artifact — shareable and explorable."
         }
-      ]
+      ],
+      "imageFit": "contain"
     },
     {
       "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
