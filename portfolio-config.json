@@ -459,8 +459,14 @@
           "url": "/projects/Linkedin_Improvement_CaseStudy.pdf"
         }
       ],
+      "imageFit": "contain",
       "embedUrl": "/projects/Linkedin_Improvement_CaseStudy.pdf",
-      "images": [],
+      "images": [
+        {
+          "src": "/projects/Linkedin UX Case Study Cover Image.png",
+          "alt": "LinkedIn: Improving Job Hunting Experience — referral loop case study"
+        }
+      ],
       "objective": "Active job seekers on LinkedIn hit a wall after applying — cold DMs go unanswered, and the platform offers no structured way to ask for or give referrals. The biggest friction isn't finding jobs; it's closing the gap between outreach and a real conversation.",
       "keyInsights": [
         {
