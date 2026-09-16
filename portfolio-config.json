@@ -181,7 +181,7 @@
         "LangGraph",
         "LangChain"
       ],
-      "date": "2025",
+      "date": "2026",
       "status": "Completed",
       "featured": true,
       "isLive": true,
@@ -246,7 +246,7 @@
         "User Psychology",
         "Figma"
       ],
-      "date": "2025",
+      "date": "2026",
       "status": "Completed",
       "featured": true,
       "links": [
@@ -368,7 +368,7 @@
         "Web Search",
         "Code Interpreter"
       ],
-      "date": "2025",
+      "date": "2026",
       "status": "Completed",
       "featured": false,
       "isLive": true,
@@ -450,7 +450,7 @@
         "Behavioral Nudges",
         "Jobs-to-be-Done"
       ],
-      "date": "2025",
+      "date": "2026",
       "status": "Completed",
       "featured": true,
       "links": [
@@ -502,7 +502,7 @@
         "Personal Finance AI",
         "Data Visualization"
       ],
-      "date": "2025",
+      "date": "2026",
       "status": "Completed",
       "featured": false,
       "isLive": true,
@@ -865,7 +865,7 @@
         "Hugging Face",
         "Custom Dataset"
       ],
-      "date": "2025",
+      "date": "2026",
       "status": "Completed",
       "featured": false,
       "links": [
@@ -1302,7 +1302,7 @@
     {
       "title": "Why 'Unresponsive DMs' Is Killing LinkedIn for Active Job Seekers",
       "type": "PM Teardown",
-      "date": "2025",
+      "date": "2026",
       "summary": "A product teardown of LinkedIn's job-hunting flow — and how a native Referral Request loop could close the biggest friction gap between cold outreach and actual referrals.",
       "url": "https://www.linkedin.com/in/adamya-varshney15/recent-activity/articles/"
     },
@@ -1316,7 +1316,7 @@
     {
       "title": "0→3000 Sellers in 30 Days: What the GTM Sprint Taught Me",
       "type": "Product Lessons",
-      "date": "2025",
+      "date": "2026",
       "summary": "The launch that added 3000+ premium sellers in one month — differential pricing, 4 new products, 20+ campaigns, and the things I'd do differently.",
       "url": "https://www.linkedin.com/in/adamya-varshney15/recent-activity/articles/"
     }
