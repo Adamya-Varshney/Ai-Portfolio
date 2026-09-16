@@ -230,7 +230,8 @@
           "label": "Live Prototype",
           "text": "Deployed on Vercel — fully functional with login, lead dashboard, and AI-generated ad previews."
         }
-      ]
+      ],
+      "accentColor": "#6b21a8"
     },
     {
       "title": "Bundles & Buddy Mode",
@@ -293,7 +294,8 @@
           "label": "Platform Fit",
           "text": "Designed specifically for Blinkit's UX patterns and logistics model — not a generic add-on."
         }
-      ]
+      ],
+      "accentColor": "#d97706"
     },
     {
       "title": "Xcurson",
@@ -351,7 +353,8 @@
           "label": "Live",
           "text": "Deployed and publicly accessible — real users can plan trips right now."
         }
-      ]
+      ],
+      "accentColor": "#3b82f6"
     },
     {
       "title": "SAM: AI Chatbot with RAG",
@@ -430,7 +433,8 @@
           "label": "Real-time Streaming",
           "text": "Token-by-token response streaming makes the interface feel fast and natural — not a loading spinner."
         }
-      ]
+      ],
+      "accentColor": "#ea580c"
     },
     {
       "title": "Linkedin : Improving Job Hunting Experience",
@@ -494,7 +498,8 @@
           "label": "Follow-through Automation",
           "text": "Automated status tracking closes the loop — seekers know where they stand, referrers stay accountable."
         }
-      ]
+      ],
+      "accentColor": "#0a66c2"
     },
     {
       "title": "Pocket",
@@ -552,7 +557,8 @@
           "label": "Goal",
           "text": "Turn passive expense tracking into an active financial awareness tool that changes how people relate to money."
         }
-      ]
+      ],
+      "accentColor": "#0d9488"
     },
     {
       "title": "IMDB Sentiment & Topic Analysis",
@@ -599,7 +605,8 @@
           "label": "Outcome",
           "text": "A reproducible NLP framework for reception analysis — applicable to any text review corpus at scale."
         }
-      ]
+      ],
+      "accentColor": "#7c3aed"
     },
     {
       "title": "Niyam (AI Fitness Coach)",
@@ -672,7 +679,8 @@
           "label": "Built With",
           "text": "Vibe-coded using Lovable for the UI + N8N for backend automation workflows — shipped in days, not months."
         }
-      ]
+      ],
+      "accentColor": "#16a34a"
     },
     {
       "title": "Onset : Investment Platform",
@@ -735,7 +743,8 @@
           "label": "Core Goal",
           "text": "Lower the psychological and UX barrier between 'I want to invest' and 'I made my first investment'."
         }
-      ]
+      ],
+      "accentColor": "#b45309"
     },
     {
       "title": "Zomato : Farm Fresh",
@@ -798,7 +807,8 @@
           "text": "Hyper-local city-by-city launch starting with farmer-dense metro fringe zones — proving unit economics before scaling."
         }
       ],
-      "imageFit": "contain"
+      "imageFit": "contain",
+      "accentColor": "#dc2626"
     },
     {
       "title": "OpenAI : Project TAGs",
@@ -861,7 +871,8 @@
           "text": "Interactive concept built with Lovable and visualised via Claude Artifact — shareable and explorable."
         }
       ],
-      "imageFit": "contain"
+      "imageFit": "contain",
+      "accentColor": "#7c3aed"
     },
     {
       "title": "LLM Fine-tuning : Llama Model on Custom Dataset",
@@ -913,7 +924,8 @@
           "label": "Stack",
           "text": "Hugging Face Transformers + PEFT library + Google Colab — fully reproducible via the linked notebook."
         }
-      ]
+      ],
+      "accentColor": "#0ea5e9"
     },
     {
       "title": "Growth Strategy of Jio",
@@ -969,7 +981,8 @@
           "label": "Macro Outcome",
           "text": "India went from one of the world's most expensive data markets to the cheapest — under $0.10/GB average."
         }
-      ]
+      ],
+      "accentColor": "#1d4ed8"
     },
     {
       "title": "ML Applications in Diagnosis of Diabetes",
@@ -1025,7 +1038,8 @@
           "label": "Clinical Recommendation",
           "text": "Decision Tree emerged as the best balance of accuracy and explainability — a doctor can follow its logic at bedside."
         }
-      ]
+      ],
+      "accentColor": "#d97706"
     },
     {
       "title": "Marketing Strategy of Nike",
@@ -1081,7 +1095,8 @@
           "label": "Premium Pricing Power",
           "text": "Brand identity perceived as self-expression sustains margins even as production costs remain commodity-level."
         }
-      ]
+      ],
+      "accentColor": "#dc2626"
     },
     {
       "title": "GTM Strategy for New Product by Cisco",
@@ -1137,7 +1152,8 @@
           "label": "Launch Sequencing",
           "text": "Pilot with 3 lighthouse accounts → case study-led scale → geographic expansion across 3 priority regions."
         }
-      ]
+      ],
+      "accentColor": "#0369a1"
     },
     {
       "title": "Business Strategy of ABC",
@@ -1193,7 +1209,8 @@
           "label": "Growth Levers",
           "text": "Premiumisation of core SKUs + geographic expansion into Tier 2/3 markets as the dual growth engine."
         }
-      ]
+      ],
+      "accentColor": "#ea580c"
     },
     {
       "title": "V-Guard Big Idea : Product Innovation",
@@ -1250,7 +1267,8 @@
           "label": "Full GTM Plan",
           "text": "Channel strategy, pricing tiers, launch roadmap, and partnership model — a complete go-to-market blueprint."
         }
-      ]
+      ],
+      "accentColor": "#ca8a04"
     },
     {
       "title": "Tata Steel-A-Thon 2024",
@@ -1306,7 +1324,8 @@
           "label": "Presentation",
           "text": "Solution presented to a panel of Tata Steel industry leaders — combining analytical rigour with executive-ready storytelling."
         }
-      ]
+      ],
+      "accentColor": "#0891b2"
     }
   ],
   "writing": [
