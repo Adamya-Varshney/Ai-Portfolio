@@ -19,11 +19,11 @@ const SECTION_COLOR: Record<string, string> = {
   'Case Competitions': '#16a34a',
 };
 
-const SECTION_BG: Record<string, string> = {
-  'Product & Tech Projects': '#eff6ff',
-  'Business Strategy & GTM Projects': '#fef2f2',
-  'Case Competitions': '#f0fdf4',
-};
+// Convert a hex color to a very light tint for backgrounds
+function hexToAccentBg(hex: string): string {
+  // Return 12% opacity version using 8-digit hex
+  return hex + '1f';
+}
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -39,8 +39,8 @@ export default function ProjectPage() {
     );
   }
 
-  const accent = SECTION_COLOR[project.section ?? 'Product & Tech Projects'] ?? '#2563eb';
-  const accentBg = SECTION_BG[project.section ?? 'Product & Tech Projects'] ?? '#eff6ff';
+  const accent = (project as any).accentColor ?? SECTION_COLOR[project.section ?? 'Product & Tech Projects'] ?? '#2563eb';
+  const accentBg = hexToAccentBg(accent);
   const hasDeck = !!project.embedUrl;
   const links: { name: string; url: string }[] = project.links ?? [];
 
