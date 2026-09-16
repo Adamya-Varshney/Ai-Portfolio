@@ -500,6 +500,7 @@
       "title": "Pocket",
       "section": "Product & Tech Projects",
       "category": "AI / FinTech",
+      "imageFit": "contain",
       "description": "An AI expense tracker offering smart cash-flow management and visual summaries that explain spending habits. Translates raw transactions into plain-language insights so users understand the 'why' behind their spending.",
       "techStack": [
         "LLM Summarization",
