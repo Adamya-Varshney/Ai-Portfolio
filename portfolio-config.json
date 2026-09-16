@@ -598,6 +598,7 @@
       "title": "Niyam (AI Fitness Coach)",
       "section": "Product & Tech Projects",
       "category": "AI / Health & Fitness",
+      "imageFit": "contain",
       "description": "An AI fitness coach that generates personalized workout and habit plans and keeps users accountable to their goals.",
       "techStack": [
         "AI Coaching",
