@@ -74,15 +74,6 @@ export default function SiteNav() {
           ))}
         </div>
 
-        {/* Open to work */}
-        <div className="hidden sm:flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full shrink-0"
-          style={{ background: '#f0fdf4', color: '#15803d', border: '1px solid #bbf7d0' }}>
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-500" />
-          </span>
-          Open to work
-        </div>
       </div>
     </nav>
   );

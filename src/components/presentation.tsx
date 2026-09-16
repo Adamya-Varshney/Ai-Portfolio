@@ -104,14 +104,6 @@ export function Presentation() {
         <div>
           <div className="flex flex-wrap items-center justify-center gap-2.5 mb-1">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-tight">{profile.name}</h1>
-            <span className="flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-0.5 rounded-full"
-              style={{ background: '#f0fdf4', color: '#15803d', border: '1px solid #bbf7d0' }}>
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-500" />
-              </span>
-              Open to work
-            </span>
           </div>
           <p className="text-base font-medium text-gray-500">{(profile as any).title ?? 'Product Manager'}</p>
           <div className="flex items-center justify-center gap-1 text-xs text-gray-400 mt-1">
