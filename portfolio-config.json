@@ -356,6 +356,7 @@
       "title": "SAM: AI Chatbot with RAG",
       "section": "Product & Tech Projects",
       "category": "Agentic AI / Conversational",
+      "imageFit": "contain",
       "description": "A multi-capability AI agent built with LangGraph and Streamlit, combining RAG-powered knowledge retrieval, live web search, and a code interpreter — all within a multi-threaded chat interface with real-time response streaming. Maintains persistent context across parallel conversation threads for a coherent, research-grade assistant experience.",
       "techStack": [
         "Agentic AI",
