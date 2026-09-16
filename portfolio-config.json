@@ -797,7 +797,8 @@
           "label": "GTM Strategy",
           "text": "Hyper-local city-by-city launch starting with farmer-dense metro fringe zones — proving unit economics before scaling."
         }
-      ]
+      ],
+      "imageFit": "contain"
     },
     {
       "title": "OpenAI : Project TAGs",
